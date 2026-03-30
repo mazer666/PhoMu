@@ -133,10 +133,10 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, blurred = false }: 
           <div
             className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 cursor-pointer select-none"
             style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', background: 'rgba(0,0,0,0.4)' }}
-            onClick={() => setVideoRevealed(true)}
+            onClick={() => setVideoRevealed(v => !v)}
           >
             <span className="text-3xl">🎵</span>
-            <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Antippen zum Enthüllen</p>
+            <p className="text-[10px] font-black uppercase tracking-widest opacity-60">Antippen zum Ein-/Ausblenden</p>
           </div>
         )}
 
