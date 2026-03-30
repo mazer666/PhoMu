@@ -1,0 +1,429 @@
+{
+  "meta": {
+    "pack": "World, Reggae & Soul",
+    "version": "1.0.0",
+    "updatedAt": "2026-03-30T16:26:50Z"
+  },
+  "songs": [
+    {
+      "id": "reggae-bob-marley-no-woman",
+      "title": "No Woman, No Cry",
+      "artist": "Bob Marley",
+      "year": 1974,
+      "country": "JM",
+      "genre": "Reggae",
+      "difficulty": "easy",
+      "mood": ["Chill", "Classic", "Inspirational"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Die Live-Version aus dem Lyceum Theatre in London ist die bekannteste Fassung.",
+        "Thematisiert die harte Zeit im Ghetto von Trenchtown und den Trost durch Gemeinschaft.",
+        "Der Titel bedeutet im jamaikanischen Patois eigentlich 'Nein, Frau, weine nicht'.",
+        "Wurde zu einer weltweiten Hymne des Reggae und der Hoffnung.",
+        "Refrain: 'No woman, no cry!'"
+      ],
+      "lyrics": { "real": ["No woman, no cry, no woman, no cry", "Little darling, don't shed no tears, no woman, no cry", "Everything's gonna be alright, everything's gonna be alright"], "fake": "Dancing in the light, feeling so right, all through the night" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "jGqrvn3q1oo" }
+    },
+    {
+      "id": "soul-otis-redding-dock-bay",
+      "title": "(Sittin' On) The Dock of the Bay",
+      "artist": "Otis Redding",
+      "year": 1968,
+      "country": "US",
+      "genre": "Soul",
+      "difficulty": "easy",
+      "mood": ["Chill", "Classic", "Melancholic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Wurde nur wenige Tage vor Otis Reddings tragischem Flugzeugabsturz aufgenommen.",
+        "Bekannt für das entspannte Pfeif-Solo am Ende des Songs.",
+        "Thematisiert das Gefühl von Rastlosigkeit und das Beobachten der Schiffe in der Bucht von San Francisco.",
+        "Erreichte als erster Song postum Platz 1 der US-Charts.",
+        "Refrain: 'Sittin' on the dock of the bay, wastin' time!'"
+      ],
+      "lyrics": { "real": ["Sittin' in the morning sun, I'll be sittin' when the evening comes", "Watching the ships roll in, and then I watch 'em roll away again, yeah", "Sittin' on the dock of the bay, watching the tide roll away"], "fake": "Walking down the street with a rhythm in my feet tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "rTVjnBo66dU" }
+    },
+    {
+      "id": "soul-marvin-gaye-whats-going-on",
+      "title": "What's Going On",
+      "artist": "Marvin Gaye",
+      "year": 1971,
+      "country": "US",
+      "genre": "Soul / R&B",
+      "difficulty": "medium",
+      "mood": ["Serious", "Classic", "Thoughtful"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Ein Protestsong gegen den Vietnamkrieg und soziale Ungerechtigkeit.",
+        "Der Song beginnt mit Partygeräuschen und lockeren Gesprächen im Hintergrund.",
+        "Marvin Gaye musste hart dafür kämpfen, diesen sozialkritischen Song bei seinem Label Motown zu veröffentlichen.",
+        "Gilt als einer der einflussreichsten Soul-Tracks der Musikgeschichte.",
+        "Refrain: 'Mother, mother, there's too many of you crying...'"
+      ],
+      "lyrics": { "real": ["Mother, mother, there's too many of you crying", "Brother, brother, brother, there's far too many of you dying", "You know we've got to find a way to bring some lovin' here today"], "fake": "In the shadow of the night, I'm looking for the light of the broken soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "H-kA3UtBj4M" }
+    },
+    {
+      "id": "soul-al-green-stay-together",
+      "title": "Let's Stay Together",
+      "artist": "Al Green",
+      "year": 1971,
+      "country": "US",
+      "genre": "Soul",
+      "difficulty": "easy",
+      "mood": ["Romantic", "Classic", "Smooth"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Einer der wohl leidenschaftlichsten und glattesten Soul-Songs aller Zeiten.",
+        "Al Greens weiche, fast flüsternde Stimme ist das Markenzeichen des Stücks.",
+        "Wurde durch den Soundtrack von 'Pulp Fiction' in den 90ern erneut populär.",
+        "Ein zeitloser Klassiker über die Beständigkeit der Liebe.",
+        "Refrain: 'Let's, let's stay together! Lovin' you whether high or low, happy or blue!'"
+      ],
+      "lyrics": { "real": ["I'm so in love with you, whatever you want to do is all right with me", "Let's, let's stay together, lovin' you whether, whether times are good or bad, happy or sad", "Why, oh why can people never see that I'm so in love with you"], "fake": "Under the stars of the night, I'm feeling so right with you" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "COiIC3A0ROM" }
+    },
+    {
+      "id": "world-miriam-makeba-pata-pata",
+      "title": "Pata Pata",
+      "artist": "Miriam Makeba",
+      "year": 1967,
+      "country": "ZA",
+      "genre": "Afropop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Fun", "Dance"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Miriam Makeba wurde auch 'Mama Africa' genannt.",
+        "Pata Pata bezieht sich auf einen Tanzstil aus den Townships von Johannesburg.",
+        "Der Text ist in Xhosa verfasst, eine Sprache mit markanten Klicklauten.",
+        "Einer der ersten afrikanischen Songs, die weltweit Platz 1 der Charts erreichten.",
+        "Ein absolutes Symbol für Lebensfreude trotz aller Widrigkeiten."
+      ],
+      "lyrics": { "real": ["Saguquka sathi bheka, nantsi Pata Pata", "Yiyo mama, yiyo mama, nantsi Pata Pata", "A-yi-ma, a-yi-ma, nantsi Pata Pata"], "fake": "Dancing in the sun, having so much fun with everyone" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "lNeM3n_S2R0" }
+    },
+    {
+      "id": "world-bvsc-chan-chan",
+      "title": "Chan Chan",
+      "artist": "Buena Vista Social Club",
+      "year": 1997,
+      "country": "CU",
+      "genre": "Son Cubano",
+      "difficulty": "medium",
+      "mood": ["Chill", "Classic", "Melancholic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Der Song handelt von einer ländlichen Reise zweier Charaktere (Juanica und Chan Chan).",
+        "Compay Segundo schrieb das Lied, das zur Hymne der kubanischen Musik im Ausland wurde.",
+        "Besticht durch die unverwechselbare 'Tres'-Gitarre und die warmen Bläser.",
+        "Wurde durch das gleichnamige Album und den Dokumentarfilm zum Welterfolg.",
+        "Refrain: 'De Alto Cedro voy para Marcané, llego a Cueto voy para Mayarí!'"
+      ],
+      "lyrics": { "real": ["De Alto Cedro voy para Marcané, llego a Cueto voy para Mayarí", "El cariño que te tengo no te lo puedo negar", "Se me sale la babita, yo no lo puedo evitar"], "fake": "Bajo la luna de Cuba, cantamos con mucha fortuna" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "tnFfK4P7HiE" }
+    },
+    {
+      "id": "world-santana-oye-como-va",
+      "title": "Oye Como Va",
+      "artist": "Santana",
+      "year": 1970,
+      "country": "MX/US",
+      "genre": "Latin Rock",
+      "difficulty": "easy",
+      "mood": ["Dance", "Groovy", "Energy"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Ist eigentlich eine Coverversion des Mambo-Klassikers von Tito Puente.",
+        "Carlos Santanas Gitarrenspiel verbindet Blues mit lateinamerikanischen Rhythmen.",
+        "Bekannt für das hypnotische Orgel-Solo und die treibenden Percussions.",
+        "Kombiniert Rock-Energie mit Cha-Cha-Cha-Feeling.",
+        "Refrain: 'Oye como va, mi ritmo, bueno pa' gozar, mulata!'"
+      ],
+      "lyrics": { "real": ["Oye como va, mi ritmo, bueno pa' gozar, mulata", "Oye como va, mi ritmo, bueno pa' gozar, mulata"], "fake": "Dancing in the street, moving to the beat of the broken drum" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "JmN6p-m8l-E" }
+    },
+    {
+      "id": "world-fela-kuti-water",
+      "title": "Water No Get Enemy",
+      "artist": "Fela Kuti",
+      "year": 1975,
+      "country": "NG",
+      "genre": "Afrobeat",
+      "difficulty": "hard",
+      "mood": ["Epic", "Groovy", "Serious"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Fela Kuti gilt als der Erfinder des Afrobeat.",
+        "Thematisiert die Notwendigkeit und Allgegenwart des Wassers (niemand kann Wasser hassen).",
+        "Afrobeat mischt Yoruba-Melodien mit Funk und Jazz-Improvisation.",
+        "Die Tracks sind oft extrem lang und bauen einen hypnotischen 'Groove' auf.",
+        "Ein politisch und musikalisch kraftvolles Meisterwerk aus Nigeria."
+      ],
+      "lyrics": { "real": ["Omi o l'ota o, water, him not get enemy", "If you fight am, you go die, water, him not get enemy", "I say water no get enemy!"], "fake": "Dancing in the rain, following the train to the plain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "IQBC5URoF0s" }
+    },
+    {
+      "id": "reggae-toots-maytals-54-46",
+      "title": "54-46 Was My Number",
+      "artist": "Toots & The Maytals",
+      "year": 1968,
+      "country": "JM",
+      "genre": "Rocksteady / Reggae",
+      "difficulty": "medium",
+      "mood": ["Energy", "Classic", "Raw"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Toots Hibbert schrieb diesen Song nach seiner zweijährigen Gefängnisstrafe.",
+        "Die Nummer im Titel war seine Häftlingsnummer.",
+        "Einer der wichtigsten Songs für den Übergang von Rocksteady zu Reggae.",
+        "Bekannt für den energischen 'One-Drop' Beat.",
+        "Refrain: '54-46 was my number, right now someone else has that number!'"
+      ],
+      "lyrics": { "real": ["54-46 was my number, right now someone else has that number", "Give it to me one time, give it to me two times, give it to me three times", "I said give it to me!"], "fake": "In the middle of the night, we're looking for the light of the sun" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "yjg6u_hEY8" }
+    },
+    {
+      "id": "reggae-peter-tosh-legalize-it",
+      "title": "Legalize It",
+      "artist": "Peter Tosh",
+      "year": 1976,
+      "country": "JM",
+      "genre": "Reggae",
+      "difficulty": "easy",
+      "mood": ["Chill", "Classic", "Serious"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Peter Tosh war Gründungsmitglied der Wailers neben Bob Marley.",
+        "Der Song ist das wohl bekannteste Plädoyer für die Legalisierung von Marihuana.",
+        "Thematisiert den rituellen und medizinischen Gebrauch in der Rastafari-Kultur.",
+        "Bekannt für den extrem entspannten 'Lope'-Rhythmus.",
+        "Refrain: 'Legalize it, don't criticize it!'"
+      ],
+      "lyrics": { "real": ["Legalize it, don't criticize it, legalize it and I will advertise it", "Singers smoke it, and players of instruments too", "It's good for the flu, it's good for asthma too"], "fake": "Drinking under the sun, having so much fun with your gun" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "ABc8ciT5QLs" }
+    },
+    {
+      "id": "reggae-shaggy-wasnt-me",
+      "title": "It Wasn't Me",
+      "artist": "Shaggy",
+      "year": 2000,
+      "country": "JM",
+      "genre": "Reggae Fusion",
+      "difficulty": "easy",
+      "mood": ["Funny", "Groovy", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Handelt von einem Mann, der beim Fremdgehen erwischt wurde und den absurden Rat erhält, alles zu leugnen.",
+        "Shaggys tiefe, raue Stimme kontrastiert perfekt mit RikRoks melodischem Gesang.",
+        "Wurde zu einem der größten Reggae-Pop-Hits der 2000er Jahre.",
+        "Bekannt für den humorvollen und fast schon legendären Text.",
+        "Refrain: 'But she caught me on the counter... It wasn't me!'"
+      ],
+      "lyrics": { "real": ["But she caught me on the counter (It wasn't me), saw me bangin' on the sofa (It wasn't me)", "I even had her in the shower (It wasn't me), she even caught me on camera (It wasn't me)", "She saw the marks on my shoulder (It wasn't me), heard the words that I told her (It wasn't me)"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "dfBf3" }
+    },
+    {
+      "id": "reggae-sean-paul-get-busy",
+      "title": "Get Busy",
+      "artist": "Sean Paul",
+      "year": 2002,
+      "country": "JM",
+      "genre": "Dancehall",
+      "difficulty": "medium",
+      "mood": ["Energy", "Dance", "Club"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Basiert auf dem legendären 'Diwali Riddim'.",
+        "Sean Paul brachte den jamaikanischen Dancehall-Sound damit endgültig in den globalen Mainstream.",
+        "Bekannt für den extrem treibenden, rhythmischen Klatsch-Sound.",
+        "Wurde zu einer absoluten Party-Hymne der frühen 2000er.",
+        "Refrain: 'Shake that thing Miss Cana Cana!'"
+      ],
+      "lyrics": { "real": ["Shake that thing Miss Cana Cana, shake that thing Miss Sugar Sugar", "Get busy, get busy, get busy, get busy", "Just shake that thing, girl, I wanna see you go down"], "fake": "Dancing in the street, moving to the beat of the broken drum" },
+      "isOne_hit_wonder": false,
+      "links": { "youtube": "oPQ3oSTAt6" }
+    },
+    {
+      "id": "reggae-jimmy-cliff-rivers",
+      "title": "Many Rivers to Cross",
+      "artist": "Jimmy Cliff",
+      "year": 1969,
+      "country": "JM",
+      "genre": "Reggae / Soul",
+      "difficulty": "medium",
+      "mood": ["Sad", "Classic", "Powerful"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Thematisiert die harten Kämpfe und Hindernisse im Leben eines Musikers.",
+        "Jimmy Cliff gilt als einer der wichtigsten Pioniere des Reggae vor Bob Marley.",
+        "Der Song besticht durch seine tiefe Emotionalität und fast gospelartige Intensität.",
+        "Wurde durch den Film 'The Harder They Come' weltbekannt.",
+        "Refrain: 'Many rivers to cross, but I can't seem to find my way over!'"
+      ],
+      "lyrics": { "real": ["Many rivers to cross, but I can't seem to find my way over", "Wandering, I am lost, as I travel along the White Cliffs of Dover", "And this loneliness won't leave me alone"], "fake": "In the shadow of the valley, I'm looking for a rally of hope" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "haH3tP_I66g" }
+    },
+    {
+      "id": "soul-tracy-chapman-fast-car",
+      "title": "Fast Car",
+      "artist": "Tracy Chapman",
+      "year": 1988,
+      "country": "US",
+      "genre": "Folk / Soul",
+      "difficulty": "easy",
+      "mood": ["Sad", "Serious", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Thematisiert die Hoffnung auf ein besseres Leben und den Teufelskreis der Armut.",
+        "Tracy Chapmans tiefe, warme Stimme und das einfache Gitarren-Riff sind ikonisch.",
+        "Wurde durch ihren Auftritt beim Nelson Mandela 70th Birthday Tribute weltberühmt.",
+        "Ein zeitloser Klassiker über Träume und harte Realität.",
+        "Refrain: 'You got a fast car, is it fast enough so we can fly away?'"
+      ],
+      "lyrics": { "real": ["You got a fast car, is it fast enough so we can fly away?", "We gotta make a decision, leave tonight or live and die this way", "I remember we were driving in your car, speed so fast it felt like I was drunk"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "DwrHwZyFN7M" }
+    },
+    {
+      "id": "soul-bill-withers-sunshine",
+      "title": "Ain't No Sunshine",
+      "artist": "Bill Withers",
+      "year": 1971,
+      "country": "US",
+      "genre": "Soul / Blues",
+      "difficulty": "easy",
+      "mood": ["Sad", "Classic", "Short"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Bekannt für die repetitive Passage 'I know, I know, I know...' (26 Mal!).",
+        "Bill Withers arbeitete damals noch in einer Fabrik für Flugzeugteile.",
+        "Thematisiert die Ohnmacht und Einsamkeit nach einem Abschied.",
+        "Ein extrem kurzer, aber gewaltiger Klassiker der Soulgeschichte.",
+        "Refrain: 'Ain't no sunshine when she's gone!'"
+      ],
+      "lyrics": { "real": ["Ain't no sunshine when she's gone, it's not warm when she's away", "Ain't no sunshine when she's gone, and she's always gone too long", "I know, I know, I know, I know, I know..."], "fake": "Dancing in the rain, following the train to the plain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "CICIOJ25LZY" }
+    },
+    {
+      "id": "soul-amy-back-to-black",
+      "title": "Back to Black",
+      "artist": "Amy Winehouse",
+      "year": 2006,
+      "country": "GB",
+      "genre": "Soul / Jazz",
+      "difficulty": "medium",
+      "mood": ["Dark", "Classic", "Powerful"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Produziert von Mark Ronson, im Stil des 'Wall of Sound' der 60er Jahre.",
+        "Handelt von einer schmerzhaften Trennung und der Rückkehr in ein dunkles Leben.",
+        "Amy Winehouse kombinierte hier modernen R&B mit klassischem Soul.",
+        "Wurde zum Markenzeichen ihres gleichnamigen, legendären Albums.",
+        "Refrain: 'We only said goodbye with words, I died a hundred times!'"
+      ],
+      "lyrics": { "real": ["He left no time to regret, kept his dick wet with his same old safe bet", "Me and my head high, and my tears dry, get on without my guy", "You go back to her and I go back to black"], "fake": "Walking through the rain, I'm calling out your name in vain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "TJAfLE39ZZ8" }
+    },
+    {
+      "id": "soul-lauryn-hill-doo-wop",
+      "title": "Doo Wop (That Thing)",
+      "artist": "Lauryn Hill",
+      "year": 1998,
+      "country": "US",
+      "genre": "Soul / Hip Hop",
+      "difficulty": "medium",
+      "mood": ["Cool", "Powerful", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Lauryn Hills erste Solo-Single nach den Fugees.",
+        "Gibt Ratschläge an Männer und Frauen, sich nicht für oberflächliche Dinge auszunutzen.",
+        "Kombiniert Doo-Wop-Harmonien aus den 60ern mit modernem Hip-Hop.",
+        "Gewann den Grammy für den besten R&B-Song und die beste weibliche R&B-Aufnahme.",
+        "Refrain: 'Girls you know you better watch out... Guys you know you better watch out!'"
+      ],
+      "lyrics": { "real": ["It's been three weeks since you were looking for your friend", "Watch out, watch out! Look out, look out!", "Baby girl, respect is just a minimum"], "fake": "Dancing in the street, moving to the beat of the broken heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "T6QKqFPRZSA" }
+    },
+    {
+      "id": "soul-erykah-badu-on-on",
+      "title": "On & On",
+      "artist": "Erykah Badu",
+      "year": 1997,
+      "country": "US",
+      "genre": "Neo Soul",
+      "difficulty": "hard",
+      "mood": ["Chill", "Deep", "Intelligent"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Markierte den definitiven Durchbruch des 'Neo Soul' Genres.",
+        "Der Text ist voller philosophischer und spiritueller Anspielungen.",
+        "Bekannt für den entspannten, fast schleppenden Rhythmus.",
+        "Erykah Badus Stimme wird oft mit der von Billie Holiday verglichen.",
+        "Refrain: 'And it goes on and on and on... over and over again!'"
+      ],
+      "lyrics": { "real": ["One, two, three and on and on and on", "I was born on the underwater, with the dollar and the quarter", "And you don't even know what you're doing, doing, doing"], "fake": "In the middle of the stars, I'm wishing on the cars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "haH3tP_I66g" }
+    },
+    {
+      "id": "jazz-nina-simone-baby",
+      "title": "My Baby Just Cares for Me",
+      "artist": "Nina Simone",
+      "year": 1958,
+      "country": "US",
+      "genre": "Jazz",
+      "difficulty": "easy",
+      "mood": ["Happy", "Classic", "Elegant"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Wurde erst 30 Jahre nach Release durch eine Parfüm-Werbung (Chanel No. 5) zum Welthit.",
+        "Nina Simone zeigt hier ihre meisterhafte Verbindung von Piano-Spiel und Jazz-Gesang.",
+        "Der Text zählt scherzhaft Dinge auf, die ihren Partner NICHT interessieren.",
+        "Ein zeitloser, eleganter Jazz-Klassiker.",
+        "Refrain: 'My baby don't care for furs and laces, my baby don't care for high-tone places!'"
+      ],
+      "lyrics": { "real": ["My baby don't care for furs and laces, my baby don't care for high-tone places", "My baby don't care for rings, or other expensive things", "She's sensible as can be, my baby just cares for me"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "eFGmha" }
+    },
+    {
+      "id": "world-kaoma-lambada",
+      "title": "Lambada",
+      "artist": "Kaoma",
+      "year": 1989,
+      "country": "FR",
+      "genre": "Zouk / Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Dance", "Summer"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Verlöste den weltweiten Lambada-Tanzboom der späten 80er Jahre aus.",
+        "Der Song basiert auf einem bolivianischen Volkslied (Llorando se fue).",
+        "Wurde von einer französischen Gruppe mit brasilianischen Sängern aufgenommen.",
+        "Besticht durch das markante Panflöten-Intro und den Sommer-Vibe.",
+        "Refrain: 'Chorando se foi quem um dia só me fez chorar!'"
+      ],
+      "lyrics": { "real": ["Chorando se foi quem um dia só me fez chorar", "Chorando estará ao lembrar de um amor que um dia não soube cuidar", "A recordação vai estar com ele aonde for"], "fake": "Bajo la luna de plata, bailamos con mucha fortuna" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "iyLdoQGBchU" }
+    }
+  ]
+}

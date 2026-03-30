@@ -15,6 +15,9 @@ import germanClassics from './german-classics.json';
 import hipHopEssentials from './hip-hop-essentials.json';
 import indieAlternative from './indie-alternative.json';
 import electronicTechno from './electronic-techno.json';
+import schlagerEvergreens from './schlager-evergreens.json';
+import countryJazzBlues from './country-jazz-blues.json';
+import worldReggaeSoul from './world-reggae-soul.json';
 
 import type { PhomuSong } from '@/types/song';
 
@@ -30,6 +33,9 @@ export const ALL_SONGS: PhomuSong[] = [
   ...(hipHopEssentials.songs as any),
   ...(indieAlternative.songs as any),
   ...(electronicTechno.songs as any),
+  ...(schlagerEvergreens.songs as any),
+  ...(countryJazzBlues.songs as any),
+  ...(worldReggaeSoul.songs as any),
 ];
 
 /** All available pack names extracted from data */
