@@ -21,8 +21,37 @@ function randomInitialYears(count: number): number[] {
   return shuffled.slice(0, count).sort((a, b) => a - b);
 }
 
-/** Gibt den korrekten Slot-Index zurück (0 = vor erstem Jahr, n = nach letztem Jahr) */
-function correctSlot(songYear: number, sortedYears: number[]): number {
+/**
+ * Gibt alle akzeptierten Slot-Indizes zurück.
+ * Wenn das Jahr bereits in der Timeline vorkommt, gelten beide Slots
+ * um das Duplikat (davor und danach) als korrekt.
+ */
+function getValidSlots(songYear: number, sortedYears: number[]): Set<number> {
+  const slots = new Set<number>();
+
+  // Kanonischer Slot: erster Slot, wo songYear < sortedYears[i]
+  let canonical = sortedYears.length;
+  for (let i = 0; i < sortedYears.length; i++) {
+    if (songYear < sortedYears[i]) {
+      canonical = i;
+      break;
+    }
+  }
+  slots.add(canonical);
+
+  // Für alle exakt gleichen Jahre: Slot davor und danach ebenfalls akzeptieren
+  for (let i = 0; i < sortedYears.length; i++) {
+    if (sortedYears[i] === songYear) {
+      slots.add(i);
+      slots.add(i + 1);
+    }
+  }
+
+  return slots;
+}
+
+/** Kanonischer Slot für die Anzeige (grüner Hinweis bei falscher Antwort) */
+function canonicalSlot(songYear: number, sortedYears: number[]): number {
   for (let i = 0; i < sortedYears.length; i++) {
     if (songYear < sortedYears[i]) return i;
   }
@@ -47,8 +76,12 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
     }
   }, []);
 
+  const validSlotSet = useMemo(
+    () => getValidSlots(song.year, timelineYears),
+    [song.year, timelineYears],
+  );
   const correct = useMemo(
-    () => correctSlot(song.year, timelineYears),
+    () => canonicalSlot(song.year, timelineYears),
     [song.year, timelineYears],
   );
 
@@ -63,7 +96,7 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
   // Nach korrekter Antwort: Jahr hinzufügen + ggf. Entfernungs-Logik
   function handleReveal() {
     if (selectedSlot === null || isRevealed) return;
-    const isCorrect = selectedSlot === correct;
+    const isCorrect = validSlotSet.has(selectedSlot);
     setIsRevealed(true);
     onAnswer(isCorrect, isCorrect ? points : 0);
 
@@ -119,7 +152,7 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
         <h2 className="text-2xl font-black uppercase tracking-tight">
           {!isRevealed
             ? 'Wann war dieser Song?'
-            : selectedSlot === correct
+            : selectedSlot !== null && validSlotSet.has(selectedSlot)
               ? 'Goldrichtig! ✨'
               : 'Leider daneben... 🌧️'}
         </h2>
@@ -137,7 +170,7 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
             Eine Jahreszahl entfernen? (Optional)
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
-            {timelineYears.map((year, i) => (
+            {timelineYears.map((year: number, i: number) => (
               <button
                 key={`${year}-${i}`}
                 onClick={() => handleRemoveYear(year)}
@@ -186,13 +219,13 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
                     !isTarget && !isRevealed
                       ? 'border-white/10 bg-white/[0.02] hover:border-white/20'
                       : '',
-                    isRevealed && slotIdx === correct
+                    isRevealed && validSlotSet.has(slotIdx) && (isTarget || slotIdx === correct)
                       ? 'border-green-500 bg-green-500/10'
                       : '',
-                    isRevealed && isTarget && slotIdx !== correct
+                    isRevealed && isTarget && !validSlotSet.has(slotIdx)
                       ? 'border-red-500 bg-red-500/10'
                       : '',
-                    isRevealed && !isTarget && slotIdx !== correct
+                    isRevealed && !isTarget && !validSlotSet.has(slotIdx)
                       ? 'border-white/5 bg-transparent'
                       : '',
                   ].join(' ')}
@@ -223,7 +256,7 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
                       {slotIdx + 1}
                     </span>
                   )}
-                  {isRevealed && !isTarget && slotIdx === correct && (
+                  {isRevealed && !isTarget && validSlotSet.has(slotIdx) && slotIdx === correct && (
                     <div className="flex items-center gap-2 text-green-400 font-black px-3">
                       <span>←</span>
                       <span className="text-[10px] uppercase tracking-widest">Hier</span>

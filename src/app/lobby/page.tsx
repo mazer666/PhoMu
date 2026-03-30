@@ -98,7 +98,7 @@ export default function LobbyPage() {
   // ─── Render Schritte ───────────────────────────────────────────
 
   return (
-    <main className="h-screen flex flex-col max-w-2xl mx-auto px-4 md:px-8">
+    <main className="flex flex-col max-w-2xl mx-auto px-4 md:px-8" style={{ height: '100dvh' }}>
 
       {/* Header mit Progress */}
       <div className="pt-4 md:pt-8 pb-4 flex flex-col gap-4 shrink-0">
@@ -107,14 +107,14 @@ export default function LobbyPage() {
           <span className="text-sm font-bold opacity-30">Schritt {step} von 4</span>
         </div>
         <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-          <motion.div 
+          <motion.div
             className="h-full bg-[var(--color-accent)]"
             animate={{ width: `${(step / 4) * 100}%` }}
           />
         </div>
       </div>
 
-      {/* Wizard Content Area — scrollbar */}
+      {/* Wizard Content Area — scrollable */}
       <div className="flex-1 overflow-y-auto pb-4">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
@@ -276,7 +276,20 @@ export default function LobbyPage() {
         </AnimatePresence>
       </div>
 
-      {/* Navigation Footer — fix am unteren Rand */}
+      <QRScannerModal
+        isOpen={isScannerOpen}
+        onClose={() => setIsScannerOpen(false)}
+        onScan={(text) => {
+          if (text.startsWith('@')) {
+            setNameInput(text.substring(1));
+            handleAddPlayer();
+          } else {
+            alert(`Gescannter Code: ${text}\n(Zukünftige Funktion: Song-Favoriten oder Deck-Import)`);
+          }
+        }}
+      />
+
+      {/* Navigation Footer — always visible at bottom */}
       <div className="shrink-0 pb-6 pt-3 flex flex-col gap-2 border-t border-white/5">
         <div className="flex gap-3">
           {step > 1 && (
@@ -314,20 +327,6 @@ export default function LobbyPage() {
           Lobby zurücksetzen
         </button>
       </div>
-
-      <QRScannerModal 
-        isOpen={isScannerOpen} 
-        onClose={() => setIsScannerOpen(false)}
-        onScan={(text) => {
-          // If code starts with @, treat it as a player name/alias
-          if (text.startsWith('@')) {
-            setNameInput(text.substring(1));
-            handleAddPlayer();
-          } else {
-             alert(`Gescannter Code: ${text}\n(Zukünftige Funktion: Song-Favoriten oder Deck-Import)`);
-          }
-        }}
-      />
 
     </main>
   );

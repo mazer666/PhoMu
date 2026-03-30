@@ -30,7 +30,7 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, blurred = false }: 
   const [muted, setMuted] = useState(false);
   const [videoRevealed, setVideoRevealed] = useState(false);
   const swipeStartX = useRef<number | null>(null);
-  const SWIPE_THRESHOLD = 60; // px
+  const SWIPE_THRESHOLD = 60;
 
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
     swipeStartX.current = e.touches[0].clientX;
@@ -44,6 +44,7 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, blurred = false }: 
       setVideoRevealed(v => !v);
     }
   }, []);
+
   const [activeDomain, setActiveDomain] = useState<'music.youtube.com' | 'www.youtube.com'>(
     preferredPlayer === 'music' ? 'music.youtube.com' : 'www.youtube.com'
   );
