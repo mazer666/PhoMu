@@ -67,3 +67,25 @@
   --color-border: #e0e0e0;
   --radius: 16px;
 }
+
+/* ─── Global Form Element Fixes ─── */
+select, option, input, textarea {
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+/* Ensure options are readable on all systems */
+option {
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+}
+
+/* Specific fix for Music Wall (Light Theme) */
+[data-theme='musicwall'] select, 
+[data-theme='musicwall'] option,
+[data-theme='musicwall'] input {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-color: #e0e0e0;
+}

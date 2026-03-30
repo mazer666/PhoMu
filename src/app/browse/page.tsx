@@ -1,319 +1,237 @@
 'use client';
 
-/**
- * Song-Browser
- * Route: /browse
- *
- * Zeigt alle Songs aus dem global-hits.json Pack.
- * Features:
- *  - Volltextsuche nach Titel / Artist
- *  - Filter nach Genre, Jahrzehnt, Schwierigkeit
- *  - Hints ein-/ausblenden
- *  - Statistik-Leiste oben
- */
-
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import type { PhomuSong } from '@/types/song';
 import { SongCard } from '@/components/browse/SongCard';
-import globalHitsRaw from '@/data/packs/global-hits.json';
+import { SongEditor } from '@/components/admin/SongEditor';
+import { useGameStore } from '@/stores/game-store';
+import { ALL_SONGS as DATA_SONGS } from '@/data/packs';
 
-// ─── Daten laden ──────────────────────────────────────────────────────────────
+// ─── Daten laden & Storage ──────────────────────────────────────────────────
 
-// JSON hat lyrics: null, unser Typ erlaubt das jetzt
-const ALL_SONGS = globalHitsRaw.songs as unknown as PhomuSong[];
+const STORAGE_KEY = 'phomu-admin-songs';
+
+/** Lädt Songs aus localStorage oder Fallback auf JSON */
+function loadSongs(): PhomuSong[] {
+  if (typeof window === 'undefined') return DATA_SONGS;
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch {}
+  return DATA_SONGS;
+}
+
+/** Speichert Songs in localStorage */
+function saveSongsToStorage(songs: PhomuSong[]) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(songs));
+}
 
 // ─── Hilfsfunktionen ─────────────────────────────────────────────────────────
 
-/** Gibt das Jahrzehnt eines Songs zurück als Label, z.B. "1980er" */
 function getDecadeLabel(year: number): string {
   const decade = Math.floor(year / 10) * 10;
   return `${decade}er`;
 }
 
-/** Alle einzigartigen Jahrzehnte aus den Songs ermitteln, sortiert */
 function getDecades(songs: PhomuSong[]): string[] {
   const decades = new Set(songs.map((s) => getDecadeLabel(s.year)));
   return Array.from(decades).sort();
 }
 
-/** Alle einzigartigen Genres, sortiert */
 function getGenres(songs: PhomuSong[]): string[] {
   const genres = new Set(songs.map((s) => s.genre));
   return Array.from(genres).sort();
 }
 
-// ─── Filter-Zustand ───────────────────────────────────────────────────────────
-
-interface BrowseFilters {
-  search: string;
-  genre: string;        // '' = alle
-  decade: string;       // '' = alle
-  difficulty: string;   // '' = alle
-  onlyOneHitWonders: boolean;
-  onlyWithLyrics: boolean;
-}
-
-const EMPTY_FILTERS: BrowseFilters = {
-  search: '',
-  genre: '',
-  decade: '',
-  difficulty: '',
-  onlyOneHitWonders: false,
-  onlyWithLyrics: false,
-};
-
 // ─── Hauptkomponente ──────────────────────────────────────────────────────────
 
 export default function BrowsePage() {
-  const [filters, setFilters] = useState<BrowseFilters>(EMPTY_FILTERS);
+  const router = useRouter();
+  const startQuickGame = useGameStore((state) => state.startQuickGame);
+
+  const [allSongs, setAllSongs] = useState<PhomuSong[]>([]);
+  const [adminMode, setAdminMode] = useState(false);
+  const [editingSong, setEditingSong] = useState<PhomuSong | null>(null);
   const [showHints, setShowHints] = useState(false);
   const [sortBy, setSortBy] = useState<'year' | 'title' | 'artist'>('year');
+  
+  const [filters, setFilters] = useState({
+    search: '',
+    genre: '',
+    decade: '',
+    difficulty: '',
+    onlyOneHitWonders: false,
+    onlyWithLyrics: false,
+  });
 
-  // Alle möglichen Filterwerte aus dem Datensatz berechnen
-  const genres = useMemo(() => getGenres(ALL_SONGS), []);
-  const decades = useMemo(() => getDecades(ALL_SONGS), []);
+  // Initiales Laden
+  useEffect(() => {
+    setAllSongs(loadSongs());
+  }, []);
 
-  // Gefilterte und sortierte Songs berechnen
+  const genres = useMemo(() => getGenres(allSongs), [allSongs]);
+  const decades = useMemo(() => getDecades(allSongs), [allSongs]);
+
   const filteredSongs = useMemo(() => {
-    let result = ALL_SONGS;
-
-    // Volltextsuche
-    if (filters.search.trim()) {
-      const q = filters.search.toLowerCase();
-      result = result.filter(
-        (s) =>
-          s.title.toLowerCase().includes(q) ||
-          s.artist.toLowerCase().includes(q) ||
-          s.genre.toLowerCase().includes(q)
+    let result = allSongs;
+    const q = filters.search.toLowerCase().trim();
+    
+    if (q) {
+      result = result.filter(s => 
+        s.title.toLowerCase().includes(q) || 
+        s.artist.toLowerCase().includes(q) || 
+        s.genre.toLowerCase().includes(q)
       );
     }
+    if (filters.genre) result = result.filter(s => s.genre === filters.genre);
+    if (filters.decade) result = result.filter(s => getDecadeLabel(s.year) === filters.decade);
+    if (filters.difficulty) result = result.filter(s => s.difficulty === filters.difficulty);
+    if (filters.onlyOneHitWonders) result = result.filter(s => s.isOneHitWonder);
+    if (filters.onlyWithLyrics) result = result.filter(s => s.lyrics !== null);
 
-    // Genre-Filter
-    if (filters.genre) {
-      result = result.filter((s) => s.genre === filters.genre);
-    }
-
-    // Jahrzehnt-Filter
-    if (filters.decade) {
-      result = result.filter((s) => getDecadeLabel(s.year) === filters.decade);
-    }
-
-    // Schwierigkeits-Filter
-    if (filters.difficulty) {
-      result = result.filter((s) => s.difficulty === filters.difficulty);
-    }
-
-    // One-Hit-Wonder-Filter
-    if (filters.onlyOneHitWonders) {
-      result = result.filter((s) => s.isOneHitWonder);
-    }
-
-    // Lyrics-Filter
-    if (filters.onlyWithLyrics) {
-      result = result.filter((s) => s.lyrics !== null);
-    }
-
-    // Sortierung
     return [...result].sort((a, b) => {
       if (sortBy === 'year') return a.year - b.year;
       if (sortBy === 'title') return a.title.localeCompare(b.title);
       if (sortBy === 'artist') return a.artist.localeCompare(b.artist);
       return 0;
     });
-  }, [filters, sortBy]);
+  }, [allSongs, filters, sortBy]);
 
-  // Filter aktualisieren
-  function updateFilter<K extends keyof BrowseFilters>(key: K, value: BrowseFilters[K]) {
-    setFilters((prev) => ({ ...prev, [key]: value }));
-  }
+  const handleSaveSong = useCallback((updated: PhomuSong) => {
+    const next = allSongs.map(s => s.id === updated.id ? updated : s);
+    if (!allSongs.find(s => s.id === updated.id)) next.push(updated);
+    
+    setAllSongs(next);
+    saveSongsToStorage(next);
+    setEditingSong(null);
+  }, [allSongs]);
 
-  // Alle Filter zurücksetzen
-  function resetFilters() {
-    setFilters(EMPTY_FILTERS);
-  }
+  const handlePlaySong = useCallback((song: PhomuSong) => {
+    startQuickGame(song);
+    router.push('/game');
+  }, [startQuickGame, router]);
 
-  const hasActiveFilters =
-    filters.search ||
-    filters.genre ||
-    filters.decade ||
-    filters.difficulty ||
-    filters.onlyOneHitWonders ||
-    filters.onlyWithLyrics;
-
-  // Statistiken
   const stats = useMemo(() => ({
-    total: ALL_SONGS.length,
-    easy: ALL_SONGS.filter((s) => s.difficulty === 'easy').length,
-    medium: ALL_SONGS.filter((s) => s.difficulty === 'medium').length,
-    hard: ALL_SONGS.filter((s) => s.difficulty === 'hard').length,
-    oneHitWonders: ALL_SONGS.filter((s) => s.isOneHitWonder).length,
-    withLyrics: ALL_SONGS.filter((s) => s.lyrics !== null).length,
-  }), []);
+    total: allSongs.length,
+    withLyrics: allSongs.filter(s => s.lyrics !== null).length,
+  }), [allSongs]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <h1 className="text-3xl font-bold text-gray-900">🎵 Song-Browser</h1>
-          <p className="text-gray-500 mt-1">
-            {ALL_SONGS.length} Songs · Pack: Global Hits 1950–2026
-          </p>
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-30">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-black text-gray-900 flex items-center gap-2">
+              🎵 Phomu-Browser
+              {adminMode && <span className="text-[10px] bg-red-600 text-white px-1.5 py-0.5 rounded uppercase tracking-widest">Admin Mode</span>}
+            </h1>
+            <p className="text-xs text-gray-400 font-bold uppercase tracking-tighter">
+              {stats.total} Songs · {stats.withLyrics} mit Lyrics
+            </p>
+          </div>
 
-          {/* Statistik-Zeile */}
-          <div className="flex flex-wrap gap-3 mt-4">
-            {[
-              { label: 'Leicht', value: stats.easy, color: 'green' },
-              { label: 'Mittel', value: stats.medium, color: 'yellow' },
-              { label: 'Schwer', value: stats.hard, color: 'red' },
-              { label: 'One-Hit-Wonders', value: stats.oneHitWonders, color: 'orange' },
-              { label: 'Mit Lyrics', value: stats.withLyrics, color: 'blue' },
-            ].map((stat) => (
-              <span
-                key={stat.label}
-                className={`px-3 py-1 rounded-full text-xs font-semibold bg-${stat.color}-50 text-${stat.color}-700`}
-              >
-                {stat.label}: {stat.value}
-              </span>
-            ))}
+          <div className="flex items-center gap-3">
+            <button 
+              onClick={() => setAdminMode(!adminMode)}
+              className={`px-4 py-2 rounded-xl text-xs font-black transition-all ${adminMode ? 'bg-red-600 text-white shadow-lg' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'}`}
+            >
+              {adminMode ? '🔒 ADMIN AN' : '🔓 ADMIN AUS'}
+            </button>
+            <button 
+              onClick={() => router.push('/lobby')}
+              className="px-4 py-2 bg-gray-900 text-white rounded-xl text-xs font-black hover:bg-black transition-all"
+            >
+              ZURÜCK ZUR LOBBY
+            </button>
           </div>
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-6 py-6">
-        {/* Filter-Leiste */}
-        <div className="bg-white rounded-xl border border-gray-200 p-4 mb-6">
+      <div className="max-w-7xl mx-auto px-6 mt-6">
+        {/* Filter Section */}
+        <div className="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm space-y-4">
           <div className="flex flex-wrap gap-3">
-            {/* Suche */}
             <input
               type="search"
-              placeholder="Suche nach Titel, Artist, Genre..."
+              placeholder="Suche nach Titel, Artist..."
               value={filters.search}
-              onChange={(e) => updateFilter('search', e.target.value)}
-              className="flex-1 min-w-[200px] border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+              onChange={e => setFilters(p => ({ ...p, search: e.target.value }))}
+              className="flex-1 min-w-[200px] bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 transition-all outline-none"
             />
-
-            {/* Genre */}
-            <select
-              value={filters.genre}
-              onChange={(e) => updateFilter('genre', e.target.value)}
-              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            <select 
+              value={filters.genre} 
+              onChange={e => setFilters(p => ({ ...p, genre: e.target.value }))}
+              className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none"
             >
               <option value="">Alle Genres</option>
-              {genres.map((g) => (
-                <option key={g} value={g}>{g}</option>
-              ))}
+              {genres.map(g => <option key={g} value={g}>{g}</option>)}
             </select>
-
-            {/* Jahrzehnt */}
-            <select
-              value={filters.decade}
-              onChange={(e) => updateFilter('decade', e.target.value)}
-              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+            <select 
+              value={filters.decade} 
+              onChange={e => setFilters(p => ({ ...p, decade: e.target.value }))}
+              className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none"
             >
               <option value="">Alle Jahrzehnte</option>
-              {decades.map((d) => (
-                <option key={d} value={d}>{d}</option>
-              ))}
-            </select>
-
-            {/* Schwierigkeit */}
-            <select
-              value={filters.difficulty}
-              onChange={(e) => updateFilter('difficulty', e.target.value)}
-              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              <option value="">Alle Schwierigkeiten</option>
-              <option value="easy">Leicht</option>
-              <option value="medium">Mittel</option>
-              <option value="hard">Schwer</option>
-            </select>
-
-            {/* Sortierung */}
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as 'year' | 'title' | 'artist')}
-              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              <option value="year">Sortiert nach Jahr</option>
-              <option value="title">Sortiert nach Titel</option>
-              <option value="artist">Sortiert nach Artist</option>
+              {decades.map(d => <option key={d} value={d}>{d}</option>)}
             </select>
           </div>
 
-          {/* Zweite Zeile: Checkboxen + Optionen */}
-          <div className="flex flex-wrap items-center gap-4 mt-3 pt-3 border-t border-gray-100">
-            <label className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer select-none">
-              <input
-                type="checkbox"
-                checked={filters.onlyOneHitWonders}
-                onChange={(e) => updateFilter('onlyOneHitWonders', e.target.checked)}
-                className="rounded"
-              />
-              Nur One-Hit-Wonders
+          <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-gray-50">
+            <label className="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase cursor-pointer">
+              <input type="checkbox" checked={filters.onlyOneHitWonders} onChange={e => setFilters(p => ({ ...p, onlyOneHitWonders: e.target.checked }))} className="rounded-md w-4 h-4 accent-blue-600" />
+              One-Hit-Wonders
             </label>
-
-            <label className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer select-none">
-              <input
-                type="checkbox"
-                checked={filters.onlyWithLyrics}
-                onChange={(e) => updateFilter('onlyWithLyrics', e.target.checked)}
-                className="rounded"
-              />
-              Nur Songs mit Lyrics
+            <label className="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase cursor-pointer">
+              <input type="checkbox" checked={filters.onlyWithLyrics} onChange={e => setFilters(p => ({ ...p, onlyWithLyrics: e.target.checked }))} className="rounded-md w-4 h-4 accent-blue-600" />
+              Mit Lyrics
             </label>
-
-            <label className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer select-none">
-              <input
-                type="checkbox"
-                checked={showHints}
-                onChange={(e) => setShowHints(e.target.checked)}
-                className="rounded"
-              />
+            <label className="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase cursor-pointer">
+              <input type="checkbox" checked={showHints} onChange={e => setShowHints(e.target.checked)} className="rounded-md w-4 h-4 accent-blue-600" />
               Hints anzeigen
             </label>
-
-            {hasActiveFilters && (
-              <button
-                onClick={resetFilters}
-                className="ml-auto text-sm text-blue-600 hover:text-blue-800 underline"
-              >
-                Filter zurücksetzen
-              </button>
-            )}
+            <div className="ml-auto text-xs font-bold text-gray-400">
+              {filteredSongs.length} Treffer
+            </div>
           </div>
         </div>
 
-        {/* Ergebnis-Header */}
-        <div className="flex items-center justify-between mb-4">
-          <p className="text-sm text-gray-500">
-            {filteredSongs.length === ALL_SONGS.length
-              ? `Alle ${ALL_SONGS.length} Songs`
-              : `${filteredSongs.length} von ${ALL_SONGS.length} Songs`}
-          </p>
-        </div>
-
-        {/* Song-Grid */}
-        {filteredSongs.length === 0 ? (
-          <div className="text-center py-16 text-gray-400">
-            <p className="text-4xl mb-3">🔍</p>
-            <p className="font-medium text-gray-600">Keine Songs gefunden</p>
-            <p className="text-sm mt-1">Versuche andere Suchbegriffe oder Filter.</p>
-            <button
-              onClick={resetFilters}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold hover:bg-blue-700"
+        {/* Song Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8">
+          {filteredSongs.map((song) => (
+            <SongCard 
+              key={song.id} 
+              song={song} 
+              showHints={showHints}
+              isAdmin={adminMode}
+              onEdit={setEditingSong}
+              onPlay={handlePlaySong}
+            />
+          ))}
+          {adminMode && (
+            <button 
+              onClick={() => setEditingSong({ 
+                id: `new-${Date.now()}`, title: '', artist: '', year: 2024, country: 'DE', genre: 'Pop', 
+                difficulty: 'medium', mood: [], pack: 'Custom', hints: ['', '', '', '', ''], lyrics: null, 
+                isOneHitWonder: false, links: { youtube: '' } 
+              })}
+              className="border-2 border-dashed border-gray-300 rounded-xl h-full min-h-[200px] flex flex-col items-center justify-center text-gray-400 hover:text-blue-500 hover:border-blue-500 hover:bg-blue-50 transition-all"
             >
-              Filter zurücksetzen
+              <span className="text-4xl mb-2">+</span>
+              <span className="text-xs font-black uppercase">Song hinzufügen</span>
             </button>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {filteredSongs.map((song) => (
-              <SongCard key={song.id} song={song} showHints={showHints} />
-            ))}
-          </div>
-        )}
+          )}
+        </div>
       </div>
+
+      {/* Editor Modal */}
+      {editingSong && (
+        <SongEditor 
+          song={editingSong} 
+          onSave={handleSaveSong} 
+          onCancel={() => setEditingSong(null)} 
+        />
+      )}
     </div>
   );
 }

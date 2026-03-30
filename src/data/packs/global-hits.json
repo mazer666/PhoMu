@@ -993,7 +993,15 @@
           "Oppan Gangnam style",
           "Eh- Sexy Lady, op, op, op, op, Oppan Gangnam style",
           "A girl who is warm and humanly during the day"
-{
+        ],
+        "fake": "Dancing in the city where the neon lights are bright"
+      },
+      "isOneHitWonder": true,
+      "links": {
+        "youtube": "9bZkp7q19f0"
+      }
+    },
+    {
       "id": "pharrell-happy-2013",
       "title": "Happy",
       "artist": "Pharrell Williams",
@@ -1130,7 +1138,317 @@
         "Langsamer Aufbau, der in einen bombastischen Refrain mit Sias dramatischer Vierokaven-Stimme explodiert.",
         "Sia schwingt wie ein Kronleuchter – eine Hymne über Vergessen, Feiern und den schmerzhaften Morgen danach."
       ],
-        "youtube": "TODO:verify"
+      "lyrics": {
+        "real": [
+          "Party girls don't get hurt, can't feel anything, when will I learn?",
+          "I'm gonna swing from the chandelier",
+          "I'm gonna live like tomorrow doesn't exist"
+        ],
+        "fake": "Dancing in the shadows until the morning light"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "2vjPBrBU-TM"
+      }
+    },
+    {
+      "id": "sam-smith-stay-with-me-2014",
+      "title": "Stay with Me",
+      "artist": "Sam Smith",
+      "year": 2014,
+      "country": "GB",
+      "genre": "Soul",
+      "difficulty": "medium",
+      "mood": ["Heartbreak", "Rainy Day", "Power Ballad"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Tom Petty und Jeff Lynne wurden nachträglich als Mitautoren anerkannt, weil die Melodie dem Refrain von 'I Won't Back Down' ähnelt.",
+        "Sam Smith schrieb diesen Song nach einer One-Night-Stand-Erfahrung und der anschließenden Bitte, doch zu bleiben.",
+        "Erschienen 2014 auf dem Dorf-Album 'In the Lonely Hour'; gewann vier Grammys inklusive 'Bestes neues Talent'.",
+        "Sparsame Gospel-Piano-Akkorde, ein Chor, der sich langsam erhebt, und Smiths intime, melancholische Falsettstimme.",
+        "Sam Smith fleht nach einer kurzen Begegnung inständig darum, dass die andere Person einfach bleibt – auch ohne Liebe."
+      ],
+      "lyrics": {
+        "real": [
+          "Guess it's true, I'm not good at a one-night stand",
+          "But I still need love 'cause I'm just a man",
+          "Won't you stay with me? 'Cause you're all I need"
+        ],
+        "fake": "The moon is high and I'm feeling so alone"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "pB-5XG-DbAA"
+      }
+    },
+    {
+      "id": "taylor-swift-shake-it-off-2014",
+      "title": "Shake It Off",
+      "artist": "Taylor Swift",
+      "year": 2014,
+      "country": "US",
+      "genre": "Pop",
+      "difficulty": "easy",
+      "mood": ["Party Anthem", "Summer Vibes", "Dance Floor"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Das Stück markierte Swifts öffentlichen Wechsel vom Country zum reinen Pop; sie schrieb es als Reaktion auf anhaltende Medienkritik.",
+        "Das Musikvideo zeigt Swift, wie sie verschiedene Tanzstile ausprobiert – und bei keinem davon besonders gut ist.",
+        "Erschienen 2014 auf dem Album '1989'; Swifts erstes Nummer-1-Pop-Album in den USA.",
+        "Fröhlicher, spritziger Pop mit Blechbläser-Elementen und einem Refrain, der zum Tanzen und Weitermachen einlädt.",
+        "Taylor Swift beschließt, von Kritik und Klatsch nicht runterziehen zu lassen – und schüttelt einfach alles ab."
+      ],
+      "lyrics": {
+        "real": [
+          "I stay out too late, got nothing in my brain",
+          "That's what people say, mmm-mmm",
+          "But I keep cruising, can't stop, won't stop moving"
+        ],
+        "fake": "I'm dancing through the rain like I don't have a care"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "nfWlot6h_JM"
+      }
+    },
+    {
+      "id": "justin-timberlake-cant-stop-the-feeling-2016",
+      "title": "Can't Stop the Feeling!",
+      "artist": "Justin Timberlake",
+      "year": 2016,
+      "country": "US",
+      "genre": "Pop",
+      "difficulty": "easy",
+      "mood": ["Dance Floor", "Summer Vibes", "Party Anthem"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Das Stück entstand für den Animationsfilm 'Trolls' und begann auf einer Ukulele, auf der Produzent Max Martin herumgespielt hatte.",
+        "Gewann 2017 den Grammy für 'Bestes Lied, das für visuelle Medien geschrieben wurde'.",
+        "Erschienen 2016; einer der wenigen Songs, der seit dem Jahr 2000 in Deutschland Platz 1 der Charts erreichte.",
+        "Sonniger Funk-Pop mit Handclaps, einem positiven Refrain und einem unwiderstehlichen Groove, der gute Laune verbreitet.",
+        "Justin Timberlake singt über ein gutes Gefühl auf der Tanzfläche, das er einfach nicht stoppen kann – niemand kann es."
+      ],
+      "lyrics": {
+        "real": [
+          "I got this feeling inside my bones",
+          "It goes electric, wavy when I turn it on",
+          "Nothing I can see but you when you dance, dance, dance"
+        ],
+        "fake": "The stars are shining on the floor where we stand"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "ru0K8uYEZWw"
+      }
+    },
+    {
+      "id": "drake-one-dance-2016",
+      "title": "One Dance",
+      "artist": "Drake",
+      "year": 2016,
+      "country": "CA",
+      "genre": "R&B",
+      "difficulty": "medium",
+      "mood": ["Chill", "Summer Vibes", "Dance Floor"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Das Stück enthält ein Sample aus dem Afrobeats-Song 'Do You Mind' von Kyla aus dem Jahr 2013.",
+        "Drake wurde von südafrikanischer Dancehall-Musik inspiriert, die er während einer Tournee kennenlernte.",
+        "Erschienen 2016; Drakes erster globaler Nummer-1-Hit und einer der meistgestreamten Songs des Jahres.",
+        "Laid-back Afrobeats-Groove, eine federleichte Melodie und Drakes typischer Singsang-Rap für eine warme Sommernacht.",
+        "Drake bittet eine Frau um nur einen Tanz, einen Drink und vielleicht noch eine weitere Chance."
+      ],
+      "lyrics": {
+        "real": [
+          "Grip on your waist, front way, back way",
+          "I need a one dance, got a Hennessy in my hand",
+          "One more time before I go, higher powers taking a hold on me"
+        ],
+        "fake": "Step to the left, then move it to the right tonight"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "qL7zrWcv6XY"
+      }
+    },
+    {
+      "id": "ed-sheeran-shape-of-you-2017",
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "year": 2017,
+      "country": "GB",
+      "genre": "Pop",
+      "difficulty": "easy",
+      "mood": ["Summer Vibes", "Dance Floor", "Road Trip"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Sheeran schrieb diesen Song eigentlich für Rihanna – sie lehnte ihn ab, und er behielt ihn für sich selbst.",
+        "Die Marimba-artige Melodie zu Beginn wurde mit einem Marimba-Synthesizer-Preset in der DAW GarageBand erzeugt.",
+        "Erschienen 2017 auf dem Album '÷' (Divide); mit über fünf Milliarden Streams einer der meistgestreamten Songs aller Zeiten.",
+        "Eingängiger Marimba-Loop, ein tropisch beeinflusster Pop-Groove und Sheerans Sprechgesang-Stil.",
+        "Ed Sheeran verliebt sich in einem Fitnessstudio – und besingt seine Lieblingsform."
+      ],
+      "lyrics": {
+        "real": [
+          "The club isn't the best place to find a lover, so the bar is where I go",
+          "I'm in love with the shape of you, we push and pull like a magnet do",
+          "Every day discovering something brand new"
+        ],
+        "fake": "We walked for hours through the city streets"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "JGwWNGJdvx8"
+      }
+    },
+    {
+      "id": "luis-fonsi-despacito-2017",
+      "title": "Despacito",
+      "artist": "Luis Fonsi ft. Daddy Yankee",
+      "year": 2017,
+      "country": "PR",
+      "genre": "Reggaeton",
+      "difficulty": "easy",
+      "mood": ["Summer Vibes", "Dance Floor", "Road Trip"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Das Musikvideo wurde in La Perla gedreht – einem historischen, damals als gefährlich geltenden Viertel von San Juan, Puerto Rico.",
+        "Die Remix-Version mit Justin Bieber machte den Song weltweit noch populärer, obwohl das Original bereits ein Mega-Hit war.",
+        "Erschienen 2017; erster hauptsächlich spanischsprachiger Nummer-1-Hit in den USA seit 'Macarena' im Jahr 1996.",
+        "Sommerlicher Reggaeton-Rhythmus, akustische Gitarre und ein langsam-verführerischer Titel, der das Tempo des Liedes selbst beschreibt.",
+        "Luis Fonsi und Daddy Yankee singen auf Spanisch über langsame, behutsame Annäherung – der Titel bedeutet 'langsam'."
+      ],
+      "lyrics": {
+        "real": [
+          "Despacito, quiero respirar tu cuello despacito",
+          "Deja que te diga cosas al oído para que te acuerdes si no estás conmigo",
+          "Pasito a pasito, suave suavecito"
+        ],
+        "fake": "Bailando juntos unter der Sonne"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "ktvTqknDobU"
+      }
+    },
+    {
+      "id": "the-weeknd-blinding-lights-2019",
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
+      "year": 2019,
+      "country": "CA",
+      "genre": "Synth-Pop",
+      "difficulty": "easy",
+      "mood": ["Neon Night", "Road Trip", "Dance Floor"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Der Synthesizer-Sound ist direkt von 80er-Jahre-Synth-Pop inspiriert – insbesondere von A-ha und Depeche Mode.",
+        "Das Stück blieb länger in den Billboard Hot 100 als jeder andere Song in der Geschichte der Charts.",
+        "Erschienen 2019 auf dem Album 'After Hours'; laut Spotify einer der meistgestreamten Songs aller Zeiten.",
+        "Pulsierender Retro-Synthesizer, ein laufendes Tempo und die hohe Falsettstimme des Weeknds unter Neonlichtern.",
+        "Der Weeknd fährt durch blendende Lichter einer nächtlichen Stadt und sehnt sich verzweifelt nach einer Person."
+      ],
+      "lyrics": {
+        "real": [
+          "I've been on my own for long enough, maybe you can show me how to love",
+          "I'm blinded by the lights, no I can't sleep until I feel your touch",
+          "The city's cold and empty, no one's around to judge me"
+        ],
+        "fake": "Driving so fast through the neon glow of the street"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "4NRXx6U8ABQ"
+      }
+    },
+    {
+      "id": "billie-eilish-bad-guy-2019",
+      "title": "bad guy",
+      "artist": "Billie Eilish",
+      "year": 2019,
+      "country": "US",
+      "genre": "Pop",
+      "difficulty": "medium",
+      "mood": ["Neon Night", "Rebel", "Chill"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Billie Eilish und ihr Bruder Finneas O'Connell nahmen den Song im Schlafzimmer ihres Elternhauses auf – mit selbstgebautem Acoustic Treatment.",
+        "Das Stück verwendet einen Trap-Hi-Hat-Rhythmus, der für das Genre ungewöhnlich leise und minimalistisch eingesetzt wird.",
+        "Erschienen 2019 auf dem Debütalbum 'When We All Fall Asleep, Where Do We Go?'; gewann fünf Grammys.",
+        "Flüsteriger Gesang über einem minimalistischen Bass-Drop – ironisch, selbstbewusst und kühl.",
+        "Billie Eilish behauptet ironisch, sie sei die Böse – und unterläuft damit alle Erwartungen an einen Pop-Star."
+      ],
+      "lyrics": {
+        "real": [
+          "White shirt now red, my bloody nose",
+          "Sleeping, you're on your tippy toes, creeping around like no one knows",
+          "So you're a tough guy, like it really rough guy"
+        ],
+        "fake": "I'm sitting in the dark and waiting for you"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "DyDfgMOUjCI"
+      }
+    },
+    {
+      "id": "dua-lipa-levitating-2020",
+      "title": "Levitating",
+      "artist": "Dua Lipa",
+      "year": 2020,
+      "country": "GB",
+      "genre": "Pop",
+      "difficulty": "medium",
+      "mood": ["Dance Floor", "Summer Vibes", "Neon Night"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Das Stück wurde von Clarence Coffee Jr. und Stuart Price mitgeschrieben – beide sind auch für Hits von Ariana Grande bekannt.",
+        "Die Disco-Einflüsse wurden bewusst gewählt: Produzent Stuart Price wollte den Sound der 70er für ein 2020er-Publikum modernisieren.",
+        "Erschienen 2020 auf dem Album 'Future Nostalgia'; das Kritikerliebling-Album des Jahres 2020.",
+        "Funkiger Disco-Pop mit schwebenden Synthesizern, einem treibenden Bass und Dua Lipas warmer Stimme.",
+        "Dua Lipa fühlt sich so verliebt, dass sie das Gefühl hat zu levitieren – zu schweben."
+      ],
+      "lyrics": {
+        "real": [
+          "If you wanna run away with me, I know a galaxy",
+          "And I can take you for a ride",
+          "I'm levitating, the Milky Way, we're renegading"
+        ],
+        "fake": "We're walking on the stars above the city lights"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "TUVcZfQe-Kw"
+      }
+    },
+    {
+      "id": "glass-animals-heat-waves-2020",
+      "title": "Heat Waves",
+      "artist": "Glass Animals",
+      "year": 2020,
+      "country": "GB",
+      "genre": "Indie Pop",
+      "difficulty": "hard",
+      "mood": ["Rainy Day", "Heartbreak", "Chill"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Sänger Dave Bayley schrieb den Song auf Wunsch eines Freundes als Tribut an eine Person, die er sehr vermisste.",
+        "Das Stück wurde durch TikTok-Nutzung wiederentdeckt und erreichte erst 2022 Platz 1 in den USA – anderthalb Jahre nach Release.",
+        "Erschienen 2020 auf dem Album 'Dreamland'; einer der seltenen Songs, der einen verzögerten globalen Durchbruch erlebte.",
+        "Traumhafter Indie-Pop mit schwimmenden Synthesizern, einem emotionalen Refrain und einem fast hypnotischen Groove.",
+        "Glass Animals singen von Hitzewellen und dem schmerzhaften Vermissen einer Person – sogar in Träumen."
+      ],
+      "lyrics": {
+        "real": [
+          "Sometimes all I think about is you, late nights in the middle of June",
+          "Heat waves been faking me out, can't make you happier now",
+          "I just wonder what you're dreaming of"
+        ],
+        "fake": "The winter cold is coming to take my breath away"
+      },
+      "isOneHitWonder": false,
+      "links": {
+        "youtube": "mRD0-GxqHVo"
       }
     },
     {
@@ -1150,7 +1468,14 @@
         "Pianolastige Pop-Ballade, die von zerbrechlich und ruhig zu einem Herzschmerz-Ausbruch in der Bridge anschwillt.",
         "Olivia Rodrigo fährt zum ersten Mal allein durch die Vorstädte – mit frischem Führerschein und einem alten Herzschmerz."
       ],
-      "lyrics": null,
+      "lyrics": {
+        "real": [
+          "I got my driver's license last week, just like we always talked about",
+          "You were so excited for me to finally drive up to your house",
+          "But today I drove through the suburbs, crying 'cause you weren't around"
+        ],
+        "fake": "I bought a new car and drove it down the coast today"
+      },
       "isOneHitWonder": false,
       "links": {
         "youtube": "ZmDBbnmKpqQ"
@@ -1173,7 +1498,14 @@
         "Melancholischer 80er-inspirierter Synth-Pop mit Gitarren-Arpeggio und einem euphorisch-traurigen Refrain.",
         "Harry Styles singt, dass er nicht allein zu Hause sein soll – und dass nichts mehr so ist wie es war."
       ],
-      "lyrics": null,
+      "lyrics": {
+        "real": [
+          "Hold out your hand and you'll find me there",
+          "In this world, it's just us, you know it's not the same as it was",
+          "Answer the phone, 'Harry, you're no good alone, why are you sitting at home?'"
+        ],
+        "fake": "The road is long but I will find my way back to you"
+      },
       "isOneHitWonder": false,
       "links": {
         "youtube": "H5v3kku4y6Q"

@@ -1,37 +1,27 @@
 /**
- * Lobby-Seite
- *
- * Hier werden Spieler hinzugefügt, der Spielmodus konfiguriert und
- * das Spiel gestartet. Alle Einstellungen landen im Zustand-Store
- * und werden in localStorage persistiert.
+ * Lobby-Seite (Wizard-Edition)
+ * 
+ * Ein schrittweiser Prozess (1-4) für optimale Mobile-Nutzung.
+ * 1. Spieler | 2. Modi | 3. Packs | 4. Einstellungen
  */
 'use client';
 
-import { useState, useCallback, type KeyboardEvent } from 'react';
+import { useState, useCallback, useMemo, type KeyboardEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useGameStore } from '@/stores/game-store';
 import { PlayerCard } from '@/components/lobby/PlayerCard';
 import { ModeSelector } from '@/components/lobby/ModeSelector';
+import { PackSelector } from '@/components/lobby/PackSelector';
 import { PHOMU_CONFIG } from '@/config/game-config';
+import { AVAILABLE_PACKS } from '@/data/packs';
 import type { Difficulty } from '@/config/game-config';
 import type { TeamMode } from '@/types/player';
 
 // ─── Konstanten ───────────────────────────────────────────────────
 
-/** Emoji-Auswahl für Spieler-Avatare */
-const EMOJI_AVATARS = [
-  '🎵', '🎸', '🥁', '🎹', '🎺', '🎻', '🎤', '🎧',
-  '🦁', '🐯', '🦊', '🐺', '🦝', '🐸', '🐧', '🦄',
-  '🌟', '🔥', '⚡', '🌈', '💎', '🍕', '🚀', '👾',
-] as const;
-
-/** Farb-Palette für Spieler */
-const PLAYER_COLORS = [
-  '#FF6B35', '#FFD166', '#06D6A0', '#118AB2', '#EF476F',
-  '#A8DADC', '#F4A261', '#E9C46A', '#2A9D8F', '#E76F51',
-  '#9B5DE5', '#F15BB5', '#00BBF9', '#00F5D4', '#FEE440',
-] as const;
+const EMOJI_AVATARS = ['🎵', '🎸', '🥁', '🎹', '🎺', '🎻', '🎤', '🎧', '🦁', '🐯', '🦊', '🦄', '👾', '🚀'];
+const PLAYER_COLORS = ['#FF6B35', '#FFD166', '#06D6A0', '#118AB2', '#EF476F', '#9B5DE5', '#00BBF9'];
 
 const DIFFICULTY_OPTIONS: Array<{ value: Difficulty | 'all'; label: string }> = [
   { value: 'all',    label: 'Alle' },
@@ -44,344 +34,270 @@ const TIME_LIMIT_OPTIONS: Array<{ value: number | null; label: string }> = [
   { value: null, label: 'Kein Limit' },
   { value: 30,   label: '30 Sek.' },
   { value: 60,   label: '60 Sek.' },
-  { value: 90,   label: '90 Sek.' },
   { value: 120,  label: '2 Min.' },
 ];
 
 const TEAM_MODE_OPTIONS: Array<{ value: TeamMode; label: string; description: string }> = [
-  { value: 'individual', label: 'Individual',    description: 'Jeder spielt für sich allein' },
-  { value: 'fixed',      label: 'Feste Teams',   description: 'Teams bleiben die gesamte Partie' },
-  { value: 'shifting',   label: 'Wechselteams',  description: 'Teams werden jede Runde neu gemischt' },
+  { value: 'individual', label: 'Jeder für sich',    description: 'Klassisch' },
+  { value: 'fixed',      label: 'Teams',            description: 'Fest' },
+  { value: 'shifting',   label: 'Mix-Teams',         description: 'Rotiert' },
 ];
-
-// ─── Hilfsfunktion ────────────────────────────────────────────────
-
-/** Gibt den nächsten Index in einem Array zurück (zirkulär) */
-function nextIndex<T>(arr: readonly T[], current: T): T {
-  const idx = arr.indexOf(current);
-  return arr[(idx + 1) % arr.length] ?? arr[0] ?? current;
-}
 
 // ─── Lobby-Seite ──────────────────────────────────────────────────
 
 export default function LobbyPage() {
   const router = useRouter();
-  const { players, config, addPlayer, removePlayer, setConfig, initSession, startGame } =
-    useGameStore();
+  const { players, config, addPlayer, removePlayer, setConfig, initSession, startGame } = useGameStore();
 
-  // Lokaler State für das "Spieler hinzufügen"-Formular
-  const [nameInput, setNameInput]         = useState('');
-  const [nameError, setNameError]         = useState('');
-  const [selectedAvatar, setSelectedAvatar] = useState<string>(EMOJI_AVATARS[0]);
-  const [selectedColor, setSelectedColor]   = useState<string>(PLAYER_COLORS[0]);
+  const [step, setStep] = useState(1);
+  const [nameInput, setNameInput] = useState('');
 
-  // ─── Spieler hinzufügen ────────────────────────────────────────
+  // ─── Hilfsfunktionen ────────────────────────────────────────────
+
+  const canGoNext = useMemo(() => {
+    if (step === 1) return players.length >= PHOMU_CONFIG.MIN_PLAYERS;
+    if (step === 2) return config.selectedModes.length > 0;
+    if (step === 3) return config.selectedPacks.length > 0;
+    return true;
+  }, [step, players.length, config]);
 
   const handleAddPlayer = useCallback(() => {
-    const name = nameInput.trim();
-    if (!name) {
-      setNameError('Bitte einen Namen eingeben.');
-      return;
-    }
-    if (players.length >= PHOMU_CONFIG.MAX_PLAYERS) {
-      setNameError(`Maximal ${PHOMU_CONFIG.MAX_PLAYERS} Spieler erlaubt.`);
-      return;
-    }
+    if (!nameInput.trim()) return;
+    if (players.length >= PHOMU_CONFIG.MAX_PLAYERS) return;
 
-    addPlayer(name, selectedAvatar, selectedColor);
+    // Auto-assign color and avatar based on current player count
+    const avatar = EMOJI_AVATARS[players.length % EMOJI_AVATARS.length];
+    const color = PLAYER_COLORS[players.length % PLAYER_COLORS.length];
+
+    addPlayer(nameInput.trim(), avatar, color);
     setNameInput('');
-    setNameError('');
-    // Automatisch nächste Farbe und Avatar vorschlagen
-    setSelectedColor(nextIndex(PLAYER_COLORS, selectedColor));
-    setSelectedAvatar(nextIndex(EMOJI_AVATARS, selectedAvatar));
-  }, [nameInput, players.length, selectedAvatar, selectedColor, addPlayer]);
+  }, [nameInput, players.length, addPlayer]);
 
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent<HTMLInputElement>) => {
-      if (e.key === 'Enter') handleAddPlayer();
-    },
-    [handleAddPlayer]
-  );
-
-  // ─── Spiel starten ─────────────────────────────────────────────
-
-  const handleStartGame = useCallback(() => {
-    if (players.length < PHOMU_CONFIG.MIN_PLAYERS) return;
+  const handleStart = useCallback(() => {
     startGame();
     router.push('/game');
-  }, [players.length, startGame, router]);
+  }, [startGame, router]);
 
-  const canStart = players.length >= PHOMU_CONFIG.MIN_PLAYERS;
+  // Framer Motion Animation Variants
+  const variants = {
+    enter: (direction: number) => ({ x: direction > 0 ? '100%' : '-100%', opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (direction: number) => ({ x: direction < 0 ? '100%' : '-100%', opacity: 0 }),
+  };
 
-  // ─── Render ────────────────────────────────────────────────────
+  // ─── Render Schritte ───────────────────────────────────────────
 
   return (
-    <main className="min-h-screen p-4 md:p-8 max-w-4xl mx-auto pb-24">
-
-      {/* Seitenkopf */}
-      <div className="mb-8">
-        <h1 className="text-4xl font-black mb-1">🎮 Lobby</h1>
-        <p className="opacity-60">Konfiguriere dein Phomu-Spiel und füge Spieler hinzu.</p>
+    <main className="min-h-screen p-4 md:p-8 max-w-2xl mx-auto flex flex-col">
+      
+      {/* Header mit Progress */}
+      <div className="mb-8 flex flex-col gap-4">
+        <div className="flex items-center justify-between">
+          <h1 className="text-3xl font-black">🕹️ Lobby</h1>
+          <span className="text-sm font-bold opacity-30">Schritt {step} von 4</span>
+        </div>
+        <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+          <motion.div 
+            className="h-full bg-[var(--color-accent)]"
+            animate={{ width: `${(step / 4) * 100}%` }}
+          />
+        </div>
       </div>
 
-      {/* ── 1. Spieler hinzufügen ──────────────────────────────── */}
-      <Section title="Spieler hinzufügen">
-
-        {/* Avatar-Auswahl */}
-        <p className="text-xs opacity-50 mb-2 uppercase tracking-wider">Avatar</p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {EMOJI_AVATARS.map((emoji) => (
-            <button
-              key={emoji}
-              onClick={() => setSelectedAvatar(emoji)}
-              className={[
-                'text-xl w-9 h-9 rounded-lg transition-all',
-                selectedAvatar === emoji
-                  ? 'ring-2 ring-[var(--color-accent)] bg-[var(--color-accent)]/20 scale-110'
-                  : 'bg-white/10 hover:bg-white/20',
-              ].join(' ')}
-              aria-label={`Avatar ${emoji}`}
-              aria-pressed={selectedAvatar === emoji}
-            >
-              {emoji}
-            </button>
-          ))}
-        </div>
-
-        {/* Farb-Auswahl */}
-        <p className="text-xs opacity-50 mb-2 uppercase tracking-wider">Farbe</p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {PLAYER_COLORS.map((color) => (
-            <button
-              key={color}
-              onClick={() => setSelectedColor(color)}
-              className={[
-                'w-7 h-7 rounded-full transition-all',
-                selectedColor === color
-                  ? 'ring-2 ring-white scale-125'
-                  : 'opacity-60 hover:opacity-100 hover:scale-110',
-              ].join(' ')}
-              style={{ backgroundColor: color }}
-              aria-label={`Farbe auswählen`}
-              aria-pressed={selectedColor === color}
-            />
-          ))}
-        </div>
-
-        {/* Namenseingabe */}
-        <div className="flex gap-2">
-          <input
-            value={nameInput}
-            onChange={(e) => { setNameInput(e.target.value); setNameError(''); }}
-            onKeyDown={handleKeyDown}
-            placeholder="Spielername eingeben …"
-            maxLength={20}
-            className="flex-1 bg-white/10 border border-[var(--color-border)]
-                       rounded-xl px-4 py-2.5 focus:outline-none
-                       focus:border-[var(--color-accent)] transition-colors"
-          />
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={handleAddPlayer}
-            disabled={players.length >= PHOMU_CONFIG.MAX_PLAYERS}
-            className="px-5 py-2.5 rounded-xl bg-[var(--color-accent)] font-bold
-                       disabled:opacity-40 hover:opacity-90 transition-opacity whitespace-nowrap"
+      {/* Wizard Content Area */}
+      <div className="flex-1">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={step}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            variants={variants}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
           >
-            + Hinzufügen
-          </motion.button>
-        </div>
-        {nameError && (
-          <p className="text-[var(--color-error)] text-sm mt-2">{nameError}</p>
-        )}
-      </Section>
+            {step === 1 && (
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-xl font-bold mb-2">Wer spielt mit?</h2>
+                  <p className="text-sm opacity-60">Füge mindestens einen Spieler hinzu.</p>
+                </div>
+                
+                <div className="flex gap-2">
+                  <input
+                    value={nameInput}
+                    onChange={(e) => setNameInput(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleAddPlayer()}
+                    placeholder="Name eingeben..."
+                    className="flex-1 bg-white/10 border border-[var(--color-border)] rounded-xl px-4 py-3 focus:outline-none focus:border-[var(--color-accent)]"
+                  />
+                  <button 
+                    onClick={handleAddPlayer}
+                    className="px-6 rounded-xl bg-[var(--color-accent)] font-bold shadow-lg"
+                  >
+                    +
+                  </button>
+                </div>
 
-      {/* ── 2. Spielerliste ────────────────────────────────────── */}
-      {players.length > 0 && (
-        <Section title={`Spieler (${players.length} / ${PHOMU_CONFIG.MAX_PLAYERS})`}>
-          <AnimatePresence mode="popLayout">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {players.map((player) => (
-                <PlayerCard
-                  key={player.id}
-                  name={player.name}
-                  avatar={player.avatar}
-                  color={player.color}
-                  isPilot={player.isPilot}
-                  onRemove={() => removePlayer(player.id)}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {players.map((p) => (
+                    <PlayerCard 
+                      key={p.id} 
+                      name={p.name} 
+                      avatar={p.avatar} 
+                      color={p.color} 
+                      isPilot={p.isPilot}
+                      onRemove={() => removePlayer(p.id)}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {step === 2 && (
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-xl font-bold mb-2">Wie wird gespielt?</h2>
+                  <p className="text-sm opacity-60">Wähle die Spielmodi, die vorkommen sollen.</p>
+                </div>
+                <ModeSelector 
+                  selectedModes={config.selectedModes}
+                  onChange={(modes) => setConfig({ selectedModes: modes })}
                 />
-              ))}
-            </div>
-          </AnimatePresence>
-        </Section>
+              </div>
+            )}
+
+            {step === 3 && (
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-xl font-bold mb-2">Was hören wir?</h2>
+                  <p className="text-sm opacity-60">Wähle eines oder mehrere Song-Packs aus.</p>
+                </div>
+                <PackSelector 
+                  selectedPacks={config.selectedPacks}
+                  onChange={(packs) => setConfig({ selectedPacks: packs })}
+                />
+              </div>
+            )}
+
+            {step === 4 && (
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-xl font-bold mb-2">Feinschiff</h2>
+                  <p className="text-sm opacity-60">Letzte Einstellungen vor dem Start.</p>
+                </div>
+
+                <div className="grid gap-6">
+                  {/* Win Score */}
+                  <div className="bg-[var(--color-bg-card)]/50 p-4 rounded-2xl border border-[var(--color-border)]">
+                    <label className="text-sm font-bold opacity-60 block mb-2 uppercase tracking-wide">
+                      Zielpunkte: <span className="text-[var(--color-accent)] text-lg">{config.winCondition}</span>
+                    </label>
+                    <input 
+                      type="range" min={5} max={25} step={1}
+                      value={config.winCondition}
+                      onChange={(e) => setConfig({ winCondition: Number(e.target.value) })}
+                      className="w-full h-2 accent-[var(--color-accent)] cursor-pointer"
+                    />
+                  </div>
+
+                  {/* Difficulty */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="text-xs font-bold opacity-40 uppercase mb-2 block">Schwierigkeit</label>
+                      <select 
+                        value={config.difficulty} 
+                        onChange={(e) => setConfig({ difficulty: e.target.value as Difficulty | 'all' })}
+                        className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)] p-3 rounded-xl"
+                      >
+                        {DIFFICULTY_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="text-xs font-bold opacity-40 uppercase mb-2 block">Zeitlimit</label>
+                      <select 
+                        value={config.timeLimitSeconds ?? ''} 
+                        onChange={(e) => setConfig({ timeLimitSeconds: e.target.value ? Number(e.target.value) : null })}
+                        className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)] p-3 rounded-xl"
+                      >
+                        {TIME_LIMIT_OPTIONS.map(o => <option key={o.value ?? 'null'} value={o.value ?? ''}>{o.label}</option>)}
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Team Mode */}
+                  <div>
+                    <label className="text-xs font-bold opacity-40 uppercase mb-2 block">Team Modus</label>
+                    <div className="grid grid-cols-3 gap-2">
+                      {TEAM_MODE_OPTIONS.map(o => (
+                        <button 
+                          key={o.value}
+                          onClick={() => setConfig({ teamMode: o.value })}
+                          className={`p-3 rounded-xl border-2 text-xs font-bold transition-all ${config.teamMode === o.value ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10' : 'border-white/10 opacity-60'}`}
+                        >
+                          {o.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Summary / Replay Button if appropriate */}
+                {players.length > 0 && step === 4 && (
+                  <button 
+                    onClick={handleStart}
+                    className="w-full py-5 rounded-2xl bg-[var(--color-primary)] text-white text-xl font-black shadow-xl hover:scale-[1.02] active:scale-95 transition-all mt-4"
+                  >
+                    🚀 SPIEL STARTEN!
+                  </button>
+                )}
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Navigation Footer */}
+      <div className="mt-12 flex gap-4">
+        {step > 1 && (
+          <button 
+            onClick={() => setStep(s => s - 1)}
+            className="flex-1 py-4 rounded-xl border-2 border-[var(--color-border)] font-bold opacity-60 hover:opacity-100"
+          >
+            Zurück
+          </button>
+        )}
+        {step < 4 ? (
+          <button 
+            onClick={() => setStep(s => s + 1)}
+            disabled={!canGoNext}
+            className="flex-[2] py-4 rounded-xl bg-white/10 border border-white/20 font-black disabled:opacity-20 flex items-center justify-center gap-2"
+          >
+            Weiter {canGoNext ? '→' : '(Schritte fehlen)'}
+          </button>
+        ) : null}
+      </div>
+
+      {/* Quick Replay Functionality */}
+      {players.length > 0 && step === 1 && (
+        <div className="mt-8 pt-8 border-t border-white/5 flex flex-col items-center gap-4">
+          <p className="text-xs opacity-40 uppercase font-black">Bereits gespielt?</p>
+          <button 
+            onClick={() => setStep(4)}
+            className="text-sm font-bold text-[var(--color-accent)] hover:underline"
+          >
+            Direkt zu den Einstellungen &rarr;
+          </button>
+        </div>
       )}
 
-      {/* ── 3. Spielmodi ───────────────────────────────────────── */}
-      <Section title="Spielmodi">
-        <p className="text-sm opacity-60 mb-3">
-          Wähle einen oder mehrere Modi — das Spiel wechselt zufällig zwischen
-          den aktiven Modi.
-        </p>
-        <ModeSelector
-          selectedModes={config.selectedModes}
-          onChange={(modes) => setConfig({ selectedModes: modes })}
-        />
-      </Section>
-
-      {/* ── 4. Pack & Einstellungen ────────────────────────────── */}
-      <Section title="Pack & Einstellungen">
-
-        {/* Song-Pack */}
-        <label className="block text-sm font-semibold opacity-80 mb-1">
-          Song-Pack
-        </label>
-        <select
-          value={config.selectedPacks[0]}
-          onChange={(e) => setConfig({ selectedPacks: [e.target.value] })}
-          className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)]
-                     rounded-xl px-4 py-2.5 mb-5 focus:outline-none
-                     focus:border-[var(--color-accent)] transition-colors"
-        >
-          {PHOMU_CONFIG.SONG_PACKS.map((pack) => (
-            <option key={pack} value={pack}>{pack}</option>
-          ))}
-        </select>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-
-          {/* Schwierigkeit */}
-          <div>
-            <label className="block text-sm font-semibold opacity-80 mb-1">
-              Schwierigkeit
-            </label>
-            <select
-              value={config.difficulty}
-              onChange={(e) =>
-                setConfig({ difficulty: e.target.value as Difficulty | 'all' })
-              }
-              className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)]
-                         rounded-xl px-3 py-2.5 focus:outline-none
-                         focus:border-[var(--color-accent)] transition-colors"
-            >
-              {DIFFICULTY_OPTIONS.map((opt) => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
-              ))}
-            </select>
-          </div>
-
-          {/* Gewinnscore */}
-          <div>
-            <label className="block text-sm font-semibold opacity-80 mb-1">
-              Gewinnscore: <span className="text-[var(--color-accent)]">{config.winCondition}</span>
-            </label>
-            <input
-              type="range"
-              min={3}
-              max={30}
-              step={1}
-              value={config.winCondition}
-              onChange={(e) => setConfig({ winCondition: Number(e.target.value) })}
-              className="w-full accent-[var(--color-accent)] mt-2"
-            />
-            <div className="flex justify-between text-xs opacity-40 mt-1">
-              <span>3</span><span>30</span>
-            </div>
-          </div>
-
-          {/* Zeitlimit */}
-          <div>
-            <label className="block text-sm font-semibold opacity-80 mb-1">
-              Zeitlimit pro Runde
-            </label>
-            <select
-              value={config.timeLimitSeconds ?? ''}
-              onChange={(e) =>
-                setConfig({
-                  timeLimitSeconds: e.target.value !== '' ? Number(e.target.value) : null,
-                })
-              }
-              className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)]
-                         rounded-xl px-3 py-2.5 focus:outline-none
-                         focus:border-[var(--color-accent)] transition-colors"
-            >
-              {TIME_LIMIT_OPTIONS.map((opt) => (
-                <option key={opt.value ?? 'null'} value={opt.value ?? ''}>
-                  {opt.label}
-                </option>
-              ))}
-            </select>
-          </div>
-
-        </div>
-      </Section>
-
-      {/* ── 5. Team-Modus ──────────────────────────────────────── */}
-      <Section title="Team-Modus">
-        <div className="flex flex-col sm:flex-row gap-3">
-          {TEAM_MODE_OPTIONS.map((opt) => (
-            <button
-              key={opt.value}
-              onClick={() => setConfig({ teamMode: opt.value })}
-              className={[
-                'flex-1 p-3.5 rounded-xl border-2 text-left transition-colors',
-                config.teamMode === opt.value
-                  ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10'
-                  : 'border-[var(--color-border)] bg-[var(--color-bg-card)]/50 hover:border-white/40',
-              ].join(' ')}
-              aria-pressed={config.teamMode === opt.value}
-            >
-              <p className="font-bold text-sm">{opt.label}</p>
-              <p className="text-xs opacity-60 mt-0.5">{opt.description}</p>
-            </button>
-          ))}
-        </div>
-      </Section>
-
-      {/* ── Start-Button ───────────────────────────────────────── */}
-      <div className="flex flex-col items-center gap-3 mt-8">
-        {!canStart && (
-          <p className="text-sm opacity-50">
-            Mindestens {PHOMU_CONFIG.MIN_PLAYERS} Spieler erforderlich
-          </p>
-        )}
-
-        <motion.button
-          whileTap={{ scale: 0.97 }}
-          onClick={handleStartGame}
-          disabled={!canStart}
-          className="w-full max-w-sm py-4 rounded-2xl text-xl font-black
-                     bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)]
-                     disabled:opacity-40 transition-colors shadow-lg"
-        >
-          🚀 Spiel starten!
-        </motion.button>
-
-        <button
-          onClick={() => initSession()}
-          className="text-sm opacity-40 hover:opacity-70 transition-opacity"
-        >
-          Lobby zurücksetzen
-        </button>
-      </div>
+      {/* Reset Hint */}
+      <button 
+        onClick={() => { initSession(); setStep(1); }}
+        className="mt-12 text-xs opacity-20 hover:opacity-100 transition-opacity"
+      >
+        Komplette Lobby zurücksetzen
+      </button>
 
     </main>
-  );
-}
-
-// ─── Hilfskomponente: Abschnitt ───────────────────────────────────
-
-/** Visueller Abschnitt mit Titel-Akzentlinie */
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <section className="mb-8">
-      <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-        <span
-          className="w-1 h-5 rounded-full shrink-0"
-          style={{ backgroundColor: 'var(--color-accent)' }}
-          aria-hidden
-        />
-        <span>{title}</span>
-      </h2>
-      {children}
-    </section>
   );
 }

@@ -48,18 +48,24 @@ interface SongCardProps {
   song: PhomuSong;
   /** Ob die Hints aufgeklappt angezeigt werden sollen (Standard: false) */
   showHints?: boolean;
+  /** Admin-Modus aktiv? */
+  isAdmin?: boolean;
+  /** Callback zum Bearbeiten */
+  onEdit?: (song: PhomuSong) => void;
+  /** Callback zum sofortigen Spielen */
+  onPlay?: (song: PhomuSong) => void;
 }
 
-export function SongCard({ song, showHints = false }: SongCardProps) {
+export function SongCard({ song, showHints = false, isAdmin = false, onEdit, onPlay }: SongCardProps) {
   const diff = difficultyStyle(song.difficulty);
   const youtubeUrl = buildYoutubeUrl(song.links.youtube);
   const decade = getDecade(song.year);
   const hasLyrics = song.lyrics !== null;
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-200 overflow-hidden">
+    <div className="bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col h-full">
       {/* Kopfzeile */}
-      <div className="p-4 pb-3">
+      <div className="p-4 pb-3 flex-1">
         <div className="flex items-start justify-between gap-2">
           <div className="min-w-0">
             <h3 className="font-bold text-gray-900 text-base leading-tight truncate">
@@ -68,56 +74,58 @@ export function SongCard({ song, showHints = false }: SongCardProps) {
             <p className="text-sm text-gray-500 mt-0.5 truncate">{song.artist}</p>
           </div>
 
-          {/* YouTube-Link */}
-          {youtubeUrl ? (
-            <a
-              href={youtubeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 w-8 h-8 bg-red-50 hover:bg-red-100 rounded-lg flex items-center justify-center transition-colors"
-              title="Auf YouTube anhören"
-              aria-label={`${song.title} auf YouTube`}
-            >
-              <span className="text-red-600 text-sm">▶</span>
-            </a>
-          ) : (
-            <span
-              className="shrink-0 w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center"
-              title="Kein YouTube-Link vorhanden"
-            >
-              <span className="text-gray-400 text-sm">▶</span>
-            </span>
-          )}
+          <div className="flex gap-2">
+            {/* Quick Play Button */}
+            {onPlay && (
+              <button
+                onClick={() => onPlay(song)}
+                className="shrink-0 w-8 h-8 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors shadow-sm"
+                title="Diesen Song sofort spielen"
+              >
+                <span className="text-white text-xs">🚀</span>
+              </button>
+            )}
+
+            {/* YouTube-Link */}
+            {youtubeUrl ? (
+              <a
+                href={youtubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 w-8 h-8 bg-red-50 hover:bg-red-100 rounded-lg flex items-center justify-center transition-colors"
+                title="Auf YouTube anhören"
+                aria-label={`${song.title} auf YouTube`}
+              >
+                <span className="text-red-600 text-sm">▶</span>
+              </a>
+            ) : (
+              <span
+                className="shrink-0 w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center"
+                title="Kein YouTube-Link vorhanden"
+              >
+                <span className="text-gray-400 text-sm">▶</span>
+              </span>
+            )}
+          </div>
         </div>
 
         {/* Metadaten-Zeile */}
         <div className="flex flex-wrap gap-1.5 mt-3">
-          {/* Jahr */}
           <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-gray-100 text-gray-700 rounded text-xs font-medium">
             📅 {song.year}
           </span>
-
-          {/* Jahrzehnt */}
           <span className="inline-flex items-center px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs">
             {decade}
           </span>
-
-          {/* Land */}
           <span className="inline-flex items-center px-2 py-0.5 bg-blue-50 text-blue-700 rounded text-xs font-medium">
             🌍 {song.country}
           </span>
-
-          {/* Genre */}
           <span className="inline-flex items-center px-2 py-0.5 bg-purple-50 text-purple-700 rounded text-xs">
             🎸 {song.genre}
           </span>
-
-          {/* Schwierigkeit */}
           <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold ${diff.className}`}>
             {diff.label}
           </span>
-
-          {/* One-Hit-Wonder */}
           {song.isOneHitWonder && (
             <span className="inline-flex items-center px-2 py-0.5 bg-orange-50 text-orange-700 rounded text-xs font-semibold">
               ⭐ One-Hit-Wonder
@@ -129,10 +137,7 @@ export function SongCard({ song, showHints = false }: SongCardProps) {
         {song.mood.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {song.mood.map((m) => (
-              <span
-                key={m}
-                className="px-2 py-0.5 bg-indigo-50 text-indigo-600 rounded-full text-xs"
-              >
+              <span key={m} className="px-2 py-0.5 bg-indigo-50 text-indigo-600 rounded-full text-xs">
                 {m}
               </span>
             ))}
@@ -156,12 +161,21 @@ export function SongCard({ song, showHints = false }: SongCardProps) {
       )}
 
       {/* Footer */}
-      <div className="border-t border-gray-100 px-4 py-2 flex items-center justify-between">
-        <span className="text-xs text-gray-400">{song.pack}</span>
-        <div className="flex gap-2 text-xs">
-          <span className={hasLyrics ? 'text-green-500' : 'text-gray-300'}>
-            {hasLyrics ? '✓ Lyrics' : '○ Lyrics fehlen'}
+      <div className="border-t border-gray-100 px-4 py-2 flex items-center justify-between bg-gray-50/50">
+        <span className="text-[10px] text-gray-400 font-medium truncate max-w-[100px]">{song.pack}</span>
+        <div className="flex gap-2 items-center">
+          <span className={`text-[10px] font-bold ${hasLyrics ? 'text-green-600' : 'text-gray-300'}`}>
+            {hasLyrics ? '✓ LYRICS' : '○ NO LYRICS'}
           </span>
+          
+          {isAdmin && onEdit && (
+            <button 
+              onClick={() => onEdit(song)}
+              className="ml-2 px-2 py-1 bg-gray-900 text-white text-[10px] font-black rounded hover:bg-black transition-colors"
+            >
+              EDIT
+            </button>
+          )}
         </div>
       </div>
     </div>

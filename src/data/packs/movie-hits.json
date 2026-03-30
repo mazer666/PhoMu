@@ -1,0 +1,324 @@
+{
+  "meta": {
+    "pack": "Movie Hits",
+    "version": "1.0.0",
+    "updatedAt": "2026-03-30T16:11:35Z"
+  },
+  "songs": [
+    {
+      "id": "movie-celine-dion-my-heart-will-go-on",
+      "title": "My Heart Will Go On",
+      "artist": "Celine Dion",
+      "year": 1997,
+      "country": "CA",
+      "genre": "Pop",
+      "difficulty": "easy",
+      "mood": ["Sad", "Romantic", "Epic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Dieses Lied ist das Hauptthema des Blockbusters 'Titanic'.",
+        "Der Regisseur James Cameron wollte ursprünglich gar keinen Gesangssong für den Abspann.",
+        "Die berühmte Flötenmelodie (Penny Whistle) am Anfang erkennt man sofort.",
+        "Gewann sowohl den Oscar als auch den Golden Globe für den besten Filmsong.",
+        "Besonders emotional, wenn man an eine schwimmende Tür am Ende des Films denkt."
+      ],
+      "lyrics": { "real": ["Every night in my dreams I see you, I feel you", "That is how I know you go on", "Far across the distance and spaces between us"], "fake": "Walking through the rain, I'm calling out your name in vain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "3gK_2XdjOdY" }
+    },
+    {
+      "id": "movie-ray-parker-jr-ghostbusters",
+      "title": "Ghostbusters",
+      "artist": "Ray Parker Jr.",
+      "year": 1984,
+      "country": "US",
+      "genre": "Soundtrack",
+      "difficulty": "easy",
+      "mood": ["Fun", "Catchy", "Halloween"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Titelsong der gleichnamigen Komödie über Geisterjäger.",
+        "Der ikonische Slogan lautet: 'Who you gonna call?'",
+        "Im Refrain antwortet der Chor lautstark mit dem Filmtitel.",
+        "Wurde von einem Huey Lewis Song ('I Want a New Drug') beeinflusst (und führte zu einem Rechtsstreit).",
+        "Wenn etwas Seltsames in deiner Nachbarschaft passiert, wen rufst du an?"
+      ],
+      "lyrics": { "real": ["If there's something strange in your neighborhood, who you gonna call?", "If there's something weird and it don't look good, who you gonna call?", "I ain't afraid of no ghost"], "fake": "When the shadows fall and the monsters call for your soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "Fe93CLbHjkQ" }
+    },
+    {
+      "id": "movie-dirty-dancing-time-of-my-life",
+      "title": "(I've Had) The Time of My Life",
+      "artist": "Bill Medley & Jennifer Warnes",
+      "year": 1987,
+      "country": "US",
+      "genre": "Pop",
+      "difficulty": "medium",
+      "mood": ["Romantic", "Happy", "Classic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Das Finale des Films 'Dirty Dancing' wird durch diesen Song gekrönt.",
+        "Legendär durch die Hebefigur (The Lift) zwischen Johnny und Babyam Ende.",
+        "Gewann den Oscar für den Besten Originalsong.",
+        "Ein Duett zwischen einem Mitglied der 'Righteous Brothers' und einer Popsängerin.",
+        "Niemand schiebt Baby in eine Ecke."
+      ],
+      "lyrics": { "real": ["Now I've had the time of my life, no I never felt like this before", "Yes I swear it's the truth, and I owe it all to you", "Cause I've had the time of my life and I've searched through every open door"], "fake": "Dancing in the dark, lighting up a spark in my lonely heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "WpmILPAcRQo" }
+    },
+    {
+      "id": "movie-pharrell-happy",
+      "title": "Happy",
+      "artist": "Pharrell Williams",
+      "year": 2013,
+      "country": "US",
+      "genre": "Neo Soul",
+      "difficulty": "easy",
+      "mood": ["Happy", "Upbeat", "Dance"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Wurde für den Soundtrack von 'Ich – Einfach unverbesserlich 2' (Despicable Me 2) geschrieben.",
+        "Sollte ursprünglich von CeeLo Green gesungen werden.",
+        "Das Musikvideo war das erste '24-Stunden-Musikvideo' der Welt.",
+        "Der Text fordert dazu auf, mitzuklatschen, wenn man sich glücklich fühlt.",
+        "Refrain: 'Because I'm happy, clap along if you feel like a room without a roof.'"
+      ],
+      "lyrics": { "real": ["It might seem crazy what I'm about to say, sunshine she's here you can take a break", "Because I'm happy, clap along if you feel like a room without a roof", "Because I'm happy, clap along if you feel like happiness is the truth"], "fake": "Nothing's gonna stop me now, I'm feeling like I'm floating in the sky" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "ZbZSe6N_BXs" }
+    },
+    {
+      "id": "movie-kenny-loggins-footloose",
+      "title": "Footloose",
+      "artist": "Kenny Loggins",
+      "year": 1984,
+      "country": "US",
+      "genre": "Rock",
+      "difficulty": "easy",
+      "mood": ["Happy", "Upbeat", "Dance"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Titelsong des gleichnamigen Films mit Kevin Bacon.",
+        "Handelt von einer Stadt, in der das Tanzen verboten ist.",
+        "Der Sänger ist auch als 'King of the Movie Soundtrack' bekannt.",
+        "Fordert dazu auf, die Schuhe auszuziehen und loszutanzen ('Kick off your Sunday shoes').",
+        "Ein absoluter Tanzklassiker der 80er Jahre."
+      ],
+      "lyrics": { "real": ["Been working so hard, I'm punching my card, eight hours for what?", "I got this feeling that time's just holding me down", "I'll hit the ceiling or else I'll tear up this town"], "fake": "Running for the light, looking for a fight in the middle of the night" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "ltrMfT44XLY" }
+    },
+    {
+      "id": "movie-elton-john-can-you-feel-the-love",
+      "title": "Can You Feel the Love Tonight",
+      "artist": "Elton John",
+      "year": 1994,
+      "country": "GB",
+      "genre": "Pop",
+      "difficulty": "easy",
+      "mood": ["Romantic", "Disney", "Epic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Dieser Song ist das Herzstück des Disney-Animationsfilms 'Der König der Löwen'.",
+        "Wurde ursprünglich für die Charaktere Timon und Pumbaa geschrieben, aber Elton John wollte eine ernsthafte Ballade.",
+        "Gewann den Oscar für den Besten Originalsong 1995.",
+        "Refrain: 'And can you feel the love tonight? It is where we are.'",
+        "Besonders bewegend im Zusammenspiel mit Hans Zimmers Filmmusik."
+      ],
+      "lyrics": { "real": ["There's a calm surrender to the rush of day, when the heat of a rolling wave can be turned away", "An enchanted moment, and it sees me through", "It's enough to make kings and vagabonds believe the very best in you"], "fake": "In the circle of life, we find the strength to move throughout the night" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "fTtgVSx66M4" }
+    },
+    {
+      "id": "movie-adele-skyfall",
+      "title": "Skyfall",
+      "artist": "Adele",
+      "year": 2012,
+      "country": "GB",
+      "genre": "Soul-pop",
+      "difficulty": "medium",
+      "mood": ["Dark", "Epic", "Cinematic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Das Titellied zum gleichnamigen James-Bond-Abenteuer mit Daniel Craig.",
+        "War das erste Bond-Thema, das einen Oscar, einen Golden Globe und einen Brit Award gewann.",
+        "Enthält typische Bond-Klänge wie dramatische Streicher und Bläser.",
+        "Der Text nutzt die Metapher des 'Himmelseinsturzes' für den Zusammenbruch einer Welt.",
+        "Markante, tiefe Stimme der britischen Soul-Sängerin."
+      ],
+      "lyrics": { "real": ["This is the end, hold your breath and count to ten", "Feel the earth move and then, hear my heart burst again", "For this is the end, I've drowned and dreamt this moment"], "fake": "Diamonds are forever, they're the only thing that's gonna stay through time" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "DeumyOzKqgI" }
+    },
+    {
+      "id": "movie-irene-cara-flashdance",
+      "title": "Flashdance... What a Feeling",
+      "artist": "Irene Cara",
+      "year": 1983,
+      "country": "US",
+      "genre": "Dance",
+      "difficulty": "easy",
+      "mood": ["Upbeat", "Happy", "Inspiring"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Inspirierte eine ganze Generation von Tänzern durch den Film 'Flashdance'.",
+        "Wurde von Giorgio Moroder produziert, dem 'Vater des Disco'.",
+        "Der Text handelt davon, seine Träume wahr werden zu lassen ('Making it happen').",
+        "Die berühmte Szene mit dem Wassereimer auf der Bühne ist ikonisch.",
+        "Refrain: 'What a feeling! Being's believing!'"
+      ],
+      "lyrics": { "real": ["First, when there's nothing, but a slow glowing dream that your fear seems to hide deep inside your mind", "All alone I have cried, silent tears full of pride in a world made of steel, made of stone", "Take your passion and make it happen"], "fake": "Step into the light, feel the neon bright, dancing through the night" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "ILWSp0m9G2U" }
+    },
+    {
+      "id": "movie-bee-gees-stayin-alive",
+      "title": "Stayin' Alive",
+      "artist": "Bee Gees",
+      "year": 1977,
+      "country": "AU",
+      "genre": "Disco",
+      "difficulty": "easy",
+      "mood": ["Cool", "Dance", "Groovy"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Der Eröffnungssong von 'Saturday Night Fever' mit John Travolta.",
+        "Der Rhythmus wird weltweit zur Taktvorgabe für Wiederbelebungsmaßnahmen genutzt.",
+        "Markanter Falsett-Gesang der drei Brüder.",
+        "Showcase für den ikonischen 'Strut'-Walk zu Beginn des Films.",
+        "Der Inbegriff der Disco-Ära."
+      ],
+      "lyrics": { "real": ["Well, you can tell by the way I use my walk, I'm a woman's man: no time to talk", "Music loud and women warm, I've been kicked around since I was born", "And now it's all right, it's okay, and you may look the other way"], "fake": "Night fever, night fever, we know how to do it when the light is low" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "I_izvAbhExY" }
+    },
+    {
+      "id": "movie-huey-lewis-power-of-love",
+      "title": "The Power of Love",
+      "artist": "Huey Lewis & The News",
+      "year": 1985,
+      "country": "US",
+      "genre": "Rock",
+      "difficulty": "easy",
+      "mood": ["Happy", "Upbeat", "Classic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Wurde durch den Film 'Zurück in die Zukunft' (Back to the Future) zum Welthit.",
+        "Der Sänger hat im Film einen Cameo-Auftritt als Lehrer, der die Band auditioniert.",
+        "Nominiert für den Oscar als bester Filmsong.",
+        "Der Text preist die Kraft der Liebe, die weder Geld noch Ruhm braucht.",
+        "Ikonisches Album-Cover mit der Silhouette eines DeLoreans (indirekt)."
+      ],
+      "lyrics": { "real": ["The power of love is a curious thing, make a one man weep, make another man sing", "Change a hawk to a little white dove, more than a feeling: that's the power of love", "Tougher than diamonds, rich like cream! Stronger and harder than a bad girl's dream"], "fake": "Running back in time, try to find a rhyme, through the middle of the crime" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "wK-8TkvzXgc" }
+    },
+    {
+      "id": "movie-survivor-burning-heart",
+      "title": "Burning Heart",
+      "artist": "Survivor",
+      "year": 1985,
+      "country": "US",
+      "genre": "Hard Rock",
+      "difficulty": "medium",
+      "mood": ["Powerful", "Inspiring", "Rock"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Wurde für den Film 'Rocky IV' geschrieben (Kampf gegen Ivan Drago).",
+        "Thematisiert den Konflikt zwischen Ost und West während des Kalten Krieges.",
+        "Erreichte Platz 2 der US-Billboard-Charts.",
+        "Ein klassischer Motivations-Song für Heldenreisen.",
+        "Refrain: 'In the burning heart, just about to burst!'"
+      ],
+      "lyrics": { "real": ["Two worlds collide, rival nations", "It's a primitive clash, venting years of frustrations", "In the burning heart, just about to burst, there's a quest for satisfaction"], "fake": "Fighting for the right, in the middle of the night, shining bright" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "yL3lJfhnt8g" }
+    },
+    {
+      "id": "movie-berlin-take-my-breath-away",
+      "title": "Take My Breath Away",
+      "artist": "Berlin",
+      "year": 1986,
+      "country": "US",
+      "genre": "Synth-pop",
+      "difficulty": "easy",
+      "mood": ["Romantic", "Epic", "Classic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Das Liebesthema aus dem Film 'Top Gun'.",
+        "Gewann den Oscar für den Besten Originalsong.",
+        "Wurde von Giorgio Moroder und Tom Whitlock geschrieben.",
+        "Der markante Bass-Synthesizer leitet den atmosphärischen Song ein.",
+        "Ein absolutes Highlight für Sonnenuntergänge und Kampfjets."
+      ],
+      "lyrics": { "real": ["Watching every motion in my foolish lover's game", "On this endless ocean, finally abandoned all my shame", "Take my breath away"], "fake": "Flying high above the clouds, away from all the noisy crowds" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "Bx51eegLTY8" }
+    },
+    {
+      "id": "movie-simple-minds-dont-you-forget",
+      "title": "Don't You (Forget About Me)",
+      "artist": "Simple Minds",
+      "year": 1985,
+      "country": "GB",
+      "genre": "New Wave",
+      "difficulty": "easy",
+      "mood": ["Happy", "Inspiring", "Classic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Wurde durch den Eröffnungs- und Abspann von 'The Breakfast Club' unsterblich.",
+        "Die Band 'Simple Minds' wollte den Song erst gar nicht aufnehmen.",
+        "Die berühmten 'La-la-la-la'-Gesänge am Ende sind weltbekannt.",
+        "Das Symbol für das Teenager-Lebensgefühl der 80er Jahre.",
+        "Wer erinnert sich an die erhobene Faust am Ende?"
+      ],
+      "lyrics": { "real": ["Hey, hey, hey, hey! Ohhh...", "Won't you come see about me? I'll be alone, dancing you know it baby", "Don't you forget about me, don't, don't, don't, don't"], "fake": "Nothing's gonna change my world, you're the only special girl" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "CdqoNKCCt7A" }
+    },
+    {
+      "id": "movie-seal-kiss-from-a-rose",
+      "title": "Kiss from a Rose",
+      "artist": "Seal",
+      "year": 1994,
+      "country": "GB",
+      "genre": "Soul-pop",
+      "difficulty": "medium",
+      "mood": ["Romantic", "Epic", "Moody"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Wurde ein Welthit durch den Soundtrack von 'Batman Forever'.",
+        "Der Sänger Seal hielt den Song anfangs für 'peinlich' und wollte ihn wegwerfen.",
+        "Der Song gewann drei Grammys, darunter Record and Song of the Year.",
+        "Bekannt für seine komplexen Harmonien und Folk-Einflüsse.",
+        "Refrain: 'But did you know that when it snows, my eyes become large and the light that you shine can be seen?'"
+      ],
+      "lyrics": { "real": ["There used to be a greying tower alone on the sea", "You became the light on the dark side of me", "Love remained a drug that's the high and not the pill"], "fake": "In the middle of the night, I will hold you tight and treat you right" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "ateQQc-Ag3E" }
+    },
+    {
+      "id": "movie-idina-menzel-let-it-go",
+      "title": "Let It Go",
+      "artist": "Idina Menzel",
+      "year": 2013,
+      "country": "US",
+      "genre": "Disney",
+      "difficulty": "medium",
+      "mood": ["Powerful", "Disney", "Inspiring"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Die zentrale Hymne aus dem Disney-Film 'Die Eiskönigin' (Frozen).",
+        "Wurde in über 40 Sprachen für die verschiedenen Filmfassungen übersetzt.",
+        "Thematisiert die Befreiung von gesellschaftlichen Erwartungen und das Akzeptieren der eigenen Kräfte.",
+        "Ein globaler kultureller Phänomen-Song, besonders bei Kindern.",
+        "Lass es los! 'The cold never bothered me anyway.'"
+      ],
+      "lyrics": { "real": ["The snow glows white on the mountain tonight, not a footprint to be seen", "A kingdom of isolation, and it looks like I'm the queen", "Let it go, let it go, can't hold it back anymore"], "fake": "Building a castle in the sky, where the eagles learn to fly" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "L0MK7qz13bU" }
+    }
+  ]
+}

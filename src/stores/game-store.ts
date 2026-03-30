@@ -69,6 +69,9 @@ interface GameActions {
 
   /** Setzt alle Spieler-Scores auf 0 zurück (für "Nochmal spielen") */
   resetScores: () => void;
+
+  /** Startet sofort ein Spiel mit einem spezifischen Song (Quick Play) */
+  startQuickGame: (song: PhomuSong) => void;
 }
 
 /** Vollständiger Store-Typ = State + Actions */
@@ -264,6 +267,25 @@ export const useGameStore = create<GameStore>()(
           isGameOver: false,
           winnerId: undefined,
           roundPhase: 'drawing',
+        }));
+      },
+
+      // ── startQuickGame ───────────────────────────────────────────
+      startQuickGame(song) {
+        const { addPlayer } = get();
+        // Falls keine Spieler da sind, einen Standard-Spieler hinzufügen
+        if (get().players.length === 0) {
+          addPlayer('Spieler 1', '🎵', '#FF6B35');
+        }
+        set((state) => ({
+          currentRound: 1,
+          roundPhase: 'question',
+          currentMode: state.config.selectedModes[0] ?? 'timeline',
+          currentSong: song,
+          currentAnswers: [],
+          isGameOver: false,
+          winnerId: undefined,
+          playedSongIds: [...state.playedSongIds, song.id],
         }));
       },
     }),
