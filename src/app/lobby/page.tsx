@@ -6,7 +6,7 @@
  */
 'use client';
 
-import { useState, useCallback, useMemo, type KeyboardEvent } from 'react';
+import { useState, useEffect, useCallback, useMemo, type KeyboardEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useGameStore } from '@/stores/game-store';
@@ -14,6 +14,7 @@ import { PlayerCard } from '@/components/lobby/PlayerCard';
 import { ModeSelector } from '@/components/lobby/ModeSelector';
 import { PackSelector } from '@/components/lobby/PackSelector';
 import { QRScannerModal } from '@/components/game/QRScannerModal';
+import { Tooltip } from '@/components/ui/Tooltip';
 import { PHOMU_CONFIG } from '@/config/game-config';
 import { AVAILABLE_PACKS } from '@/data/packs';
 import type { Difficulty } from '@/config/game-config';
@@ -51,8 +52,15 @@ export default function LobbyPage() {
   const { players, config, addPlayer, removePlayer, setConfig, initSession, startGame } = useGameStore();
 
   const [step, setStep] = useState(1);
-  const [nameInput, setNameInput] = useState('');
+  const [nameInput, setNameInput] = useState(`Spieler ${players.length + 1}`);
   const [isScannerOpen, setIsScannerOpen] = useState(false);
+
+  // Update name input when players list changes (if not modified by user)
+  useEffect(() => {
+    if (nameInput.startsWith('Spieler ') || nameInput === '') {
+      setNameInput(`Spieler ${players.length + 1}`);
+    }
+  }, [players.length]);
 
   // ─── Hilfsfunktionen ────────────────────────────────────────────
 
@@ -72,7 +80,7 @@ export default function LobbyPage() {
     const color = PLAYER_COLORS[players.length % PLAYER_COLORS.length];
 
     addPlayer(nameInput.trim(), avatar, color);
-    setNameInput('');
+    // The useEffect will handle the next 'Spieler X' pre-fill
   }, [nameInput, players.length, addPlayer]);
 
   const handleStart = useCallback(() => {
@@ -132,19 +140,22 @@ export default function LobbyPage() {
                       placeholder="Name eingeben..."
                       className="flex-1 bg-white/10 border border-[var(--color-border)] rounded-2xl px-4 py-4 focus:outline-none focus:border-[var(--color-accent)] font-bold text-sm"
                     />
-                    <button 
-                      onClick={handleAddPlayer}
-                      className="px-6 rounded-2xl bg-[var(--color-accent)] font-black shadow-lg"
-                    >
-                      +
-                    </button>
-                    <button 
-                      onClick={() => setIsScannerOpen(true)}
-                      className="px-5 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center text-xl hover:bg-white/20 transition-all"
-                      title="Karte scannen"
-                    >
-                      📸
-                    </button>
+                    <Tooltip content="Spieler hinzufügen" position="top">
+                      <button 
+                        onClick={handleAddPlayer}
+                        className="px-6 py-4 rounded-2xl bg-[var(--color-accent)] font-black shadow-lg hover:scale-105 active:scale-95 transition-all text-white"
+                      >
+                        +
+                      </button>
+                    </Tooltip>
+                    <Tooltip content="Phomu-Karte scannen" position="top">
+                      <button 
+                        onClick={() => setIsScannerOpen(true)}
+                        className="px-5 py-4 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center text-xl hover:bg-white/20 transition-all active:scale-95"
+                      >
+                        📸
+                      </button>
+                    </Tooltip>
                   </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

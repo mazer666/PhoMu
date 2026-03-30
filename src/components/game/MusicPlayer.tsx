@@ -51,7 +51,7 @@ interface MusicPlayerProps {
 // ─── Komponente ───────────────────────────────────────────────────
 
 export function MusicPlayer({ youtubeLink, startSeconds = 0 }: MusicPlayerProps) {
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(false);
   const [useStandardFallback, setUseStandardFallback] = useState(false);
   const videoId = extractYouTubeId(youtubeLink);
 
@@ -119,7 +119,7 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0 }: MusicPlayerProps)
               ${muted ? 'bg-white/10 text-white opacity-60' : 'bg-green-500 text-white shadow-green-500/20'}
             `}
           >
-            {muted ? '🔇 TON EIN' : '🔊 TON AUS'}
+            {muted ? '🔈 SOUND MUTE' : '🔊 SOUND ON'}
           </button>
         </div>
       </div>

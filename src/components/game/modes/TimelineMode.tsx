@@ -9,7 +9,7 @@
 'use client';
 
 import { useMemo, useState, useEffect } from 'react';
-import { motion, AnimatePresence, useDragControls } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
 import { getAllSongs } from '@/utils/song-picker';
 
@@ -31,7 +31,7 @@ function correctSlot(song: PhomuSong, anchors: PhomuSong[]): number {
 interface TimelineModeProps {
   song: PhomuSong;
   onAnswer: (isCorrect: boolean, pointsAwarded: number) => void;
-  roundNumber?: number; // Added for discard logic
+  roundNumber?: number; 
 }
 
 export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModeProps) {
@@ -54,6 +54,34 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
     onAnswer(isCorrect, isCorrect ? TIMELINE_POINTS : 0);
   }
 
+  // Keyboard Navigation
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (isRevealed) return;
+      
+      // Numbers 1-4 for slots
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        handleDrop(parseInt(e.key) - 1);
+      }
+      
+      // Arrows for slots
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        setSelectedSlot(prev => (prev === null || prev === 0) ? 3 : prev - 1);
+      }
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+        setSelectedSlot(prev => (prev === null || prev === 3) ? 0 : prev + 1);
+      }
+
+      // Enter/Space to reveal
+      if ((e.key === 'Enter' || e.key === ' ') && selectedSlot !== null) {
+        handleReveal();
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown as any);
+    return () => window.removeEventListener('keydown', handleKeyDown as any);
+  }, [selectedSlot, isRevealed]);
+
   return (
     <div className="flex flex-col items-center px-4 py-8 gap-8 max-w-xl mx-auto min-h-[60vh]">
       
@@ -63,28 +91,26 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
           {!isRevealed ? "Hör genau hin!" : selectedSlot === correct ? "Goldrichtig! ✨" : "Leider daneben... 🌧️"}
         </h2>
         <p className="opacity-50 text-xs font-bold uppercase tracking-widest">
-          {!isRevealed ? "Ziehe die Karte in den zeitlich passenden Slot" : "Das war die Lösung"}
+          {!isRevealed ? "Wähle den Slot (Tasten 1-4 oder Klicken)" : "Das war die Lösung"}
         </p>
       </div>
 
       {/* Timeline Layout */}
       <div className="w-full relative flex flex-col gap-12 mt-4">
-        {/* Connection Line vertically (Mobile First) or Horizontal */}
+        {/* Connection Line */}
         <div className="absolute left-1/2 top-4 bottom-4 w-1 bg-white/5 -translate-x-1/2 rounded-full" />
 
-        {/* Anchor Points & Slots */}
         <div className="space-y-6">
           {[0, 1, 2, 3].map((slotIdx) => {
-            const anchor = anchors[slotIdx - 1]; // Anchor is AFTER slot i-1
             const isTarget = selectedSlot === slotIdx;
             
             return (
               <div key={slotIdx} className="relative">
-                {/* Slot Area */}
-                <div 
+                {/* Slot Area as Button for Accessibility */}
+                <button 
                   onClick={() => handleDrop(slotIdx)}
                   className={`
-                    w-full h-24 rounded-2xl border-2 border-dashed flex items-center justify-center transition-all cursor-pointer
+                    w-full h-24 rounded-2xl border-2 border-dashed flex items-center justify-center transition-all focus:outline-none focus:ring-4 focus:ring-[var(--color-accent)]/50
                     ${isTarget ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10 scale-105' : 'border-white/10 hover:border-white/20'}
                     ${isRevealed && slotIdx === correct ? 'border-green-500 bg-green-500/20' : ''}
                     ${isRevealed && isTarget && slotIdx !== correct ? 'border-red-500 bg-red-500/20' : ''}
@@ -99,7 +125,7 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
                            <img src={song.coverUrl || '/placeholder-cd.png'} className="w-16 h-16 rounded-lg object-cover shadow-2xl" alt="Cover" />
                            <div className="text-left">
                              <p className="text-xs font-black uppercase">{song.artist}</p>
-                             <p className="text-[10px] font-bold opacity-60">{song.title}</p>
+                             <p className="text-[10px] font-bold opacity-60 text-white/40">{song.title}</p>
                              <p className="text-lg font-black text-green-400">{song.year}</p>
                            </div>
                         </div>
@@ -107,7 +133,7 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
                     </div>
                   )}
                   {!isTarget && !isRevealed && (
-                    <p className="text-[10px] font-black opacity-20 uppercase tracking-widest">Hier ablegen</p>
+                    <p className="text-[10px] font-black opacity-20 uppercase tracking-widest">Slot {slotIdx + 1}</p>
                   )}
                   {isRevealed && !isTarget && slotIdx === correct && (
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 text-green-500 font-black flex items-center gap-2">
@@ -115,9 +141,9 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
                        <span className="text-2xl">←</span>
                     </div>
                   )}
-                </div>
+                </button>
 
-                {/* Anchor Card (only 3 anchors) */}
+                {/* Anchor Card */}
                 {slotIdx < 3 && anchors[slotIdx] && (
                   <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 z-10">
                     <div className="px-4 py-2 bg-[var(--color-bg-card)] border border-white/10 rounded-xl shadow-2xl">
@@ -134,15 +160,14 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
         </div>
       </div>
 
-      {/* Control Bar */}
       <footer className="fixed bottom-10 left-0 right-0 px-6 z-[60]">
         <div className="max-w-md mx-auto grid grid-cols-2 gap-4">
           {canDiscard && !isRevealed && (
             <button 
-              onClick={() => onAnswer(false, 0)} // Discard counts as "skipped/wrong"
-              className="py-4 bg-white/5 border border-white/10 rounded-2xl font-black uppercase text-xs tracking-widest"
+              onClick={() => onAnswer(false, 0)}
+              className="py-4 bg-white/5 border border-white/10 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-white/10 transition-all"
             >
-              Karte abgeben (10/10)
+              Abgeben (10/10)
             </button>
           )}
           
@@ -151,7 +176,7 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
             onClick={handleReveal}
             className={`
               col-span-full py-5 rounded-3xl font-black text-lg transition-all shadow-2xl
-              ${selectedSlot !== null && !isRevealed ? 'bg-[var(--color-accent)] animate-bounce' : 'bg-white/10 opacity-40'}
+              ${selectedSlot !== null && !isRevealed ? 'bg-[var(--color-accent)] animate-bounce text-white' : 'bg-white/10 opacity-40 text-white/40'}
             `}
           >
             {isRevealed ? "GEWERTET" : "JETZT AUFLÖSEN"}
@@ -159,7 +184,7 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
         </div>
       </footer>
 
-      {/* Initial Blank Card Animation (Just for visual flair) */}
+      {/* Initial Blank Card Placeholder */}
       <AnimatePresence>
         {!selectedSlot && (
           <motion.div 
