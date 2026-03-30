@@ -15,8 +15,6 @@ import { getAllSongs } from '@/utils/song-picker';
 import { useGameStore } from '@/stores/game-store';
 import { MusicPlayer } from '../MusicPlayer';
 
-const THRESHOLD = 10; // Ab dieser Anzahl kann eine Jahreszahl entfernt werden
-
 function randomInitialYears(count: number): number[] {
   const all = [...new Set(getAllSongs().map((s) => s.year))];
   const shuffled = all.sort(() => Math.random() - 0.5);
@@ -37,7 +35,7 @@ interface TimelineModeProps {
   onReveal?: () => void;
 }
 
-type RemovalState = 'none' | 'auto' | 'choosing' | 'done';
+type RemovalState = 'none' | 'choosing' | 'done';
 
 export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
   const { timelineYears, initTimeline, addTimelineYear, removeTimelineYear } = useGameStore();
@@ -59,7 +57,6 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
   const [removalState, setRemovalState] = useState<RemovalState>('none');
-  const [autoRemovedYear, setAutoRemovedYear] = useState<number | null>(null);
 
   const numSlots = timelineYears.length + 1;
 
@@ -74,19 +71,15 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
 
     const newYear = song.year;
     const isDuplicate = timelineYears.includes(newYear);
-    const newCount = timelineYears.length + 1;
 
     addTimelineYear(newYear);
 
-    if (newCount >= THRESHOLD) {
-      if (isDuplicate) {
-        // Duplikat entstand → automatisch entfernen
-        removeTimelineYear(newYear);
-        setAutoRemovedYear(newYear);
-        setRemovalState('auto');
-      } else {
-        setRemovalState('choosing');
-      }
+    if (isDuplicate) {
+      // Duplikat → direkt entfernen, kein Eingriff nötig
+      removeTimelineYear(newYear);
+    } else {
+      // Spieler darf optional eine Jahreszahl entfernen
+      setRemovalState('choosing');
     }
   }
 
@@ -95,7 +88,7 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
     setRemovalState('done');
   }
 
-  const canProceed = isRevealed && (removalState === 'none' || removalState === 'auto' || removalState === 'done');
+  const canProceed = isRevealed;
 
   // Keyboard navigation
   useEffect(() => {
@@ -137,19 +130,11 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
         </p>
       </div>
 
-      {/* Entfernungs-UI (ab 10 Jahreszahlen nach richtigem Tipp) */}
-      {removalState === 'auto' && autoRemovedYear !== null && (
-        <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-4 text-center">
-          <p className="text-xs font-black uppercase tracking-widest text-yellow-400">
-            Duplikat entfernt: {autoRemovedYear}
-          </p>
-        </div>
-      )}
-
+      {/* Optional: Jahreszahl entfernen nach richtigem Tipp */}
       {removalState === 'choosing' && (
         <div className="bg-[var(--color-bg-card)] border border-white/10 rounded-2xl p-4 space-y-3">
           <p className="text-xs font-black uppercase tracking-widest text-center opacity-60">
-            Timeline voll — welche Jahreszahl entfernen?
+            Eine Jahreszahl entfernen? (Optional)
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
             {timelineYears.map((year, i) => (
@@ -267,20 +252,16 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
       <footer className="fixed bottom-0 left-0 right-0 px-4 pb-6 pt-8 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/90 to-transparent z-[60]">
         <div className="max-w-md mx-auto">
           <button
-            disabled={selectedSlot === null || (isRevealed && !canProceed)}
+            disabled={selectedSlot === null}
             onClick={canProceed ? onReveal : handleReveal}
             className={[
               'w-full py-5 rounded-3xl font-black text-lg transition-all shadow-2xl',
-              (selectedSlot !== null && (!isRevealed || canProceed))
+              selectedSlot !== null
                 ? 'bg-[var(--color-accent)] text-white scale-[1.02] shadow-[0_10px_40px_-10px_rgba(var(--color-accent-rgb),0.5)]'
                 : 'bg-white/5 opacity-20 text-white/40 cursor-not-allowed',
             ].join(' ')}
           >
-            {!isRevealed
-              ? 'AUFLÖSEN'
-              : removalState === 'choosing'
-                ? 'Jahr entfernen um fortzufahren'
-                : 'WEITER →'}
+            {isRevealed ? 'WEITER →' : 'AUFLÖSEN'}
           </button>
         </div>
       </footer>
