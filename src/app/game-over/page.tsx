@@ -10,7 +10,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '@/stores/game-store';
-import { PHOMU_CONFIG } from '@/config/game-config';
 
 // ─── Podest-Konfiguration ─────────────────────────────────────────
 
@@ -24,31 +23,23 @@ const PODEST_CONFIG = [
 
 export default function GameOverPage() {
   const router = useRouter();
-  const { 
-    players, 
-    winnerId, 
-    currentRound, 
-    totalXP, 
-    unlockedPackIds,
-    isLinearProgressionEnabled,
-    initSession, 
-    startGame, 
-    resetScores 
+  const {
+    players,
+    winnerId,
+    currentRound,
+    totalXP,
+    initSession,
+    startGame,
+    resetScores
   } = useGameStore();
 
   const sessionXP = players.reduce((sum, p) => sum + p.score, 0);
   const previousTotalXP = totalXP - sessionXP;
-  
+
   // Level-Berechnung
   const currentLevel = Math.floor(totalXP / 100) + 1;
   const previousLevel = Math.floor(previousTotalXP / 100) + 1;
   const didLevelUp = currentLevel > previousLevel;
-
-  // Welche Packs wurden neu freigeschaltet?
-  const allPacks = PHOMU_CONFIG.SONG_PACKS;
-  const newlyUnlocked = allPacks
-    .filter(p => unlockedPackIds.includes(p.id))
-    .slice(Math.max(0, unlockedPackIds.length - sessionXP/100)); // Grobe Schätzung für die Animation
 
   // Guard: Kein beendetes Spiel → zur Lobby
   useEffect(() => {

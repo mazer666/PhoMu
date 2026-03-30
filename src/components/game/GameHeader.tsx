@@ -22,6 +22,7 @@ const MODE_ICONS: Record<GameMode, string> = {
   lyrics:      '📝',
   'vibe-check': '😎',
   survivor:    '🏆',
+  'cover-confusion': '🎭',
 };
 
 const MODE_LABELS: Record<GameMode, string> = {
@@ -30,6 +31,7 @@ const MODE_LABELS: Record<GameMode, string> = {
   lyrics:      'Lyrics',
   'vibe-check': 'Vibe-Check',
   survivor:    'Survivor',
+  'cover-confusion': 'Cover Confusion',
 };
 
 // ─── Props ────────────────────────────────────────────────────────
