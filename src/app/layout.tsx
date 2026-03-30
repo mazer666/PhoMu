@@ -1,0 +1,23 @@
+import type { Metadata } from 'next';
+import Providers from '@/components/Providers';
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'Phomu - The Modular Music Party Platform',
+  description:
+    'An open-source hybrid party game that bridges physical cards and digital music experiences.',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="de" data-theme="jackbox" suppressHydrationWarning>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
+}
