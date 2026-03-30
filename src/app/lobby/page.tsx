@@ -98,10 +98,10 @@ export default function LobbyPage() {
   // ─── Render Schritte ───────────────────────────────────────────
 
   return (
-    <main className="fixed inset-0 flex flex-col max-w-2xl mx-auto px-4 md:px-8 overflow-hidden">
+    <main className="max-w-2xl mx-auto px-4 md:px-8">
 
       {/* Header mit Progress */}
-      <div className="pt-4 md:pt-8 pb-4 flex flex-col gap-4 shrink-0">
+      <div className="pt-4 md:pt-8 pb-4 flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <h1 className="text-3xl font-black">🕹️ Lobby</h1>
           <span className="text-sm font-bold opacity-30">Schritt {step} von 4</span>
@@ -114,8 +114,8 @@ export default function LobbyPage() {
         </div>
       </div>
 
-      {/* Wizard Content Area — scrollable */}
-      <div className="flex-1 overflow-y-auto pb-4">
+      {/* Wizard Content Area — padding-bottom makes room for the fixed footer */}
+      <div className="pb-52">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={step}
@@ -289,43 +289,45 @@ export default function LobbyPage() {
         }}
       />
 
-      {/* Navigation Footer — always visible at bottom */}
-      <div className="shrink-0 pb-6 pt-3 flex flex-col gap-2 border-t border-white/5">
-        <div className="flex gap-3">
-          {step > 1 && (
-            <button
-              onClick={() => setStep(s => s - 1)}
-              className="flex-1 py-4 rounded-xl border-2 border-[var(--color-border)] font-bold opacity-60 hover:opacity-100"
-            >
-              Zurück
-            </button>
-          )}
-          {step < 4 && (
-            <button
-              onClick={() => setStep(s => s + 1)}
-              disabled={!canGoNext}
-              className="flex-[2] py-4 rounded-xl bg-white/10 border border-white/20 font-black disabled:opacity-20 flex items-center justify-center gap-2"
-            >
-              Weiter {canGoNext ? '→' : '(fehlt noch)'}
-            </button>
-          )}
-        </div>
+      {/* Navigation Footer — fixed at viewport bottom */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-[var(--color-bg)] border-t border-white/5">
+        <div className="max-w-2xl mx-auto px-4 md:px-8 pt-3 pb-6 flex flex-col gap-2">
+          <div className="flex gap-3">
+            {step > 1 && (
+              <button
+                onClick={() => setStep(s => s - 1)}
+                className="flex-1 py-4 rounded-xl border-2 border-[var(--color-border)] font-bold opacity-60 hover:opacity-100"
+              >
+                Zurück
+              </button>
+            )}
+            {step < 4 && (
+              <button
+                onClick={() => setStep(s => s + 1)}
+                disabled={!canGoNext}
+                className="flex-[2] py-4 rounded-xl bg-white/10 border border-white/20 font-black disabled:opacity-20 flex items-center justify-center gap-2"
+              >
+                Weiter {canGoNext ? '→' : '(fehlt noch)'}
+              </button>
+            )}
+          </div>
 
-        {players.length > 0 && step === 1 && (
+          {players.length > 0 && step === 1 && (
+            <button
+              onClick={() => setStep(4)}
+              className="text-xs font-bold text-[var(--color-accent)] opacity-60 hover:opacity-100 transition-opacity text-center py-1"
+            >
+              Direkt zu den Einstellungen →
+            </button>
+          )}
+
           <button
-            onClick={() => setStep(4)}
-            className="text-xs font-bold text-[var(--color-accent)] opacity-60 hover:opacity-100 transition-opacity text-center py-1"
+            onClick={() => { initSession(); setStep(1); }}
+            className="text-[10px] opacity-20 hover:opacity-60 transition-opacity text-center"
           >
-            Direkt zu den Einstellungen →
+            Lobby zurücksetzen
           </button>
-        )}
-
-        <button
-          onClick={() => { initSession(); setStep(1); }}
-          className="text-[10px] opacity-20 hover:opacity-60 transition-opacity text-center"
-        >
-          Lobby zurücksetzen
-        </button>
+        </div>
       </div>
 
     </main>
