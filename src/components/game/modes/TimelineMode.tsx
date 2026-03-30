@@ -12,6 +12,7 @@ import { useMemo, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
 import { getAllSongs } from '@/utils/song-picker';
+import { MusicPlayer } from '../MusicPlayer';
 
 const TIMELINE_POINTS = 5;
 
@@ -83,8 +84,15 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
   }, [selectedSlot, isRevealed]);
 
   return (
-    <div className="flex flex-col items-center px-4 py-8 gap-6 max-w-xl mx-auto min-h-[80vh] pb-40">
-      
+    <div className="flex flex-col items-center pl-10 pr-4 py-8 gap-6 max-w-xl mx-auto min-h-[80vh] pb-40">
+
+      {/* Musik Player */}
+      {song.links?.youtube && (
+        <div className="w-full">
+          <MusicPlayer youtubeLink={song.links.youtube} />
+        </div>
+      )}
+
       {/* Dynamic Header / Instruction */}
       <div className="text-center space-y-4 w-full">
         <div className="flex flex-col items-center gap-2">
@@ -166,12 +174,10 @@ export function TimelineMode({ song, onAnswer, roundNumber = 1 }: TimelineModePr
 
                 {/* Anchor Card - Moved to the Left on the Line */}
                 {slotIdx < 3 && anchors[slotIdx] && (
-                  <div className="absolute -bottom-10 left-0 -translate-x-1/2 z-20">
-                    <div className="w-16 h-16 bg-[var(--color-bg-card)] border-2 border-white/10 rounded-full flex flex-col items-center justify-center shadow-2xl ring-4 ring-black/40">
-                      <p className="text-sm font-black text-white leading-none">{anchors[slotIdx].year}</p>
+                  <div className="absolute -bottom-10 left-8 -translate-x-1/2 z-20">
+                    <div className="w-14 h-14 bg-[var(--color-bg-card)] border-2 border-white/10 rounded-full flex flex-col items-center justify-center shadow-2xl ring-4 ring-black/40">
+                      <p className="text-xs font-black text-white leading-none">{anchors[slotIdx].year}</p>
                     </div>
-                    {/* Visual Hint for the Anchor */}
-                    <div className="absolute top-1/2 left-20 -translate-y-1/2 w-4 h-[1px] bg-white/20" />
                   </div>
                 )}
               </div>
