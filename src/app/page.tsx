@@ -9,23 +9,17 @@
  */
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import ThemeSwitcher from '@/components/ui/ThemeSwitcher';
-import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
+import { useRouter } from 'next/navigation';
 
 export default function HomePage() {
   const { t } = useTranslation();
+  const router = useRouter();
 
   return (
     <main
       className="flex min-h-screen flex-col items-center justify-center px-4"
       style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}
     >
-      {/* Settings bar (top right) */}
-      <div className="fixed top-4 right-4 z-50 flex flex-col items-end gap-3">
-        <LanguageSwitcher />
-        <ThemeSwitcher />
-      </div>
-
       {/* Hero section with animated entrance */}
       <motion.div
         className="flex flex-col items-center text-center"
@@ -57,6 +51,7 @@ export default function HomePage() {
       >
         {/* Quick Start button */}
         <button
+          onClick={() => router.push('/lobby')}
           className="group relative min-w-[220px] cursor-pointer rounded-xl px-8 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
           style={{ backgroundColor: 'var(--color-primary)' }}
         >
@@ -68,6 +63,7 @@ export default function HomePage() {
 
         {/* Customize button */}
         <button
+          onClick={() => router.push('/lobby')}
           className="group relative min-w-[220px] cursor-pointer rounded-xl px-8 py-4 text-lg font-bold shadow-lg transition-transform hover:scale-105 active:scale-95"
           style={{
             backgroundColor: 'var(--color-bg-card)',

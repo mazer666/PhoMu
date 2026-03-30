@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Providers from '@/components/Providers';
+import { ConditionalNavBar } from '@/components/ui/ConditionalNavBar';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="de" data-theme="jackbox" suppressHydrationWarning>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <ConditionalNavBar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
