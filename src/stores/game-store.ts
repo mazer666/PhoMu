@@ -242,16 +242,21 @@ export const useGameStore = create<GameStore>()(
 
         // Unlock-Logik: Alle 100 XP ein neues Pack freischalten
         const allPacks = PHOMU_CONFIG.SONG_PACKS;
+        const currentUnlockCount = unlockedPackIds.length;
+        const totalPossibleUnlocks = Math.floor(newTotalXP / 100);
         const expectedUnlockCount = Math.min(
           allPacks.length,
-          3 + Math.floor(newTotalXP / 100) // Start mit 3 Packs + 1 pro 100 XP
+          3 + totalPossibleUnlocks // Start mit 3 Packs + 1 pro 100 XP
         );
 
         const newUnlockedIds = [...unlockedPackIds];
+        let newlyUnlockedPack: string | null = null;
+        
         for (let i = 0; i < expectedUnlockCount; i++) {
           const packId = allPacks[i].id;
           if (!newUnlockedIds.includes(packId)) {
             newUnlockedIds.push(packId);
+            newlyUnlockedPack = allPacks[i].name;
           }
         }
 
@@ -262,6 +267,10 @@ export const useGameStore = create<GameStore>()(
           totalXP: newTotalXP,
           unlockedPackIds: newUnlockedIds,
         });
+
+        if (newlyUnlockedPack) {
+          console.log(`🎉 NEUES PACK FREIGESCHALTET: ${newlyUnlockedPack}`);
+        }
       },
 
       // ── drawSong ─────────────────────────────────────────────────

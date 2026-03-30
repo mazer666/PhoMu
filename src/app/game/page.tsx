@@ -230,6 +230,7 @@ export default function GamePage() {
             >
               <RevealPhase
                 song={currentSong}
+                currentMode={currentMode}
                 answers={currentAnswers}
                 players={players}
                 winCondition={config.winCondition}

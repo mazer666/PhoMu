@@ -10,6 +10,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
+import { MusicPlayer } from '../MusicPlayer';
 
 interface SurvivorModeProps {
   song: PhomuSong;
@@ -43,6 +44,12 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
         <p className="opacity-50 text-sm">
           {Math.floor(song.year / 10) * 10}er · {song.genre}
         </p>
+        <div className="mt-4 w-64 mx-auto opacity-40 hover:opacity-100 transition-opacity">
+          <MusicPlayer 
+            youtubeLink={song.links.youtube} 
+            startSeconds={song.previewTimestamp?.start ?? 0} 
+          />
+        </div>
       </motion.div>
 
       {/* Frage */}

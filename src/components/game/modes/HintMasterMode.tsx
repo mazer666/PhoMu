@@ -1,9 +1,9 @@
 /**
- * Hint-Master-Modus
+ * Hint-Master-Modus (Refined Phase 5)
  *
- * Zeigt bis zu 5 Hinweise nacheinander.
- * Der Pilot tippt einen Song-Titel ein. Punkte: 5/4/3/2/1 je nach Hinweis-Ebene.
- * Der Pilot validiert die Antworten der anderen Spieler manuell.
+ * Zeigt bis zu 5 Hinweise.
+ * Ab Hinweis 4 kann Musik abgespielt werden.
+ * Kein Tippen mehr nötig — der Spieler klickt auf "Lösung" und entscheidet selbst.
  */
 'use client';
 
@@ -11,6 +11,7 @@ import { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
 import { PHOMU_CONFIG } from '@/config/game-config';
+import { MusicPlayer } from '../MusicPlayer';
 
 interface HintMasterModeProps {
   song: PhomuSong;
@@ -19,111 +20,131 @@ interface HintMasterModeProps {
 
 export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
   const [shownHints, setShownHints] = useState(1);
-  const [guessInput, setGuessInput] = useState('');
-  const [answered, setAnswered] = useState(false);
-  const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+  const [isRevealed, setIsRevealed] = useState(false);
+  const [showMusic, setShowMusic] = useState(false);
 
   const maxHints = song.hints.length;
   const points = PHOMU_CONFIG.HINT_MASTER_POINTS[shownHints - 1] ?? 1;
 
   const handleNextHint = useCallback(() => {
-    if (shownHints < maxHints) setShownHints((n) => n + 1);
+    if (shownHints < maxHints) {
+      setShownHints((n) => n + 1);
+      // Ab Hinweis 4 Musik erlauben (oder automatisch abspielen)
+      if (shownHints + 1 >= 4) setShowMusic(true);
+    }
   }, [shownHints, maxHints]);
 
-  const handleGuess = useCallback(() => {
-    if (answered || !guessInput.trim()) return;
-
-    // Normalisierte Vergleich: Groß-/Kleinschreibung ignorieren, Sonderzeichen
-    const normalize = (s: string) =>
-      s.toLowerCase().replace(/[^a-z0-9äöüß]/g, '').trim();
-
-    const correct = normalize(guessInput) === normalize(song.title);
-    setIsCorrect(correct);
-    setAnswered(true);
-    onAnswer(correct, correct ? points : 0);
-  }, [answered, guessInput, song.title, points, onAnswer]);
+  const handleFinalDecision = (isCorrect: boolean) => {
+    onAnswer(isCorrect, isCorrect ? points : 0);
+  };
 
   return (
-    <div className="flex flex-col px-6 gap-5 pt-4 max-w-lg mx-auto">
+    <div className="flex flex-col px-6 gap-6 pt-4 max-w-lg mx-auto min-h-[50vh]">
 
-      {/* Hinweis-Counter */}
-      <div className="flex items-center justify-between">
-        <p className="text-sm opacity-50">
-          Hinweis {shownHints} / {maxHints}
-        </p>
-        <p className="text-sm font-bold" style={{ color: 'var(--color-accent)' }}>
-          {points} {points === 1 ? 'Punkt' : 'Punkte'}
-        </p>
+      {/* Header Info */}
+      <div className="flex items-center justify-between bg-white/5 p-4 rounded-2xl border border-white/10">
+        <div>
+          <p className="text-[10px] font-black uppercase opacity-40">Ebene</p>
+          <p className="text-xl font-black">{shownHints} <span className="text-xs opacity-30">/ {maxHints}</span></p>
+        </div>
+        <div className="text-right">
+          <p className="text-[10px] font-black uppercase opacity-40">Mögliche Punkte</p>
+          <p className="text-xl font-black text-[var(--color-accent)]">+{points}</p>
+        </div>
       </div>
 
-      {/* Hinweis-Karten */}
-      <div className="space-y-2">
-        <AnimatePresence>
+      {/* Musik-Hinweis (Triggered @ 4 or 5) */}
+      <AnimatePresence>
+        {showMusic && !isRevealed && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            className="overflow-hidden"
+          >
+            <div className="p-4 bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 rounded-2xl space-y-3">
+              <div className="flex items-center gap-2">
+                <span className="text-lg">🔊</span>
+                <p className="text-[10px] font-black uppercase tracking-widest text-[var(--color-accent)]">Audio-Hinweis Aktiv</p>
+              </div>
+              <MusicPlayer 
+                youtubeLink={song.links.youtube} 
+                startSeconds={song.previewTimestamp?.start ?? 0} 
+              />
+              <p className="text-[9px] opacity-50 italic text-center">Tipp: Du kannst die ersten 30 Sek. wiederholen</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Hinweis-Liste */}
+      <div className="space-y-3">
+        <AnimatePresence initial={false}>
           {song.hints.slice(0, shownHints).map((hint, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.05 }}
-              className="p-4 rounded-xl text-sm leading-relaxed"
-              style={{
-                backgroundColor: 'var(--color-bg-card)',
-                border: '1px solid var(--color-border)',
-                opacity: i < shownHints - 1 ? 0.6 : 1,
-              }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className={`p-5 rounded-2xl text-sm leading-relaxed border transition-all ${i === shownHints - 1 ? 'border-[var(--color-accent)] bg-white/5' : 'border-white/5 opacity-40'}`}
             >
-              <span className="font-bold opacity-40 mr-2">#{i + 1}</span>
+              <span className="font-black opacity-20 mr-3 text-xs">0{i + 1}</span>
               {hint}
             </motion.div>
           ))}
         </AnimatePresence>
       </div>
 
-      {/* Nächster-Hinweis-Button (nur wenn noch Hinweise übrig) */}
-      {!answered && shownHints < maxHints && (
-        <button
-          onClick={handleNextHint}
-          className="py-2 rounded-xl text-sm font-semibold border opacity-60 hover:opacity-100 transition-opacity"
-          style={{ borderColor: 'var(--color-border)' }}
-        >
-          Nächster Hinweis → weniger Punkte
-        </button>
-      )}
-
-      {/* Eingabefeld */}
-      {!answered ? (
-        <div className="flex gap-2 mt-2">
-          <input
-            value={guessInput}
-            onChange={(e) => setGuessInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleGuess()}
-            placeholder="Song-Titel eingeben …"
-            className="flex-1 bg-white/10 border border-[var(--color-border)]
-                       rounded-xl px-4 py-3 focus:outline-none
-                       focus:border-[var(--color-accent)] transition-colors"
-          />
-          <button
-            onClick={handleGuess}
-            disabled={!guessInput.trim()}
-            className="px-5 py-3 rounded-xl font-bold disabled:opacity-40 transition-opacity"
-            style={{ backgroundColor: 'var(--color-accent)' }}
+      {/* Navigation & Actions */}
+      <div className="mt-auto space-y-4 pb-10">
+        {!isRevealed ? (
+          <div className="grid grid-cols-1 gap-3">
+            {shownHints < maxHints && (
+              <button
+                onClick={handleNextHint}
+                className="w-full py-4 rounded-2xl border-2 border-white/10 font-black uppercase text-xs tracking-widest hover:bg-white/5 transition-all"
+              >
+                Nächster Hinweis → {PHOMU_CONFIG.HINT_MASTER_POINTS[shownHints] ?? 1} Pkt
+              </button>
+            )}
+            
+            <button
+              onClick={() => setIsRevealed(true)}
+              className="w-full py-5 rounded-3xl bg-[var(--color-accent)] font-black text-lg shadow-xl shadow-[var(--color-accent)]/20 hover:scale-[1.02] active:scale-95 transition-all"
+            >
+              LÖSUNG ZEIGEN
+            </button>
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="text-center p-6 bg-white/5 rounded-3xl border border-white/10 space-y-6"
           >
-            ✓
-          </button>
-        </div>
-      ) : (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="text-center py-4"
-        >
-          <p className="text-4xl mb-2">{isCorrect ? '✅' : '❌'}</p>
-          <p className="font-bold">
-            {isCorrect ? `Richtig! +${points} Punkte` : 'Leider falsch.'}
-          </p>
-          <p className="text-sm opacity-50 mt-1">Wartet auf das Reveal …</p>
-        </motion.div>
-      )}
+            <div>
+               <p className="text-[10px] font-black uppercase opacity-40 mb-2">Die Antwort war</p>
+               <h3 className="text-2xl font-black">{song.title}</h3>
+               <p className="text-sm opacity-60">{song.artist}</p>
+            </div>
+            
+            <div className="space-y-3">
+              <p className="text-xs font-bold italic">Hast du es gewusst?</p>
+              <div className="flex gap-4">
+                <button
+                  onClick={() => handleFinalDecision(true)}
+                  className="flex-1 py-4 bg-green-500 rounded-2xl font-black text-white shadow-lg shadow-green-500/20"
+                >
+                  JA ✅
+                </button>
+                <button
+                  onClick={() => handleFinalDecision(false)}
+                  className="flex-1 py-4 bg-red-500 rounded-2xl font-black text-white shadow-lg shadow-red-500/20"
+                >
+                  NEIN ❌
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 }

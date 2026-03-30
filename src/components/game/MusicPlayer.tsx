@@ -52,6 +52,7 @@ interface MusicPlayerProps {
 
 export function MusicPlayer({ youtubeLink, startSeconds = 0 }: MusicPlayerProps) {
   const [muted, setMuted] = useState(true);
+  const [useStandardFallback, setUseStandardFallback] = useState(false);
   const videoId = extractYouTubeId(youtubeLink);
 
   // Kein gültiges Video vorhanden
@@ -61,45 +62,66 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0 }: MusicPlayerProps)
         className="flex items-center justify-center h-20 rounded-xl text-sm opacity-50 border"
         style={{ borderColor: 'var(--color-border)' }}
       >
-        🎵 Kein YouTube-Link verfügbar
+        🎵 Kein Musik-Link verfügbar
       </div>
     );
   }
 
+  // YouTube Music Embed URL vs Standard YouTube
+  const domain = useStandardFallback ? 'www.youtube.com' : 'music.youtube.com';
   const embedUrl =
-    `https://www.youtube.com/embed/${videoId}` +
+    `https://${domain}/embed/${videoId}` +
     `?autoplay=1&mute=${muted ? 1 : 0}&start=${startSeconds}&rel=0&modestbranding=1`;
 
   return (
-    <div className="w-full rounded-xl overflow-hidden" style={{ border: '1px solid var(--color-border)' }}>
+    <div className="w-full rounded-2xl overflow-hidden shadow-2xl transition-all" style={{ border: '1px solid var(--color-border)' }}>
       {/* Video-Frame */}
       <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 */ }}>
         <iframe
-          key={`${videoId}-${muted}`} /* Key-Wechsel erzwingt Neu-Laden beim Mute-Toggle */
+          key={`${videoId}-${muted}-${useStandardFallback}`}
           src={embedUrl}
-          title="YouTube-Player"
+          title="Phomu Music Player"
           allow="autoplay; encrypted-media"
-          allowFullScreen
+          onError={() => setUseStandardFallback(true)}
           className="absolute inset-0 w-full h-full"
         />
+        {/* Anti-Spoiler Overlay (Optional - usually handles in parent, but here we cover for safety) */}
+        {!useStandardFallback && (
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm pointer-events-none flex items-center justify-center">
+             <div className="w-12 h-12 rounded-full border-4 border-white/20 border-t-[var(--color-accent)] animate-spin" />
+          </div>
+        )}
       </div>
 
       {/* Ton-Steuerung */}
       <div
-        className="flex items-center justify-between px-3 py-2"
+        className="flex items-center justify-between px-4 py-3"
         style={{ backgroundColor: 'var(--color-bg-card)' }}
       >
-        <span className="text-xs opacity-50">YouTube</span>
-        <button
-          onClick={() => setMuted((m) => !m)}
-          className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-lg
-                     transition-colors hover:opacity-80"
-          style={{
-            backgroundColor: muted ? 'var(--color-border)' : 'var(--color-success)',
-          }}
-        >
-          {muted ? '🔇 Ton ein' : '🔊 Ton aus'}
-        </button>
+        <div className="flex flex-col">
+          <span className="text-[10px] font-black uppercase tracking-widest opacity-40">Source</span>
+          <span className="text-xs font-bold">{useStandardFallback ? 'YouTube Video' : 'YouTube Music'}</span>
+        </div>
+        <div className="flex gap-2">
+          {useStandardFallback && !domain.includes('music') && (
+            <button 
+              onClick={() => setUseStandardFallback(false)}
+              className="text-[9px] font-black uppercase opacity-40 hover:opacity-100"
+            >
+              Retry Music Mode
+            </button>
+          )}
+          <button
+            onClick={() => setMuted((m) => !m)}
+            className={`
+              flex items-center gap-2 text-xs font-black px-5 py-2 rounded-xl
+              transition-all shadow-lg active:scale-95
+              ${muted ? 'bg-white/10 text-white opacity-60' : 'bg-green-500 text-white shadow-green-500/20'}
+            `}
+          >
+            {muted ? '🔇 TON EIN' : '🔊 TON AUS'}
+          </button>
+        </div>
       </div>
     </div>
   );

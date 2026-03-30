@@ -65,9 +65,10 @@ export function VibeCheckMode({ song, onAnswer }: VibeCheckModeProps) {
         animate={{ opacity: 1, y: 0 }}
         className="text-center"
       >
-        <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Artist & Dekade</p>
+        <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Song Info</p>
         <h3 className="text-3xl font-black mb-1">{song.artist}</h3>
-        <p className="opacity-50 text-sm">{Math.floor(song.year / 10) * 10}er</p>
+        <p className="text-xl font-bold opacity-80">{song.title}</p>
+        <p className="opacity-50 text-sm mt-1">{Math.floor(song.year / 10) * 10}er</p>
       </motion.div>
 
       {/* Frage */}

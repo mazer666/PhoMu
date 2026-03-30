@@ -41,6 +41,9 @@ export interface PhomuSong {
   /** Musical genre, e.g. 'Pop', 'Rock', 'Hip-Hop', 'Electronic', 'R&B' */
   genre: string;
 
+  /** Optional: URL to the song's cover art image */
+  coverUrl?: string;
+
   /** How recognizable this song is to the average player */
   difficulty: Difficulty;
 
@@ -97,6 +100,8 @@ export interface PhomuSong {
   links: {
     /** YouTube video ID (11 characters) or full URL */
     youtube: string;
+    /** YouTube Music / Cover version ID (for Cover Confusion mode) */
+    coverLink?: string;
     /** Spotify track URI (spotify:track:xxx) or URL */
     spotify?: string;
     /** Apple Music track URL (future feature) */

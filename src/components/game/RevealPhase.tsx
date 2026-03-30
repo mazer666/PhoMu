@@ -11,12 +11,14 @@ import { motion } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
 import type { PlayerAnswer } from '@/types/game-state';
 import type { Player } from '@/types/player';
+import type { GameMode } from '@/config/game-config';
 import { MusicPlayer } from './MusicPlayer';
 
 // ─── Props ────────────────────────────────────────────────────────
 
 interface RevealPhaseProps {
   song: PhomuSong;
+  currentMode: GameMode;
   answers: PlayerAnswer[];
   players: Player[];
   winCondition: number;
@@ -42,6 +44,7 @@ const DIFFICULTY_LABELS: Record<string, string> = {
 
 export function RevealPhase({
   song,
+  currentMode,
   answers,
   players,
   winCondition,
@@ -51,7 +54,7 @@ export function RevealPhase({
   // Prüfen ob irgendein Spieler den Gewinnscore erreicht hat
   const winner = players.find((p) => p.score >= winCondition);
 
-  // Punkte-Zusammenfassung: welcher Spieler hat was bekommen?
+  // Punkte-Zusammenfassung
   const scoringRows = answers
     .filter((a) => a.pointsAwarded > 0)
     .map((a) => {
@@ -62,6 +65,37 @@ export function RevealPhase({
 
   return (
     <div className="max-w-lg mx-auto px-6 py-8 flex flex-col gap-6">
+
+      {/* Mode-Specific Reveal Info (NEW Phase 5) */}
+      {currentMode === 'lyrics' && song.lyrics && (
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white/5 border border-white/10 p-5 rounded-3xl space-y-3"
+        >
+          <p className="text-[10px] font-black uppercase opacity-40 text-center tracking-widest">Die gefälschte Zeile war</p>
+          <p className="text-sm font-mono text-center italic text-red-400">
+            &ldquo;{song.lyrics.fake}&rdquo;
+          </p>
+          <div className="pt-2 flex justify-center">
+             <span className="px-3 py-1 bg-green-500/20 text-green-500 text-[10px] font-black rounded-full border border-green-500/20">
+               DIE ANDEREN 3 WAREN ECHT
+             </span>
+          </div>
+        </motion.div>
+      )}
+
+      {currentMode === 'cover-confusion' && (
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 p-5 rounded-3xl text-center space-y-2"
+        >
+          <p className="text-[10px] font-black uppercase opacity-60">Original von</p>
+          <p className="text-2xl font-black text-[var(--color-accent)]">{song.artist}</p>
+          <p className="text-[10px] opacity-40 italic">Gehört haben wir eine Cover-Version</p>
+        </motion.div>
+      )}
 
       {/* Song-Karte */}
       <motion.div

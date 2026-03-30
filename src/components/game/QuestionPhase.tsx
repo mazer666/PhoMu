@@ -15,6 +15,7 @@ import { VibeCheckMode } from './modes/VibeCheckMode';
 import { HintMasterMode } from './modes/HintMasterMode';
 import { TimelineMode } from './modes/TimelineMode';
 import { LyricsMode } from './modes/LyricsMode';
+import { CoverConfusionMode } from './modes/CoverConfusionMode';
 
 // ─── Props ────────────────────────────────────────────────────────
 
@@ -34,6 +35,7 @@ const MODES_WITH_REVEAL_BUTTON: GameMode[] = [
   'hint-master',
   'timeline',
   'lyrics',
+  'cover-confusion',
 ];
 
 // ─── Komponente ───────────────────────────────────────────────────
@@ -72,6 +74,10 @@ export function QuestionPhase({
 
       {currentMode === 'lyrics' && (
         <LyricsMode song={song} onAnswer={handleAnswered} />
+      )}
+
+      {currentMode === 'cover-confusion' && (
+        <CoverConfusionMode song={song} onAnswer={handleAnswered} />
       )}
 
       {/* Alle-fertig-Button → Reveal für alle Modi */}

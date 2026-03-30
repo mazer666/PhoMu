@@ -14,7 +14,8 @@ export type GameMode =
   | 'hint-master'    // Mode 2: Hint-Master (5 levels, manual validation)
   | 'lyrics'         // Mode 3: Lyrics Labyrinth (fake lyric detection)
   | 'vibe-check'     // Mode 4: Vibe-Check (mood matching)
-  | 'survivor';      // Mode 5: Survivor (one-hit-wonder detection)
+  | 'survivor'       // Mode 5: Survivor (one-hit-wonder detection)
+  | 'cover-confusion'; // Mode 6: Cover Confusion (original artist detection)
 
 /** Supported music providers */
 export type MusicProvider =
@@ -99,6 +100,7 @@ export const PHOMU_CONFIG = {
     'lyrics',
     'vibe-check',
     'survivor',
+    'cover-confusion',
   ] as GameMode[],
 
   // Hint-Master Scoring (points per hint level)

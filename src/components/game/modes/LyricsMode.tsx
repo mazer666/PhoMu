@@ -100,8 +100,6 @@ function LyricsQuestion({
       <div className="grid grid-cols-1 gap-3">
         {options.map((option, i) => {
           const isSelected = selected === i;
-          const isFakeAndAnswered = answered && option.isFake;
-          const isWrong = answered && isSelected && !option.isFake;
 
           return (
             <motion.button
@@ -114,17 +112,11 @@ function LyricsQuestion({
               className="text-left p-4 rounded-xl border-2 text-sm leading-relaxed
                          font-mono transition-all disabled:cursor-default"
               style={{
-                borderColor: isFakeAndAnswered
-                  ? 'var(--color-success)'
-                  : isWrong
-                  ? 'var(--color-error)'
-                  : isSelected
+                borderColor: isSelected
                   ? 'var(--color-accent)'
                   : 'var(--color-border)',
-                backgroundColor: isFakeAndAnswered
-                  ? 'color-mix(in srgb, var(--color-success) 15%, transparent)'
-                  : isWrong
-                  ? 'color-mix(in srgb, var(--color-error) 15%, transparent)'
+                backgroundColor: isSelected
+                  ? 'color-mix(in srgb, var(--color-accent) 15%, transparent)'
                   : 'var(--color-bg-card)',
               }}
             >
@@ -132,22 +124,6 @@ function LyricsQuestion({
                 {String.fromCharCode(65 + i)}.
               </span>
               &ldquo;{option.text}&rdquo;
-              {isFakeAndAnswered && (
-                <span
-                  className="ml-2 text-xs font-sans font-bold"
-                  style={{ color: 'var(--color-success)' }}
-                >
-                  ← FAKE
-                </span>
-              )}
-              {isWrong && (
-                <span
-                  className="ml-2 text-xs font-sans font-bold"
-                  style={{ color: 'var(--color-error)' }}
-                >
-                  ← Echt!
-                </span>
-              )}
             </motion.button>
           );
         })}
@@ -157,12 +133,9 @@ function LyricsQuestion({
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-sm opacity-50 text-center"
+          className="text-sm opacity-50 text-center italic"
         >
-          {options[selected ?? -1]?.isFake
-            ? `✅ Richtig! +${LYRICS_POINTS} Punkte`
-            : '❌ Falsch!'}{' '}
-          Wartet auf das Reveal …
+          Antwort eingeloggt. Warten auf das Reveal …
         </motion.p>
       )}
     </div>

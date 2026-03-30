@@ -80,38 +80,42 @@ export default function SettingsPage() {
           </div>
         </div>
         
-        <div className="space-y-2">
-          <div className="h-4 bg-black/20 rounded-full overflow-hidden border border-white/5">
+        <div className="space-y-4">
+          <div className="h-4 bg-black/20 rounded-full overflow-hidden border border-white/5 relative">
             <motion.div 
               initial={{ width: 0 }}
               animate={{ width: `${progressToNext}%` }}
               className="h-full bg-[var(--color-accent)] shadow-[0_0_15px_rgba(var(--color-accent-rgb),0.5)]"
             />
           </div>
-          <p className="text-[10px] font-bold opacity-40 text-right uppercase">Noch {100 - progressToNext} XP bis Level {currentLevel + 1}</p>
+          <div className="flex justify-between items-center">
+             <p className="text-[10px] font-black opacity-40 uppercase tracking-widest">Lvl {currentLevel}</p>
+             <p className="text-[10px] font-black text-[var(--color-accent)] uppercase tracking-[0.2em] animate-pulse">Next Unlock: {PHOMU_CONFIG.SONG_PACKS[unlockedPackIds.length]?.name || 'All Unlocked'}</p>
+             <p className="text-[10px] font-black opacity-40 uppercase tracking-widest">Lvl {currentLevel + 1}</p>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
-          <div className="bg-white/5 p-3 rounded-2xl border border-white/5 text-center">
-            <p className="text-[10px] font-bold opacity-40 uppercase">Packs Unlocked</p>
-            <p className="text-xl font-black">{unlockedPackIds.length} / {PHOMU_CONFIG.SONG_PACKS.length}</p>
+          <div className="bg-white/5 p-4 rounded-3xl border border-white/5 text-center group hover:bg-white/10 transition-all">
+            <p className="text-[9px] font-black opacity-40 uppercase tracking-widest mb-1">Packs Unlocked</p>
+            <p className="text-2xl font-black">{unlockedPackIds.length} <span className="text-sm opacity-20">/ {PHOMU_CONFIG.SONG_PACKS.length}</span></p>
           </div>
-          <div className="bg-white/5 p-3 rounded-2xl border border-white/5 text-center">
-            <p className="text-[10px] font-bold opacity-40 uppercase">Songs Ready</p>
-            <p className="text-xl font-black">1.000</p>
+          <div className="bg-white/5 p-4 rounded-3xl border border-white/5 text-center group hover:bg-white/10 transition-all">
+            <p className="text-[9px] font-black opacity-40 uppercase tracking-widest mb-1">Songs Ready</p>
+            <p className="text-2xl font-black">1.000+</p>
           </div>
-          <div className="bg-white/5 p-3 rounded-2xl border border-white/5 text-center">
-            <p className="text-[10px] font-bold opacity-40 uppercase">Progression</p>
+          <div className="bg-white/5 p-4 rounded-3xl border border-white/5 text-center group hover:bg-white/10 transition-all">
+            <p className="text-[9px] font-black opacity-40 uppercase tracking-widest mb-1">XP System</p>
             <p className={`text-xl font-black ${isLinearProgressionEnabled ? 'text-green-400' : 'text-orange-400'}`}>
-              {isLinearProgressionEnabled ? 'AKTIV' : 'OFF'}
+              {isLinearProgressionEnabled ? 'LINEAR' : 'FREE'}
             </p>
           </div>
           <button 
             onClick={() => toggleLinearProgression()}
-            className="bg-white/10 hover:bg-white/20 p-3 rounded-2xl border border-white/10 text-center transition-all active:scale-95"
+            className="bg-[var(--color-accent)] text-white p-4 rounded-3xl shadow-xl shadow-[var(--color-accent)]/20 hover:scale-105 active:scale-95 transition-all flex flex-col items-center justify-center"
           >
-            <p className="text-[10px] font-bold uppercase underline decoration-[var(--color-accent)]">Umschalten</p>
-            <p className="text-[10px] font-black opacity-60 uppercase mt-1">Free Play Mode</p>
+            <p className="text-[9px] font-black uppercase tracking-widest">Spielfluss</p>
+            <p className="text-xs font-black uppercase">Ändern</p>
           </button>
         </div>
       </section>

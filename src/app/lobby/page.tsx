@@ -13,6 +13,7 @@ import { useGameStore } from '@/stores/game-store';
 import { PlayerCard } from '@/components/lobby/PlayerCard';
 import { ModeSelector } from '@/components/lobby/ModeSelector';
 import { PackSelector } from '@/components/lobby/PackSelector';
+import { QRScannerModal } from '@/components/game/QRScannerModal';
 import { PHOMU_CONFIG } from '@/config/game-config';
 import { AVAILABLE_PACKS } from '@/data/packs';
 import type { Difficulty } from '@/config/game-config';
@@ -51,6 +52,7 @@ export default function LobbyPage() {
 
   const [step, setStep] = useState(1);
   const [nameInput, setNameInput] = useState('');
+  const [isScannerOpen, setIsScannerOpen] = useState(false);
 
   // ─── Hilfsfunktionen ────────────────────────────────────────────
 
@@ -122,21 +124,28 @@ export default function LobbyPage() {
                   <p className="text-sm opacity-60">Füge mindestens einen Spieler hinzu.</p>
                 </div>
                 
-                <div className="flex gap-2">
-                  <input
-                    value={nameInput}
-                    onChange={(e) => setNameInput(e.target.value)}
-                    onKeyDown={(e) => e.key === 'Enter' && handleAddPlayer()}
-                    placeholder="Name eingeben..."
-                    className="flex-1 bg-white/10 border border-[var(--color-border)] rounded-xl px-4 py-3 focus:outline-none focus:border-[var(--color-accent)]"
-                  />
-                  <button 
-                    onClick={handleAddPlayer}
-                    className="px-6 rounded-xl bg-[var(--color-accent)] font-bold shadow-lg"
-                  >
-                    +
-                  </button>
-                </div>
+                  <div className="flex gap-2">
+                    <input
+                      value={nameInput}
+                      onChange={(e) => setNameInput(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && handleAddPlayer()}
+                      placeholder="Name eingeben..."
+                      className="flex-1 bg-white/10 border border-[var(--color-border)] rounded-2xl px-4 py-4 focus:outline-none focus:border-[var(--color-accent)] font-bold text-sm"
+                    />
+                    <button 
+                      onClick={handleAddPlayer}
+                      className="px-6 rounded-2xl bg-[var(--color-accent)] font-black shadow-lg"
+                    >
+                      +
+                    </button>
+                    <button 
+                      onClick={() => setIsScannerOpen(true)}
+                      className="px-5 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center text-xl hover:bg-white/20 transition-all"
+                      title="Karte scannen"
+                    >
+                      📸
+                    </button>
+                  </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {players.map((p) => (
@@ -289,6 +298,20 @@ export default function LobbyPage() {
           </button>
         </div>
       )}
+
+      <QRScannerModal 
+        isOpen={isScannerOpen} 
+        onClose={() => setIsScannerOpen(false)}
+        onScan={(text) => {
+          // If code starts with @, treat it as a player name/alias
+          if (text.startsWith('@')) {
+            setNameInput(text.substring(1));
+            handleAddPlayer();
+          } else {
+             alert(`Gescannter Code: ${text}\n(Zukünftige Funktion: Song-Favoriten oder Deck-Import)`);
+          }
+        }}
+      />
 
       {/* Reset Hint */}
       <button 
