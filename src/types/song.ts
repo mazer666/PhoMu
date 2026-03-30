@@ -64,13 +64,16 @@ export interface PhomuSong {
    */
   hints: [string, string, string, string, string];
 
-  /** Lyrics data for Lyrics Labyrinth mode */
+  /**
+   * Lyrics data for Lyrics Labyrinth mode.
+   * null = noch nicht eingetragen (wird über Admin-Tool ausgefüllt).
+   */
   lyrics: {
     /** Exactly 3 real lyric lines from the actual song */
     real: [string, string, string];
     /** 1 AI-generated fake lyric line that sounds plausible but is wrong */
     fake: string;
-  };
+  } | null;
 
   /**
    * For Survivor mode: true if the artist had only 1 major hit (one-hit wonder),
