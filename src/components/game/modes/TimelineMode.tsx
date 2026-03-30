@@ -1,32 +1,34 @@
 /**
- * Timeline-Modus — Progressive Difficulty
+ * Timeline-Modus — Gemeinsame wachsende Timeline
  *
- * Startet mit 2 Ankern (3 Slots). Für jede richtig platzierte Karte
- * wächst die Timeline um einen Anker (= einen Slot schwieriger).
- * Max: 8 Anker / 9 Slots.
+ * Startet mit 3 zufälligen Jahreszahlen.
+ * Richtig geraten → Jahreszahl des Songs wird hinzugefügt.
+ * Ab 10 Jahreszahlen: Spieler darf eine entfernen.
+ *   - Duplikat entstanden → wird automatisch entfernt
+ *   - Kein Duplikat → Spieler wählt selbst
  */
 'use client';
 
-import { useMemo, useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import type { PhomuSong } from '@/types/song';
 import { getAllSongs } from '@/utils/song-picker';
 import { useGameStore } from '@/stores/game-store';
 import { MusicPlayer } from '../MusicPlayer';
 
-const MIN_ANCHORS = 2;
-const MAX_ANCHORS = 8;
+const THRESHOLD = 10; // Ab dieser Anzahl kann eine Jahreszahl entfernt werden
 
-function pickAnchors(currentSongId: string, count: number): PhomuSong[] {
-  const pool = getAllSongs().filter((s) => s.id !== currentSongId);
-  const shuffled = [...pool].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, count).sort((a, b) => a.year - b.year);
+function randomInitialYears(count: number): number[] {
+  const all = [...new Set(getAllSongs().map((s) => s.year))];
+  const shuffled = all.sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count).sort((a, b) => a - b);
 }
 
-function correctSlot(song: PhomuSong, anchors: PhomuSong[]): number {
-  for (let i = 0; i < anchors.length; i++) {
-    if (song.year <= (anchors[i]?.year ?? Infinity)) return i;
+/** Gibt den korrekten Slot-Index zurück (0 = vor erstem Jahr, n = nach letztem Jahr) */
+function correctSlot(songYear: number, sortedYears: number[]): number {
+  for (let i = 0; i < sortedYears.length; i++) {
+    if (songYear < sortedYears[i]) return i;
   }
-  return anchors.length; // after last anchor
+  return sortedYears.length;
 }
 
 interface TimelineModeProps {
@@ -35,59 +37,84 @@ interface TimelineModeProps {
   onReveal?: () => void;
 }
 
+type RemovalState = 'none' | 'auto' | 'choosing' | 'done';
+
 export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
-  const { roundHistory } = useGameStore();
+  const { timelineYears, initTimeline, addTimelineYear, removeTimelineYear } = useGameStore();
 
-  // Difficulty: count past correctly answered timeline rounds
-  const correctCount = useMemo(() =>
-    roundHistory.filter(r => r.mode === 'timeline' && r.answers.some(a => a.isCorrect)).length,
-    [roundHistory]
+  // Einmalig initialisieren, wenn Timeline noch leer ist
+  useEffect(() => {
+    if (timelineYears.length === 0) {
+      initTimeline(randomInitialYears(3));
+    }
+  }, []);
+
+  const correct = useMemo(
+    () => correctSlot(song.year, timelineYears),
+    [song.year, timelineYears],
   );
-  const numAnchors = Math.min(MIN_ANCHORS + correctCount, MAX_ANCHORS);
-  const numSlots = numAnchors + 1;
-  const points = numAnchors + 1; // more anchors = more points
 
-  const anchors = useMemo(() => pickAnchors(song.id, numAnchors), [song.id, numAnchors]);
-  const correct = useMemo(() => correctSlot(song, anchors), [song, anchors]);
+  const points = timelineYears.length + 1; // mehr Jahre = mehr Punkte
 
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
+  const [removalState, setRemovalState] = useState<RemovalState>('none');
+  const [autoRemovedYear, setAutoRemovedYear] = useState<number | null>(null);
 
-  function handleDrop(slotIndex: number) {
-    if (isRevealed) return;
-    setSelectedSlot(slotIndex);
-  }
+  const numSlots = timelineYears.length + 1;
 
+  // Nach korrekter Antwort: Jahr hinzufügen + ggf. Entfernungs-Logik
   function handleReveal() {
     if (selectedSlot === null || isRevealed) return;
     const isCorrect = selectedSlot === correct;
     setIsRevealed(true);
     onAnswer(isCorrect, isCorrect ? points : 0);
-  }
 
-  useEffect(() => {
-    function handleKeyDown(e: KeyboardEvent) {
-      if (isRevealed) return;
-      const num = parseInt(e.key);
-      if (!isNaN(num) && num >= 1 && num <= numSlots) {
-        handleDrop(num - 1);
-      }
-      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-        setSelectedSlot(prev => (prev === null || prev === 0) ? numSlots - 1 : prev - 1);
-      }
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-        setSelectedSlot(prev => (prev === null || prev === numSlots - 1) ? 0 : prev + 1);
-      }
-      if ((e.key === 'Enter' || e.key === ' ') && selectedSlot !== null) {
-        handleReveal();
+    if (!isCorrect) return;
+
+    const newYear = song.year;
+    const isDuplicate = timelineYears.includes(newYear);
+    const newCount = timelineYears.length + 1;
+
+    addTimelineYear(newYear);
+
+    if (newCount >= THRESHOLD) {
+      if (isDuplicate) {
+        // Duplikat entstand → automatisch entfernen
+        removeTimelineYear(newYear);
+        setAutoRemovedYear(newYear);
+        setRemovalState('auto');
+      } else {
+        setRemovalState('choosing');
       }
     }
-    window.addEventListener('keydown', handleKeyDown as any);
-    return () => window.removeEventListener('keydown', handleKeyDown as any);
+  }
+
+  function handleRemoveYear(year: number) {
+    removeTimelineYear(year);
+    setRemovalState('done');
+  }
+
+  const canProceed = isRevealed && (removalState === 'none' || removalState === 'auto' || removalState === 'done');
+
+  // Keyboard navigation
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (isRevealed) return;
+      const n = parseInt(e.key);
+      if (!isNaN(n) && n >= 1 && n <= numSlots) setSelectedSlot(n - 1);
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft')
+        setSelectedSlot((p) => (p === null || p === 0 ? numSlots - 1 : p - 1));
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight')
+        setSelectedSlot((p) => (p === null || p === numSlots - 1 ? 0 : p + 1));
+      if ((e.key === 'Enter' || e.key === ' ') && selectedSlot !== null) handleReveal();
+    }
+    window.addEventListener('keydown', onKey as any);
+    return () => window.removeEventListener('keydown', onKey as any);
   }, [selectedSlot, isRevealed, numSlots]);
 
   return (
-    <div className="flex flex-col px-4 py-6 gap-5 max-w-xl mx-auto pb-40">
+    <div className="flex flex-col px-4 py-6 gap-5 max-w-xl mx-auto pb-44">
 
       {/* Musik Player */}
       {song.links?.youtube && (
@@ -99,68 +126,116 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
         <h2 className="text-2xl font-black uppercase tracking-tight">
           {!isRevealed
             ? 'Wann war dieser Song?'
-            : selectedSlot === correct ? 'Goldrichtig! ✨' : 'Leider daneben... 🌧️'}
+            : selectedSlot === correct
+              ? 'Goldrichtig! ✨'
+              : 'Leider daneben... 🌧️'}
         </h2>
-        <div className="flex items-center justify-center gap-3">
-          <p className="opacity-40 text-[9px] font-black uppercase tracking-[0.2em]">
-            {!isRevealed ? `${numSlots} Positionen · ${points} Punkte` : 'Das war die Lösung'}
-          </p>
-          {correctCount > 0 && !isRevealed && (
-            <span className="text-[9px] font-black px-2 py-0.5 rounded-full bg-[var(--color-accent)]/20 text-[var(--color-accent)] uppercase tracking-wider">
-              Lvl {correctCount + 1}
-            </span>
-          )}
-        </div>
+        <p className="opacity-40 text-[9px] font-black uppercase tracking-[0.2em]">
+          {!isRevealed
+            ? `${numSlots} Positionen · ${points} Punkte`
+            : 'Das war die Lösung'}
+        </p>
       </div>
+
+      {/* Entfernungs-UI (ab 10 Jahreszahlen nach richtigem Tipp) */}
+      {removalState === 'auto' && autoRemovedYear !== null && (
+        <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-4 text-center">
+          <p className="text-xs font-black uppercase tracking-widest text-yellow-400">
+            Duplikat entfernt: {autoRemovedYear}
+          </p>
+        </div>
+      )}
+
+      {removalState === 'choosing' && (
+        <div className="bg-[var(--color-bg-card)] border border-white/10 rounded-2xl p-4 space-y-3">
+          <p className="text-xs font-black uppercase tracking-widest text-center opacity-60">
+            Timeline voll — welche Jahreszahl entfernen?
+          </p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {timelineYears.map((year, i) => (
+              <button
+                key={`${year}-${i}`}
+                onClick={() => handleRemoveYear(year)}
+                className="px-4 py-2 rounded-xl border border-white/20 font-black text-sm hover:bg-red-500/20 hover:border-red-500/50 transition-all active:scale-95"
+              >
+                {year}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {removalState === 'done' && (
+        <div className="bg-green-500/10 border border-green-500/30 rounded-2xl p-3 text-center">
+          <p className="text-xs font-black uppercase tracking-widest text-green-400">
+            Jahreszahl entfernt ✓
+          </p>
+        </div>
+      )}
 
       {/* Timeline */}
       <div className="w-full flex flex-col">
         {Array.from({ length: numSlots }, (_, slotIdx) => {
           const isTarget = selectedSlot === slotIdx;
-          const anchor = anchors[slotIdx]; // undefined for last slot
+          const yearAfter = timelineYears[slotIdx];
 
           return (
             <div key={slotIdx} className="flex flex-col">
-              {/* Slot row */}
+              {/* Slot-Zeile */}
               <div className="flex items-center gap-3">
-                {/* Timeline line column */}
                 <div className="w-12 shrink-0 flex flex-col items-center">
-                  <div className="w-0.5 flex-1 bg-white/10 min-h-[10px]" />
+                  <div className="w-0.5 flex-1 bg-white/10 min-h-[8px]" />
                   <div className="w-2 h-2 rounded-full bg-white/20 my-0.5 shrink-0" />
-                  <div className="w-0.5 flex-1 bg-white/10 min-h-[10px]" />
+                  <div className="w-0.5 flex-1 bg-white/10 min-h-[8px]" />
                 </div>
 
-                {/* Slot button */}
                 <button
                   onClick={() => handleDrop(slotIdx)}
+                  disabled={isRevealed}
                   className={[
                     'flex-1 rounded-xl border-2 border-dashed flex items-center justify-center transition-all focus:outline-none',
                     numSlots <= 5 ? 'h-20' : numSlots <= 7 ? 'h-16' : 'h-12',
-                    isTarget && !isRevealed ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10' : '',
-                    !isTarget && !isRevealed ? 'border-white/10 bg-white/[0.02] hover:border-white/20' : '',
-                    isRevealed && slotIdx === correct ? 'border-green-500 bg-green-500/10' : '',
-                    isRevealed && isTarget && slotIdx !== correct ? 'border-red-500 bg-red-500/10' : '',
-                    isRevealed && !isTarget && slotIdx !== correct ? 'border-white/5 bg-transparent' : '',
+                    isTarget && !isRevealed
+                      ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                      : '',
+                    !isTarget && !isRevealed
+                      ? 'border-white/10 bg-white/[0.02] hover:border-white/20'
+                      : '',
+                    isRevealed && slotIdx === correct
+                      ? 'border-green-500 bg-green-500/10'
+                      : '',
+                    isRevealed && isTarget && slotIdx !== correct
+                      ? 'border-red-500 bg-red-500/10'
+                      : '',
+                    isRevealed && !isTarget && slotIdx !== correct
+                      ? 'border-white/5 bg-transparent'
+                      : '',
                   ].join(' ')}
                 >
                   {isTarget && !isRevealed && (
                     <div className="flex items-center gap-2 px-3">
                       <span className="text-sm">🎵</span>
-                      <p className="text-[10px] font-black uppercase tracking-widest animate-pulse">Eingesetzt</p>
+                      <p className="text-[10px] font-black uppercase tracking-widest animate-pulse">
+                        Eingesetzt
+                      </p>
                     </div>
                   )}
                   {isTarget && isRevealed && (
-                    <div className="flex items-center gap-3 px-3">
-                      <div className="text-left">
-                        <p className="text-xs font-black uppercase truncate max-w-[160px]">{song.artist}</p>
-                        <p className="text-[9px] opacity-40 uppercase truncate max-w-[160px] leading-none mb-0.5">{song.title}</p>
+                    <div className="flex items-center gap-3 px-3 text-left">
+                      <div>
+                        <p className="text-xs font-black uppercase truncate max-w-[160px]">
+                          {song.artist}
+                        </p>
+                        <p className="text-[9px] opacity-40 uppercase truncate max-w-[160px] leading-none mb-0.5">
+                          {song.title}
+                        </p>
                         <p className="text-lg font-black">{song.year}</p>
                       </div>
                     </div>
                   )}
                   {!isTarget && !isRevealed && (
                     <span className="text-[9px] font-black opacity-10 uppercase tracking-widest">
-                      {numSlots <= 9 ? String(slotIdx + 1) : ''}
+                      {slotIdx + 1}
                     </span>
                   )}
                   {isRevealed && !isTarget && slotIdx === correct && (
@@ -172,12 +247,12 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
                 </button>
               </div>
 
-              {/* Year label between slots */}
-              {anchor && (
+              {/* Jahreszahl zwischen Slots */}
+              {yearAfter !== undefined && (
                 <div className="flex items-center gap-3">
                   <div className="w-12 shrink-0 flex justify-center py-0.5">
                     <div className="px-2.5 py-0.5 bg-[var(--color-bg-card)] border border-white/15 rounded-full shadow-md">
-                      <p className="text-[11px] font-black text-white leading-none">{anchor.year}</p>
+                      <p className="text-[11px] font-black text-white leading-none">{yearAfter}</p>
                     </div>
                   </div>
                   <div className="flex-1 h-px bg-white/5" />
@@ -192,19 +267,28 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
       <footer className="fixed bottom-0 left-0 right-0 px-4 pb-6 pt-8 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/90 to-transparent z-[60]">
         <div className="max-w-md mx-auto">
           <button
-            disabled={selectedSlot === null}
-            onClick={isRevealed ? onReveal : handleReveal}
+            disabled={selectedSlot === null || (isRevealed && !canProceed)}
+            onClick={canProceed ? onReveal : handleReveal}
             className={[
               'w-full py-5 rounded-3xl font-black text-lg transition-all shadow-2xl',
-              selectedSlot !== null
+              (selectedSlot !== null && (!isRevealed || canProceed))
                 ? 'bg-[var(--color-accent)] text-white scale-[1.02] shadow-[0_10px_40px_-10px_rgba(var(--color-accent-rgb),0.5)]'
                 : 'bg-white/5 opacity-20 text-white/40 cursor-not-allowed',
             ].join(' ')}
           >
-            {isRevealed ? 'WEITER →' : 'AUFLÖSEN'}
+            {!isRevealed
+              ? 'AUFLÖSEN'
+              : removalState === 'choosing'
+                ? 'Jahr entfernen um fortzufahren'
+                : 'WEITER →'}
           </button>
         </div>
       </footer>
     </div>
   );
+
+  function handleDrop(slotIndex: number) {
+    if (isRevealed) return;
+    setSelectedSlot(slotIndex);
+  }
 }
