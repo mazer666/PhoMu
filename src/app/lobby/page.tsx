@@ -98,7 +98,7 @@ export default function LobbyPage() {
   // ─── Render Schritte ───────────────────────────────────────────
 
   return (
-    <main className="flex flex-col max-w-2xl mx-auto px-4 md:px-8" style={{ height: '100dvh' }}>
+    <main className="fixed inset-0 flex flex-col max-w-2xl mx-auto px-4 md:px-8 overflow-hidden">
 
       {/* Header mit Progress */}
       <div className="pt-4 md:pt-8 pb-4 flex flex-col gap-4 shrink-0">

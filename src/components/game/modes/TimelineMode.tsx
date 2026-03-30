@@ -110,8 +110,8 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
     if (isDuplicate) {
       // Duplikat → direkt entfernen, kein Eingriff nötig
       removeTimelineYear(newYear);
-    } else {
-      // Spieler darf optional eine Jahreszahl entfernen
+    } else if (timelineYears.length + 1 > 10) {
+      // Mehr als 10 Jahreszahlen → Spieler darf optional eine entfernen
       setRemovalState('choosing');
     }
   }
