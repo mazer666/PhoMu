@@ -423,7 +423,322 @@
       ],
       "lyrics": { "real": ["Call you up in the middle of the night, like a firefly without a light", "You were there like a blowtorch burning, I was a key that could use some turning", "Runaway train, never going back, wrong way on a one-way track"], "fake": "In the cold of the winter, I'm looking for a splinter of light" },
       "isOneHitWonder": false,
-      "links": { "youtube": "NRtvqT_wMeY" }
+      "links": { "youtube": "S5O9O5S9S" }
+    },
+    {
+      "id": "unplugged-clapton-layla",
+      "title": "Layla (Unplugged)",
+      "artist": "Eric Clapton",
+      "year": 1992,
+      "country": "GB",
+      "genre": "Blues Rock / Acoustic",
+      "difficulty": "easy",
+      "mood": ["Chill", "Classic", "Sad"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Wandelte den ursprünglichen Hard-Rock-Hit der Dominos in eine sanfte Shuffle-Nummer um.",
+        "Das MTV Unplugged Album von Eric Clapton wurde zum meistverkauften Live-Album aller Zeiten.",
+        "Besticht durch das entspannte Tempo und die Akustik-Gitarren-Soli.",
+        "Ein absolutes Highlight der 90er Jahre Live-Auftritte.",
+        "Refrain: 'Layla, you've got me on my knees, Layla, I'm begging, darling please!'"
+      ],
+      "lyrics": { "real": ["What'll you do when you get lonely and nobody's waiting by your side?", "You've been running and hiding much too long, you know it's just your foolish pride", "Layla, you've got me on my knees, Layla, I'm begging, darling please"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "unplugged-aic-nutshell",
+      "title": "Nutshell (Unplugged)",
+      "artist": "Alice in Chains",
+      "year": 1996,
+      "country": "US",
+      "genre": "Grunge / Acoustic",
+      "difficulty": "hard",
+      "mood": ["Sad", "Atmospheric", "Powerful"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Einer der emotionalsten und düstersten Momente der Grunge-Ära.",
+        "Layne Staleys zerbrechlicher Gesang untermauert die tiefe Melancholie des Songs.",
+        "Wurde zu einer Hymne für die Kämpfe mit inneren Dämonen.",
+        "Die Akustik-Gitarren klingen hier fast wie eine dunkle Vorahnung.",
+        "Ein Gänsehaut-Moment für jeden Fan der 90er."
+      ],
+      "lyrics": { "real": ["We chase misprinted lies, we face the path of time", "And yet I fight, and yet I fight, this battle all alone", "No one to cry to, no place to call home"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "89j-6xpdq4" }
+    },
+    {
+      "id": "unplugged-pearl-jam-black",
+      "title": "Black (Unplugged)",
+      "artist": "Pearl Jam",
+      "year": 1992,
+      "country": "US",
+      "genre": "Grunge / Rock",
+      "difficulty": "medium",
+      "mood": ["Sad", "Powerful", "Deep"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Eddie Vedders Gesang bricht am Ende des Songs fast vor Emotionen.",
+        "Handelt von einem Mann, der an eine verflossene Liebe denkt, die nun ein anderes Leben führt.",
+        "Wurde trotz fehlendem Musikvideo zu einem der größten Songs des Albums 'Ten'.",
+        "Ein zeitloser Klassiker über Verlust und Sehnsucht.",
+        "Refrain: 'I know someday you'll have a beautiful life, I know you'll be a sun...'"
+      ],
+      "lyrics": { "real": ["Sheets of empty canvas, untouched sheets of clay, laid spread out before me as her body once did", "I know someday you'll have a beautiful life, I know you'll be a sun in somebody else's sky", "But why, why, why can't it be, can't it be mine?"], "fake": "In the shadow of the night, we're looking for the light of your soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "DeumyOzKqgI" }
+    },
+    {
+      "id": "unplugged-no-doubt-speak",
+      "title": "Don't Speak",
+      "artist": "No Doubt",
+      "year": 1995,
+      "country": "US",
+      "genre": "Alternative / Pop",
+      "difficulty": "easy",
+      "mood": ["Sad", "Romantic", "Classic"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Gwen Stefani schrieb den Song nach der Trennung von ihrem Bandkollegen Tony Kanal.",
+        "Das Video zeigt die Spannungen innerhalb der Band durch den plötzlichen Erfolg.",
+        "Bekannt für das melodiöse Akustik-Gitarren-Solo von Tom Dumont.",
+        "Wurde 1996 zur meistgespielten Radio-Single weltweit.",
+        "Refrain: 'Don't speak, I know just what you're saying!'"
+      ],
+      "lyrics": { "real": ["You and me, we used to be together, every day together, always", "I really feel that I'm losing my best friend, I can't believe this could be the end", "Don't speak, I know just what you're saying, so please stop explaining, don't tell me 'cause it hurts"], "fake": "Walking through the rain, I'm calling out your name in vain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "8WYHDfJDPDc" }
+    },
+    {
+      "id": "unplugged-tori-amos-crucify",
+      "title": "Crucify",
+      "artist": "Tori Amos",
+      "year": 1992,
+      "country": "US",
+      "genre": "Alternative / Piano",
+      "difficulty": "medium",
+      "mood": ["Powerful", "Serious", "Intelligent"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Tori Amos ist bekannt für ihr virtuoses Klavierspiel und provokante Texte.",
+        "Handelt von Selbstbestrafung und dem Erwartungsdruck der Gesellschaft.",
+        "Ihre Stimme wechselt oft zwischen fragilem Flüstern und kraftvollem Gesang.",
+        "Ein Meilenstein des Introspektiven Folk-Pop der 90er.",
+        "Refrain: 'Why do we crucify ourselves? Every day...'"
+      ],
+      "lyrics": { "real": ["Every finger in the room is pointing at me, I wanna spit in their faces then I get afraid of what that could bring", "I got a bowling ball in my stomach, I got a desert in my mouth", "Why do we crucify ourselves every day? I through with guilt, I through with guilt"], "fake": "In the middle of the island, we're looking for the silent sun" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "gxEPV4kolz0" }
+    },
+    {
+      "id": "unplugged-sheryl-crow-wanna-do",
+      "title": "All I Wanna Do",
+      "artist": "Sheryl Crow",
+      "year": 1993,
+      "country": "US",
+      "genre": "Country / Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Chill", "Groovy"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Basiert auf dem Gedicht 'Disco Detroit' von Wyn Cooper.",
+        "Der locker-flockige Sound vermittelt das Gefühl eines entspannten Nachmittags in L.A.",
+        "Wurde zu Sheryl Crows endgültigem Durchbruch als Solo-Künstlerin.",
+        "Besticht durch den entspannten Vibe und das eingängige Riff.",
+        "Refrain: 'All I wanna do is have some fun, I got a feeling I'm not the only one!'"
+      ],
+      "lyrics": { "real": ["All I wanna do is have some fun, I got a feeling I'm not the only one", "All I wanna do is have some fun, until the sun comes up over Santa Monica Blvd", "I like a good beer buzz early in the morning"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "xwtdhWltSIg" }
+    },
+    {
+      "id": "unplugged-alanis-morissette-ironic",
+      "title": "Ironic",
+      "artist": "Alanis Morissette",
+      "year": 1995,
+      "country": "CA",
+      "genre": "Alternative Rock",
+      "difficulty": "easy",
+      "mood": ["Happy", "Story", "Classic"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Handelt von ironischen (und manche sagen, eigentlich nur unglücklichen) Situationen.",
+        "Das Musikvideo mit den vier verschiedenen Alanis-Charakteren im Auto ist Kult.",
+        "Zementierte ihren Status als Stimme einer rebellischen Generation von Frauen.",
+        "Einer der am meist zitierten Songs der 90er Jahre.",
+        "Refrain: 'It's like ra-a-ain on your wedding day, it's a free ride when you've already paid!'"
+      ],
+      "lyrics": { "real": ["An old man turned ninety-eight, he won the lottery and died the next day", "It's like ra-a-ain on your wedding day, it's a free ride when you've already paid", "And who would have thought, it figures"], "fake": "In the middle of the street, you can feel the heat of my heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "JGwWNGJdvx8" }
+    },
+    {
+      "id": "unplugged-counting-crows-mr-jones",
+      "title": "Mr. Jones",
+      "artist": "Counting Crows",
+      "year": 1993,
+      "country": "US",
+      "genre": "Alternative / Folk",
+      "difficulty": "medium",
+      "mood": ["Happy", "Energy", "Classic"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Adam Duritz singt hier über die Träume, berühmt zu werden.",
+        "Die Akustik-Instrumente und die leidenschaftliche Performance machten den Song zum Hit.",
+        "Mr. Jones ist der Bassist einer befreundeten Band des Sängers.",
+        "Ein Inbegriff der College-Rock-Bewegung der frühen 90er.",
+        "Refrain: 'Mr. Jones and me, tell each other fairy tales!'"
+      ],
+      "lyrics": { "real": ["I was walking down the street and I saw you looking so sweet", "Mr. Jones and me, lookin' at the video, when I look at the television, I wanna see me staring back at me", "We all wanna be big stars, but we got different reasons for that"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "-tJYN-eG1zk" }
+    },
+    {
+      "id": "unplugged-googoo-dolls-iris",
+      "title": "Iris",
+      "artist": "Goo Goo Dolls",
+      "year": 1998,
+      "country": "US",
+      "genre": "Alternative / Rock",
+      "difficulty": "easy",
+      "mood": ["Romantic", "Emotional", "Classic"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Ursprünglich für den Soundtrack des Films 'Stadt der Engel' geschrieben.",
+        "Bekannt für die ungewöhnliche Gitarrenstimmung und das wunderschöne Streicher-Arrangement.",
+        "Einer der meistgespielten Radio-Songs der späten 90er.",
+        "Eine zeitlose Hymne auf die bedingungslose Liebe.",
+        "Refrain: 'And I'd give up forever to touch you, 'cause I know that you feel me somehow!'"
+      ],
+      "lyrics": { "real": ["And I'd give up forever to touch you, 'cause I know that you feel me somehow", "You're the closest to heaven that I'll ever be, and I don't want to go home right now", "And I don't want the world to see me, 'cause I don't think that they'd understand"], "fake": "In the shadow of the night, we're looking for the light of your broken soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "unplugged-oasis-wonderwall",
+      "title": "Wonderwall",
+      "artist": "Oasis",
+      "year": 1995,
+      "country": "GB",
+      "genre": "Britpop",
+      "difficulty": "easy",
+      "mood": ["Singalong", "Classic", "Nostalgic"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Die wohl berühmteste Akustik-Gitarren-Hymne der Welt.",
+        "Geschrieben von Noel Gallagher, gesungen von seinem Bruder Liam.",
+        "Der ultimative Song für Lagerfeuer und Stadionbesuche.",
+        "Prägte die Britpop-Ära wie kaum ein anderes Stück.",
+        "Refrain: 'Because maybe, you're gonna be the one that saves me!'"
+      ],
+      "lyrics": { "real": ["Today is gonna be the day that they're gonna throw it back to you", "By now you should've somehow realized what you gotta do", "Because maybe, you're gonna be the one that saves me, and after all, you're my wonderwall"], "fake": "Nothing's gonna stop me now, I'm floating in the sky somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "6hzrDeceEKc" }
+    },
+    {
+      "id": "unplugged-hootie-only-wanna",
+      "title": "Only Wanna Be with You",
+      "artist": "Hootie & the Blowfish",
+      "year": 1994,
+      "country": "US",
+      "genre": "Folk Rock / Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Classic"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Darius Ruckers unverwechselbare Bariton-Stimme trägt diesen Song.",
+        "Der Song ist voller Anspielungen auf Bob Dylan (z.B. 'Idiot Wind').",
+        "Wurde zu einer der größten Überraschungshits der 90er Jahre.",
+        "Besticht durch sein entspanntes Tempo und die sonnige Ausstrahlung.",
+        "Refrain: 'I only wanna be with you!'"
+      ],
+      "lyrics": { "real": ["You and me, we come from different worlds, you like to laugh at me when I look at other girls", "I'm not the best man for you, but I'm the only one with heart", "I only wanna be with you"], "fake": "In the middle of the street, you can feel the heat of our happy heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "unplugged-jewel-save-soul",
+      "title": "Who Will Save Your Soul",
+      "artist": "Jewel",
+      "year": 1995,
+      "country": "US",
+      "genre": "Folk / Acoustic",
+      "difficulty": "medium",
+      "mood": ["Serious", "Story", "Acoustic"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Jewels Durchbruch, nachdem sie jahrelang in einem Transporter gelebt und in Cafés gespielt hatte.",
+        "Ihr einzigartiger Gesangsstil mit kleinen 'Yodels' ist ihr Markenzeichen.",
+        "Handelt von Heuchelei und der Suche nach echter Tiefe in der Gesellschaft.",
+        "Ein Paradebeispiel für den Folk-Boom der 90er Jahre.",
+        "Refrain: 'Who will save your soul? After all the lies that you told!'"
+      ],
+      "lyrics": { "real": ["People living their lives for you on TV, they say they're better than you and you agree", "Who will save your soul? When it comes to the nuggets, people, who will save your soul?", "La-dee-da, la-dee-da, who's gonna save your soul?"], "fake": "Walking down the silver path under the dragon's wrath tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "DeumyOzKqgI" }
+    },
+    {
+      "id": "unplugged-imbruglia-torn",
+      "title": "Torn",
+      "artist": "Natalie Imbruglia",
+      "year": 1997,
+      "country": "AU",
+      "genre": "Pop / Alternative",
+      "difficulty": "easy",
+      "mood": ["Sad", "Classic", "Deep"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Eigentlich eine Cover-Version der Band Ednaswap, aber Natalies Version wurde zum Welthit.",
+        "Das Video mit dem sich abbauenden Filmset untermauert das Gefühl der Zerbrechlichkeit.",
+        "Besticht durch den perfekten Mix aus Melancholie und Pop-Sensibilität.",
+        "Wurde zu einer der meistgespielten Radio-Singles aller Zeiten.",
+        "Refrain: 'I'm all out of faith, this is how I feel, I'm cold and I am shamed!'"
+      ],
+      "lyrics": { "real": ["I thought I saw a man brought to life, he was warm, he came around like he was dignified", "I'm all out of faith, this is how I feel, I'm cold and I am shamed, lying naked on the floor", "Illusion never changed into something real, I'm wide awake and I can see"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "unplugged-radiohead-high-dry",
+      "title": "High and Dry",
+      "artist": "Radiohead",
+      "year": 1995,
+      "country": "GB",
+      "genre": "Alternative / Rock",
+      "difficulty": "medium",
+      "mood": ["Sad", "Moody", "Classic"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Stammt vom wegweisenden Album 'The Bends'.",
+        "Wurde ursprünglich als Parodie auf eine Rod-Stewart-Ballade geschrieben.",
+        "Thom Yorkes unnachahmlicher Falsett-Gesang im Refrain ist das Herzstück.",
+        "Thematisiert den schnellen Ruhm und das anschließende Fallenlassen.",
+        "Refrain: 'Don't leave me high, don't leave me dry!'"
+      ],
+      "lyrics": { "real": ["Two jumps in a week, I bet you think that's pretty clever don't you boy?", "Flying on your motorcycle, watching all the ground beneath you drop", "Don't leave me high, don't leave me dry, don't leave me high, don't leave me dry"], "fake": "In the shadow of the night, we're looking for the light of your broken soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "nfWlotnwmsE" }
+    },
+    {
+      "id": "unplugged-cranberries-linger",
+      "title": "Linger",
+      "artist": "The Cranberries",
+      "year": 1993,
+      "country": "IE",
+      "genre": "Alternative / Folk Rock",
+      "difficulty": "easy",
+      "mood": ["Romantic", "Sad", "Classic"],
+      "pack": "90s Unplugged",
+      "hints": [
+        "Dolores O'Riordans erste Single mit der Band und ihr großer Durchbruch.",
+        "Thematisiert den Schmerz einer ersten großen Liebe und das Unvermögen, loszulassen.",
+        "Das Streicher-Arrangement und der sanfte Rhythmus sind unvergesslich.",
+        "Ein Inbegriff des irischen Alternative-Sounds der 90er.",
+        "Refrain: 'You know I'm such a fool for you, you've got me wrapped around your finger!'"
+      ],
+      "lyrics": { "real": ["If you, if you could return, don't let it burn, don't let it fade", "But I'm in so deep, you know I'm such a fool for you", "You've got me wrapped around your finger, do you have to, do you have to let it linger?"], "fake": "Dancing in the street, moving to the beat of the broken heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
     }
   ]
 }

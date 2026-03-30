@@ -405,6 +405,237 @@
       "links": { "youtube": "SSbBvKaM6sk" }
     },
     {
+      "id": "rock-deeppurple-highwaystar",
+      "title": "Highway Star",
+      "artist": "Deep Purple",
+      "year": 1972,
+      "country": "GB",
+      "genre": "Hard Rock",
+      "difficulty": "hard",
+      "mood": ["Fast", "Energy", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Gilt als einer der wichtigsten Songs für die Entwicklung des Speed Metal.",
+        "Das Gitarren- und Orgel-Solo sind legendär.",
+        "Entstand während einer Busfahrt, als ein Journalist fragte, wie die Band ihre Songs schreibt.",
+        "Ein absoluter Klassiker für Autofahrten.",
+        "Refrain: 'I'm a highway star!'"
+      ],
+      "lyrics": { "real": ["I'm a highway star, I'm a highway star", "I'm a highway star, I'm a highway star"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "rock-acdc-back-black",
+      "title": "Back In Black",
+      "artist": "AC/DC",
+      "year": 1980,
+      "country": "AU",
+      "genre": "Hard Rock",
+      "difficulty": "easy",
+      "mood": ["Energy", "Raw", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Einer der am meist verkauften Rock-Songs aller Zeiten.",
+        "Das Eröffnungsriff ist eines der simpelsten und gleichzeitig kraftvollsten der Musikgeschichte.",
+        "Brian Johnsons erste Single nach dem Tod von Bon Scott.",
+        "Eine Hommage an ihren verstorbenen Sänger.",
+        "Refrain: 'I'm back in black, I hit the sack!'"
+      ],
+      "lyrics": { "real": ["Back in black, I hit the sack, I've been too long, I'm glad to be back", "Yes, I'm let loose from the noose that's kept me hanging about", "I'm back, yes I'm back, well I'm back in black"], "fake": "In the middle of the street, you can feel the heat of the broken drum" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "pAgnJDJN4VA" }
+    },
+    {
+      "id": "rock-gnr-jungle",
+      "title": "Welcome to the Jungle",
+      "artist": "Guns N' Roses",
+      "year": 1987,
+      "country": "US",
+      "genre": "Hard Rock / Glam Metal",
+      "difficulty": "medium",
+      "mood": ["Energy", "Dangerous", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Der ultimative Opener von 'Appetite for Destruction'.",
+        "Axl Roses Schrei am Anfang zementierte seinen Status als Rockstar.",
+        "Handelt von den harten Realitäten und der Gefahr des Lebens in Los Angeles.",
+        "Slashs Riffs und Soli definieren den Sound einer ganzen Generation.",
+        "Refrain: 'Welcome to the jungle, we've got fun and games!'"
+      ],
+      "lyrics": { "real": ["Welcome to the jungle, we've got fun and games", "We got everything you want, honey, we know the names", "In the jungle, welcome to the jungle, watch it bring you to your sha-na-na-na-na-na-na-na-knees, knees"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "o1tj2zJ2Wvg" }
+    },
+    {
+      "id": "rock-aerosmith-dream-on",
+      "title": "Dream On",
+      "artist": "Aerosmith",
+      "year": 1973,
+      "country": "US",
+      "genre": "Rock / Power Ballad",
+      "difficulty": "hard",
+      "mood": ["Epic", "Emotional", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Steven Tylers erste große Rock-Ballade.",
+        "Bekannt für den extrem hohen Schrei im Finale des Songs.",
+        "Thematisiert den Lauf der Zeit und das Festhalten an seinen Träumen.",
+        "Ein absolutes stimmliches Meisterwerk.",
+        "Refrain: 'Dream on, dream on, dream until your dreams come true!'"
+      ],
+      "lyrics": { "real": ["Every time that I look in the mirror, all these lines on my face getting clearer", "The past is gone, it went by like dusk to dawn", "Dream on, dream on, dream until your dreams come true"], "fake": "In the shadow of the night, we're looking for the light of our soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "89j-6xpdq4" }
+    },
+    {
+      "id": "rock-the-who-riley",
+      "title": "Baba O'Riley",
+      "artist": "The Who",
+      "year": 1971,
+      "country": "GB",
+      "genre": "Hard Rock / Prog Rock",
+      "difficulty": "medium",
+      "mood": ["Epic", "Electronic", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Oft fälschlicherweise als 'Teenage Wasteland' bezeichnet.",
+        "Besitzt ein revolutionäres Synthesizer-Intro, das Pete Townshend programmierte.",
+        "Das furiose Geigen-Solo am Ende ist ein Markenzeichen des Songs.",
+        "Handelt von einem Bauern und der Hoffnung auf ein besseres Leben.",
+        "Refrain: 'Don't cry! Don't raise your eye! It's only teenage wasteland!'"
+      ],
+      "lyrics": { "real": ["Out here in the fields, I fight for my meals, I get my back into my living", "I don't need to fight to prove I'm right, I don't need to be forgiven", "Teenage wasteland, it's only teenage wasteland"], "fake": "Walking down the street with a rhythm in my feet tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "x2KRpRMqlHg" }
+    },
+    {
+      "id": "rock-metallica-sandman",
+      "title": "Enter Sandman",
+      "artist": "Metallica",
+      "year": 1991,
+      "country": "US",
+      "genre": "Heavy Metal",
+      "difficulty": "easy",
+      "mood": ["Powerful", "Dark", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Der Song, der Metallica endgültig in den globalen Mainstream katapultierte.",
+        "Thematisiert Kindheitsängste und den 'Sandmann'.",
+        "Das Hauptriff von Kirk Hammett ist eines der bekanntesten im Metal.",
+        "Bekannt für den eingebauten Gebetsteil ('Now I lay me down to sleep').",
+        "Refrain: 'Exit light, enter night! Take my hand, we're off to never-never land!'"
+      ],
+      "lyrics": { "real": ["Say your prayers, little one, don't forget, my son, to include everyone", "I tuck you in, warm within, keep you free from sin", "Exit light, enter night, take my hand, we're off to never-never land"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "CD-E-LDc384" }
+    },
+    {
+      "id": "rock-iron-maiden-trooper",
+      "title": "The Trooper",
+      "artist": "Iron Maiden",
+      "year": 1983,
+      "country": "GB",
+      "genre": "Heavy Metal",
+      "difficulty": "hard",
+      "mood": ["Energy", "Epic", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Basiert auf der Attacke der Leichten Brigade im Krimkrieg (1854).",
+        "Das melodiöse Gitarren-Harmonie-Riff ist das Erkennungsmerkmal der Band.",
+        "Bruce Dickinsons Gesang und die galoppierende Basslinie von Steve Harris.",
+        "Ein Inbegriff des 'New Wave of British Heavy Metal'.",
+        "Refrain: (Gitarren-Melodie) - 'Woah-oh-oh-oh-oh-oh-oh-oh!'"
+      ],
+      "lyrics": { "real": ["The bugle sounds, the charge begins, but on this battlefield no one wins", "You'll take my life but I'll take yours too, you fire your musket but I'll run you through", "When you're waiting for the next attack, you better stand there's no turning back"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "2G5rfPISIwo" }
+    },
+    {
+      "id": "rock-sabbath-paranoid",
+      "title": "Paranoid",
+      "artist": "Black Sabbath",
+      "year": 1970,
+      "country": "GB",
+      "genre": "Heavy Metal",
+      "difficulty": "easy",
+      "mood": ["Raw", "Short", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Gilt als einer der Blaupausen für Heavy Metal.",
+        "Wurde als Lückenfüller in nur 30 Minuten für das gleichnamige Album geschrieben.",
+        "Ozzy Osbournes charakteristischer Gesang und Tony Iommis schwere Riffs.",
+        "Ein extrem kompakter und druckvoller Meilenstein.",
+        "Refrain: 'Can you help me? Occupy my brain? Oh yeah!'"
+      ],
+      "lyrics": { "real": ["Finished with my woman 'cause she couldn't help me with my mind", "People think I'm insane because I am frowning all the time", "All day long I think of things but nothing seems to satisfy"], "fake": "Dancing in the street, moving to the beat of the broken drum" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "v8HeY_08nMA" }
+    },
+    {
+      "id": "rock-deep-purple-smoke",
+      "title": "Smoke on the Water",
+      "artist": "Deep Purple",
+      "year": 1972,
+      "country": "GB",
+      "genre": "Hard Rock",
+      "difficulty": "easy",
+      "mood": ["Classic", "Story", "Energy"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Vielleicht das berühmteste Gitarren-Riff aller Zeiten.",
+        "Erzählt die wahre Geschichte eines Feuers im Casino von Montreux während eines Frank Zappa Konzerts.",
+        "Ritchie Blackmores Riff wird fast jedem Gitarren-Anfänger als Erstes beigebracht.",
+        "Ein Paradebeispiel für klassischen Hard-Rock.",
+        "Refrain: 'Smoke on the water, fire in the sky!'"
+      ],
+      "lyrics": { "real": ["We all came out to Montreux, on the Lake Geneva shoreline", "To make records with a mobile, we didn't have much time", "Smoke on the water, a fire in the sky"], "fake": "In the middle of the lake, we're making no mistake tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "zUwEIt9ez7M" }
+    },
+    {
+      "id": "rock-kiss-rock-nite",
+      "title": "Rock and Roll All Nite",
+      "artist": "KISS",
+      "year": 1975,
+      "country": "US",
+      "genre": "Hard Rock",
+      "difficulty": "easy",
+      "mood": ["Party", "Energy", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Die ultimative Party-Hymne der Rock-Welt.",
+        "Mitglieder der Band traten stets in extremer Schminke und Kostümen auf.",
+        "Wurde zu einer Hymne des Hedonismus und der guten Laune.",
+        "Ein unverzichtbarer Song für jedes Rock-Konzert.",
+        "Refrain: 'I wanna rock and roll all nite, and party every day!'"
+      ],
+      "lyrics": { "real": ["You say you wanna stand by my side, darlin', your love's something I can't hide", "You drive me wild, we'll drive me crazy", "I wanna rock and roll all nite, and party every day"], "fake": "Nothing's gonna stop us now, we're playing in the clouds somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "A_MjCqQoLLA" }
+    },
+    {
+      "id": "rock-zz-top-la-grange",
+      "title": "La Grange",
+      "artist": "ZZ Top",
+      "year": 1973,
+      "country": "US",
+      "genre": "Blues Rock",
+      "difficulty": "medium",
+      "mood": ["Cool", "Raw", "Classic"],
+      "pack": "Rock Anthems",
+      "hints": [
+        "Bekannt für den 'Tush'-Beat und das unglaubliche Gitarrenspiel von Billy Gibbons.",
+        "Handelt von einem berühmten Etablissement in Texas.",
+        "Die Band ist bekannt für ihre extrem langen Bärte (außer Schlagzeuger Frank Beard!).",
+        "Ein Klassiker des Southern Rock mit viel Groove.",
+        "Refrain: 'A haw, haw, haw, haw! A haw!'"
+      ],
+      "lyrics": { "real": ["Rumor spreadin' 'round in that Texas town, 'bout that shack outside La Grange", "And you know what I'm talkin' about, just introduced which you don't doubt", "They gotta lot of nice girls ah"], "fake": "Walking down the road, carrying a heavy load of blues" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
       "id": "rock-linkin-park-numb",
       "title": "Numb",
       "artist": "Linkin Park",

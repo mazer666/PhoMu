@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "pack": "60s & 70s Soul & Rock Legends",
+    "version": "1.0.0",
+    "updatedAt": "2026-03-30T16:33:30Z"
+  },
+  "songs": [
+    {
+      "id": "legends-beatles-hey-jude",
+      "title": "Hey Jude",
+      "artist": "The Beatles",
+      "year": 1968,
+      "country": "GB",
+      "genre": "Rock / Pop",
+      "difficulty": "easy",
+      "mood": ["Epic", "Emotional", "Classic"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Ursprünglich als Trost für John Lennons Sohn Julian ('Jules') geschrieben.",
+        "Der Song ist mit über 7 Minuten einer der längsten Nummer-1-Hits jener Ära.",
+        "Bekannt für das über vierminütige 'Na na na na'-Outro.",
+        "Paul McCartney übernahm hier den Hauptgesang.",
+        "Refrain: 'Hey Jude, don't make it bad, take a sad song and make it better!'"
+      ],
+      "lyrics": { "real": ["Hey Jude, don't make it bad, take a sad song and make it better", "Remember to let her into your heart, then you can start to make it better", "Better better better better better, waaaaa!"], "fake": "Dancing in the light, feeling so right, all through the night" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "A_MjCqQoLLA" }
+    },
+    {
+      "id": "legends-stones-satisfaction",
+      "title": "(I Can't Get No) Satisfaction",
+      "artist": "The Rolling Stones",
+      "year": 1965,
+      "country": "GB",
+      "genre": "Rock",
+      "difficulty": "easy",
+      "mood": ["Energy", "Raw", "Classic"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Keith Richards wachte nachts auf, nahm das Riff auf und schlief wieder ein.",
+        "Das Fuzz-Gitarren-Riff ist eines der bekanntesten der Welt.",
+        "Handelt von Frustration über Kommerz und die moderne Gesellschaft.",
+        "Mick Jaggers Gesang und Performance zementierten den Status der Band als 'Anti-Beatles'.",
+        "Refrain: 'I can't get no satisfaction!'"
+      ],
+      "lyrics": { "real": ["I can't get no satisfaction, I can't get no satisfaction", "Cause I try, and I try, and I try, and I try", "I can't get no, I can't get no!"], "fake": "In the middle of the street, you can feel the heat of the broken drum" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "nrIPxlFzDi0" }
+    },
+    {
+      "id": "legends-elvis-suspicious-minds",
+      "title": "Suspicious Minds",
+      "artist": "Elvis Presley",
+      "year": 1969,
+      "country": "US",
+      "genre": "Rock / Soul",
+      "difficulty": "easy",
+      "mood": ["Powerful", "Emotional", "Classic"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Markierte das große Comeback des 'King of Rock 'n' Roll' in den späten 60ern.",
+        "Handelt von Misstrauen und der Unfähigkeit, eine Beziehung zu retten.",
+        "Bekannt für das markante 'Fade-out' und 'Fade-in' am Ende des Songs.",
+        "Elvis trug bei den Auftritten oft seine berühmten Jumpsuits.",
+        "Refrain: 'We're caught in a trap, I can't walk out, because I love you too much baby!'"
+      ],
+      "lyrics": { "real": ["We're caught in a trap, I can't walk out, because I love you too much baby", "Why can't you see what you're doing to me, when you don't believe a word I say?", "We can't go on together with suspicious minds"], "fake": "In the shadow of the night, I'm looking for the light of your broken soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "Wb0Jlp6766M" }
+    },
+    {
+      "id": "legends-abba-dancing-queen",
+      "title": "Dancing Queen",
+      "artist": "ABBA",
+      "year": 1976,
+      "country": "SE",
+      "genre": "Disco / Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Classic", "Dance"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Wurde zur Hochzeit von König Carl XVI. Gustaf von Schweden uraufgeführt.",
+        "Ein absolutes Meisterwerk des schwedischen Kompositions-Duos Benny & Björn.",
+        "Der einzige ABBA-Song, der in den USA Platz 1 erreichte.",
+        "Verbindet Disco-Beats mit glockenharem Pop-Gesang.",
+        "Refrain: 'You are the dancing queen, young and sweet, only seventeen!'"
+      ],
+      "lyrics": { "real": ["You can dance, you can jive, having the time of your life", "See that girl, watch that scene, digging the dancing queen", "Friday night and the lights are low, looking out for a place to go"], "fake": "Dancing in the stars, playing my guitars, until the morning bars" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "xP-z676878" }
+    },
+    {
+      "id": "legends-bee-gees-stayin-alive",
+      "title": "Stayin' Alive",
+      "artist": "Bee Gees",
+      "year": 1977,
+      "country": "GB/AU",
+      "genre": "Disco",
+      "difficulty": "easy",
+      "mood": ["Energy", "Cool", "Classic"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Inbegriff der Disco-Ära durch den Film 'Saturday Night Fever'.",
+        "Bekannt für den extrem hohen Falsett-Gesang der Gibb-Brüder.",
+        "Der Rhythmus entspricht fast exakt 103 Beats pro Minute (perfekt für Herzdruckmassage).",
+        "Thematisiert das nackte Überleben im harten New York der 70er.",
+        "Das Video zeigt die Brüder, wie sie lässig durch eine Häuserschlucht spazieren."
+      ],
+      "lyrics": { "real": ["Well, you can tell by the way I use my walk, I'm a woman's man, no time to talk", "Music loud and women warm, I've been kicked around since I was born", "Stayin' alive, stayin' alive, ah ha ha ha, stayin' alive"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "I_izvAbhExY" }
+    },
+    {
+      "id": "legends-led-zeppelin-stairway",
+      "title": "Stairway to Heaven",
+      "artist": "Led Zeppelin",
+      "year": 1971,
+      "country": "GB",
+      "genre": "Hard Rock / Folk Rock",
+      "difficulty": "hard",
+      "mood": ["Epic", "Dramatic", "Moody"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Oft als bester Rock-Song aller Zeiten bezeichnet.",
+        "Baut sich langsam von einer akustischen Folk-Ballade zu einem Hard-Rock-Finale auf.",
+        "Das Gitarren-Solo von Jimmy Page ist eines der am meist kopierten der Welt.",
+        "Es gibt unzählige Mythen über versteckte Botschaften (Backward-Masking).",
+        "Refrain: 'And she's buying a stairway to heaven!'"
+      ],
+      "lyrics": { "real": ["There's a lady who's sure all that glitters is gold, and she's buying a stairway to heaven", "When she gets there she knows, if the stores are all closed, with a word she can get what she came for", "And it makes me wonder..."], "fake": "Walking down the silver path under the dragon's wrath tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "893u_h-6x98" }
+    },
+    {
+      "id": "legends-pink-floyd-wish",
+      "title": "Wish You Were Here",
+      "artist": "Pink Floyd",
+      "year": 1975,
+      "country": "GB",
+      "genre": "Progressive Rock",
+      "difficulty": "medium",
+      "mood": ["Sad", "Atmospheric", "Deep"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Eine Hommage an das Gründungsmitglied Syd Barrett, der die Band verlassen musste.",
+        "Der Song beginnt mit einem berühmten Radio-Effekt und einem akustischen Intro.",
+        "Handelt von Entfremdung und der Sehnsucht nach echter Verbindung.",
+        "Einer der am meisten geliebten Akustik-Gitarren-Songs der Rockgeschichte.",
+        "Refrain: 'How I wish, how I wish you were here!'"
+      ],
+      "lyrics": { "real": ["So, so you think you can tell heaven from hell, blue skies from pain?", "Can you tell a green field from a cold steel rail? A smile from a veil?", "How I wish, how I wish you were here"], "fake": "Staring at the wall, waiting for the fall of the silent rain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "89j-6xpdq4" }
+    },
+    {
+      "id": "legends-fleetwood-mac-dreams",
+      "title": "Dreams",
+      "artist": "Fleetwood Mac",
+      "year": 1977,
+      "country": "GB/US",
+      "genre": "Soft Rock",
+      "difficulty": "easy",
+      "mood": ["Chill", "Moody", "Classic"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Stammt vom legendären Album 'Rumours', das während heftiger bandinterner Trennungen entstand.",
+        "Stevie Nicks schrieb den Text in nur 10 Minuten in einem kleinen Nebenraum im Studio.",
+        "Bekannt für den schwebenden, zweistimmigen Basslauf und die ätherische Atmosphäre.",
+        "Erlebte ein massives Revival durch ein virales TikTok-Video mit Cranberry-Saft.",
+        "Refrain: 'Thunder only happens when it's raining!'"
+      ],
+      "lyrics": { "real": ["Now here you go again, you say you want your freedom, well who am I to keep you down?", "Thunder only happens when it's raining, players only love you when they're playing", "Say, women, they will come and they will go"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "mrZRURarkSS" }
+    },
+    {
+      "id": "legends-bowie-space-oddity",
+      "title": "Space Oddity",
+      "artist": "David Bowie",
+      "year": 1969,
+      "country": "GB",
+      "genre": "Glam Rock / Art Rock",
+      "difficulty": "medium",
+      "mood": ["Epic", "Sad", "Atmospheric"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Wurde zeitgleich mit der ersten Mondlandung (Apollo 11) veröffentlicht.",
+        "Erzählt die Geschichte von Major Tom, einem Astronauten, der den Kontakt zur Erde verliert.",
+        "Bowie erfand hiermit die Kunstfigur, die seine Karriere maßgeblich prägte.",
+        "Besitzt einen ikonischen 'Countdown' zu Beginn des Songs.",
+        "Refrain: 'Ground Control to Major Tom! Your circuit's dead, there's something wrong!'"
+      ],
+      "lyrics": { "real": ["Ground Control to Major Tom, Ground Control to Major Tom", "Check ignition and may God's love be with you", "This is Ground Control to Major Tom, you've really made the grade"], "fake": "Flying to the sun, we're having so much fun with no one" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "iYYRH4apXDo" }
+    },
+    {
+      "id": "legends-simon-garfunkel-bridge",
+      "title": "Bridge Over Troubled Water",
+      "artist": "Simon & Garfunkel",
+      "year": 1970,
+      "country": "US",
+      "genre": "Folk Rock / Gospel",
+      "difficulty": "medium",
+      "mood": ["Inspiring", "Emotional", "Classic"],
+      "pack": "60s & 70s Soul & Rock Legends",
+      "hints": [
+        "Die wohl berühmteste Klavier-Ballade der US-Folk-Geschichte.",
+        "Besticht durch den unglaublichen Gesang von Art Garfunkel.",
+        "Wurde zu einer Hymne für Beistand und Hilfe in schwierigen Zeiten.",
+        "Gewann fünf Grammys im Jahr 1971.",
+        "Refrain: 'Like a bridge over troubled water, I will lay me down!'"
+      ],
+      "lyrics": { "real": ["When you're weary, feeling small, when tears are in your eyes, I will dry them all", "I'm on your side when times get rough and friends just can't be found", "Like a bridge over troubled water, I will lay me down"], "fake": "In the middle of the island, we're looking for the silent sun" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "WrcwRt6Jm2U" }
+    }
+  ]
+}

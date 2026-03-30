@@ -423,7 +423,322 @@
       ],
       "lyrics": { "real": ["Wer friert uns diesen Moment ein? Besser kann es nicht sein", "Ein Hoch auf das, was uns vereint, auf diesen Moment, der immer bleibt", "Auf uns, auf diesen Tag, auf dieses Leben!"], "fake": "Wir springen ins Glück, schauen niemals zurück, Stück für Stück" },
       "isOne_hit_wonder": false,
-      "links": { "youtube": "flXGy-G2HkE" }
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "german-groenemeyer-maenner",
+      "title": "Männer",
+      "artist": "Herbert Grönemeyer",
+      "year": 1984,
+      "country": "DE",
+      "genre": "Pop / Rock",
+      "difficulty": "easy",
+      "mood": ["Funny", "Classic", "Thoughtful"],
+      "pack": "German Classics",
+      "hints": [
+        "Eine ironische und zugleich tiefgründige Analyse des männlichen Rollenbildes.",
+        "Herbert Grönemeyers endgültiger Durchbruch als einer der wichtigsten deutschen Musiker.",
+        "Bekannt für den markanten, fast abgehackten Gesangsstil.",
+        "Ein absoluter Klassiker, der auf keiner deutschen Party fehlen darf.",
+        "Refrain: 'Männer nehmen in den Arm, Männer geben Geborgenheit!'"
+      ],
+      "lyrics": { "real": ["Männer haben's schwer, nehmen's leicht, außen hart und innen ganz weich", "Männer werden als Kind schon auf Mann geeicht", "Männer nehmen in den Arm, Männer geben Geborgenheit"], "fake": "Tanzen im Regen, dem Leben entgegen, heute Nacht" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "oE_s_yYq_eE" }
+    },
+    {
+      "id": "german-westernhagen-freiheit",
+      "title": "Freiheit",
+      "artist": "Westernhagen",
+      "year": 1987,
+      "country": "DE",
+      "genre": "Rock / Ballad",
+      "difficulty": "easy",
+      "mood": ["Emotional", "Inspirational", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Wurde zur Hymne der deutschen Wiedervereinigung 1989/90.",
+        "Marius Müller-Westernhagens Reibeisenstimme verleiht dem Song enorme Kraft.",
+        "Thematisiert den universellen Wunsch nach Freiheit und Selbstbestimmung.",
+        "Ein fester Bestandteil der deutschen Rockgeschichte.",
+        "Refrain: 'Freiheit... ist das einzige, was zählt!'"
+      ],
+      "lyrics": { "real": ["Die Verträge sind gemacht, und es wurde viel gelacht", "Alle Türen stehen offen, auf ein Neues lässt sich hoffen", "Freiheit, Freiheit, ist das einzige, was zählt"], "fake": "In der Mitte der Nacht, haben wir das Licht angemacht" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "S5O9O5S9S" }
+    },
+    {
+      "id": "german-hosen-tage",
+      "title": "Tage wie diese",
+      "artist": "Die Toten Hosen",
+      "year": 2012,
+      "country": "DE",
+      "genre": "Punk Rock / Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Die erfolgreichste Single in der Geschichte der Band um Campino.",
+        "Wurde zu einer Hymne für große Siege, Feiern und Gemeinschaft.",
+        "Der Song fängt die Euphorie eines besonderen Augenblicks perfekt ein.",
+        "Ein moderner Klassiker des deutschsprachigen Rock.",
+        "Refrain: 'An Tagen wie diesen, wünscht man sich Unendlichkeit!'"
+      ],
+      "lyrics": { "real": ["Ich warte seit Wochen auf diesen Tag, und tanz' vor Freude über den Asphalt", "An Tagen wie diesen, wünscht man sich Unendlichkeit", "An Tagen wie diesen, haben wir noch ewig Zeit"], "fake": "Nichts kann uns stoppen, wir fliegen durch die Wolken irgendwie" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "j09hpp3AxIE" }
+    },
+    {
+      "id": "german-aerzte-zu-spaet",
+      "title": "Zu spät",
+      "artist": "Die Ärzte",
+      "year": 1984,
+      "country": "DE",
+      "genre": "Punk Rock",
+      "difficulty": "easy",
+      "mood": ["Funny", "Energy", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Einer der frühen Hits der 'besten Band der Welt'.",
+        "Handelt von einem Verlassenen, der seiner Ex-Freundin prophezeit, dass sie es bereuen wird.",
+        "Farin Urlaub und Bela B. zeigen hier ihren typischen Humor.",
+        "Ein unverzichtbarer Song für jedes Ärzte-Konzert.",
+        "Refrain: 'Doch eines Tages werd' ich mich rächen! Ich werd' die Herzen aller Mädchen brechen!'"
+      ],
+      "lyrics": { "real": ["Du bist gegangen, hast mich einfach so verlassen", "Und jetzt steh ich hier, mutterseelenallein auf der Gassen", "Doch eines Tages werd' ich mich rächen, ich werd' die Herzen aller Mädchen brechen"], "fake": "In der Mitte der Straβe, spürst du die Hitze der Trommel" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "german-falco-amadeus",
+      "title": "Rock Me Amadeus",
+      "artist": "Falco",
+      "year": 1985,
+      "country": "AT",
+      "genre": "Pop / Rap",
+      "difficulty": "easy",
+      "mood": ["Energy", "Classic", "Dance"],
+      "pack": "German Classics",
+      "hints": [
+        "Der einzige deutschsprachige Song, der jemals Platz 1 der US-Billboard-Charts erreichte.",
+        "Eine Hommage an Wolfgang Amadeus Mozart im modernen Gewand.",
+        "Falco kombinierte hier meisterhaft Rap-Elemente mit Pop-Hooklines.",
+        "Zementierte seinen Status als globaler Superstar der 80er Jahre.",
+        "Refrain: 'Amadeus, Amadeus, oh, oh, oh Amadeus!'"
+      ],
+      "lyrics": { "real": ["Er war ein Genie und wir liebten ihn, er war ein Superstar, er war populär", "Amadeus, Amadeus, oh, oh, oh Amadeus", "Rock me Amadeus!"], "fake": "Tanzen in den Sternen, meine Gitarren spielen heute Nacht" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "bHAtB2P6m9M" }
+    },
+    {
+      "id": "german-peter-fox-haus",
+      "title": "Haus am See",
+      "artist": "Peter Fox",
+      "year": 2008,
+      "country": "DE",
+      "genre": "Reggae / Pop / Hip Hop",
+      "difficulty": "easy",
+      "mood": ["Chill", "Happy", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Stammt vom legendären Solo-Album 'Stadtaffe' des Seeed-Frontmanns.",
+        "Beschreibt den Traum von einem ruhigen Alter im Einklang mit sich selbst.",
+        "Besticht durch den entspannten Groove und die orchestralen Elemente.",
+        "Ein moderner Meilenstein der deutschen Pop-Musik.",
+        "Refrain: 'Und am Ende der Straße steht ein Haus am See!'"
+      ],
+      "lyrics": { "real": ["Hier bin ich geborn, hier werd ich begraben, hab taube Ohren, einen weißen Bart"], "fake": "In der Mitte der Nacht, haben wir das Licht angemacht" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "german-seeed-ding",
+      "title": "Ding",
+      "artist": "Seeed",
+      "year": 2005,
+      "country": "DE",
+      "genre": "Dancehall / Reggae",
+      "difficulty": "easy",
+      "mood": ["Energy", "Dance", "Funny"],
+      "pack": "German Classics",
+      "hints": [
+        "Seeed brachten mit diesem Track den Berliner Dancehall-Sound auf ein neues Level.",
+        "Thematisiert den Reiz und die Gefahr von Seitensprüngen in der Nacht.",
+        "Bekannt für den treibenden Beat und die markante Bläser-Sektion.",
+        "Gewann den Bundesvision Song Contest 2006.",
+        "Refrain: 'Du hast da so ein Ding am Laufen!'"
+      ],
+      "lyrics": { "real": ["Ich seh mein Schicksal in dei'm Ausschnitt, es ist heiß und es ist Zeit für den nächsten Schritt", "Du hast da so ein Ding am Laufen, mit mir und ein paar andern Typen draußen", "Ich schau dich an, und ich weiß genau was du denkst"], "fake": "Tanzen auf der Straβe, im Rhythmus des Herzens heute" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "-tJYN-eG1zk" }
+    },
+    {
+      "id": "german-jan-delay-jonny",
+      "title": "Oh Jonny",
+      "artist": "Jan Delay",
+      "year": 2009,
+      "country": "DE",
+      "genre": "Funk / Soul",
+      "difficulty": "easy",
+      "mood": ["Groovy", "Happy", "Energy"],
+      "pack": "German Classics",
+      "hints": [
+        "Jan Delay erfand sich hiermit als Funk-Showmaster mit seiner Band 'Disko No. 1' neu.",
+        "Handelt von einem coolen Charakter namens Jonny, der jede Party rockt.",
+        "Der Bläsersatz und Jan Delays nasale Stimme sind das Markenzeichen.",
+        "Ein Inbegriff für modernen deutschen Funk.",
+        "Refrain: 'Oh Jonny, oh Jonny, oh Jonny, oh Jonny!'"
+      ],
+      "lyrics": { "real": ["Es war ein harter Tag, doch jetzt bin ich hier, Oh Jonny", "Du bist die Sonne, du bist das Licht, wenn du tanzt sieht man es nicht", "Oh Jonny, oh Jonny, oh Jonny, oh Jonny"], "fake": "Nichts kann uns stoppen, wenn wir durch die Nacht fliegen irgendwie" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "rTVjnBo66dU" }
+    },
+    {
+      "id": "german-revolverheld-halt-dich",
+      "title": "Halt dich an mir fest",
+      "artist": "Revolverheld ft. Marta Jandová",
+      "year": 2010,
+      "country": "DE",
+      "genre": "Pop Rock",
+      "difficulty": "medium",
+      "mood": ["Emotional", "Romantic", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Eines der erfolgreichsten deutschen Duette der 2010er Jahre.",
+        "Thematisiert gegenseitigen Halt in schwierigen Zeiten.",
+        "Besticht durch das harmonische Zusammenspiel der beiden Stimmen.",
+        "Ein Dauerbrenner im Radio und bei Hochzeiten.",
+        "Refrain: 'Halt dich an mir fest, wenn du nicht mehr weiterweißt!'"
+      ],
+      "lyrics": { "real": ["Lass uns noch ein bisschen bleiben, wir haben uns so viel zu schreiben", "Halt dich an mir fest, ich lass dich nicht allein", "Halt dich an mir fest, wenn du nicht mehr weiterweißt"], "fake": "In der Mitte der Träume, suchen wir das Licht der Sterne tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "german-silbermond-das-beste",
+      "title": "Das Beste",
+      "artist": "Silbermond",
+      "year": 2006,
+      "country": "DE",
+      "genre": "Pop / Ballad",
+      "difficulty": "easy",
+      "mood": ["Romantic", "Emotional", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Die ultimative Liebeserklärung der 2000er Jahre.",
+        "Stefanie Kloß' gefühlvolle Stimme und das dezente Klavier tragen den Song.",
+        "Wurde zu einem der meistgespielten Songs bei Trauungen in Deutschland.",
+        "Zementierte den Status von Silbermond als eine der wichtigsten deutschen Bands.",
+        "Refrain: 'Das Beste, was mir je passiert ist!'"
+      ],
+      "lyrics": { "real": ["Ich habe einen Schatz gefunden, und er trägt deinen Namen", "Du bist das Beste, was mir je passiert ist", "Es ist so schön, dass es dich gibt"], "fake": "In der Stille der Nacht, haben wir an dich gedacht" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "gxEPV4kolz0" }
+    },
+    {
+      "id": "german-juli-welle",
+      "title": "Perfekte Welle",
+      "artist": "Juli",
+      "year": 2004,
+      "country": "DE",
+      "genre": "Pop / Rock",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Markierte den Beginn der neuen deutschen Pop-Welle Mitte der 2000er.",
+        "Thematisiert den einen perfekten Moment im Leben, den man nutzen muss.",
+        "Besticht durch den frischen, gitarrenlastigen Sound.",
+        "Wurde nach der Tsunami-Katastrophe 2004 zeitweise nicht mehr im Radio gespielt.",
+        "Refrain: 'Das ist die perfekte Welle, das ist der perfekte Tag!'"
+      ],
+      "lyrics": { "real": ["Du hast dein Leben lang gewartet, auf diesen einen Moment", "Das ist die perfekte Welle, das ist der perfekte Tag", "Lass dich einfach von ihr tragen, denk am besten gar nicht nach"], "fake": "Tanzen auf der Straβe, im Rhythmus des Lebens heute" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "german-helden-denkmal",
+      "title": "Denkmal",
+      "artist": "Wir sind Helden",
+      "year": 2003,
+      "country": "DE",
+      "genre": "Indie / Pop",
+      "difficulty": "easy",
+      "mood": ["Funny", "Energy", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Wir sind Helden brachten mit diesem Song intellektuellen Witz zurück in den Pop.",
+        "Handelt davon, dass man lieber gemeinsam lebt als sich ein Denkmal bauen zu lassen.",
+        "Bekannt für Judith Holofernes' charakteristische Texte und Stimme.",
+        "Ein Meilenstein des deutschen Indie-Pop.",
+        "Refrain: 'Hol den Vorschlaghammer! Sie haben uns ein Denkmal gebaut!'"
+      ],
+      "lyrics": { "real": ["Komm mal ans Fenster, komm mal her zu mir", "Hol den Vorschlaghammer, sie haben uns ein Denkmal gebaut", "Und jeder Vollidiot weiß, dass das Liebe ist"], "fake": "Nichts kann uns stoppen, wenn wir durch die Zeit fliegen irgendwie" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "O7-L_u_3p_Y" }
+    },
+    {
+      "id": "german-stiller-kompliment",
+      "title": "Ein Kompliment",
+      "artist": "Sportfreunde Stiller",
+      "year": 2002,
+      "country": "DE",
+      "genre": "Indie Rock / Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Wurde zur absoluten Mitsing-Hymne der 2000er Jahre.",
+        "Handelt von der ungeschminkten, ehrlichen Bewunderung für einen Partner.",
+        "Der Song ist ein fester Bestandteil jedes Indie-Clubs und jeder WG-Party.",
+        "Besticht durch seine charmante Einfachheit.",
+        "Refrain: 'Ich wollte dir nur mal eben sagen, dass du das Größte für mich bist!'"
+      ],
+      "lyrics": { "real": ["Wenn man so will, bist du das Ziel einer langen Reise", "Ich wollte dir nur mal eben sagen, dass du das Größte für mich bist", "Ein Kompliment, mit dem ich dich verwöhnen will"], "fake": "In der Mitte der Nacht, haben wir das Licht angemacht" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "german-xavier-weg",
+      "title": "Dieser Weg",
+      "artist": "Xavier Naidoo",
+      "year": 2005,
+      "country": "DE",
+      "genre": "Soul / R&B",
+      "difficulty": "medium",
+      "mood": ["Serious", "Deep", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Inbegriff des Sommermärchens der WM 2006 (wurde oft in der Kabine gespielt).",
+        "Thematisiert den mühsamen, aber lohnenden Pfad zum Ziel.",
+        "Xavier Naidoos Soul-Stimme dominierte damit lange Zeit die deutschen Charts.",
+        "Ein klangvoller Meilenstein des modernen deutschen Soul.",
+        "Refrain: 'Dieser Weg wird kein leichter sein, dieser Weg wird steinig und schwer!'"
+      ],
+      "lyrics": { "real": ["Ich hab gesucht, doch nichts gefunden, ich hab gewartet, doch es kam nichts", "Dieser Weg wird kein leichter sein, dieser Weg wird steinig und schwer", "Nicht mit vielen wirst du dir einig sein, doch dieses Leben bietet so viel mehr"], "fake": "In der Stille der Nacht, haben wir an dich gedacht" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "S5O9O5S9S" }
+    },
+    {
+      "id": "german-sido-bilder",
+      "title": "Bilder im Kopf",
+      "artist": "Sido",
+      "year": 2012,
+      "country": "DE",
+      "genre": "Hip Hop / Pop",
+      "difficulty": "easy",
+      "mood": ["Thoughtful", "Emotional", "Classic"],
+      "pack": "German Classics",
+      "hints": [
+        "Markierte Sidos Wandel vom 'Masken-Rapper' zum ernstzunehmenden Künstler.",
+        "Handelt von den Erinnerungen und Erfahrungen, die einen Menschen prägen.",
+        "Besitzt eine extrem eingängige Melodie und einen nachdenklichen Text.",
+        "Einer der erfolgreichsten deutschen Rap-Songs aller Zeiten im Mainstream.",
+        "Refrain: 'Ich kuck' zurück auf eine wunderschöne Zeit!'"
+      ],
+      "lyrics": { "real": ["Ich hab' das alles mal gelernt, doch wieder vergessen", "Ich kuck zurück auf eine wunderschöne Zeit", "Und ich hab diese Bilder im Kopf, die mir keiner nehmen kann"], "fake": "Dancing in the street, moving to the beat of my life tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
     }
   ]
 }

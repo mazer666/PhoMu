@@ -423,7 +423,322 @@
       ],
       "lyrics": { "real": ["Lady, hear me tonight, 'cause my feeling is just so right", "As we dance by the light, and I'll keep you till the morning light", "Lady, I just feel like I won't get you out of my mind"], "fake": "When the stars are shining bright, I will hold you through the night" },
       "isOne_hit_wonder": true,
-      "links": { "youtube": "HzpCcNdhy5w" }
+      "links": { "youtube": "S5O9O5S9S" }
+    },
+    {
+      "id": "dance-madonna-vogue",
+      "title": "Vogue",
+      "artist": "Madonna",
+      "year": 1990,
+      "country": "US",
+      "genre": "Dance-Pop / House",
+      "difficulty": "easy",
+      "mood": ["Cool", "Classic", "Dance"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Brachte den Underground-'Voguing'-Tanzstil in den Mainstream.",
+        "Der Sprechgesang im Mittelteil zählt Ikonen des alten Hollywood auf.",
+        "Ein Meilenstein der House-beeinflussten Pop-Musik der frühen 90er.",
+        "Das Schwarz-Weiß-Video von David Fincher ist pure Kunst.",
+        "Refrain: 'Strike a pose! Vogue, vogue, vogue!'"
+      ],
+      "lyrics": { "real": ["Look around, everywhere you turn is heartache, it's everywhere that you go", "You try everything you can to escape the pain of life that you know", "Strike a pose, vogue, vogue, vogue, vogue, vogue!"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "GuJQSAiODqI" }
+    },
+    {
+      "id": "dance-mj-billie-jean",
+      "title": "Billie Jean",
+      "artist": "Michael Jackson",
+      "year": 1983,
+      "country": "US",
+      "genre": "Dance-Pop / Funk",
+      "difficulty": "easy",
+      "mood": ["Energy", "Classic", "Dance"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Besitzt eine der berühmtesten Basslinien der Musikgeschichte.",
+        "Bei der Aufführung dieses Songs bei 'Motown 25' zeigte MJ zum ersten Mal den Moonwalk.",
+        "Handelt von einem Groupie, das behauptet, Michael sei der Vater ihres Kindes.",
+        "Produziert von Quincy Jones, obwohl er die Basslinie anfangs zu lang fand.",
+        "Ein absolutes Dauerbrenner-Highlight auf jeder Tanzfläche."
+      ],
+      "lyrics": { "real": ["She was more like a beauty queen from a movie scene", "I said don't mind, but what do you mean, I am the one", "Billie Jean is not my lover, she's just a girl who claims that I am the one"], "fake": "In the middle of the street, you can feel the heat of the broken heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "Zi_XLOBDo_Y" }
+    },
+    {
+      "id": "dance-daft-punk-one-more",
+      "title": "One More Time",
+      "artist": "Daft Punk",
+      "year": 2000,
+      "country": "FR",
+      "genre": "French House / Electronic",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Classic"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Bekannt für den extremen Einsatz von Auto-Tune auf den Vocals von Romanthony.",
+        "Der Inbegriff des 'French House' Sounds um die Jahrtausendwende.",
+        "Das Anime-Musikvideo ist Teil des Films 'Interstella 5555'.",
+        "Ein Inbegriff für unbeschwerte Party-Energie.",
+        "Refrain: 'One more time, we're gonna celebrate!'"
+      ],
+      "lyrics": { "real": ["One more time, we're gonna celebrate, oh yeah, all right, don't stop the dancing", "One more time, we're gonna celebrate, oh yeah, all right, don't stop the dancing", "Music's got me feeling so free, we're gonna celebrate"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "FGBhQbmPwQ8" }
+    },
+    {
+      "id": "dance-lady-gaga-bad-romance",
+      "title": "Bad Romance",
+      "artist": "Lady Gaga",
+      "year": 2009,
+      "country": "US",
+      "genre": "Dance-Pop / Electro",
+      "difficulty": "easy",
+      "mood": ["Energy", "Powerful", "Classic"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Einer der visuell und akustisch einflussreichsten Pop-Songs der 2000er.",
+        "Der 'Rah-rah-ah-ah-ah'-Hook ist sofortiges Erkennungsmerkmal.",
+        "Thematisiert die Anziehung zu toxischen Beziehungen.",
+        "Das Video definierte Gagas avantgardistischen Status endgültig.",
+        "Refrain: 'I want your love and I want your revenge, you and me could write a bad romance!'"
+      ],
+      "lyrics": { "real": ["Rah-rah-ah-ah-ah, Roma, roma-ma, Gaga, ooh-la-la", "I want your ugly, I want your disease, I want your everything as long as it's free", "I want your love and I want your revenge, you and me could write a bad romance"], "fake": "In the shadow of the valley, I'm looking for a rally of hope" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "qrO4AUcuwow" }
+    },
+    {
+      "id": "dance-katy-perry-firework",
+      "title": "Firework",
+      "artist": "Katy Perry",
+      "year": 2010,
+      "country": "US",
+      "genre": "Dance-Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Inspirational", "Powerful"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Eine Hymne auf Selbstwertgefühl und die eigene Einzigartigkeit.",
+        "Katy Perrys erfolgreichster Song, der oft bei großen Events gespielt wird.",
+        "Der Refrain baut eine gewaltige Energie auf, die zur Explosion passt.",
+        "Wurde zu einem festen Bestandteil von Silvester-Playlists weltweit.",
+        "Refrain: 'Cause baby, you're a firework! Come on, show 'em what you're worth!'"
+      ],
+      "lyrics": { "real": ["Do you ever feel like a plastic bag, drifting through the wind, wanting to start again?", "You just gotta ignite the light, and let it shine", "Cause baby, you're a firework, come on, show 'em what you're worth"], "fake": "Nothing's gonna stop me now, I'm floating in the sky somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "QGJuMBdaqIw" }
+    },
+    {
+      "id": "dance-guetta-titanium",
+      "title": "Titanium",
+      "artist": "David Guetta ft. Sia",
+      "year": 2011,
+      "country": "FR/AU",
+      "genre": "EDM / Dance-Pop",
+      "difficulty": "medium",
+      "mood": ["Powerful", "Emotional", "Electronic"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Sias kraftvolle Stimme macht diesen Club-Track zu einer emotionalen Hymne.",
+        "Sollte ursprünglich von Mary J. Blige oder Katy Perry gesungen werden.",
+        "Thematisiert Unverwüstlichkeit gegenüber Kritik und Angriffen.",
+        "Ein Meilenstein für den weltweiten EDM-Boom der 2010er.",
+        "Refrain: 'I'm bulletproof, nothing to lose, fire away, fire away!'"
+      ],
+      "lyrics": { "real": ["You shout it loud, but I can't hear a word you say, I'm talking loud, not saying much", "I'm bulletproof, nothing to lose, fire away, fire away", "You shoot me down, but I won't fall, I am titanium"], "fake": "In the middle of the island, we're looking for the silent sun" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "JRfuAAnVKl0" }
+    },
+    {
+      "id": "dance-avicii-wake-me",
+      "title": "Wake Me Up",
+      "artist": "Avicii ft. Aloe Blacc",
+      "year": 2013,
+      "country": "SE/US",
+      "genre": "Folk-House / EDM",
+      "difficulty": "easy",
+      "mood": ["Happy", "Inspirational", "Energy"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Revolutionierte den EDM-Sound durch die Kombination mit Folk-Gitarren.",
+        "Aloe Blaccs markante Soul-Stimme über Aviciis treibendem Beat.",
+        "Löste bei der Premiere am Ultra Music Festival gemischte Reaktionen aus, wurde dann aber zum Welthit.",
+        "Ein Symbol für Aviciis bahnbrechende musikalische Vision.",
+        "Refrain: 'So wake me up when it's all over, when I'm wiser and I'm older!'"
+      ],
+      "lyrics": { "real": ["Feeling my way through the darkness, guided by a beating heart", "I can't tell where the journey will end, but I know where to start", "So wake me up when it's all over, when I'm wiser and I'm older"], "fake": "Walking down the street with a rhythm in my feet tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "I_izvAbhExY" }
+    },
+    {
+      "id": "dance-calvin-harris-summer",
+      "title": "Summer",
+      "artist": "Calvin Harris",
+      "year": 2014,
+      "country": "GB",
+      "genre": "Dance-Pop / EDM",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Summer"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Calvin Harris übernimmt hier selbst den Gesang.",
+        "Der Inbegriff des Sommer-Club-Sounds der 2014er Saison.",
+        "Besticht durch den euphorischen Synthesizer-Drop im Refrain.",
+        "Vermittelt das perfekte Gefühl von Freiheit und warmen Nächten.",
+        "Refrain: 'When I met you in the summer, to my heartbeat sound!'"
+      ],
+      "lyrics": { "real": ["When I met you in the summer, to my heartbeat sound", "We fell in love, as the leaves turned brown", "And we could be together, baby, as long as skies are blue"], "fake": "Dancing in the sun, having so much fun with everyone" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "ebXbLfLACGM" }
+    },
+    {
+      "id": "dance-dua-lipa-start-now",
+      "title": "Don't Start Now",
+      "artist": "Dua Lipa",
+      "year": 2019,
+      "country": "GB",
+      "genre": "Nu-Disco / Pop",
+      "difficulty": "easy",
+      "mood": ["Cool", "Energy", "Dance"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Brachte den Disco-Sound mit moderner Produktion zurück in die Charts.",
+        "Besitzt eine extrem mitreißende Basslinie.",
+        "Handelt davon, dass man über eine alte Liebe hinweg ist und sich nicht mehr stören lässt.",
+        "Ein Paradebeispiel für den Erfolg ihres Albums 'Future Nostalgia'.",
+        "Refrain: 'Don't show up, don't come out, don't start caring about me now!'"
+      ],
+      "lyrics": { "real": ["If you don't wanna see me dancing with somebody, if you wanna believe that anything could stop me", "Don't show up, don't come out, don't start caring about me now", "Walk away, you know how, don't start caring about me now"], "fake": "In the middle of the island, we're looking for the silent sun" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "oygrmJFKYZY" }
+    },
+    {
+      "id": "dance-weeknd-feel-face",
+      "title": "Can't Feel My Face",
+      "artist": "The Weeknd",
+      "year": 2015,
+      "country": "CA",
+      "genre": "Pop / Funk",
+      "difficulty": "easy",
+      "mood": ["Groovy", "Energy", "Dance"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Produziert von Max Martin, inspiriert durch Michael Jacksons Funk-Sound.",
+        "Thematisiert auf metaphorische Weise eine intensive Anziehung (oder Sucht).",
+        "Besticht durch den harten, trockenen Beat und The Weeknds gefühlvollen Gesang.",
+        "Wurde zu seinem endgültigen Durchbruch im Pop-Olymp.",
+        "Refrain: 'I can't feel my face when I'm with you, but I love it!'"
+      ],
+      "lyrics": { "real": ["And I know she'll be the death of me, at least we'll both be numb", "And she'll always get the best of me, the worst is yet to come", "I can't feel my face when I'm with you, but I love it"], "fake": "Walking through the rain, I'm calling out your name in vain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "dqt8Z7YL4RU" }
+    },
+    {
+      "id": "dance-bruno-uptown-funk",
+      "title": "Uptown Funk",
+      "artist": "Mark Ronson ft. Bruno Mars",
+      "year": 2014,
+      "country": "GB/US",
+      "genre": "Funk / Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Groovy"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Eine moderne Hommage an den Minneapolis-Sound und den Funk der 80er.",
+        "Die Zusammenarbeit zwischen Mark Ronson und Bruno Mars wurde zum Dauerbrenner.",
+        "Bekannt für den extrem coolen Vibe und die Bläser-Sätze.",
+        "Wurde zu einem der erfolgreichsten Songs des Jahrzehnts.",
+        "Refrain: 'Don't believe me, just watch!'"
+      ],
+      "lyrics": { "real": ["This hit, that ice cold, Michelle Pfeiffer, that white gold", "This one for them hood girls, them good girls, straight masterpieces", "Don't believe me, just watch, come on!"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "OPf0AuLS" }
+    },
+    {
+      "id": "dance-jt-can-stop",
+      "title": "Can't Stop the Feeling!",
+      "artist": "Justin Timberlake",
+      "year": 2016,
+      "country": "US",
+      "genre": "Dance-Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Positive", "Energy"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Titelsong aus dem Animationsfilm 'Trolls'.",
+        "Ein Inbegriff für 'Gute-Laune-Musik' mit einem ansteckenden Rhythmus.",
+        "Sorgte weltweit für spontane Tanzflashmobs.",
+        "Besticht durch seine Leichtigkeit und den positiven Vibe.",
+        "Refrain: 'I got this feeling inside my bones, it goes electric, wavy when I turn it on!'"
+      ],
+      "lyrics": { "real": ["I got this feeling inside my bones, it goes electric, wavy when I turn it on", "All through my city, all through my home, we're flying up, no ceiling, when we're in our zone", "I can't stop the feeling, so just dance, dance, dance"], "fake": "In the middle of the street, you can feel the heat of our happy heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "rutF6n" }
+    },
+    {
+      "id": "dance-maroon5-jagger",
+      "title": "Moves Like Jagger",
+      "artist": "Maroon 5 ft. Christina Aguilera",
+      "year": 2011,
+      "country": "US",
+      "genre": "Dance-Pop",
+      "difficulty": "easy",
+      "mood": ["Cool", "Energy", "Dance"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Eine Hommage an die Tanzbewegungen von Mick Jagger.",
+        "Besticht durch den markanten Pfeif-Hook am Anfang.",
+        "Die Zusammenarbeit zwischen Adam Levine und Christina Aguilera war ein Megahit.",
+        "Vermittelt ein Gefühl von Lockerheit und Selbstbewusstsein.",
+        "Refrain: 'I got the moves like Jagger, I got the moves like Jagger!'"
+      ],
+      "lyrics": { "real": ["Just shoot for the stars, if it feels right, and aim for my heart if you feel like", "You wanna steer, but I'm taking ownership, I'm taking control", "And it goes like this, I got the moves like Jagger"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "iEPTlhBHeFg" }
+    },
+    {
+      "id": "dance-pitbull-everything",
+      "title": "Give Me Everything",
+      "artist": "Pitbull ft. Ne-Yo, Afrojack & Nayer",
+      "year": 2011,
+      "country": "US/NL",
+      "genre": "Dance-Pop / Electro House",
+      "difficulty": "easy",
+      "mood": ["Energy", "Party", "Happy"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Inbegriff des 'Electronic Dance Pop' Booms der frühen 2010er.",
+        "Ne-Yos Hook kombiniert mit Pitbulls Rap-Parts.",
+        "Wurde zu einer der meistverkauften digitalen Singles aller Zeiten.",
+        "Ein absolutes Muss für jede Clubnacht jener Ära.",
+        "Refrain: 'Tonight I want all of you tonight, give me everything tonight!'"
+      ],
+      "lyrics": { "real": ["Me not working hard? Yeah, right! Picture that with a Kodak!", "Tonight I want all of you tonight, give me everything tonight", "For all we know we might not get tomorrow, let's do it tonight"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "EPo5wwmKEfg" }
+    },
+    {
+      "id": "dance-lmfao-party-rock",
+      "title": "Party Rock Anthem",
+      "artist": "LMFAO",
+      "year": 2011,
+      "country": "US",
+      "genre": "Electionic / Pop",
+      "difficulty": "easy",
+      "mood": ["Energy", "Party", "Fun"],
+      "pack": "Dance Floor Fillers",
+      "hints": [
+        "Löste den weltweiten 'Shuffle'-Tanzboom aus.",
+        "Der Refrain 'Every day I'm shufflin'' wurde zum geflügelten Wort.",
+        "Ein Inbegriff für übertriebenen, spaßigen Party-Sound.",
+        "Das Musikvideo parodiert den Film '28 Days Later'.",
+        "Refrain: 'Party rock is in the house tonight! Everybody just have a good time!'"
+      ],
+      "lyrics": { "real": ["Party rock is in the house tonight, everybody just have a good time", "And we gonna make you lose your mind, everybody just have a good time", "Every day I'm shufflin'"], "fake": "Dancing in the street, moving to the beat of the broken drum" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "KQ6zr6kCPj8" }
     }
   ]
 }

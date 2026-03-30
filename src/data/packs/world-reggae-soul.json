@@ -423,7 +423,322 @@
       ],
       "lyrics": { "real": ["Chorando se foi quem um dia só me fez chorar", "Chorando estará ao lembrar de um amor que um dia não soube cuidar", "A recordação vai estar com ele aonde for"], "fake": "Bajo la luna de plata, bailamos con mucha fortuna" },
       "isOneHitWonder": false,
-      "links": { "youtube": "iyLdoQGBchU" }
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "world-marley-threebirds",
+      "title": "Three Little Birds",
+      "artist": "Bob Marley & The Wailers",
+      "year": 1977,
+      "country": "JM",
+      "genre": "Reggae",
+      "difficulty": "easy",
+      "mood": ["Happy", "Positive", "Chill"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Einer der optimistischsten Songs der Musikgeschichte.",
+        "Thematisiert die Überzeugung, dass am Ende alles gut werden wird.",
+        "Bekannt für den extrem entspannten Rhythmus und die eingängige Botschaft.",
+        "Ein Inbegriff für Marleys spirituelle und positive Ausstrahlung.",
+        "Refrain: 'Don't worry about a thing! 'Cause every little thing's gonna be alright!'"
+      ],
+      "lyrics": { "real": ["Don't worry about a thing, 'cause every little thing's gonna be alright", "Singin', 'Don't worry about a thing, 'cause every little thing's gonna be alright!'", "Rise up this mornin', smiled with the risin' sun"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "ZA_7X_" }
+    },
+    {
+      "id": "world-ub40-redwine",
+      "title": "Red Red Wine",
+      "artist": "UB40",
+      "year": 1983,
+      "country": "GB",
+      "genre": "Reggae Pop",
+      "difficulty": "easy",
+      "mood": ["Chill", "Sad", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Ursprünglich ein Song von Neil Diamond.",
+        "UB40 machten daraus einen der erfolgreichsten Reggae-Pop-Hits der 80er.",
+        "Thematisiert den Versuch, Kummer mit Wein zu vergessen.",
+        "Besticht durch den sanften Synthesizer-Reggae-Sound.",
+        "Refrain: 'Red, red wine! You make me feel so fine!'"
+      ],
+      "lyrics": { "real": ["Red, red wine, you make me feel so fine, you keep me rocking all of the time", "Red, red wine, stay close to me, don't let me be alone", "It's tearing me apart, to be alone like this"], "fake": "In the middle of the island, we're looking for the silent sun" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "zXt5MeWM" }
+    },
+    {
+      "id": "world-jimmycliff-clearly",
+      "title": "I Can See Clearly Now",
+      "artist": "Jimmy Cliff",
+      "year": 1993,
+      "country": "JM",
+      "genre": "Reggae / Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Positive", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Eine Cover-Version des Hits von Johnny Nash.",
+        "Wurde durch den Film 'Cool Runnings' weltweit erneut zum Hit.",
+        "Thematisiert die Erleichterung und Klarheit nach einer schwierigen Zeit.",
+        "Besticht durch die fröhliche Marimba-Melodie und Jimmy Cliffs optimistischen Gesang.",
+        "Refrain: 'I can see clearly now, the rain is gone!'"
+      ],
+      "lyrics": { "real": ["I can see clearly now the rain is gone, I can see all obstacles in my way", "Gone are the dark clouds that had me blind", "It's gonna be a bright, bright sun-shiny day"], "fake": "In the shadow of the valley, I'm looking for a rally of hope" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "world-innercircle-sweat",
+      "title": "Sweat (A La La La La Long)",
+      "artist": "Inner Circle",
+      "year": 1992,
+      "country": "JM",
+      "genre": "Reggae Fusion",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Dance"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Einer der größten Sommerhits der frühen 90er Jahre.",
+        "Bekannt für den extrem einprägsamen 'A La La La La Long' Refrain.",
+        "Vermittelt pure Urlaubsstimmung und gute Laune.",
+        "Besticht durch den treibenden Reggae-Beat mit Pop-Elementen.",
+        "Refrain: 'Girl, I want to make you sweat!'"
+      ],
+      "lyrics": { "real": ["I've been watching you, a-la-la-la-la-long, a-la-la-la-la-long long li-long-long", "Girl I want to make you sweat, sweat till you can't sweat no more", "And if you cry out, I'm gonna push it some more"], "fake": "Tanzen im Licht, wir vergessen dich nicht heute" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "uc2X9C" }
+    },
+    {
+      "id": "world-shaggy-itwasntme",
+      "title": "It Wasn't Me",
+      "artist": "Shaggy ft. Rikrok",
+      "year": 2000,
+      "country": "JM/US",
+      "genre": "Reggae Fusion",
+      "difficulty": "easy",
+      "mood": ["Funny", "Groovy", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Thematisiert auf humorvolle Weise das Leugnen eines Seitensprungs trotz erdrückender Beweise.",
+        "Shaggys markante, tiefe Stimme bildet den perfekten Kontrast zu Rikroks Gesang.",
+        "Wurde zu einem der erfolgreichsten Reggae-inspirierten Songs der 2000er.",
+        "Ein absoluter Party-Klassiker.",
+        "Refrain: 'But she caught me on the counter! It wasn't me!'"
+      ],
+      "lyrics": { "real": ["But she caught me on the counter (It wasn't me), saw me bangin' on the sofa (It wasn't me)", "I even had her in the shower (It wasn't me), she even caught me on camera (It wasn't me)", "Honey came in and she caught me red-handed creeping with the girl next door"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "2g5Hz17" }
+    },
+    {
+      "id": "world-seanpaul-getbusy",
+      "title": "Get Busy",
+      "artist": "Sean Paul",
+      "year": 2002,
+      "country": "JM",
+      "genre": "Dancehall / Reggae Fusion",
+      "difficulty": "easy",
+      "mood": ["Energy", "Dance", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Sean Paul brachte hiermit den Dancehall-Sound endgültig in den globalen Mainstream.",
+        "Basiert auf dem extrem populären 'Diwali Riddim'.",
+        "Besticht durch den harten, perkussiven Beat und Sean Pauls charakteristischen Flow.",
+        "Ein Muss für jede Tanzfläche.",
+        "Refrain: 'Shake that thing Miss Kana Kana!'"
+      ],
+      "lyrics": { "real": ["Shake that thing Miss Kana Kana, shake that thing Miss Kana Kana", "Get busy, yo, get busy, yo", "Woman of every shape and size, pull up the thing and let me look in your eyes"], "fake": "In the middle of the street, you can feel the heat of the broken drum" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "world-aretha-respect",
+      "title": "Respect",
+      "artist": "Aretha Franklin",
+      "year": 1967,
+      "country": "US",
+      "genre": "Soul / R&B",
+      "difficulty": "easy",
+      "mood": ["Powerful", "Confident", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Ursprünglich von Otis Redding geschrieben, wurde es in Arethas Version zur Frauen-Hymne.",
+        "Besitzt das berühmte 'R-E-S-P-E-C-T' Buchstabieren.",
+        "Aretha Franklin erhielt dafür den Beinamen 'Queen of Soul'.",
+        "Ein Meilenstein der Bürgerrechts- und Emanzipationsbewegung.",
+        "Refrain: 'R-E-S-P-E-C-T! Find out what it means to me!'"
+      ],
+      "lyrics": { "real": ["What you want, baby, I got it, what you need, you know I got it", "All I'm askin' is for a little respect when you come home", "R-E-S-P-E-C-T, find out what it means to me"], "fake": "Tanzen auf der Straße, im Rhythmus der Zeit heute Nacht" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "6FOUqQt3Kg0" }
+    },
+    {
+      "id": "world-marvin-goingon",
+      "title": "What's Going On",
+      "artist": "Marvin Gaye",
+      "year": 1971,
+      "country": "US",
+      "genre": "Soul",
+      "difficulty": "easy",
+      "mood": ["Serious", "Deep", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Ein politisch motivierter Song, der Krieg und Ungerechtigkeit thematisiert.",
+        "Marvin Gaye wich hiermit von seinem bisherigen Liebeslied-Image ab.",
+        "Besticht durch die sanfte, fast schwebende Produktion und den nachdenklichen Text.",
+        "Gilt als einer der besten Songs aller Zeiten (laut Rolling Stone Magazin).",
+        "Refrain: 'Father, father... we don't need to escalate!'"
+      ],
+      "lyrics": { "real": ["Mother, mother, there's too many of you crying", "Brother, brother, brother, there's far too many of you dying", "You know we've got to find a way to bring some lovin' here today"], "fake": "In the shadow of the night, I'm looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "H-kA3t" }
+    },
+    {
+      "id": "world-stevie-superstition",
+      "title": "Superstition",
+      "artist": "Stevie Wonder",
+      "year": 1972,
+      "country": "US",
+      "genre": "Funk / Soul",
+      "difficulty": "medium",
+      "mood": ["Groovy", "Energy", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Besitzt eines der berühmtesten Clavinet-Riffs der Musikgeschichte.",
+        "Thematisiert den Aberglauben und die damit verbundenen Ängste.",
+        "Besticht durch den extrem druckvollen Funk-Groove und Stevies leidenschaftlichen Gesang.",
+        "Ein Meilenstein des modernen Funk.",
+        "Refrain: 'When you believe in things you don't understand, then you suffer!'"
+      ],
+      "lyrics": { "real": ["Very superstitious, writing's on the wall, very superstitious, ladders 'bout to fall", "Thirteen month old baby, broke the lookin' glass", "Seven years of bad luck, the good things in your past"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "world-jamesbrown-feelgood",
+      "title": "I Got You (I Feel Good)",
+      "artist": "James Brown",
+      "year": 1965,
+      "country": "US",
+      "genre": "Funk / Soul",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Der Inbegriff für explosive Energie des 'Godfather of Soul'.",
+        "Bekannt für den markanten Schrei am Anfang und die knackigen Bläser.",
+        "Vermittelt pure, unverfälschte Lebensfreude.",
+        "Zementierte James Browns Status als revolutionärer Künstler.",
+        "Refrain: 'I feel good! I knew that I would!'"
+      ],
+      "lyrics": { "real": ["Woah! I feel good, I knew that I would, now", "I feel good, I knew that I would, now", "So good, so good, I got you"], "fake": "In the middle of the street, you can feel the heat of our happy heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "B1wOK9y" }
+    },
+    {
+      "id": "world-billwithers-sunshine",
+      "title": "Ain't No Sunshine",
+      "artist": "Bill Withers",
+      "year": 1971,
+      "country": "US",
+      "genre": "Soul / R&B",
+      "difficulty": "easy",
+      "mood": ["Sad", "Atmospheric", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Bekannt für die mehrfache Wiederholung der Zeile 'I know, I know...'.",
+        "Thematisiert die schmerzhafte Abwesenheit eines geliebten Menschen.",
+        "Besticht durch seine minimalistische, aber enorm wirkungsvolle Produktion.",
+        "Bill Withers' warme Stimme trägt den Song meisterhaft.",
+        "Refrain: 'Ain't no sunshine when she's gone! It's not warm when she's away!'"
+      ],
+      "lyrics": { "real": ["Ain't no sunshine when she's gone, it's not warm when she's away", "Ain't no sunshine when she's gone, and she's always gone too long", "Anytime she goes away"], "fake": "Walking through the rain, I'm calling out your name in vain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "S5O9O5S9S" }
+    },
+    {
+      "id": "world-algreen-together",
+      "title": "Let's Stay Together",
+      "artist": "Al Green",
+      "year": 1971,
+      "country": "US",
+      "genre": "Soul",
+      "difficulty": "easy",
+      "mood": ["Romantic", "Chill", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Einer der sanftesten und romantischsten Soul-Songs aller Zeiten.",
+        "Thematisiert die Bedingungslosigkeit der Liebe in guten wie in schlechten Zeiten.",
+        "Wurde durch Filme wie 'Pulp Fiction' einer neuen Generation bekannt.",
+        "Al Greens seidenweiche Stimme ist das Markenzeichen dieses Hits.",
+        "Refrain: 'Let's stay together! Loving you whether times are good or bad!'"
+      ],
+      "lyrics": { "real": ["I'm so in love with you, whatever you want to do is all right with me", "Let's, let's stay together, lovin' you whether, times are good or bad, happy or sad", "Why, tell me why, people break up then turn around and make up"], "fake": "In the shadow of the night, we're looking for the light of your broken soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "world-otis-dock",
+      "title": "(Sittin' On) The Dock of the Bay",
+      "artist": "Otis Redding",
+      "year": 1967,
+      "country": "US",
+      "genre": "Soul",
+      "difficulty": "easy",
+      "mood": ["Chill", "Melancholic", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Wurde posthum veröffentlicht (Otis verstarb kurz nach der Aufnahme bei einem Flugzeugabsturz).",
+        "Thematisiert das Gefühl von Stillstand und Sehnsucht am Wasser.",
+        "Bekannt für das beruhigende Meeresrauschen und das gepfiffene Outro.",
+        "Ein Inbegriff für den entspannten, gefühlvollen Soul der 60er.",
+        "Refrain: 'Sittin' on the dock of the bay, watchin' the tide roll away!'"
+      ],
+      "lyrics": { "real": ["Sittin' in the morning sun, I'll be sittin' when the evening comes", "Watchin' the ships roll in, and then I watch 'em roll away again, yeah", "I'm sittin' on the dock of the bay, watchin' the tide roll away"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "gxEPV4kolz0" }
+    },
+    {
+      "id": "world-beneking-standbyme",
+      "title": "Stand By Me",
+      "artist": "Ben E. King",
+      "year": 1961,
+      "country": "US",
+      "genre": "Soul / R&B",
+      "difficulty": "easy",
+      "mood": ["Romantic", "Positive", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Basierend auf einem alten Gospel-Song, wurde es zum zeitlosen Welt-Evergreen.",
+        "Thematisiert die Wichtigkeit von Beistand und Loyalität.",
+        "Besticht durch den markanten Bass-Rhythmus und die hoffnungsvolle Melodie.",
+        "Wurde durch den gleichnamigen Film aus den 80ern erneut zum Riesenhit.",
+        "Refrain: 'So darlin', darlin', stand by me! Oh, stand by me!'"
+      ],
+      "lyrics": { "real": ["When the night has come, and the land is dark, and the moon is the only light we'll see", "No I won't be afraid, no I won't be afraid, just as long as you stand, stand by me", "So darlin', darlin', stand by me, oh stand by me"], "fake": "In the middle of the night, we're looking for the light of our happy love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "hwZNL7AMOSE" }
+    },
+    {
+      "id": "world-raycharles-roadjack",
+      "title": "Hit the Road Jack",
+      "artist": "Ray Charles",
+      "year": 1961,
+      "country": "US",
+      "genre": "R&B / Soul / Jazz",
+      "difficulty": "easy",
+      "mood": ["Funny", "Energy", "Classic"],
+      "pack": "World, Reggae & Soul",
+      "hints": [
+        "Ein humorvoller Dialog-Song zwischen einem verlassenen Mann und seiner Ex-Partnerin.",
+        "Besticht durch den treibenden Rhythmus und die markanten Chor-Antworten.",
+        "Ray Charles markante Stimme und sein Klavierspiel stehen im Mittelpunkt.",
+        "Ein absoluter Klassiker, der weltweit bekannt ist.",
+        "Refrain: 'Hit the road Jack! And don't you come back no more!'"
+      ],
+      "lyrics": { "real": ["Hit the road Jack and don't you come back no more, no more, no more, no more", "Hit the road Jack and don't you come back no more", "What you say?"], "fake": "In the middle of the island, we're looking for the silent sun tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
     }
   ]
 }

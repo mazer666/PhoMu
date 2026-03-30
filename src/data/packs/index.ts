@@ -18,6 +18,19 @@ import electronicTechno from './electronic-techno.json';
 import schlagerEvergreens from './schlager-evergreens.json';
 import countryJazzBlues from './country-jazz-blues.json';
 import worldReggaeSoul from './world-reggae-soul.json';
+import sixtySeventyLegends from './60s-70s-legends.json';
+import popRnB2000s from './2000s-pop-rnb.json';
+import hits2010s2020s from './2010s-2020s-hits.json';
+import pop80s from './80s-pop.json';
+import kidsDisney from './kids-disney.json';
+import jazzBlues from './jazz-blues.json';
+import metalHardcore from './metal-hardcore.json';
+import countryFolk from './country-folk.json';
+import pianoBallads from './piano-ballads.json';
+import electronicSynth from './electronic-synth.json';
+import soulFunk from './soul-funk.json';
+import classicalOrchestral from './classical-orchestral.json';
+import grandFinale from './grand-finale.json';
 
 import type { PhomuSong } from '@/types/song';
 
@@ -36,6 +49,19 @@ export const ALL_SONGS: PhomuSong[] = [
   ...(schlagerEvergreens.songs as any),
   ...(countryJazzBlues.songs as any),
   ...(worldReggaeSoul.songs as any),
+  ...(sixtySeventyLegends.songs as any),
+  ...(popRnB2000s.songs as any),
+  ...(hits2010s2020s.songs as any),
+  ...(pop80s.songs as any),
+  ...(kidsDisney.songs as any),
+  ...(jazzBlues.songs as any),
+  ...(metalHardcore.songs as any),
+  ...(countryFolk.songs as any),
+  ...(pianoBallads.songs as any),
+  ...(electronicSynth.songs as any),
+  ...(soulFunk.songs as any),
+  ...(classicalOrchestral.songs as any),
+  ...(grandFinale.songs as any),
 ];
 
 /** All available pack names extracted from data */

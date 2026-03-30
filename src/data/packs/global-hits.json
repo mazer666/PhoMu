@@ -1510,6 +1510,174 @@
       "links": {
         "youtube": "H5v3kku4y6Q"
       }
+    },
+    {
+      "id": "miley-cyrus-flowers-2023",
+      "title": "Flowers",
+      "artist": "Miley Cyrus",
+      "year": 2023,
+      "country": "US",
+      "genre": "Pop / Disco",
+      "difficulty": "easy",
+      "mood": ["Confident", "Positive", "Summer Vibes"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Inbegriff für weibliche Selbstermächtigung nach einer Trennung.",
+        "Wurde oft als Antwort auf Bruno Mars' 'When I Was Your Man' interpretiert.",
+        "Mitreißender Mid-Tempo-Groove mit Disco-Anklängen.",
+        "Gewann Miley Cyrus ihre ersten beiden Grammys in ihrer Karriere.",
+        "Refrain: 'I can buy myself flowers! Write my name in the sand!'"
+      ],
+      "lyrics": { "real": ["I can buy myself flowers, write my name in the sand", "Talk to myself for hours, say things you don't understand", "I can take myself dancing, and I can hold my own hand"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "G7KNmW9a75Y" }
+    },
+    {
+      "id": "taylor-swift-antihero-2022",
+      "title": "Anti-Hero",
+      "artist": "Taylor Swift",
+      "year": 2022,
+      "country": "US",
+      "genre": "Synth-Pop",
+      "difficulty": "easy",
+      "mood": ["Honest", "Chill", "Dark"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Thematisiert schonungslos eigene Unsicherheiten und Selbstzweifel.",
+        "Besticht durch den unterkühlten 80er-Jahre-Synthie-Beat von Jack Antonoff.",
+        "Wurde zu einem viralen Phänomen auf Social Media.",
+        "Ein Kernstück ihres Mega-Erfolgs-Albums 'Midnights'.",
+        "Refrain: 'It's me! Hi! I'm the problem, it's me!'"
+      ],
+      "lyrics": { "real": ["It's me, hi, I'm the problem, it's me!", "At teatime, everybody agrees", "I'll stare directly at the sun but never in the mirror"], "fake": "In the shadow of the night, I'm looking for the light of our love tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "b1kbLwvqugk" }
+    },
+    {
+      "id": "glass-animals-heatwaves-2020",
+      "title": "Heat Waves",
+      "artist": "Glass Animals",
+      "year": 2020,
+      "country": "GB",
+      "genre": "Indie Pop / Psychedelic Pop",
+      "difficulty": "medium",
+      "mood": ["Chill", "Summer Vibes", "Sad"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Hat den längsten Aufstieg in der Geschichte der Billboard Charts hinter sich.",
+        "Thematisiert Sehnsucht und das Festhalten an Erinnerungen im Sommer.",
+        "Besticht durch den markanten, leicht verzerrten Gitarren-Hook.",
+        "Ein absoluter Dauerbrenner im Streaming-Zeitalter.",
+        "Refrain: 'Sometimes all I think about is you! Late nights in the middle of June!'"
+      ],
+      "lyrics": { "real": ["Sometimes all I think about is you, late nights in the middle of June", "Heat waves been faking me out, can't make you happier now", "I just wonder what you're dreaming of"], "fake": "Dancing in the STARS, playing my guitars tonight tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "mRD0-G97" }
+    },
+    {
+      "id": "olivia-rodrigo-drivers-2021",
+      "title": "drivers license",
+      "artist": "Olivia Rodrigo",
+      "year": 2021,
+      "country": "US",
+      "genre": "Pop / Power Ballad",
+      "difficulty": "easy",
+      "mood": ["Sad", "Emotional", "Heartbreak"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Machte die damals 17-Jährige über Nacht zur globalen Sensation.",
+        "Thematisiert den Schmerz einer Trennung vor dem Hintergrund der neuen Fahrerlaubnis.",
+        "Besticht durch den dramatischen Bridge-Aufbau und die ehrlichen Lyrics.",
+        "Besitzt einen beinahe hypnotischen, minimalistischen Beat.",
+        "Refrain: 'And I know we weren't perfect! But I've never felt this way for no one!'"
+      ],
+      "lyrics": { "real": ["I got my drivers license last week, just like we always talked about", "But today I drove through the suburbs, crying 'cause you weren't around", "And I know we weren't perfect but I've never felt this way for no one"], "fake": "In the middle of the street, you can feel the heat of the broken heart tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "ZmDBbnmKpqQ" }
+    },
+    {
+      "id": "sza-killbill-2023",
+      "title": "Kill Bill",
+      "artist": "SZA",
+      "year": 2023,
+      "country": "US",
+      "genre": "R&B / Soul",
+      "difficulty": "medium",
+      "mood": ["Honest", "Moody", "Dark"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Inbegriff für SZAs ehrlichen, fast schon provokanten Storytelling-Stil.",
+        "Spielt mit der Ästhetik des gleichnamigen Quentin-Tarantino-Films.",
+        "Besticht durch die unterkühlten Beats und die sanfte R&B-Vibe.",
+        "Thematisiert extreme Eifersucht nach einer Trennung.",
+        "Refrain: 'I might kill my ex! Not the best idea!'"
+      ],
+      "lyrics": { "real": ["I might kill my ex, not the best idea", "His new girlfriend's next, how'd I get here?", "I'd rather be in jail than alone"], "fake": "In the shadow of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "SQncL" }
+    },
+    {
+      "id": "dojacat-sayso-2020",
+      "title": "Say So",
+      "artist": "Doja Cat",
+      "year": 2020,
+      "country": "US",
+      "genre": "Pop / Disco-Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Sexy", "Summer Vibes"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Inbegriff für den massiven Erfolg durch TikTok-Tanz-Challenges.",
+        "Besticht durch den federleichten Retro-Disco-Rhythmus.",
+        "Thematisiert Flirts und die Aufforderung, den ersten Schritt zu machen.",
+        "Vereint Rap-Elemente mit süßem Pop-Gesang.",
+        "Refrain: 'Day to night to morning! Keep with me in the moment!'"
+      ],
+      "lyrics": { "real": ["Day to night to morning, keep with me in the moment", "I'd let you had you known it, why don't you say so?", "Didn't even notice, no punches left to roll with"], "fake": "Dancing in the STARS, playing my guitars tonight tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "pok8H_L1_Ww" }
+    },
+    {
+      "id": "lilnasx-oldtown-2019",
+      "title": "Old Town Road",
+      "artist": "Lil Nas X ft. Billy Ray Cyrus",
+      "year": 2019,
+      "country": "US",
+      "genre": "Country Rap / Hip-Hop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Funny"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Hielt mit 19 Wochen den Rekord für die längste Nummer 1 in den US-Charts.",
+        "Löste eine Debatte darüber aus, was 'echter' Country ist.",
+        "Kombiniert Banjo-Samples mit schweren Trap-Beats.",
+        "War ein massiver viraler Erfolg auf Plattformen wie TikTok.",
+        "Refrain: 'I'm gonna take my horse to the old town road! I'm gonna ride 'til I can't no more!'"
+      ],
+      "lyrics": { "real": ["I'm gonna take my horse to the old town road", "I'm gonna ride 'til I can't no more", "I got the horses in the back, horse tack is attached"], "fake": "In the middle of the island, we're looking for the silent moon tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "w2Ov5jfm34" }
+    },
+    {
+      "id": "weeknd-ariana-tears-2021",
+      "title": "Save Your Tears",
+      "artist": "The Weeknd & Ariana Grande",
+      "year": 2021,
+      "country": "CA/US",
+      "genre": "Synth-Pop",
+      "difficulty": "easy",
+      "mood": ["Chill", "Melancholic", "Nostalgic"],
+      "pack": "Global Hits 1950-2026",
+      "hints": [
+        "Inbegriff für den perfekten 80er-Jahre-Retro-Sound der modernen Popmusik.",
+        "Besonders populär in der Remix-Version mit Ariana Grande.",
+        "Thematisiert Reue und das Verpassen der richtigen Worte in einer Beziehung.",
+        "Besticht durch den klaren, treibenden Synthesizer-Beat.",
+        "Refrain: 'Save your tears for another day! I made you think that I would always stay!'"
+      ],
+      "lyrics": { "real": ["I saw you dancing in a crowded room, you look so happy when I'm not with you", "Save your tears for another day", "I made you think that I would always stay"], "fake": "In the shadow of the night, we're looking for the light of our love tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "uQS2x3" }
     }
   ]
 }

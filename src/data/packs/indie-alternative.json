@@ -423,7 +423,322 @@
       ],
       "lyrics": { "real": ["Waiting in a car, waiting for a ride in the dark", "The night city grows, look at the horizon glow", "The song is in my soul, let the night take control"], "fake": "Driving through the neon light, chasing ghosts in the night" },
       "isOneHitWonder": true,
-      "links": { "youtube": "dX3k_UAnyRE" }
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "indie-radiohead-creep",
+      "title": "Creep",
+      "artist": "Radiohead",
+      "year": 1992,
+      "country": "GB",
+      "genre": "Alternative Rock",
+      "difficulty": "easy",
+      "mood": ["Sad", "Emotional", "Classic"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Radioheads Debütsingle, die sie weltweit bekannt machte.",
+        "Der plötzliche Gitarren-Schlag vor dem Refrain ist das Markenzeichen des Songs.",
+        "Thematisiert Selbstzweifel und das Gefühl, nicht dazuzugehören.",
+        "Die Band mochte den Song später so wenig, dass sie ihn jahrelang nicht live spielten.",
+        "Refrain: 'I'm a creep! I'm a weirdo! What the hell am I doing here?'"
+      ],
+      "lyrics": { "real": ["When you were here before, couldn't look you in the eye", "You're just like an angel, your skin makes me cry", "I'm a creep, I'm a weirdo, what the hell am I doing here?"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "XFkzRNyygfk" }
+    },
+    {
+      "id": "indie-killers-brightside",
+      "title": "Mr. Brightside",
+      "artist": "The Killers",
+      "year": 2003,
+      "country": "US",
+      "genre": "Indie Rock",
+      "difficulty": "easy",
+      "mood": ["Energy", "Classic", "Sad"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Einer der dauerhaftesten Indie-Hits der 2000er Jahre.",
+        "Thematisiert Eifersucht und die Paranoia über die Untreue eines Partners.",
+        "Besticht durch das markante Gitarren-Arpeggio im Intro.",
+        "Wurde zu einer absoluten Mitsing-Hymne in Stadien und Clubs.",
+        "Refrain: 'I'm coming out of my cage, and I've been doing just fine!'"
+      ],
+      "lyrics": { "real": ["I'm coming out of my cage and I've been doing just fine", "Gotta gotta be down because I want it all", "It started out with a kiss, how did it end up like this?"], "fake": "In the middle of the street, you can feel the heat of the broken heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "gGdGFtwCNBE" }
+    },
+    {
+      "id": "indie-arctic-monkeys-wanna",
+      "title": "Do I Wanna Know?",
+      "artist": "Arctic Monkeys",
+      "year": 2013,
+      "country": "GB",
+      "genre": "Indie Rock / Stomp Rock",
+      "difficulty": "easy",
+      "mood": ["Cool", "Moody", "Classic"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Bekannt für das schleppende, extrem coole Gitarren-Riff.",
+        "Markierte den Wandel der Band hin zu einem schwereren, reiferen Sound.",
+        "Alex Turners Gesang vermittelt eine perfekte Mischung aus Arroganz und Verletzlichkeit.",
+        "Das animierte Video mit der Soundwelle ist Kult.",
+        "Refrain: 'Crawling back to you... do I wanna know?'"
+      ],
+      "lyrics": { "real": ["Have you got colour in your cheeks? Do you ever get that fear that you can't shift the tide?", "Crawling back to you, ever thought of calling when you've had a few?", "Cause I always do, maybe I'm too busy being yours to fall for somebody new"], "fake": "Walking down the street with a rhythm in my feet tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "bpOSxM0TkBI" }
+    },
+    {
+      "id": "indie-franz-ferdinand-takeout",
+      "title": "Take Me Out",
+      "artist": "Franz Ferdinand",
+      "year": 2004,
+      "country": "GB",
+      "genre": "Indie Rock / Post-Punk",
+      "difficulty": "easy",
+      "mood": ["Energy", "Dance", "Classic"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Besticht durch den plötzlichen Tempowechsel nach dem Intro.",
+        "Brachte den 'Dance-Punk' zurück in den Mainstream der 2000er.",
+        "Bekannt für den extrem eingängigen Gitarren-Hook.",
+        "Thematisiert die Spannung vor einem entscheidenden Moment.",
+        "Refrain: 'I say, don't you know? You say you don't know! I say, take me out!'"
+      ],
+      "lyrics": { "real": ["So if you're lonely, you know I'm here waiting for you", "I'm just a crosshair, I'm just a shot away from you", "If I move this way, step this way, touch this way, take me out!"], "fake": "In the shadow of the valley, I'm looking for a rally of hope" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "Ijk4j-r7S8w" }
+    },
+    {
+      "id": "indie-kings-of-leon-somebody",
+      "title": "Use Somebody",
+      "artist": "Kings of Leon",
+      "year": 2008,
+      "country": "US",
+      "genre": "Indie Rock / Arena Rock",
+      "difficulty": "easy",
+      "mood": ["Emotional", "Powerful", "Classic"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Die Band besteht aus drei Brüdern und einem Cousin.",
+        "Caleb Followills raue Stimme trägt die Sehnsucht des Songs perfekt.",
+        "Wurde zu einem globalen Radio-Dauerbrenner und gewann mehrere Grammys.",
+        "Ein Inbegriff für emotionalen Indie-Rock mit Stadion-Faktor.",
+        "Refrain: 'I've been roaming around, always looking down at all I see!'"
+      ],
+      "lyrics": { "real": ["I've been roaming around, always looking down at all I see", "Painted faces fill the places I can't reach", "You know that I could use somebody, someone like you and all you know and how you speak"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "gnhXHvRoUd0" }
+    },
+    {
+      "id": "indie-mgmt-kids",
+      "title": "Kids",
+      "artist": "MGMT",
+      "year": 2007,
+      "country": "US",
+      "genre": "Indie Pop / Synth Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Electronic", "Nostalgic"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Bekannt für den extrem einprägsamen Synthesizer-Hook.",
+        "Thematisiert den Kontrast zwischen kindlicher Unbekümmertheit und der Realität der Erwachsenen.",
+        "Das Video mit dem Baby und den Monstern sorgte für viel Gesprächsstoff.",
+        "Ein Meilenstein des Synth-lastigen Indie-Pop.",
+        "Refrain: 'Control yourself! Take only what you need from it!'"
+      ],
+      "lyrics": { "real": ["You were a child crawling on your knees toward it", "Control yourself, take only what you need from it", "A family of trees wanted to be haunted"], "fake": "Nothing's gonna stop me now, I'm floating in the sky somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "fe4EK4HSPkI" }
+    },
+    {
+      "id": "indie-foster-kicks",
+      "title": "Pumped Up Kicks",
+      "artist": "Foster The People",
+      "year": 2010,
+      "country": "US",
+      "genre": "Indie Pop / Dance-Pop",
+      "difficulty": "easy",
+      "mood": ["Happy", "Serious", "Groovy"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Bekannt für den krassen Kontrast zwischen fröhlicher Melodie und düsterem Text.",
+        "Thematisiert die Gedanken eines isolierten Jugendlichen.",
+        "Wurde zum Überraschungshit des Sommers 2011.",
+        "Mark Heppner schrieb den Song in nur wenigen Stunden.",
+        "Refrain: 'All the other kids with the pumped up kicks, you'd better run, better run, outrun my gun!'"
+      ],
+      "lyrics": { "real": ["Robert's got a quick hand, he'll look around the room, he won't tell you his plan", "All the other kids with the pumped up kicks", "You'd better run, better run, outrun my gun"], "fake": "Dancing in the street, moving to the beat of the broken heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "SDTZ7iX4vTQ" }
+    },
+    {
+      "id": "indie-gotye-somebody",
+      "title": "Somebody That I Used To Know",
+      "artist": "Gotye ft. Kimbra",
+      "year": 2011,
+      "country": "AU/NZ",
+      "genre": "Indie Pop / Art Pop",
+      "difficulty": "easy",
+      "mood": ["Sad", "Unique", "Classic"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Besitzt ein markantes Xylophon-Sample (inspiriert durch Luiz Bonfá).",
+        "Thematisiert das Ende einer Beziehung und das Gefühl, dem anderen fremd zu werden.",
+        "Das Video mit der Körperbemalung wurde millionenfach angesehen.",
+        "Kimbras Gastpart bildet den perfekten Gegenpol zu Gotyes Klage.",
+        "Refrain: 'But you didn't have to cut me off! Make out like it never happened and that we were nothing!'"
+      ],
+      "lyrics": { "real": ["Now and then I think of when we were together, like when you said you felt so happy you could die", "But you didn't have to cut me off, make out like it never happened and that we were nothing", "Now you're just somebody that I used to know"], "fake": "In the shadow of the night, I'm looking for the light of your broken soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "8WYHDfJDPDc" }
+    },
+    {
+      "id": "indie-florence-dogdays",
+      "title": "Dog Days Are Over",
+      "artist": "Florence + The Machine",
+      "year": 2008,
+      "country": "GB",
+      "genre": "Indie Rock / Baroque Pop",
+      "difficulty": "medium",
+      "mood": ["Powerful", "Energy", "Happy"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Florence Welchs gewaltige Stimme steht hier im Mittelpunkt.",
+        "Besticht durch das markante Händeklatschen und die Harfenklänge.",
+        "Thematisiert den plötzlichen Einbruch von Glück in ein schwieriges Leben.",
+        "Ein Inbegriff für theatralischen, mitreißenden Indie-Pop.",
+        "Refrain: 'Run fast for your mother, run fast for your father!'"
+      ],
+      "lyrics": { "real": ["Happiness, hit her like a train on a track", "Coming towards her, stuck in the light", "The dog days are over, the dog days are done, can you hear the horses? 'Cause here they come"], "fake": "In the middle of the island, we're looking for the silent sun" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "iWOyfLBYtuU" }
+    },
+    {
+      "id": "indie-mumford-lion",
+      "title": "Little Lion Man",
+      "artist": "Mumford & Sons",
+      "year": 2009,
+      "country": "GB",
+      "genre": "Folk Rock / Indie Folk",
+      "difficulty": "medium",
+      "mood": ["Energy", "Raw", "Sad"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Löste den weltweiten Folk-Rock-Boom der frühen 2010er aus.",
+        "Bekannt für den treibenden Banjo-Rhythmus und Marcus Mumfords leidenschaftlichen Gesang.",
+        "Thematisiert eigenes Versagen und die damit einhergehende Reue.",
+        "Ein Inbegriff für handgemachte Musik im digitalen Zeitalter.",
+        "Refrain: 'But it was not your fault but mine, and it was your heart on the line!'"
+      ],
+      "lyrics": { "real": ["Weep for yourself, my help, you'll never need it", "But it was not your fault but mine, and it was your heart on the line", "I really fucked it up this time, didn't I, my dear?"], "fake": "Walking through the rain, I'm calling out your name in vain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "indie-lumineers-hohey",
+      "title": "Ho Hey",
+      "artist": "The Lumineers",
+      "year": 2012,
+      "country": "US",
+      "genre": "Indie Folk",
+      "difficulty": "easy",
+      "mood": ["Happy", "Singalong", "Classic"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Besticht durch seine extreme Einfachheit und die markanten 'Ho' und 'Hey' Rufe.",
+        "Thematisiert die Sehnsucht nach einem geliebten Menschen.",
+        "Wurde zu einem der größten Mitsing-Hits der 2010er Jahre.",
+        "Ein Paradebeispiel für minimalistisches Songwriting mit großer Wirkung.",
+        "Refrain: 'I belong with you, you belong with me, you're my sweetheart!'"
+      ],
+      "lyrics": { "real": ["(Ho!) I've been trying to do it right, (Hey!) I've been living a lonely life", "I belong with you, you belong with me, you're my sweetheart", "I belong with you, you belong with me, you're my sweet (Ho!)"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "zvCBSSwgtg4" }
+    },
+    {
+      "id": "indie-bastille-pompeii",
+      "title": "Pompeii",
+      "artist": "Bastille",
+      "year": 2013,
+      "country": "GB",
+      "genre": "Indie Pop / Synth Pop",
+      "difficulty": "easy",
+      "mood": ["Energy", "Epic", "Singalong"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Besticht durch den markanten Männer-Chor am Anfang ('Eh-eho, eh-eho').",
+        "Thematisiert den Untergang der Stadt Pompeji als Metapher für Stillstand.",
+        "Dan Smiths Gesang trägt den Song durch seine dynamischen Steigerungen.",
+        "Ein Welthit, der Indie-Elemente perfekt in den Pop integrierte.",
+        "Refrain: 'But if you close your eyes, does it almost feel like nothing changed at all?'"
+      ],
+      "lyrics": { "real": ["I was left to my own devices, many days fell away with nothing to show", "But if you close your eyes, does it almost feel like nothing changed at all?", "And if you close your eyes, does it almost feel like you've been here before?"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "F90Cw4l-8NY" }
+    },
+    {
+      "id": "indie-imagine-radioactive",
+      "title": "Radioactive",
+      "artist": "Imagine Dragons",
+      "year": 2012,
+      "country": "US",
+      "genre": "Alternative Rock / Indie Electronic",
+      "difficulty": "easy",
+      "mood": ["Powerful", "Energy", "Dark"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Besitzt einen extrem wuchtigen, elektronisch beeinflussten Beat.",
+        "Thematisiert das Erwachen in einer postapokalyptischen Welt (Metapher für Neuanfang).",
+        "Dan Reynolds' Gesang wechselt zwischen Atmen und kraftvollem Schreien.",
+        "Wurde zu einem der am längsten in den US-Charts vertretenen Songs.",
+        "Refrain: 'I'm waking up, I feel it in my bones! Welcome to the new age!'"
+      ],
+      "lyrics": { "real": ["I'm waking up, I feel it in my bones, enough to make my systems blow", "Welcome to the new age, to the new age", "I'm radioactive, radioactive"], "fake": "In the middle of the street, you can feel the heat of our happy heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "indie-21pilots-stressed",
+      "title": "Stressed Out",
+      "artist": "Twenty One Pilots",
+      "year": 2015,
+      "country": "US",
+      "genre": "Alternative Hip Hop / Indie Pop",
+      "difficulty": "easy",
+      "mood": ["Nostalgic", "Serious", "Indie"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Thematisiert die Sehnsucht nach der Kindheit und den Druck des Erwachsenwerdens.",
+        "Der 'Blurryface'-Charakter ist eine Metapher für Unsicherheit.",
+        "Verbindet meisterhaft Rap-Parts mit einem melodischen Refrain.",
+        "Wurde zur Hymne einer ganzen Generation von Jugendlichen.",
+        "Refrain: 'Wish we could turn back time, to the good old days!'"
+      ],
+      "lyrics": { "real": ["I wish I found some better sounds no one's ever heard", "Wish we could turn back time, to the good old days", "When our mamma sang us to sleep but now we're stressed out"], "fake": "Tanzen im Licht, wir vergessen dich nicht heute Abend" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "pXRviuL6vMY" }
+    },
+    {
+      "id": "indie-tame-impala-less",
+      "title": "The Less I Know the Better",
+      "artist": "Tame Impala",
+      "year": 2015,
+      "country": "AU",
+      "genre": "Psychedelic Pop / Indie Pop",
+      "difficulty": "medium",
+      "mood": ["Cool", "Groovy", "Indie"],
+      "pack": "Indie & Alternative",
+      "hints": [
+        "Besticht durch eine der eingängigsten Basslinien der letzten Jahre.",
+        "Kevin Parker ist der Mastermind, der fast alle Instrumente selbst einspielt.",
+        "Thematisiert Eifersucht und das schmerzhafte Beobachten einer verflossenen Liebe.",
+        "Ein Paradebeispiel für modernen Psychedelic-Indie.",
+        "Refrain: 'Someone said they left together, I ran out the door to get her!'"
+      ],
+      "lyrics": { "real": ["Someone said they left together, I ran out the door to get her, she was holding hands with Trevor", "Not the greatest feeling ever, said pull yourself together", "You should try your luck with Heather"], "fake": "In the shadow of the night, we're looking for the light of our broken soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "O2lG6fX3XW8" }
     }
   ]
 }

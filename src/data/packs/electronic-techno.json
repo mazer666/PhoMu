@@ -423,7 +423,322 @@
       ],
       "lyrics": { "real": ["I'm a heart of stone, and you're a firestone", "We light up the world, we light up the world", "Our hearts are like firestones, our hearts are like firestones"], "fake": "In the middle of the island, we're looking for the silent sun" },
       "isOneHitWonder": false,
-      "links": { "youtube": "9Sc-irO3pYk" }
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "electro-prodigy-firestarter",
+      "title": "Firestarter",
+      "artist": "The Prodigy",
+      "year": 1996,
+      "country": "GB",
+      "genre": "Big Beat / Electronic Rock",
+      "difficulty": "medium",
+      "mood": ["Energy", "Aggressive", "Classic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Keith Flints erster Song als Sänger der Band.",
+        "Das Video im stillgelegten U-Bahn-Tunnel sorgte für Kontroversen und Faszination.",
+        "Der verzerrte Gitarren-Sample und die harten Beats definierten den 'Big Beat'.",
+        "Wurde zu einer Hymne der rebellischen 90er-Jahre-Elektronik-Szene.",
+        "Refrain: 'I'm the trouble starter, punkin' instigator!'"
+      ],
+      "lyrics": { "real": ["I'm the trouble starter, punkin' instigator", "I'm the fear addicted, danger illustrated", "I'm a firestarter, twisted firestarter"], "fake": "Tanzen im Licht, wir vergessen dich nicht heute" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "wmin5Wk769Y" }
+    },
+    {
+      "id": "electro-chemical-boygirl",
+      "title": "Hey Boy Hey Girl",
+      "artist": "The Chemical Brothers",
+      "year": 1999,
+      "country": "GB",
+      "genre": "Big Beat",
+      "difficulty": "easy",
+      "mood": ["Energy", "Dance", "Classic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Besitzt einen der minimalistischsten und effektivsten Vocals der Dance-Geschichte.",
+        "Der Track ist ein Paradebeispiel für die hypnotische Kraft von Big Beat.",
+        "Wurde zu einem festen Bestandteil jeder Clubnacht um die Jahrtausendwende.",
+        "Das Video mit den tanzenden Skeletten ist legendär.",
+        "Refrain: 'Hey boy, hey girl! Superstar DJs, here we go!'"
+      ],
+      "lyrics": { "real": ["Hey boy, hey girl, superstar DJs, here we go!", "Hey boy, hey girl, superstar DJs, here we go!", "Hey boy, hey girl, superstar DJs, here we go!"], "fake": "In the middle of the street, you can feel the heat of the broken heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "tpKCqp9CALQ" }
+    },
+    {
+      "id": "electro-fatboy-righthere",
+      "title": "Right Here, Right Now",
+      "artist": "Fatboy Slim",
+      "year": 1998,
+      "country": "GB",
+      "genre": "Big Beat",
+      "difficulty": "easy",
+      "mood": ["Epic", "Energy", "Classic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Samplet eine Zeile aus dem Film 'Strange Days'.",
+        "Das Video zeigt die Evolution des Lebens in nur wenigen Minuten.",
+        "Die orchestralen Streicher verleihen dem Beat eine epische Dimension.",
+        "Ein Inbegriff für die kreative Sample-Kunst von Norman Cook.",
+        "Refrain: 'Right here, right now! Right here, right now!'"
+      ],
+      "lyrics": { "real": ["Right here, right now, right here, right now", "Right here, right now, right here, right now", "Right here, right now!"], "fake": "In the shadow of the valley, I'm looking for a rally of hope" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "l7Z3MSR8bXg" }
+    },
+    {
+      "id": "electro-faithless-insomnia",
+      "title": "Insomnia",
+      "artist": "Faithless",
+      "year": 1995,
+      "country": "GB",
+      "genre": "Trance / Progressive House",
+      "difficulty": "easy",
+      "mood": ["Moody", "Energy", "Classic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Maxi Jazz' markante Stimme und das Pizzicato-Synthesizer-Riff sind unvergesslich.",
+        "Handelt von der inneren Unruhe und der Schlaflosigkeit in der Nacht.",
+        "Der plötzliche Drop nach dem langen Aufbau ist ein Meilenstein der Club-Musik.",
+        "Ein absoluter Trance-Klassiker, der bis heute gespielt wird.",
+        "Refrain: 'I can't get no sleep!'"
+      ],
+      "lyrics": { "real": ["Deep in the bosom of the gentle night, is when I search for the light", "I need to sleep, I can't get no sleep", "I can't get no sleep!"], "fake": "Walking down the street with a rhythm in my feet tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "P8JEm4d6nRE" }
+    },
+    {
+      "id": "electro-darude-sandstorm",
+      "title": "Sandstorm",
+      "artist": "Darude",
+      "year": 1999,
+      "country": "FI",
+      "genre": "Trance",
+      "difficulty": "easy",
+      "mood": ["Energy", "Electronic", "Classic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Einer der meistgespielten und bekanntesten Instrumentals der Elektronik-Welt.",
+        "Wurde zu einem Internet-Phänomen und Meme (Antwort auf fast jede Frage nach einem Song).",
+        "Die treibende Synthesizer-Melodie ist sofortiges Erkennungsmerkmal.",
+        "Ein Inbegriff für energetischen Trance der späten 90er.",
+        "Refrain: (Synthesizer) - 'DU-DU-DU-DU-DU-DU-DU!'"
+      ],
+      "lyrics": { "real": ["(Instrumental)"], "fake": "In the middle of the desert, we're looking for the pleasure of the night" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "y6120QOlsfU" }
+    },
+    {
+      "id": "electro-robert-miles-children",
+      "title": "Children",
+      "artist": "Robert Miles",
+      "year": 1995,
+      "country": "IT",
+      "genre": "Dream House / Trance",
+      "difficulty": "easy",
+      "mood": ["Atmospheric", "Deep", "Classic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Begründete das Genre 'Dream House' mit seiner sanften Piano-Melodie.",
+        "Sollte ursprünglich Autofahrer nach einer Clubnacht beruhigen, um Unfälle zu vermeiden.",
+        "Die Kombination aus Trance-Beat und verträumtem Klavier war damals revolutionär.",
+        "Ein zeitloser Klassiker, der weltweit die Charts stürmte.",
+        "Refrain: (Instrumental)"
+      ],
+      "lyrics": { "real": ["(Instrumental)"], "fake": "In the middle of the street, you can feel the heat of our happy heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "CC5ca6Hsb2Q" }
+    },
+    {
+      "id": "electro-atb-9pm",
+      "title": "9 PM (Till I Come)",
+      "artist": "ATB",
+      "year": 1998,
+      "country": "DE",
+      "genre": "Trance",
+      "difficulty": "easy",
+      "mood": ["Cool", "Summer", "Classic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Bekannt für den 'Pitch-Bend'-Gitarren-Synthesizer-Sound.",
+        "André Tanneberger (ATB) schuf damit einen der erfolgreichsten deutschen Trance-Tracks.",
+        "Vermittelt das perfekte Gefühl von Strandpartys und lauen Nächten.",
+        "Erreichte Platz 1 in den britischen Charts.",
+        "Refrain: (Melodie) - 'Dadada-da-da!'"
+      ],
+      "lyrics": { "real": ["I'm waiting, just waiting, for you to come along", "Till I come, till I come", "I'm waiting, just waiting"], "fake": "In the shadow of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "rTVjnBo66dU" }
+    },
+    {
+      "id": "electro-paulvandyk-angel",
+      "title": "For an Angel",
+      "artist": "Paul van Dyk",
+      "year": 1994,
+      "country": "DE",
+      "genre": "Trance",
+      "difficulty": "medium",
+      "mood": ["Epic", "Emotional", "Classic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Gilt als einer der einflussreichsten Trance-Tracks aller Zeiten.",
+        "Die euphorische Melodie ist ein Inbegriff für die goldene Ära des Trance.",
+        "Paul van Dyk zementierte damit seinen Weltruf als DJ und Produzent.",
+        "Gänsehaut-Garantie auf jedem Rave weltweit.",
+        "Refrain: (Instrumental)"
+      ],
+      "lyrics": { "real": ["(Instrumental)"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "electro-tiesto-adagio",
+      "title": "Adagio for Strings",
+      "artist": "Tiësto",
+      "year": 2005,
+      "country": "NL",
+      "genre": "Trance / Progressive",
+      "difficulty": "hard",
+      "mood": ["Epic", "Powerful", "Classic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Eine Trance-Interpretation des klassischen Werks von Samuel Barber.",
+        "Tiëstos Version wurde zu einer der bekanntesten Club-Hymnen der 2000er.",
+        "Der gewaltige Aufbau führt zu einem der intensivsten Drops der Elektronik-Geschichte.",
+        "Ein Symbol für Tiëstos Status als 'Godfather of Trance'.",
+        "Refrain: (Instrumental)"
+      ],
+      "lyrics": { "real": ["(Instrumental)"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "2EaE0_Y" }
+    },
+    {
+      "id": "electro-deadmau5-strobe",
+      "title": "Strobe",
+      "artist": "deadmau5",
+      "year": 2009,
+      "country": "CA",
+      "genre": "Progressive House",
+      "difficulty": "hard",
+      "mood": ["Atmospheric", "Epic", "Deep"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Gilt unter Fans als eines der Meisterwerke des Progressive House.",
+        "Besitzt einen legendären, über 6-minütigen Aufbau (in der Full Version).",
+        "Thematisiert musikalische Evolution und dynamische Steigerung.",
+        "Ein Inbegriff für Detailverliebtheit in der elektronischen Produktion.",
+        "Refrain: (Instrumental)"
+      ],
+      "lyrics": { "real": ["(Instrumental)"], "fake": "Walking down the silver path under the dragon's wrath tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "tKi9HIp" }
+    },
+    {
+      "id": "electro-skrillex-scary",
+      "title": "Scary Monsters and Nice Sprites",
+      "artist": "Skrillex",
+      "year": 2010,
+      "country": "US",
+      "genre": "Dubstep",
+      "difficulty": "easy",
+      "mood": ["Aggressive", "Electronic", "Energy"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Machte Dubstep weltweit massentauglich (oft als 'Brostep' bezeichnet).",
+        "Der markante 'Oh my God!' Sample stammt von einem Speed-Stacker Video.",
+        "Kombiniert aggressive Bass-Wobbles mit melodischen Zwischenspielen.",
+        "Gewann mehrere Grammys und veränderte den Sound der 2010er.",
+        "Refrain: 'YES, OH MY GOD!'"
+      ],
+      "lyrics": { "real": ["Yes, oh my God!", "Yes, oh my God!", "Yes, oh my God!"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "WSeNSzJ2-Jw" }
+    },
+    {
+      "id": "electro-shm-worry-child",
+      "title": "Don't You Worry Child",
+      "artist": "Swedish House Mafia ft. John Martin",
+      "year": 2012,
+      "country": "SE",
+      "genre": "Progressive House / EDM",
+      "difficulty": "easy",
+      "mood": ["Emotional", "Powerful", "Epic"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Die Abschieds-Single der Gruppe (vor ihrer langen Pause).",
+        "Thematisiert nostalgische Erinnerungen an die Kindheit und väterlichen Rat.",
+        "John Martins kraftvoller Gesang über dem euphorischen EDM-Beat.",
+        "Wurde zu einer der größten Hymnen der modernen EDM-Ära.",
+        "Refrain: 'Don't you worry, don't you worry, child! See heaven's got a plan for you!'"
+      ],
+      "lyrics": { "real": ["My father said, 'Don't you worry, don't you worry, child'", "See heaven's got a plan for you, don't you worry, don't you worry now", "There was a time, I used to look into my father's eyes"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1y6smkh6csw" }
+    },
+    {
+      "id": "electro-zedd-clarity",
+      "title": "Clarity",
+      "artist": "Zedd ft. Foxes",
+      "year": 2012,
+      "country": "DE/GB",
+      "genre": "Dance-Pop / EDM",
+      "difficulty": "medium",
+      "mood": ["Powerful", "Emotional", "Happy"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Zedd ist ein deutscher Produzent, der in den USA zum Superstar wurde.",
+        "Foxes' verletzlicher Gesang bildet den Kern dieser emotionalen Club-Hymne.",
+        "Thematisiert die verwirrende Anziehungskraft einer schwierigen Beziehung.",
+        "Besticht durch die glasklare Produktion und den euphorischen Refrain.",
+        "Refrain: 'If our love is tragedy, why are you my remedy?'"
+      ],
+      "lyrics": { "real": ["If our love is tragedy, why are you my remedy?", "If our love's insanity, why are you my clarity?", "Why are you my clarity?"], "fake": "In the middle of the street, you can feel the heat of the broken drum" },
+      "isOne_hit_wonder": false,
+      "links": { "youtube": "IxxstCcZGE" }
+    },
+    {
+      "id": "electro-disclosure-latch",
+      "title": "Latch",
+      "artist": "Disclosure ft. Sam Smith",
+      "year": 2012,
+      "country": "GB",
+      "genre": "UK Garage / Deep House",
+      "difficulty": "medium",
+      "mood": ["Cool", "Emotional", "Groovy"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Der Song, der Sam Smith weltweit bekannt machte.",
+        "Disclosure kombinierten hier modernen UK Garage mit Soul-Gesang.",
+        "Besticht durch den ungewöhnlichen Takt und Sam Smiths Falsett-Stimme.",
+        "Ein Inbegriff für den Deep-House-Revival der frühen 2010er.",
+        "Refrain: 'Now I've got you in my space, I won't let go of you!'"
+      ],
+      "lyrics": { "real": ["You lift my heart up when the rest of me is down", "You, you enchant me even when you're not around", "Now I've got you in my space, I won't let go of you"], "fake": "In the shadow of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "93ASuAgK" }
+    },
+    {
+      "id": "electro-kygo-firestone",
+      "title": "Firestone",
+      "artist": "Kygo ft. Conrad Sewell",
+      "year": 2014,
+      "country": "NO/AU",
+      "genre": "Tropical House",
+      "difficulty": "easy",
+      "mood": ["Chill", "Summer", "Emotional"],
+      "pack": "Electronic & Techno",
+      "hints": [
+        "Kygos großer Durchbruch und der Inbegriff des 'Tropical House' Sounds.",
+        "Besticht durch die sanften Panflöten-Synthesizer und den entspannten Beat.",
+        "Conrad Sewells gefühlvoller Gesang passt perfekt zur melancholischen Grundstimmung.",
+        "Wurde zum Sommerhit des Jahres 2015.",
+        "Refrain: 'Our hearts are like firestones! And when they strike, we feel the love!'"
+      ],
+      "lyrics": { "real": ["I'm a flame in the night, you're a spark in the light", "Our hearts are like firestones, and when they strike, we feel the love", "Sparks will fly, they ever will, illuminate the dark"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "9Sc-ir" }
     }
   ]
 }

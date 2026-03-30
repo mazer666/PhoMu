@@ -21,7 +21,7 @@ import { PHOMU_CONFIG } from '@/config/game-config';
 /** Wird beim Anlegen einer neuen Session verwendet */
 const DEFAULT_CONFIG: GameConfig = {
   selectedModes: ['timeline'],
-  selectedPacks: [PHOMU_CONFIG.SONG_PACKS[0]],
+  selectedPacks: [PHOMU_CONFIG.SONG_PACKS[0].id],
   teamMode: PHOMU_CONFIG.DEFAULT_TEAM_MODE,
   deviceMode: 'pass-the-phone',
   winCondition: PHOMU_CONFIG.DEFAULT_WIN_SCORE,
@@ -72,6 +72,15 @@ interface GameActions {
 
   /** Startet sofort ein Spiel mit einem spezifischen Song (Quick Play) */
   startQuickGame: (song: PhomuSong) => void;
+
+  /** Aktualisiert Spielerdaten (z.B. Avatar/Farbe in Settings) */
+  updatePlayer: (playerId: string, updates: Partial<Player>) => void;
+
+  /** Schaltet die lineare Progression ein/aus */
+  toggleLinearProgression: () => void;
+
+  /** Setzt den gesamten Fortschritt zurück (Reset) */
+  resetProgress: () => void;
 }
 
 /** Vollständiger Store-Typ = State + Actions */
@@ -92,10 +101,14 @@ function createInitialState(): GameState {
     currentSong: null,
     currentMode: 'timeline',
     currentAnswers: [],
-    roundHistory: [],
+     roundHistory: [],
     playedSongIds: [],
     isGameOver: false,
     winnerId: undefined,
+    // Global Progression
+    totalXP: 0,
+    unlockedPackIds: ['global-hits', '80s-flashback', '90s-rave'], // Start packs
+    isLinearProgressionEnabled: true,
   };
 }
 
@@ -222,7 +235,33 @@ export const useGameStore = create<GameStore>()(
 
       // ── endGame ──────────────────────────────────────────────────
       endGame(winnerId) {
-        set({ isGameOver: true, winnerId, roundPhase: 'scoring' });
+        const { players, totalXP, unlockedPackIds } = get();
+        // Berechne die in dieser Session verdiente XP (Summe aller Spieler-Punkte)
+        const sessionXP = players.reduce((sum, p) => sum + p.score, 0);
+        const newTotalXP = totalXP + sessionXP;
+
+        // Unlock-Logik: Alle 100 XP ein neues Pack freischalten
+        const allPacks = PHOMU_CONFIG.SONG_PACKS;
+        const expectedUnlockCount = Math.min(
+          allPacks.length,
+          3 + Math.floor(newTotalXP / 100) // Start mit 3 Packs + 1 pro 100 XP
+        );
+
+        const newUnlockedIds = [...unlockedPackIds];
+        for (let i = 0; i < expectedUnlockCount; i++) {
+          const packId = allPacks[i].id;
+          if (!newUnlockedIds.includes(packId)) {
+            newUnlockedIds.push(packId);
+          }
+        }
+
+        set({
+          isGameOver: true,
+          winnerId,
+          roundPhase: 'scoring',
+          totalXP: newTotalXP,
+          unlockedPackIds: newUnlockedIds,
+        });
       },
 
       // ── drawSong ─────────────────────────────────────────────────
@@ -288,15 +327,42 @@ export const useGameStore = create<GameStore>()(
           playedSongIds: [...state.playedSongIds, song.id],
         }));
       },
+
+      // ── updatePlayer ─────────────────────────────────────────────
+      updatePlayer(playerId, updates) {
+        set((state) => ({
+          players: state.players.map((p) =>
+            p.id === playerId ? { ...p, ...updates } : p,
+          ),
+        }));
+      },
+
+      // ── toggleLinearProgression ──────────────────────────────────
+      toggleLinearProgression() {
+        set((state) => ({
+          isLinearProgressionEnabled: !state.isLinearProgressionEnabled,
+        }));
+      },
+
+      // ── resetProgress ─────────────────────────────────────────────
+      resetProgress() {
+        set({
+          totalXP: 0,
+          unlockedPackIds: ['global-hits', '80s-flashback', '90s-rave'],
+        });
+      },
     }),
 
     {
       name: 'phomu-game-state',
-      // Nur Lobby-relevante Daten persistieren; Spielstand wird bei initSession zurückgesetzt
+      // Persistiere nun auch Progressions-Daten
       partialize: (state) => ({
         players: state.players,
         config: state.config,
         sessionId: state.sessionId,
+        totalXP: state.totalXP,
+        unlockedPackIds: state.unlockedPackIds,
+        isLinearProgressionEnabled: state.isLinearProgressionEnabled,
       }),
     }
   )

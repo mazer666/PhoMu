@@ -127,4 +127,15 @@ export interface GameState {
 
   /** ID of the winning player or team (set when isGameOver = true) */
   winnerId?: string;
+
+  // ─── Global Progression (Phase 5) ──────────────────────────
+
+  /** Total XP earned across all sessions */
+  totalXP: number;
+
+  /** List of pack IDs currently unlocked */
+  unlockedPackIds: string[];
+
+  /** Whether the linear progression system is active */
+  isLinearProgressionEnabled: boolean;
 }

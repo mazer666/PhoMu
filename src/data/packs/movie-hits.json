@@ -486,7 +486,217 @@
       ],
       "lyrics": { "real": ["The snow glows white on the mountain tonight, not a footprint to be seen", "A kingdom of isolation, and it looks like I'm the queen", "Let it go, let it go, can't hold it back anymore"], "fake": "Building a castle in the sky, where the eagles learn to fly" },
       "isOneHitWonder": false,
+      "links": { "youtube": "S5O9O5S9S" }
+    },
+    {
+      "id": "movie-dirty-dancing-time",
+      "title": "(I've Had) The Time of My Life",
+      "artist": "Bill Medley & Jennifer Warnes",
+      "year": 1987,
+      "country": "US",
+      "genre": "Pop / Soft Rock",
+      "difficulty": "easy",
+      "mood": ["Romantic", "Classic", "Happy"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Inbegriff der 80er-Jahre-Romanze durch den Film 'Dirty Dancing'.",
+        "Der Song untermalt die berühmteste Hebefigur der Filmgeschichte.",
+        "Gewann den Oscar für den besten Originalsong im Jahr 1988.",
+        "Ein absoluter Klassiker für Hochzeiten und Abschlussbälle.",
+        "Refrain: 'I've had the time of my life, No, I never felt this way before!'"
+      ],
+      "lyrics": { "real": ["I've had the time of my life, No, I never felt this way before", "Yes, I swear, it's the truth, And I owe it all to you", "Cause I've had the time of my life, and I owe it all to you"], "fake": "Dancing in the street, moving to the beat of the broken heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "WpmILPAcRQo" }
+    },
+    {
+      "id": "movie-lion-king-circle",
+      "title": "Circle of Life",
+      "artist": "Elton John / Carmen Twillie",
+      "year": 1994,
+      "country": "US/ZA",
+      "genre": "Pop / World",
+      "difficulty": "medium",
+      "mood": ["Epic", "Emotional", "Classic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Titelsong des Disney-Klassikers 'Der König der Löwen'.",
+        "Beginnt mit dem berühmten Zulu-Gesang von Lebo M. ('Nants ingonyama bagithi baba').",
+        "Thematisiert den Kreislauf des Lebens in der afrikanischen Savanne.",
+        "Geschrieben von Elton John und Tim Rice.",
+        "Ein Symbol für Hoffnung und generationsübergreifende Verantwortung."
+      ],
+      "lyrics": { "real": ["Nants ingonyama bagithi baba, sithi uhm ingonyama", "It's the circle of life, and it moves us all", "Through despair and hope, through faith and love"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "GibiNy4d4gc" }
+    },
+    {
+      "id": "movie-frozen-let-it-go",
+      "title": "Let It Go",
+      "artist": "Idina Menzel",
+      "year": 2013,
+      "country": "US",
+      "genre": "Showtune / Pop",
+      "difficulty": "easy",
+      "mood": ["Powerful", "Emotional", "Happy"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Weltweites Phänomen aus dem Disney-Film 'Die Eiskönigin'.",
+        "Elsa singt diesen Song, während sie sich von ihren Ketten befreit und ihren Eispalast baut.",
+        "Wurde in über 40 Sprachen übersetzt.",
+        "Zementierte den Status des Disney-Renaissance-Sequels.",
+        "Refrain: 'Let it go, let it go, can't hold it back anymore!'"
+      ],
+      "lyrics": { "real": ["The snow glows white on the mountain tonight, not a footprint to be seen", "Let it go, let it go, can't hold it back anymore", "Let it go, let it go, turn away and slam the door"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
       "links": { "youtube": "L0MK7qz13bU" }
+    },
+    {
+      "id": "movie-pulp-fiction-misirlou",
+      "title": "Misirlou",
+      "artist": "Dick Dale & The Del-Tones",
+      "year": 1962,
+      "country": "US",
+      "genre": "Surf Rock",
+      "difficulty": "medium",
+      "mood": ["Energy", "Raw", "Cool"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Das furiose Instrumental-Intro von Quentin Tarantinos 'Pulp Fiction'.",
+        "Dick Dale mischte hier einen nahöstlichen Volks-Song mit Surf-Rock-Energie.",
+        "Bekannt für das extrem schnelle Tremolo-Picking auf der Gitarre.",
+        "Der Sound ist untrennbar mit dem Coolness-Faktor des Films verbunden.",
+        "Refrain: (Instrumental) - 'DA-DA-DA-DA-DA-DA-DA...'"
+      ],
+      "lyrics": { "real": ["(Instrumental)"], "fake": "Singing along with the rhythm of the ocean" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "movie-snf-night-fever",
+      "title": "Night Fever",
+      "artist": "Bee Gees",
+      "year": 1977,
+      "country": "GB/AU",
+      "genre": "Disco",
+      "difficulty": "easy",
+      "mood": ["Energy", "Classic", "Dance"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Zentraler Song aus dem Disco-Phänomen 'Saturday Night Fever'.",
+        "Einer von mehreren Bee-Gees-Hits auf diesem legendären Soundtrack.",
+        "Der Titel gab dem Film ursprünglich sogar seinen Namen.",
+        "Perfekter Takt zum Tanzen und Feiern auf der LED-Tanzfläche.",
+        "Refrain: 'Night fever, night fever! We know how to do it!'"
+      ],
+      "lyrics": { "real": ["Listen to the ground, there is movement all around", "There's something going down and I can feel it", "Night fever, night fever, we know how to do it"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "-tJYN-eG1zk" }
+    },
+    {
+      "id": "movie-top-gun-danger-zone",
+      "title": "Danger Zone",
+      "artist": "Kenny Loggins",
+      "year": 1986,
+      "country": "US",
+      "genre": "Rock",
+      "difficulty": "easy",
+      "mood": ["Energy", "Powerful", "Action"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Untrennbar verbunden mit den Luftkampf-Szenen aus 'Top Gun'.",
+        "Wurde zu einem der Markenzeichen des 80er-Jahre-Actionkinos.",
+        "Kenny Loggins lieferte hiermit einen der meistgespielten Soundtracks jener Dekade.",
+        "Erlebte ein Comeback im Sequel 'Top Gun: Maverick'.",
+        "Refrain: 'Highway to the danger zone! Ride into the danger zone!'"
+      ],
+      "lyrics": { "real": ["Revvin' up your engine, listen to her howlin' roar", "Metal under tension, beggin' you to touch and go", "Highway to the danger zone, ride into the danger zone"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "siwpn14IE7E" }
+    },
+    {
+      "id": "movie-flashdance-feeling",
+      "title": "Flashdance... What a Feeling",
+      "artist": "Irene Cara",
+      "year": 1983,
+      "country": "US",
+      "genre": "Pop / Dance",
+      "difficulty": "easy",
+      "mood": ["Inspirational", "Energy", "Classic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Thematisiert den Traum einer Tänzerin, es nach oben zu schaffen.",
+        "Produziert von Giorgio Moroder (dem Vater der Disco-Musik).",
+        "Gewann den Oscar für den besten Originalsong im Jahr 1984.",
+        "Die Tanzszenen im Film setzten neue ästhetische Maßstäbe.",
+        "Refrain: 'What a feeling! Being's believin'! I can have it all!'"
+      ],
+      "lyrics": { "real": ["First, when there's nothing, but a slow glowing dream", "That your fear seems to hide deep inside your mind", "What a feeling, bein's believin', I can have it all, now I'm dancing for my life"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "movie-footloose-theme",
+      "title": "Footloose",
+      "artist": "Kenny Loggins",
+      "year": 1984,
+      "country": "US",
+      "genre": "Pop / Rock",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Dance"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Der Song über die Auflehnung gegen ein Tanzverbot.",
+        "Kenny Loggins' zweiter großer Streich auf dieser Liste.",
+        "Bekannt für den extrem ansteckenden Rhythmus und die gute Laune.",
+        "Wurde zu einer Hymne der jugendlichen Freiheit.",
+        "Refrain: 'Footloose, footloose! Kick off your Sunday shoes!'"
+      ],
+      "lyrics": { "real": ["Been working so hard, I'm punching my card, eight hours, for what?", "Footloose, footloose, kick off your Sunday shoes", "Please, Louise, pull me off of my knees"], "fake": "Dancing in the street, moving to the beat of the broken drum" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "ltrMfT44X9A" }
+    },
+    {
+      "id": "movie-bond-skyfall",
+      "title": "Skyfall",
+      "artist": "Adele",
+      "year": 2012,
+      "country": "GB",
+      "genre": "Soul / Pop",
+      "difficulty": "medium",
+      "mood": ["Epic", "Emotional", "Dramatic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Titelsong zum 23. James-Bond-Abenteuer.",
+        "Adele lieferte hiermit einen der klassischsten und besten Bond-Songs überhaupt ab.",
+        "Gewann als erster Bond-Song sowohl den Oscar als auch den Golden Globe.",
+        "Besticht durch das orchestrale Arrangement und Adeles kraftvolle Stimme.",
+        "Refrain: 'Let the sky fall, when it crumbles, we will stand tall!'"
+      ],
+      "lyrics": { "real": ["This is the end, hold your breath and count to ten", "Let the sky fall, when it crumbles, we will stand tall", "Facing it all together at Skyfall"], "fake": "In the shadow of the night, I'm looking for the light of your soul" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "DeumyOzKqgI" }
+    },
+    {
+      "id": "movie-showman-this-is-me",
+      "title": "This Is Me",
+      "artist": "Keala Settle / The Greatest Showman Cast",
+      "year": 2017,
+      "country": "US",
+      "genre": "Showtune / Pop",
+      "difficulty": "medium",
+      "mood": ["Powerful", "Inspirational", "Epic"],
+      "pack": "Movie Hits",
+      "hints": [
+        "Eine gewaltige Hymne auf Selbstakzeptanz und Stolz.",
+        "Der emotionale Höhepunkt des Films 'The Greatest Showman'.",
+        "Wurde weltweit zu einem Symbol für Inklusion und Empowerment.",
+        "Besticht durch den kraftvollen Chor und die mitreißende Energie.",
+        "Refrain: 'I am brave, I am bruised, I am who I'm meant to be, this is me!'"
+      ],
+      "lyrics": { "real": ["I'm not a stranger to the dark, hide away, they say, 'cause we don't want your broken parts", "I am brave, I am bruised, I am who I'm meant to be, this is me", "Look out 'cause here I come, and I'm marching on to the beat I drum"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "CjxugyZ5XTk" }
     }
   ]
 }

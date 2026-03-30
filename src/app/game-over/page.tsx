@@ -8,22 +8,47 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '@/stores/game-store';
+import { PHOMU_CONFIG } from '@/config/game-config';
 
 // ─── Podest-Konfiguration ─────────────────────────────────────────
 
 const PODEST_CONFIG = [
-  { rank: 1, icon: '🥇', sizeClass: 'text-5xl', heightClass: 'h-24', order: 1 },
-  { rank: 2, icon: '🥈', sizeClass: 'text-3xl', heightClass: 'h-16', order: 0 },
-  { rank: 3, icon: '🥉', sizeClass: 'text-2xl', heightClass: 'h-12', order: 2 },
+  { rank: 1, icon: '🥇', heightClass: 'h-24', order: 1 },
+  { rank: 2, icon: '🥈', heightClass: 'h-16', order: 0 },
+  { rank: 3, icon: '🥉', heightClass: 'h-12', order: 2 },
 ] as const;
 
 // ─── Seite ────────────────────────────────────────────────────────
 
 export default function GameOverPage() {
   const router = useRouter();
-  const { players, config, winnerId, currentRound, initSession, startGame, resetScores } = useGameStore();
+  const { 
+    players, 
+    winnerId, 
+    currentRound, 
+    totalXP, 
+    unlockedPackIds,
+    isLinearProgressionEnabled,
+    initSession, 
+    startGame, 
+    resetScores 
+  } = useGameStore();
+
+  const sessionXP = players.reduce((sum, p) => sum + p.score, 0);
+  const previousTotalXP = totalXP - sessionXP;
+  
+  // Level-Berechnung
+  const currentLevel = Math.floor(totalXP / 100) + 1;
+  const previousLevel = Math.floor(previousTotalXP / 100) + 1;
+  const didLevelUp = currentLevel > previousLevel;
+
+  // Welche Packs wurden neu freigeschaltet?
+  const allPacks = PHOMU_CONFIG.SONG_PACKS;
+  const newlyUnlocked = allPacks
+    .filter(p => unlockedPackIds.includes(p.id))
+    .slice(Math.max(0, unlockedPackIds.length - sessionXP/100)); // Grobe Schätzung für die Animation
 
   // Guard: Kein beendetes Spiel → zur Lobby
   useEffect(() => {
@@ -38,147 +63,117 @@ export default function GameOverPage() {
   const sorted = [...players].sort((a, b) => b.score - a.score);
   const winner = players.find((p) => p.id === winnerId) ?? sorted[0];
 
-  // Top-3 für Podest
-  const podest = PODEST_CONFIG.map((cfg) => ({
-    ...cfg,
-    player: sorted[cfg.rank - 1],
-  })).filter((p) => p.player !== undefined);
-
   return (
-    <main
-      className="min-h-screen flex flex-col items-center justify-start px-4 py-12"
-      style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}
-    >
-      {/* Gewinner-Headline */}
+    <main className="min-h-screen flex flex-col items-center justify-start px-4 py-8 pb-24 overflow-x-hidden">
+      {/* Konfetti-Gefühl / Gewinner */}
       <motion.div
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-        className="text-center mb-10"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="text-center mb-8"
       >
-        <p className="text-7xl mb-4 select-none">🏆</p>
-        <h1
-          className="text-4xl font-black mb-1"
-          style={{ color: 'var(--color-secondary)' }}
-        >
+        <div className="relative inline-block">
+          <span className="text-8xl select-none">🏆</span>
+          <motion.div 
+            animate={{ rotate: 360 }}
+            transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+            className="absolute inset-0 border-4 border-dashed border-[var(--color-accent)] rounded-full opacity-20 scale-150"
+          />
+        </div>
+        <h1 className="text-4xl font-black mt-6" style={{ color: 'var(--color-secondary)' }}>
           {winner?.name} gewinnt!
         </h1>
-        <p className="opacity-60">
-          Nach {currentRound - 1} {currentRound - 1 === 1 ? 'Runde' : 'Runden'}
+        <p className="opacity-40 font-bold uppercase tracking-tighter text-xs mt-1">
+          {currentRound - 1} Runden gerockt • {sessionXP} XP verdient
         </p>
       </motion.div>
 
-      {/* Podest */}
-      {podest.length >= 2 && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-          className="flex items-end gap-3 mb-10 w-full max-w-xs"
-        >
-          {[...podest].sort((a, b) => a.order - b.order).map(({ rank, icon, sizeClass, heightClass, player }) => (
-            <div
-              key={rank}
-              className={`flex-1 flex flex-col items-center justify-end rounded-t-xl pt-3 ${heightClass}`}
-              style={{
-                backgroundColor: player?.color ? `${player.color}22` : 'var(--color-bg-card)',
-                border: `2px solid ${player?.color ?? 'var(--color-border)'}`,
-              }}
-            >
-              <span className={`${sizeClass} mb-1 select-none`} aria-hidden>{icon}</span>
-              <span className="text-lg" aria-hidden>{player?.avatar ?? '🎵'}</span>
-              <p
-                className="text-xs font-bold truncate w-full text-center px-1"
-                style={{ color: player?.color ?? 'var(--color-text)' }}
-              >
-                {player?.name}
-              </p>
-              <p className="text-xs opacity-60 mb-2 font-black">{player?.score} Pkt.</p>
-            </div>
-          ))}
-        </motion.div>
-      )}
-
-      {/* Vollständige Tabelle */}
-      <motion.div
+      {/* NEU: XP / Progression Fortschrittsbalken */}
+      <motion.section 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
-        className="w-full max-w-sm rounded-2xl overflow-hidden mb-8"
-        style={{
-          backgroundColor: 'var(--color-bg-card)',
-          border: '1px solid var(--color-border)',
-        }}
+        transition={{ delay: 0.5 }}
+        className="w-full max-w-sm bg-white/5 p-6 rounded-3xl border border-white/10 mb-8 space-y-4"
       >
-        <div
-          className="px-4 py-3 border-b text-sm font-bold opacity-60"
-          style={{ borderColor: 'var(--color-border)' }}
-        >
-          Endabrechnung
+        <div className="flex justify-between items-end">
+          <h2 className="text-xs font-black uppercase opacity-60">Level {currentLevel}</h2>
+          <p className="text-2xl font-black font-mono">+{sessionXP} XP</p>
         </div>
-        <ol>
-          {sorted.map((player, i) => (
-            <li
-              key={player.id}
-              className="flex items-center gap-3 px-4 py-3 border-b last:border-0"
-              style={{ borderColor: 'var(--color-border)' }}
+        
+        <div className="h-4 bg-black/40 rounded-full border border-white/5 overflow-hidden">
+          <motion.div 
+            initial={{ width: `${(previousTotalXP % 100)}%` }}
+            animate={{ width: `${(totalXP % 100)}%` }}
+            className="h-full bg-[var(--color-accent)] shadow-[0_0_15px_rgba(var(--color-accent-rgb),0.5)]"
+          />
+        </div>
+
+        {/* Level Up / Unlock Alert */}
+        <AnimatePresence>
+          {didLevelUp && (
+            <motion.div 
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              className="bg-[var(--color-accent)]/20 p-3 rounded-xl border border-[var(--color-accent)]/30 text-center"
             >
-              <span className="w-5 text-center opacity-50 text-sm font-bold shrink-0">
-                {i + 1}.
-              </span>
-              <span className="text-lg shrink-0" aria-hidden>{player.avatar ?? '🎵'}</span>
-              <span
-                className="flex-1 font-bold truncate"
-                style={{ color: player.color ?? 'var(--color-text)' }}
-              >
-                {player.name}
-              </span>
-              <span className="font-black tabular-nums">{player.score}</span>
-            </li>
-          ))}
-        </ol>
-      </motion.div>
+              <p className="text-[var(--color-accent)] font-black text-xs uppercase animate-bounce">
+                🎉 LEVEL UP! NEUE PACKS FREIGESCHALTET! 🎉
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.section>
+
+      {/* Podest (Zusammengefasst) */}
+      <div className="flex items-end gap-3 mb-10 w-full max-w-xs h-40">
+        {PODEST_CONFIG.map(({ rank, icon, heightClass, order }) => {
+          const p = sorted[rank - 1];
+          if (!p) return null;
+          return (
+            <motion.div
+              key={rank}
+              style={{ order }}
+              initial={{ height: 0 }}
+              animate={{ height: heightClass.includes('24') ? '100px' : heightClass.includes('16') ? '70px' : '50px' }}
+              className="flex-1 bg-white/5 rounded-t-2xl border-2 border-white/10 flex flex-col items-center justify-center relative pt-4"
+            >
+              <span className="absolute -top-6 text-2xl" aria-hidden>{icon}</span>
+              <span className="text-2xl mb-1">{p.avatar}</span>
+              <p className="text-[10px] font-black uppercase text-center px-1 truncate w-full" style={{ color: p.color }}>{p.name}</p>
+            </motion.div>
+          );
+        })}
+      </div>
 
       {/* Aktions-Buttons */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-        className="flex flex-col gap-3 w-full max-w-sm"
-      >
-        {/* Nochmal spielen: gleiche Spieler, Scores und Runden-Stand auf 0 */}
+      <div className="flex flex-col gap-3 w-full max-w-sm">
         <button
           onClick={() => {
             resetScores();
             startGame();
             router.push('/game');
           }}
-          className="w-full py-4 rounded-2xl text-xl font-black hover:opacity-90 transition-opacity"
-          style={{ backgroundColor: 'var(--color-primary)' }}
+          className="w-full py-5 rounded-3xl text-2xl font-black bg-[var(--color-accent)] text-white hover:scale-105 active:scale-95 transition-all shadow-xl shadow-[var(--color-accent)]/20"
         >
-          🔄 Nochmal spielen
+          🔄 NOCHMAL SPIELEN
         </button>
 
-        {/* Neu starten: alles zurücksetzen */}
         <button
           onClick={() => {
             initSession();
             router.push('/lobby');
           }}
-          className="w-full py-3 rounded-2xl text-base font-bold border opacity-70
-                     hover:opacity-100 transition-opacity"
-          style={{ borderColor: 'var(--color-border)' }}
+          className="w-full py-4 rounded-3xl text-sm font-black border border-white/10 hover:bg-white/5 transition-all"
         >
-          Neue Runde (andere Spieler)
+          NEUE LOBBY STARTEN
         </button>
 
         <button
           onClick={() => router.push('/')}
-          className="text-sm opacity-40 hover:opacity-60 transition-opacity text-center"
+          className="text-[10px] uppercase font-black opacity-30 hover:opacity-100 transition-opacity text-center mt-4 tracking-widest"
         >
-          Zur Startseite
+          Zurück zum Hauptmenü
         </button>
-      </motion.div>
+      </div>
     </main>
   );
 }

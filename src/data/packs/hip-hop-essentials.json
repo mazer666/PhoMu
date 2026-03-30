@@ -423,7 +423,322 @@
       ],
       "lyrics": { "real": ["U can't touch this, u can't touch this", "My-my-my-my music hits me so hard makes me say oh my Lord", "Stop! Hammer time!"], "fake": "In the middle of the night, we're looking for the light of the broken soul" },
       "isOne_hit_wonder": true,
-      "links": { "youtube": "otCpCn0l4Wo" }
+      "links": { "youtube": "1KjPyEY7DQ4" }
+    },
+    {
+      "id": "hiphop-biggie-juicy",
+      "title": "Juicy",
+      "artist": "The Notorious B.I.G.",
+      "year": 1994,
+      "country": "US",
+      "genre": "East Coast Hip Hop",
+      "difficulty": "easy",
+      "mood": ["Inspirational", "Classic", "Chill"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Der ultimative 'Vom Tellerwäscher zum Millionär'-Song des Hip Hop.",
+        "Beginnt mit der berühmten Widmung 'It's all good, baby, baby'.",
+        "Samplet 'Juicy Fruit' von James Mtume.",
+        "Biggies Durchbruch-Single, die seinen Status als Legende zementierte.",
+        "Refrain: 'It was all a dream, I used to read Word Up! magazine!'"
+      ],
+      "lyrics": { "real": ["It was all a dream, I used to read Word Up! magazine", "Salt-N-Pepa and Heavy D up in the limousine", "Hangin' pictures on my wall, every Saturday Rap Attack, Mr. Magic, Marley Marl"], "fake": "Tanzen im Licht, wir vergessen dich nicht heute" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "_JZom_g7O0E" }
+    },
+    {
+      "id": "hiphop-2pac-california",
+      "title": "California Love",
+      "artist": "2Pac ft. Dr. Dre",
+      "year": 1995,
+      "country": "US",
+      "genre": "West Coast Hip Hop / G-Funk",
+      "difficulty": "easy",
+      "mood": ["Energy", "Classic", "Party"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Die Hymne schlechthin für den Westküsten-Hip-Hop.",
+        "Dr. Dres Produktion kombiniert mit 2Pacs charismatischem Rap.",
+        "Bekannt für den Einsatz der Talkbox (Roger Troutman).",
+        "Das Video im Mad-Max-Stil ist eines der teuersten der 90er Jahre.",
+        "Refrain: 'California! Knows how to party!'"
+      ],
+      "lyrics": { "real": ["California knows how to party, California knows how to party", "In the city of L.A., in the city of Good Ol' Watts", "In the city, the city of Compton, we keep it rockin', we keep it rockin'"], "fake": "Nichts kann uns stoppen, wir fliegen durch die Nacht irgendwie" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "5wBTdfAkqf4" }
+    },
+    {
+      "id": "hiphop-dre-still-dre",
+      "title": "Still D.R.E.",
+      "artist": "Dr. Dre ft. Snoop Dogg",
+      "year": 1999,
+      "country": "US",
+      "genre": "West Coast Hip Hop",
+      "difficulty": "easy",
+      "mood": ["Cool", "Classic", "Energy"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Markierte Dr. Dres triumphale Rückkehr mit dem Album '2001'.",
+        "Das unverwechselbare Klavier-Riff wurde von Scott Storch eingespielt.",
+        "Thematisiert, dass Dre trotz Erfolg und Zeit immer noch derselbe ist.",
+        "Einer der am meisten gespielten Rap-Songs aller Zeiten.",
+        "Refrain: 'Still taking my time to perfect the beat!'"
+      ],
+      "lyrics": { "real": ["I'm representing for them gangstas all across the world", "Still hitting them corners in them low-lows, girl", "Still, taking my time to perfect the beat, and I still got love for the streets"], "fake": "Walking down the street with a rhythm in my feet tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "_CL6n0FJZpk" }
+    },
+    {
+      "id": "hiphop-jayz-empire",
+      "title": "Empire State of Mind",
+      "artist": "Jay-Z ft. Alicia Keys",
+      "year": 2009,
+      "country": "US",
+      "genre": "Hip Hop / Pop",
+      "difficulty": "easy",
+      "mood": ["Epic", "Inspirational", "Powerful"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Die moderne Hymne auf die Stadt New York City.",
+        "Alicia Keys' gewaltiger Refrain macht den Song zum Stadion-Hit.",
+        "Thematisiert den Aufstieg vom kargen Leben zum globalen Business-Mogul.",
+        "Wurde zu einem der größten kommerziellen Erfolge von Jay-Z.",
+        "Refrain: 'In New York! Concrete jungle where dreams are made of!'"
+      ],
+      "lyrics": { "real": ["In New York, concrete jungle where dreams are made of, there's nothing you can't do", "Now you're in New York, these streets will make you feel brand new", "Big lights will inspire you, let's hear it for New York"], "fake": "In the middle of the night, we're looking for the light of our love" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "vk6014HuxcE" }
+    },
+    {
+      "id": "hiphop-kanye-stronger",
+      "title": "Stronger",
+      "artist": "Kanye West",
+      "year": 2007,
+      "country": "US",
+      "genre": "Hip Hop / Electronic",
+      "difficulty": "easy",
+      "mood": ["Energy", "Powerful", "Electronic"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Samplet 'Harder, Better, Faster, Stronger' von Daft Punk.",
+        "Verbindet Hip Hop mit futuristischen, elektronischen Klängen.",
+        "Basiert auf Nietzsches Zitat 'Was mich nicht umbringt, macht mich stärker'.",
+        "Das Video wurde unter anderem in Tokio gedreht.",
+        "Refrain: 'That that don't kill me can only make me stronger!'"
+      ],
+      "lyrics": { "real": ["N-n-now th-th-that don't kill me can only make me stronger", "I need you to hurry up now, 'cause I can't wait much longer", "I know I got to be right now, 'cause I can't get much wronger"], "fake": "Dancing in the stars, playing my guitars tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "PsO6ZnUZIt0" }
+    },
+    {
+      "id": "hiphop-outkast-ms-jackson",
+      "title": "Ms. Jackson",
+      "artist": "OutKast",
+      "year": 2000,
+      "country": "US",
+      "genre": "Southern Hip Hop",
+      "difficulty": "easy",
+      "mood": ["Chill", "Funny", "Classic"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Eine Entschuldigung an die Mutter der Ex-Partnerin (Erykah Badu).",
+        "Bekannt für den melodischen Refrain und den einzigartigen Südstaaten-Flow.",
+        "Besticht durch den entspannten Beat und die ehrlichen Texte.",
+        "Wurde zu einem der größten Hits der Gruppe.",
+        "Refrain: 'I'm sorry Ms. Jackson! I am for real!'"
+      ],
+      "lyrics": { "real": ["I'm sorry Ms. Jackson, I am for real", "Never meant to make your daughter cry, I apologize a trillion times", "I'm sorry Ms. Jackson, I am for real"], "fake": "In the shadow of the valley, I'm looking for a rally of hope" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "MYxLi94" }
+    },
+    {
+      "id": "hiphop-missy-freak-on",
+      "title": "Get Ur Freak On",
+      "artist": "Missy Elliott",
+      "year": 2001,
+      "country": "US",
+      "genre": "Hip Hop / Experimental",
+      "difficulty": "medium",
+      "mood": ["Energy", "Unique", "Dance"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Produziert von Timbaland, bekannt für den ungewöhnlichen indischen Flöten-Sample.",
+        "Missy Elliott setzte hiermit neue Maßstäbe für experimentellen Hip Hop.",
+        "Besticht durch den harten, trockenen Beat und ihre markante Performance.",
+        "Ein Inbegriff für futuristischen Sound der frühen 2000er.",
+        "Refrain: 'Holla! Get ur freak on!'"
+      ],
+      "lyrics": { "real": ["Copycat killer, look at me now, everybody know I'm the queen of the South", "I'm the best, I'm the one, I'm the only one who can hit you like this", "Holla, get ur freak on, get ur freak on"], "fake": "Dancing in the light, feeling so right, tonight" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "FPo5wwmKEfg" }
+    },
+    {
+      "id": "hiphop-50cent-club",
+      "title": "In Da Club",
+      "artist": "50 Cent",
+      "year": 2003,
+      "country": "US",
+      "genre": "Gangsta Rap",
+      "difficulty": "easy",
+      "mood": ["Energy", "Party", "Cool"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Der ultimative Geburtstags- und Club-Track der 2000er.",
+        "Produziert von Dr. Dre für das Album 'Get Rich or Die Tryin''.",
+        "Beginnt mit dem berühmten 'Go shorty, it's your birthday'.",
+        "Zementierte 50 Cents Status als globaler Rap-Superstar.",
+        "Refrain: 'You can find me in the club, bottle full of bub!'"
+      ],
+      "lyrics": { "real": ["Go, go, go, go, go, go, go, shorty, it's your birthday", "We gonna party like it's your birthday", "You can find me in the club, bottle full of bub, look daddy I got the X if you into taking drugs"], "fake": "In the middle of the island, we're looking for the silent sun" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "s7y6TfX1p-w" }
+    },
+    {
+      "id": "hiphop-kendrick-humble",
+      "title": "HUMBLE.",
+      "artist": "Kendrick Lamar",
+      "year": 2017,
+      "country": "US",
+      "genre": "Hip Hop",
+      "difficulty": "easy",
+      "mood": ["Powerful", "Energy", "Cool"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Ein kraftvoller Track mit einem minimalistischen, aber wuchtigen Piano-Beat.",
+        "Thematisiert Erfolg und die Notwendigkeit, trotz allem bescheiden zu bleiben.",
+        "Das Musikvideo ist voller religiöser und kultureller Anspielungen.",
+        "Wurde zu einem der ikonischsten Songs der späten 2010er Jahre.",
+        "Refrain: 'Bitch, be humble! Sit down!'"
+      ],
+      "lyrics": { "real": ["I remember syrup sandwiches and crime allowances", "Finesse a nigga with some counterfeits, but now I'm countin' this", "Bitch, be humble, sit down, be humble, sit down"], "fake": "Walking through the rain, I'm calling out your name in vain" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "tvTRZJ-4EyI" }
+    },
+    {
+      "id": "hiphop-travis-rockstar",
+      "title": "SICKO MODE",
+      "artist": "Travis Scott",
+      "year": 2018,
+      "country": "US",
+      "genre": "Trap / Hip Hop",
+      "difficulty": "hard",
+      "mood": ["Epic", "Energy", "Electronic"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Bekannt für seine drei verschiedenen Beat-Wechsel innerhalb eines Songs.",
+        "Ein Inbegriff für den modernen Trap-Sound und Travis Scotts kreatives Chaos.",
+        "Sorgte bei Konzerten regelmäßig für enorme Energieausbrüche.",
+        "Alicia Keys war ursprünglich nicht für den Gesang vorgesehen (Spaß!).",
+        "Refrain: 'Sun is down, freezin' cold, that's how we already know winter's here!'"
+      ],
+      "lyrics": { "real": ["Sun is down, freezin' cold, that's how we already know winter's here", "My dawg would probably do it for a Louis belt", "SICKO MODE, SICKO MODE, SICKO MODE"], "fake": "In the middle of the street, you can feel the heat of the broken drum" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "d-jbO" }
+    },
+    {
+      "id": "hiphop-post-malone-rockstar",
+      "title": "Rockstar",
+      "artist": "Post Malone ft. 21 Savage",
+      "year": 2017,
+      "country": "US",
+      "genre": "Hip Hop / Trap",
+      "difficulty": "easy",
+      "mood": ["Atmospheric", "Cool", "Sad"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Verbindet Rap-Elemente mit einer rockigen Grundstimmung.",
+        "Thematisiert den exzessiven Lebensstil eines modernen Rockstars.",
+        "Post Malones melodiöser Gesangsstil prägte hiermit ein ganzes Genre.",
+        "Ein globaler Megahit mit einem melancholischen Unterton.",
+        "Refrain: 'I've been fuckin' hoes and poppin' pillies!'"
+      ],
+      "lyrics": { "real": ["I've been fuckin' hoes and poppin' pillies, man, I feel just like a rockstar", "All my brothers got that gas and they always be smokin' like a Rasta", "Fuckin' with me, call up on a Uzi, baby, I'm a rockstar"], "fake": "Nothing's gonna stop me now, I'm floating in the sky somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "UceaB4z096s" }
+    },
+    {
+      "id": "hiphop-lilnasx-road",
+      "title": "Old Town Road",
+      "artist": "Lil Nas X",
+      "year": 2019,
+      "country": "US",
+      "genre": "Country Rap",
+      "difficulty": "easy",
+      "mood": ["Happy", "Energy", "Unique"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Löste eine weltweite Debatte über Genre-Grenzen aus.",
+        "Verbindet klassische Country-Instrumente mit Trap-Beats.",
+        "Wurde durch die Social-Media-App TikTok zum globalen Phänomen.",
+        "Ein Paradebeispiel für modernen Marketing-Erfolg und musikalische Offenheit.",
+        "Refrain: 'I'm gonna take my horse to the old town road!'"
+      ],
+      "lyrics": { "real": ["I'm gonna take my horse to the old town road, I'm gonna ride till I can't no more", "I got the horses in the back, horse tack is attached", "Hat is matte black, got the boots that's black to match"], "fake": "Dancing in the sun, having so much fun with everyone heute" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "r7qovJXuwXf" }
+    },
+    {
+      "id": "hiphop-drake-plan",
+      "title": "God's Plan",
+      "artist": "Drake",
+      "year": 2018,
+      "country": "CA",
+      "genre": "Hip Hop / R&B",
+      "difficulty": "easy",
+      "mood": ["Grateful", "Positive", "Classic"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Ein Song über Schicksal, Erfolg und die Neider.",
+        "Das Musikvideo zeigt Drake, wie er fast eine Million Dollar an bedürftige Menschen verschenkt.",
+        "Wurde zu einem der meistgestreamten Songs aller Zeiten.",
+        "Besticht durch den entspannten Beat und Drakes eingängige Lyrik.",
+        "Refrain: 'I only love my bed and my momma, I'm sorry!'"
+      ],
+      "lyrics": { "real": ["I only love my bed and my momma, I'm sorry", "Imagine if I never met the broskis", "God's plan, God's plan, God's plan"], "fake": "In the middle of the street, you can feel the heat of our happy heart" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "xpVvxpE" }
+    },
+    {
+      "id": "hiphop-cardi-yellow",
+      "title": "Bodak Yellow",
+      "artist": "Cardi B",
+      "year": 2017,
+      "country": "US",
+      "genre": "Hip Hop / Trap",
+      "difficulty": "easy",
+      "mood": ["Powerful", "Energy", "Aggressive"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Markierte den spektakulären Aufstieg von Cardi B vom Reality-Star zur Rap-Ikone.",
+        "Thematisiert Erfolg, Reichtum und ihren harten Weg nach oben.",
+        "Der Beat ist minimalistisch, aber enorm druckvoll.",
+        "Wurde zu einer der wichtigsten Frauen-Hymnen im modernen Rap.",
+        "Refrain: 'Said little bitch, you can't fuck with me if you wanted to!'"
+      ],
+      "lyrics": { "real": ["Said little bitch, you can't fuck with me if you wanted to", "These expensive, these is red bottoms, these is bloody shoes", "Hit the store, I can get 'em both, I don't wanna choose"], "fake": "Tanzen im Licht, wir vergessen dich nicht heute Abend" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "PEGccV-NOm" }
+    },
+    {
+      "id": "hiphop-megan-savage",
+      "title": "Savage",
+      "artist": "Megan Thee Stallion",
+      "year": 2020,
+      "country": "US",
+      "genre": "Hip Hop / Trap",
+      "difficulty": "easy",
+      "mood": ["Cool", "Energy", "Confident"],
+      "pack": "Hip Hop Essentials",
+      "hints": [
+        "Besonders durch eine TikTok-Tanz-Challenge weltweit bekannt geworden.",
+        "Feiert Selbstbewusstsein und verschiedene Facetten der eigenen Persönlichkeit.",
+        "Megan Thee Stallions technisches Können als Rapperin ist hier deutlich spürbar.",
+        "Ein Inbegriff für modernen, selbstbewussten weiblichen Rap.",
+        "Refrain: 'I'm a savage! Classy, bougie, ratchet!'"
+      ],
+      "lyrics": { "real": ["I'm a savage, classy, bougie, ratchet, sassy, moody, nasty", "Acting stupid, what's happening? Bitch, what's happening?", "I'm a savage, classy, bougie, ratchet"], "fake": "Nothing's gonna stop me now, I'm king of the town somehow" },
+      "isOneHitWonder": false,
+      "links": { "youtube": "eS-E58-G0Y" }
     }
   ]
 }
