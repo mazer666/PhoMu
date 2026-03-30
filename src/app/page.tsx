@@ -10,8 +10,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import ThemeSwitcher from '@/components/ui/ThemeSwitcher';
-import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -22,12 +20,6 @@ export default function HomePage() {
       className="flex min-h-screen flex-col items-center justify-center px-4"
       style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}
     >
-      {/* Settings bar (top right) */}
-      <div className="fixed top-4 right-4 z-50 flex flex-col items-end gap-3">
-        <LanguageSwitcher />
-        <ThemeSwitcher />
-      </div>
-
       {/* Hero section with animated entrance */}
       <motion.div
         className="flex flex-col items-center text-center"

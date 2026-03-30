@@ -11,6 +11,7 @@ import { motion } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
 import type { PlayerAnswer } from '@/types/game-state';
 import type { Player } from '@/types/player';
+import { MusicPlayer } from './MusicPlayer';
 
 // ─── Props ────────────────────────────────────────────────────────
 
@@ -105,17 +106,14 @@ export function RevealPhase({
           ))}
         </div>
 
-        {/* YouTube-Link (wenn vorhanden) */}
-        {song.links?.youtube && song.links.youtube !== 'TODO:verify' && (
-          <a
-            href={`https://www.youtube.com/watch?v=${song.links.youtube}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-xl text-sm font-bold
-                       bg-red-600 hover:bg-red-500 transition-colors"
-          >
-            ▶ Auf YouTube anhören
-          </a>
+        {/* YouTube-Player */}
+        {song.links?.youtube && (
+          <div className="mt-4 w-full text-left">
+            <MusicPlayer
+              youtubeLink={song.links.youtube}
+              startSeconds={song.previewTimestamp?.start}
+            />
+          </div>
         )}
       </motion.div>
 
