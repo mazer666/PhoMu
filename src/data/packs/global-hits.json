@@ -1780,40 +1780,6 @@
       }
     },
     {
-      "id": "glass-animals-heatwaves-2020",
-      "title": "Heat Waves",
-      "artist": "Glass Animals",
-      "year": 2020,
-      "country": "GB",
-      "genre": "Indie Pop / Psychedelic Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Chill",
-        "Summer Vibes",
-        "Sad"
-      ],
-      "pack": "Global Hits 1950-2026",
-      "hints": [
-        "Hat den längsten Aufstieg in der Geschichte der Billboard Charts hinter sich.",
-        "Thematisiert Sehnsucht und das Festhalten an Erinnerungen im Sommer.",
-        "Besticht durch den markanten, leicht verzerrten Gitarren-Hook.",
-        "Ein absoluter Dauerbrenner im Streaming-Zeitalter.",
-        "Refrain: 'Sometimes all I think about is you! Late nights in the middle of June!'"
-      ],
-      "lyrics": {
-        "real": [
-          "Sometimes all I think about is you, late nights in the middle of June",
-          "Heat waves been faking me out, can't make you happier now",
-          "I just wonder what you're dreaming of"
-        ],
-        "fake": "Dancing in the STARS, playing my guitars tonight tonight"
-      },
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "mRD0-GxqHVo"
-      }
-    },
-    {
       "id": "olivia-rodrigo-drivers-2021",
       "title": "drivers license",
       "artist": "Olivia Rodrigo",

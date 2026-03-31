@@ -1,19 +1,19 @@
 import nextVitals from 'eslint-config-next/core-web-vitals';
-import nextTypescript from 'eslint-config-next/typescript';
 
+// eslint-config-next v16 exports flat config arrays — direct spread works without FlatCompat.
+// core-web-vitals already includes next/typescript rules, so no separate import needed.
+
+/** @type {import('eslint').Linter.Config[]} */
 const eslintConfig = [
   {
     ignores: ['.next/**', 'out/**', 'dist/**', 'node_modules/**', 'next-env.d.ts'],
   },
   ...nextVitals,
-  ...nextTypescript,
   {
     rules: {
       '@typescript-eslint/no-require-imports': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      'react-hooks/set-state-in-effect': 'off',
-      'react-hooks/purity': 'off',
-      'react-hooks/immutability': 'off',
+      // Keep as warn (not off) to align with the project's TypeScript strict goal
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
 ];
