@@ -86,10 +86,11 @@ export function CoverConfusionMode({ song, onAnswer, onReveal }: CoverConfusionM
         </div>
       </div>
 
-      {/* Music Player */}
+      {/* Music Player — gebluurt bis Antwort gegeben (Swipe zum Enthüllen) */}
       <MusicPlayer
         youtubeLink={playLink}
         startSeconds={song.previewTimestamp?.start ?? 0}
+        blurred={phase !== 'done'}
       />
       {song.links.coverLink && (
         <p className="text-[10px] text-center -mt-2 font-black uppercase text-[var(--color-accent)] animate-pulse">
