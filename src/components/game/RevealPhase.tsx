@@ -12,8 +12,6 @@ import type { PhomuSong } from '@/types/song';
 import type { PlayerAnswer } from '@/types/game-state';
 import type { Player } from '@/types/player';
 import type { GameMode } from '@/config/game-config';
-import { MusicPlayer } from './MusicPlayer';
-
 // ─── Props ────────────────────────────────────────────────────────
 
 interface RevealPhaseProps {
@@ -140,15 +138,7 @@ export function RevealPhase({
           ))}
         </div>
 
-        {/* YouTube-Player */}
-        {song.links?.youtube && (
-          <div className="mt-4 w-full text-left">
-            <MusicPlayer
-              youtubeLink={song.links.youtube}
-              startSeconds={song.previewTimestamp?.start}
-            />
-          </div>
-        )}
+        {/* Kein eigener Player – Musik läuft weiter vom Question-Screen */}
       </motion.div>
 
       {/* Punkte-Zusammenfassung */}

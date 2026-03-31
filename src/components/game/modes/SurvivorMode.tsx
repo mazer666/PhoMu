@@ -39,6 +39,11 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
         animate={{ opacity: 1, y: 0 }}
         className="text-center"
       >
+        <div className="flex justify-center mb-3">
+          <span className="px-3 py-1 rounded-full border border-[var(--color-accent)]/40 text-[10px] font-black uppercase tracking-widest text-[var(--color-accent)]">
+            +3 Pkt bei richtiger Antwort
+          </span>
+        </div>
         <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Artist</p>
         <h3 className="text-3xl font-black mb-1">{song.artist}</h3>
         <p className="opacity-50 text-sm">

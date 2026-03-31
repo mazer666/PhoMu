@@ -177,8 +177,8 @@ export default function GamePage() {
 
       {/* Phasen-Content mit Übergangsanimation */}
       <main className="flex-1 overflow-y-auto">
+        {/* ── Drawing + Scoring: normal AnimatePresence ─────── */}
         <AnimatePresence mode="wait">
-          {/* ── Drawing Phase ─────────────────────────────────── */}
           {roundPhase === 'drawing' && (
             <motion.div
               key="drawing"
@@ -197,50 +197,6 @@ export default function GamePage() {
             </motion.div>
           )}
 
-          {/* ── Question Phase ────────────────────────────────── */}
-          {(roundPhase === 'question' || roundPhase === 'locked-in') &&
-            currentSong !== null && (
-              <motion.div
-                key="question"
-                variants={PHASE_VARIANTS}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition={{ duration: 0.3 }}
-                className="pt-2"
-              >
-                <QuestionPhase
-                  song={currentSong}
-                  currentMode={currentMode}
-                  onAnswered={handleAnswered}
-                  onReveal={handleReveal}
-                />
-              </motion.div>
-            )}
-
-          {/* ── Reveal Phase ──────────────────────────────────── */}
-          {roundPhase === 'reveal' && currentSong !== null && (
-            <motion.div
-              key="reveal"
-              variants={PHASE_VARIANTS}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.3 }}
-            >
-              <RevealPhase
-                song={currentSong}
-                currentMode={currentMode}
-                answers={currentAnswers}
-                players={players}
-                winCondition={config.winCondition}
-                onNextRound={handleNextRound}
-                onEndGame={handleEndGame}
-              />
-            </motion.div>
-          )}
-
-          {/* ── Scoring Phase (Spielende) ─────────────────────── */}
           {roundPhase === 'scoring' && (
             <motion.div
               key="scoring"
@@ -257,6 +213,59 @@ export default function GamePage() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* ── Question + Reveal: QuestionPhase bleibt gemountet ─
+            Damit der MusicPlayer (YouTube-Iframe) beim Übergang
+            zur RevealPhase nicht neu startet.
+            display:none hält den Iframe am Leben — Audio läuft weiter. */}
+        {currentSong !== null &&
+          (roundPhase === 'question' ||
+            roundPhase === 'locked-in' ||
+            roundPhase === 'reveal') && (
+          <motion.div
+            variants={PHASE_VARIANTS}
+            initial="initial"
+            animate="animate"
+            transition={{ duration: 0.3 }}
+          >
+            {/* QuestionPhase: versteckt (nicht unmountet) während Reveal */}
+            <div
+              style={roundPhase === 'reveal' ? { display: 'none' } : undefined}
+              className="pt-2"
+            >
+              <QuestionPhase
+                song={currentSong}
+                currentMode={currentMode}
+                onAnswered={handleAnswered}
+                onReveal={handleReveal}
+              />
+            </div>
+
+            {/* RevealPhase: überlagert, eigene Einblend-Animation */}
+            <AnimatePresence>
+              {roundPhase === 'reveal' && (
+                <motion.div
+                  key="reveal"
+                  variants={PHASE_VARIANTS}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={{ duration: 0.3 }}
+                >
+                  <RevealPhase
+                    song={currentSong}
+                    currentMode={currentMode}
+                    answers={currentAnswers}
+                    players={players}
+                    winCondition={config.winCondition}
+                    onNextRound={handleNextRound}
+                    onEndGame={handleEndGame}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        )}
       </main>
     </div>
   );

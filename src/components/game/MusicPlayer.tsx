@@ -12,6 +12,8 @@ import { useGameStore } from '@/stores/game-store';
 interface MusicPlayerProps {
   youtubeLink: string;
   startSeconds?: number;
+  /** Stoppt Wiedergabe automatisch nach dieser Sekunde (z.B. startSeconds + 30) */
+  endSeconds?: number;
   /** Blendet Video per Blur aus (Timeline-Modus: Song unbekannt) */
   blurred?: boolean;
 }
@@ -23,7 +25,7 @@ declare global {
   }
 }
 
-export function MusicPlayer({ youtubeLink, startSeconds = 0, blurred = false }: MusicPlayerProps) {
+export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred = false }: MusicPlayerProps) {
   const { preferredPlayer, currentSongSource, skipBrokenSong } = useGameStore();
 
   const [playerState, setPlayerState] = useState<'loading' | 'playing' | 'error' | 'fallback'>('loading');
@@ -51,6 +53,7 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, blurred = false }: 
 
   const playerRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const endCheckRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const videoId = extractYouTubeId(youtubeLink);
 
   // 1. YouTube API Laden
@@ -90,6 +93,19 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, blurred = false }: 
           onReady: (event: any) => {
             setPlayerState('playing');
             event.target.playVideo();
+            if (endSeconds) {
+              if (endCheckRef.current) clearInterval(endCheckRef.current);
+              endCheckRef.current = setInterval(() => {
+                try {
+                  const t = playerRef.current?.getCurrentTime?.();
+                  if (t !== undefined && t >= endSeconds) {
+                    playerRef.current.pauseVideo();
+                    clearInterval(endCheckRef.current!);
+                    endCheckRef.current = null;
+                  }
+                } catch (e) { /* ignore */ }
+              }, 500);
+            }
           },
           onError: (event: any) => {
             console.warn('❌ YouTube Player Error:', event.data, activeDomain);
@@ -115,6 +131,7 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, blurred = false }: 
     }
 
     return () => {
+      if (endCheckRef.current) { clearInterval(endCheckRef.current); endCheckRef.current = null; }
       if (playerRef.current) {
         try { playerRef.current.destroy(); } catch(e) {}
       }

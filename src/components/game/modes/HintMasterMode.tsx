@@ -22,9 +22,12 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
   const [shownHints, setShownHints] = useState(1);
   const [isRevealed, setIsRevealed] = useState(false);
   const [showMusic, setShowMusic] = useState(false);
+  const [done, setDone] = useState(false);
+  const [wasCorrect, setWasCorrect] = useState<boolean | null>(null);
 
   const maxHints = song.hints.length;
   const points = PHOMU_CONFIG.HINT_MASTER_POINTS[shownHints - 1] ?? 1;
+  const startSecs = song.previewTimestamp?.start ?? 0;
 
   const handleNextHint = useCallback(() => {
     if (shownHints < maxHints) {
@@ -35,6 +38,9 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
   }, [shownHints, maxHints]);
 
   const handleFinalDecision = (isCorrect: boolean) => {
+    if (done) return;
+    setWasCorrect(isCorrect);
+    setDone(true);
     onAnswer(isCorrect, isCorrect ? points : 0);
   };
 
@@ -66,9 +72,10 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
                 <span className="text-lg">🔊</span>
                 <p className="text-[10px] font-black uppercase tracking-widest text-[var(--color-accent)]">Audio-Hinweis Aktiv</p>
               </div>
-              <MusicPlayer 
-                youtubeLink={song.links.youtube} 
-                startSeconds={song.previewTimestamp?.start ?? 0} 
+              <MusicPlayer
+                youtubeLink={song.links.youtube}
+                startSeconds={startSecs}
+                endSeconds={startSecs + 30}
               />
               <p className="text-[9px] opacity-50 italic text-center">Tipp: Du kannst die ersten 30 Sek. wiederholen</p>
             </div>
@@ -95,7 +102,7 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
 
       {/* Navigation & Actions */}
       <div className="mt-auto space-y-4 pb-10">
-        {!isRevealed ? (
+        {!isRevealed && (
           <div className="grid grid-cols-1 gap-3">
             {shownHints < maxHints && (
               <button
@@ -105,7 +112,7 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
                 Nächster Hinweis → {PHOMU_CONFIG.HINT_MASTER_POINTS[shownHints] ?? 1} Pkt
               </button>
             )}
-            
+
             <button
               onClick={() => setIsRevealed(true)}
               className="w-full py-5 rounded-3xl bg-[var(--color-accent)] font-black text-lg shadow-xl shadow-[var(--color-accent)]/20 hover:scale-[1.02] active:scale-95 transition-all"
@@ -113,35 +120,60 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
               LÖSUNG ZEIGEN
             </button>
           </div>
-        ) : (
+        )}
+
+        {isRevealed && !done && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="text-center p-6 bg-white/5 rounded-3xl border border-white/10 space-y-6"
           >
             <div>
-               <p className="text-[10px] font-black uppercase opacity-40 mb-2">Die Antwort war</p>
-               <h3 className="text-2xl font-black">{song.title}</h3>
-               <p className="text-sm opacity-60">{song.artist}</p>
+              <p className="text-[10px] font-black uppercase opacity-40 mb-2">Die Antwort war</p>
+              <h3 className="text-2xl font-black">{song.title}</h3>
+              <p className="text-sm opacity-60">{song.artist}</p>
             </div>
-            
+
             <div className="space-y-3">
-              <p className="text-xs font-bold italic">Hast du es gewusst?</p>
+              <p className="text-xs font-bold italic opacity-60">Hast du es gewusst?</p>
               <div className="flex gap-4">
                 <button
                   onClick={() => handleFinalDecision(true)}
-                  className="flex-1 py-4 bg-green-500 rounded-2xl font-black text-white shadow-lg shadow-green-500/20"
+                  className="flex-1 py-4 bg-green-500 rounded-2xl font-black text-white shadow-lg shadow-green-500/20 active:scale-95 transition-all"
                 >
                   JA ✅
                 </button>
                 <button
                   onClick={() => handleFinalDecision(false)}
-                  className="flex-1 py-4 bg-red-500 rounded-2xl font-black text-white shadow-lg shadow-red-500/20"
+                  className="flex-1 py-4 bg-red-500 rounded-2xl font-black text-white shadow-lg shadow-red-500/20 active:scale-95 transition-all"
                 >
                   NEIN ❌
                 </button>
               </div>
             </div>
+          </motion.div>
+        )}
+
+        {done && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className={[
+              'text-center p-5 rounded-3xl border space-y-2',
+              wasCorrect
+                ? 'border-green-500/30 bg-green-500/10'
+                : 'border-red-500/30 bg-red-500/10',
+            ].join(' ')}
+          >
+            <p className="text-lg font-black">
+              {wasCorrect ? 'Gewusst! ✨' : 'Nicht gewusst 🌧️'}
+            </p>
+            <p className="text-sm opacity-60">
+              {song.title} &middot; {song.artist}
+            </p>
+            {wasCorrect && (
+              <p className="text-xs font-black text-[var(--color-accent)]">+{points} Punkte</p>
+            )}
           </motion.div>
         )}
       </div>
