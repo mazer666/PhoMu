@@ -76,8 +76,9 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
                 youtubeLink={song.links.youtube}
                 startSeconds={startSecs}
                 endSeconds={startSecs + 30}
+                blurred={!isRevealed}
               />
-              <p className="text-[9px] opacity-50 italic text-center">Tipp: Du kannst die ersten 30 Sek. wiederholen</p>
+              <p className="text-[9px] opacity-50 italic text-center">Swipe zum Enthüllen · max. 30 Sek.</p>
             </div>
           </motion.div>
         )}
