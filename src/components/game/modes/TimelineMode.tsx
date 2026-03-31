@@ -196,6 +196,7 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
         {Array.from({ length: numSlots }, (_, slotIdx) => {
           const isTarget = selectedSlot === slotIdx;
           const yearAfter = timelineYears[slotIdx];
+          const isAnswerCorrect = selectedSlot !== null && validSlotSet.has(selectedSlot);
 
           return (
             <div key={slotIdx} className="flex flex-col">
@@ -219,13 +220,18 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
                     !isTarget && !isRevealed
                       ? 'border-white/10 bg-white/[0.02] hover:border-white/20'
                       : '',
-                    isRevealed && validSlotSet.has(slotIdx) && (isTarget || slotIdx === correct)
+                    // Correct: green only where user placed
+                    isRevealed && isTarget && isAnswerCorrect
                       ? 'border-green-500 bg-green-500/10'
                       : '',
-                    isRevealed && isTarget && !validSlotSet.has(slotIdx)
+                    // Wrong: red where user placed, dim green hint on canonical slot
+                    isRevealed && isTarget && !isAnswerCorrect
                       ? 'border-red-500 bg-red-500/10'
                       : '',
-                    isRevealed && !isTarget && !validSlotSet.has(slotIdx)
+                    isRevealed && !isTarget && slotIdx === correct && !isAnswerCorrect
+                      ? 'border-green-500/50 bg-green-500/5'
+                      : '',
+                    isRevealed && !isTarget && !(slotIdx === correct && !isAnswerCorrect)
                       ? 'border-white/5 bg-transparent'
                       : '',
                   ].join(' ')}
@@ -256,7 +262,7 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
                       {slotIdx + 1}
                     </span>
                   )}
-                  {isRevealed && !isTarget && validSlotSet.has(slotIdx) && slotIdx === correct && (
+                  {isRevealed && !isTarget && slotIdx === correct && !isAnswerCorrect && (
                     <div className="flex items-center gap-2 text-green-400 font-black px-3">
                       <span>←</span>
                       <span className="text-[10px] uppercase tracking-widest">Hier</span>
