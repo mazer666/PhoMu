@@ -61,5 +61,5 @@ export async function processAITaskQueue<TPayload>(
   }
 
   await Promise.all(Array.from({ length: concurrency }, () => worker()));
-  return [...updated, ...queue];
+  return updated;
 }
