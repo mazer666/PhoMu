@@ -1,9 +1,8 @@
 /**
  * RevealPhase
  *
- * Zeigt den aufgedeckten Song mit allen Infos.
- * Fasst Punkte zusammen, die in der Fragerunde vergeben wurden.
- * Pilot kann die nächste Runde starten oder das Spiel beenden.
+ * Zeigt ausschließlich die für den jeweiligen Spielmodus relevante Auflösung.
+ * Kein generischer Song-Dump — jede Modusantwort bekommt eine eigene visuelle Sprache.
  */
 'use client';
 
@@ -13,6 +12,7 @@ import type { PhomuSong } from '@/types/song';
 import type { PlayerAnswer } from '@/types/game-state';
 import type { Player, Team } from '@/types/player';
 import type { GameMode } from '@/config/game-config';
+
 // ─── Props ────────────────────────────────────────────────────────
 
 interface RevealPhaseProps {
@@ -31,27 +31,16 @@ interface RevealPhaseProps {
   overrideGovernance?: 'host' | 'co-host' | 'majority';
 }
 
-// ─── Juicy Text-Varianten ─────────────────────────────────────────
-
-const REVEAL_LABELS = [
-  '🎵 Aufgedeckt!',
-  '🎤 NA ALSO!',
-  '🎉 VOILÀ!',
-  '💥 TATAAAA!',
-  '🃏 Die Karte spricht!',
-  '🔍 Gelüftet!',
-  '👁️ Augen auf!',
-  '🎯 Enthüllt!',
-];
+// ─── Juicy CTA-Varianten ──────────────────────────────────────────
 
 const SCORING_HEADERS = [
   'Punkte diese Runde',
   'Kassiert! 💰',
   'Wer hat abgeräumt?',
-  'Punktestand +1',
   'Das gab Punkte.',
   'Pluspunkte, bitte!',
   'Verdient!',
+  'Auf die Konten!',
 ];
 
 const NEXT_ROUND_LABELS = [
@@ -63,23 +52,290 @@ const NEXT_ROUND_LABELS = [
   'Ran ans nächste →',
   'Weiter, weiter! →',
   'Tut nicht weh. Weiter →',
+  'Kein Zurück mehr →',
 ];
 
-// ─── Hilfs-Badge für Schwierigkeit ───────────────────────────────
+// ─── Modus-spezifische Reveal-Karten ─────────────────────────────
 
-const DIFFICULTY_COLORS: Record<string, string> = {
-  easy:   'var(--color-success)',
-  medium: 'var(--color-secondary)',
-  hard:   'var(--color-error)',
-};
+function TimelineReveal({ song }: { song: PhomuSong }) {
+  const headlines = useMemo(() => [
+    `Jahrgang ${song.year}!`,
+    `Das war aus ${song.year}.`,
+    `${song.year} — eingetütet.`,
+    `Zeitkapsel: ${song.year}.`,
+    `${song.year}. Nicht ${song.year - 1}, nicht ${song.year + 1}.`,
+    `Der Song stammt aus ${song.year}.`,
+  ], [song.year]);
+  const headline = useMemo(() => headlines[Math.floor(Math.random() * headlines.length)]!, [headlines]);
 
-const DIFFICULTY_LABELS: Record<string, string> = {
-  easy:   'Leicht',
-  medium: 'Mittel',
-  hard:   'Schwer',
-};
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.85, y: 24 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+      className="rounded-3xl p-8 text-center overflow-hidden relative"
+      style={{ background: 'linear-gradient(135deg, rgba(6,182,212,0.15), rgba(59,130,246,0.08))', border: '2px solid rgba(6,182,212,0.4)' }}
+    >
+      <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-50 mb-3">📅 Zeitauflösung</p>
+      <motion.div
+        initial={{ scale: 0.3, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: 'spring', stiffness: 500, damping: 18, delay: 0.15 }}
+        className="text-8xl font-black tabular-nums mb-3"
+        style={{ color: '#22d3ee', textShadow: '0 0 40px rgba(34,211,238,0.5)' }}
+      >
+        {song.year}
+      </motion.div>
+      <p className="text-lg font-black mb-5" style={{ color: '#67e8f9' }}>{headline}</p>
+      <SongAttribution song={song} />
+    </motion.div>
+  );
+}
 
-// ─── Komponente ───────────────────────────────────────────────────
+function HintMasterReveal({ song }: { song: PhomuSong }) {
+  const sublines = useMemo(() => [
+    'Hinweise entschlüsselt!',
+    'Case closed!',
+    'Die Identität ist gelüftet.',
+    'Detektiv-Arbeit abgeschlossen.',
+    'Der Song hat sich verraten.',
+    'Kein Geheimnis mehr.',
+  ], []);
+  const subline = useMemo(() => sublines[Math.floor(Math.random() * sublines.length)]!, [sublines]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.85, y: 24 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+      className="rounded-3xl p-8 text-center"
+      style={{ background: 'linear-gradient(135deg, rgba(139,92,246,0.15), rgba(236,72,153,0.08))', border: '2px solid rgba(139,92,246,0.4)' }}
+    >
+      <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-50 mb-4">🕵️ {subline}</p>
+      <motion.h2
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.15 }}
+        className="text-4xl font-black leading-tight mb-2"
+        style={{ color: '#c4b5fd' }}
+      >
+        {song.title}
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+        className="text-xl font-bold opacity-80 mb-2"
+      >
+        {song.artist}
+      </motion.p>
+      <p className="text-xs opacity-30 font-black uppercase tracking-widest mt-4">
+        {Math.floor(song.year / 10) * 10}er
+      </p>
+    </motion.div>
+  );
+}
+
+function LyricsReveal({ song }: { song: PhomuSong }) {
+  const fakeLabels = useMemo(() => [
+    'Die Fälschung war …',
+    'KI-generiert, nicht echt:',
+    'Das haben wir uns ausgedacht:',
+    'Fake-News: Musikedition.',
+    'Diese Zeile war nie in dem Song:',
+    'Unser kreativer Beitrag:',
+  ], []);
+  const fakeLabel = useMemo(() => fakeLabels[Math.floor(Math.random() * fakeLabels.length)]!, [fakeLabels]);
+
+  if (!song.lyrics) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="rounded-3xl p-7 text-center bg-white/5 border border-white/10"
+      >
+        <p className="text-2xl font-black mb-2">{song.title}</p>
+        <p className="opacity-60">{song.artist}</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.85, y: 24 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+      className="rounded-3xl p-7 space-y-5"
+      style={{ background: 'linear-gradient(135deg, rgba(239,68,68,0.12), rgba(244,63,94,0.06))', border: '2px solid rgba(239,68,68,0.35)' }}
+    >
+      <div className="text-center">
+        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-red-400 opacity-80 mb-3">📝 {fakeLabel}</p>
+        <motion.p
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-base font-mono italic text-red-300 leading-relaxed px-2"
+        >
+          &ldquo;{song.lyrics.fake}&rdquo;
+        </motion.p>
+      </div>
+      <div className="flex justify-center">
+        <span className="px-4 py-1.5 bg-green-500/20 text-green-400 text-[10px] font-black rounded-full border border-green-500/25 uppercase tracking-widest">
+          die anderen 3 zeilen waren echt
+        </span>
+      </div>
+      <SongAttribution song={song} />
+    </motion.div>
+  );
+}
+
+function VibeCheckReveal({ song }: { song: PhomuSong }) {
+  const headlines = useMemo(() => [
+    'Die Stimmung war …',
+    'Vibe gecheckt!',
+    'So klingt das eben.',
+    'Der Mood-Report:',
+    'Offiziell bestätigt:',
+    'Das ist die Energie dieses Songs:',
+  ], []);
+  const headline = useMemo(() => headlines[Math.floor(Math.random() * headlines.length)]!, [headlines]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.85, y: 24 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+      className="rounded-3xl p-8 text-center"
+      style={{ background: 'linear-gradient(135deg, rgba(34,197,94,0.15), rgba(16,185,129,0.08))', border: '2px solid rgba(34,197,94,0.35)' }}
+    >
+      <p className="text-[10px] font-black uppercase tracking-[0.3em] text-green-400 opacity-80 mb-5">😎 {headline}</p>
+      <div className="flex flex-wrap justify-center gap-3 mb-6">
+        {song.mood.map((m, i) => (
+          <motion.span
+            key={m}
+            initial={{ scale: 0, rotate: -8 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: 'spring', stiffness: 450, damping: 18, delay: 0.1 + i * 0.08 }}
+            className="px-6 py-3 rounded-full font-black text-lg text-white shadow-lg"
+            style={{ background: 'linear-gradient(135deg, #22c55e, #16a34a)', boxShadow: '0 8px 24px rgba(34,197,94,0.35)' }}
+          >
+            {m}
+          </motion.span>
+        ))}
+      </div>
+      <SongAttribution song={song} />
+    </motion.div>
+  );
+}
+
+function SurvivorReveal({ song }: { song: PhomuSong }) {
+  const isOHW = song.isOneHitWonder;
+
+  const yesHeadlines = useMemo(() => [
+    `${song.artist} — tatsächlich ein One-Hit-Wonder.`,
+    `Einmal Bühne, dann Stille: ${song.artist}.`,
+    `${song.artist} hatte diesen einen Moment.`,
+    `Ja! ${song.artist} ist ein One-Hit-Wonder.`,
+    `Kurze Karriere, großer Hit: ${song.artist}.`,
+  ], [song.artist]);
+
+  const noHeadlines = useMemo(() => [
+    `${song.artist} — echter Dauerstar.`,
+    `${song.artist} ist kein One-Hit-Wonder.`,
+    `Kein Eintagsfliegen: ${song.artist}.`,
+    `${song.artist} hat mehr als einen Hit vorzuweisen.`,
+    `Dauerläufer: ${song.artist} bleibt.`,
+  ], [song.artist]);
+
+  const headline = useMemo(() => {
+    const pool = isOHW ? yesHeadlines : noHeadlines;
+    return pool[Math.floor(Math.random() * pool.length)]!;
+  }, [isOHW, yesHeadlines, noHeadlines]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.85, y: 24 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+      className="rounded-3xl p-8 text-center"
+      style={isOHW
+        ? { background: 'linear-gradient(135deg, rgba(239,68,68,0.15), rgba(244,63,94,0.08))', border: '2px solid rgba(239,68,68,0.4)' }
+        : { background: 'linear-gradient(135deg, rgba(250,204,21,0.15), rgba(234,179,8,0.08))', border: '2px solid rgba(250,204,21,0.4)' }
+      }
+    >
+      <motion.div
+        initial={{ scale: 0.2, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: 'spring', stiffness: 500, damping: 18, delay: 0.1 }}
+        className="text-6xl mb-4"
+      >
+        {isOHW ? '✋' : '🌟'}
+      </motion.div>
+      <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-50 mb-3">🏆 Survivor-Auflösung</p>
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25 }}
+        className="text-xl font-black leading-snug mb-5"
+        style={{ color: isOHW ? '#fca5a5' : '#fde68a' }}
+      >
+        {headline}
+      </motion.p>
+      <SongAttribution song={song} />
+    </motion.div>
+  );
+}
+
+function CoverConfusionReveal({ song }: { song: PhomuSong }) {
+  const headlines = useMemo(() => [
+    'Das Original kam von …',
+    'Hinter der Maske:',
+    "Wer war's wirklich?",
+    'Der echte Urheber:',
+    'Originalquelle bestätigt:',
+    'Das haben die eigentlich erfunden:',
+  ], []);
+  const headline = useMemo(() => headlines[Math.floor(Math.random() * headlines.length)]!, [headlines]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.85, y: 24 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+      className="rounded-3xl p-8 text-center"
+      style={{ background: 'linear-gradient(135deg, rgba(var(--color-accent-rgb),0.15), rgba(var(--color-accent-rgb),0.05))', border: '2px solid rgba(var(--color-accent-rgb),0.4)' }}
+    >
+      <p className="text-[10px] font-black uppercase tracking-[0.3em] opacity-60 mb-4">🎭 {headline}</p>
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="text-4xl font-black mb-2"
+        style={{ color: 'var(--color-accent)' }}
+      >
+        {song.artist}
+      </motion.p>
+      <p className="text-lg font-bold opacity-70 mb-4">{song.title}</p>
+      {song.links.coverLink && (
+        <span className="text-[10px] font-black uppercase tracking-widest opacity-40 italic">
+          Wir haben eine Cover-Version gehört
+        </span>
+      )}
+    </motion.div>
+  );
+}
+
+// ─── Kleine Hilfskomponente: diskrete Song-Attribution ────────────
+
+function SongAttribution({ song }: { song: PhomuSong }) {
+  return (
+    <p className="text-[10px] font-black uppercase tracking-widest opacity-25 mt-2">
+      {song.title} &middot; {song.artist}
+    </p>
+  );
+}
+
+// ─── Haupt-Komponente ─────────────────────────────────────────────
 
 export function RevealPhase({
   song,
@@ -99,23 +355,20 @@ export function RevealPhase({
 
   const [showPowerMenu, setShowPowerMenu] = useState(false);
 
-  const revealLabel = useMemo(() => REVEAL_LABELS[Math.floor(Math.random() * REVEAL_LABELS.length)]!, []);
   const scoringHeader = useMemo(() => SCORING_HEADERS[Math.floor(Math.random() * SCORING_HEADERS.length)]!, []);
   const nextRoundLabel = useMemo(() => NEXT_ROUND_LABELS[Math.floor(Math.random() * NEXT_ROUND_LABELS.length)]!, []);
 
-  // Gewinner nur anzeigen, wenn Punkte-Modus UND jemand hat das Ziel erreicht,
-  // ODER wenn die Gameover-Condition via Store bereits wahr ist (Time/Rounds).
-  let winnerTitle: string | null = null;
+  // Gewinner-Logik
   const showWinUI = isGameOver || (endingCondition === 'points' && (
-    players.some((p) => p.score >= winCondition) || 
+    players.some((p) => p.score >= winCondition) ||
     teams.some((t) => t.score >= winCondition)
   ));
 
+  let winnerTitle: string | null = null;
   if (showWinUI) {
     const topPlayer = [...players].sort((a, b) => b.score - a.score)[0];
     const topTeam = [...teams].sort((a, b) => b.score - a.score)[0];
     const isTeamMode = teams.length > 0;
-    
     if (isTeamMode && topTeam) {
       winnerTitle = `🏆 Team ${topTeam.name} hat gewonnen!`;
     } else if (topPlayer) {
@@ -135,90 +388,21 @@ export function RevealPhase({
   return (
     <div className="max-w-lg mx-auto px-6 py-8 flex flex-col gap-6">
 
-      {/* Mode-Specific Reveal Info (NEW Phase 5) */}
-      {currentMode === 'lyrics' && song.lyrics && (
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white/5 border border-white/10 p-5 rounded-3xl space-y-3"
-        >
-          <p className="text-[10px] font-black uppercase opacity-40 text-center tracking-widest">Die gefälschte Zeile war</p>
-          <p className="text-sm font-mono text-center italic text-red-400">
-            &ldquo;{song.lyrics.fake}&rdquo;
-          </p>
-          <div className="pt-2 flex justify-center">
-             <span className="px-3 py-1 bg-green-500/20 text-green-500 text-[10px] font-black rounded-full border border-green-500/20">
-               DIE ANDEREN 3 WAREN ECHT
-             </span>
-          </div>
-        </motion.div>
-      )}
+      {/* ── Modus-spezifische Auflösung ───────────────────────── */}
+      {currentMode === 'timeline'         && <TimelineReveal song={song} />}
+      {currentMode === 'hint-master'      && <HintMasterReveal song={song} />}
+      {currentMode === 'lyrics'           && <LyricsReveal song={song} />}
+      {currentMode === 'vibe-check'       && <VibeCheckReveal song={song} />}
+      {currentMode === 'survivor'         && <SurvivorReveal song={song} />}
+      {currentMode === 'cover-confusion'  && <CoverConfusionReveal song={song} />}
 
-      {currentMode === 'cover-confusion' && (
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 p-5 rounded-3xl text-center space-y-2"
-        >
-          <p className="text-[10px] font-black uppercase opacity-60">Original von</p>
-          <p className="text-2xl font-black text-[var(--color-accent)]">{song.artist}</p>
-          <p className="text-[10px] opacity-40 italic">Gehört haben wir eine Cover-Version</p>
-        </motion.div>
-      )}
-
-      {/* Song-Karte */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-        className="rounded-2xl p-6 text-center"
-        style={{
-          backgroundColor: 'var(--color-bg-card)',
-          border: '2px solid var(--color-accent)',
-        }}
-      >
-        {/* Aufgedeckt-Badge */}
-        <p className="text-xs uppercase tracking-widest opacity-50 mb-4">{revealLabel}</p>
-
-        {/* Titel + Artist */}
-        <h2 className="text-4xl font-black leading-tight mb-1">{song.title}</h2>
-        <p className="text-xl opacity-80 mb-4">{song.artist}</p>
-
-        {/* Metadaten-Badges */}
-        <div className="flex flex-wrap justify-center gap-2 mb-4">
-          <Badge>{song.year}</Badge>
-          <Badge>{song.genre}</Badge>
-          <Badge
-            style={{
-              backgroundColor: DIFFICULTY_COLORS[song.difficulty] + '33',
-              color: DIFFICULTY_COLORS[song.difficulty],
-              borderColor: DIFFICULTY_COLORS[song.difficulty],
-            }}
-          >
-            {DIFFICULTY_LABELS[song.difficulty] ?? song.difficulty}
-          </Badge>
-          <Badge>{song.country}</Badge>
-        </div>
-
-        {/* Stimmungen */}
-        <div className="flex flex-wrap justify-center gap-1">
-          {song.mood.map((m) => (
-            <span key={m} className="text-xs opacity-60 px-2 py-0.5 rounded-full bg-white/10">
-              {m}
-            </span>
-          ))}
-        </div>
-
-        {/* Kein eigener Player – Musik läuft weiter vom Question-Screen */}
-      </motion.div>
-
-      {/* Punkte-Zusammenfassung */}
+      {/* ── Punkte-Zusammenfassung ────────────────────────────── */}
       {scoringRows.length > 0 && (
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="rounded-xl p-4"
+          transition={{ delay: 0.35 }}
+          className="rounded-2xl p-4"
           style={{ backgroundColor: 'var(--color-bg-card)', border: '1px solid var(--color-border)' }}
         >
           <p className="text-sm font-bold opacity-70 mb-3">{scoringHeader}</p>
@@ -229,62 +413,46 @@ export function RevealPhase({
                 <span className="flex-1 font-semibold text-sm" style={{ color: player.color }}>
                   {player.name}
                 </span>
-                <span
+                <motion.span
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5 }}
                   className="font-black text-sm"
                   style={{ color: 'var(--color-success)' }}
                 >
                   +{points}
-                </span>
+                </motion.span>
               </div>
             ))}
           </div>
         </motion.div>
       )}
 
-      {/* Hinweis bei One-Hit-Wonder */}
-      {song.isOneHitWonder && (
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="text-center text-sm opacity-60"
-        >
-          ⭐ {song.artist} ist ein One-Hit-Wonder!
-        </motion.p>
-      )}
-
-      {/* Verstecktes Power-User Menü (nur Ausnahmefälle) */}
+      {/* ── Power-User Menü ───────────────────────────────────── */}
       <div className="flex justify-end">
         <button
           onClick={() => setShowPowerMenu((v) => !v)}
           className="text-[10px] opacity-20 hover:opacity-60 transition-opacity px-2 py-1"
           aria-label="Power Actions"
-          title="Power Actions"
         >
           ⋯
         </button>
       </div>
 
       {showPowerMenu && (
-        <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-3 space-y-2">
+        <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-3 space-y-2 -mt-4">
           <p className="text-[10px] uppercase tracking-wider opacity-60">
             Power User · Governance: {overrideGovernance}
           </p>
           <div className="flex flex-col gap-2">
             <button
-              onClick={() => {
-                onOverrideCorrect?.();
-                setShowPowerMenu(false);
-              }}
+              onClick={() => { onOverrideCorrect?.(); setShowPowerMenu(false); }}
               className="text-left px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-sm"
             >
               ✅ Antwort trotzdem korrekt werten
             </button>
             <button
-              onClick={() => {
-                onOverrideRedraw?.();
-                setShowPowerMenu(false);
-              }}
+              onClick={() => { onOverrideRedraw?.(); setShowPowerMenu(false); }}
               className="text-left px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-sm"
             >
               🔄 Runde verwerfen & neue Frage
@@ -293,7 +461,7 @@ export function RevealPhase({
         </div>
       )}
 
-      {/* Aktions-Buttons */}
+      {/* ── Aktions-Buttons ───────────────────────────────────── */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -319,8 +487,7 @@ export function RevealPhase({
         ) : (
           <button
             onClick={onNextRound}
-            className="w-full py-4 rounded-2xl text-xl font-black shadow-lg
-                       hover:opacity-90 transition-opacity"
+            className="w-full py-4 rounded-2xl text-xl font-black shadow-lg hover:opacity-90 transition-opacity"
             style={{ backgroundColor: 'var(--color-primary)' }}
           >
             {nextRoundLabel}
@@ -328,28 +495,5 @@ export function RevealPhase({
         )}
       </motion.div>
     </div>
-  );
-}
-
-// ─── Badge-Hilfskomponente ────────────────────────────────────────
-
-function Badge({
-  children,
-  style,
-}: {
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-}) {
-  return (
-    <span
-      className="text-xs px-2.5 py-1 rounded-full border font-semibold"
-      style={{
-        backgroundColor: 'rgba(255,255,255,0.1)',
-        borderColor: 'var(--color-border)',
-        ...style,
-      }}
-    >
-      {children}
-    </span>
   );
 }
