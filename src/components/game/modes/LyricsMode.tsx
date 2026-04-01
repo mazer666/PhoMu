@@ -62,6 +62,7 @@ function LyricsQuestion({
 }) {
   const [selected, setSelected] = useState<number | null>(null);
   const [isRevealing, setIsRevealing] = useState(false);
+  const [cheatActive, setCheatActive] = useState(false);
 
   // 3 echte + 1 fake Zeile mischen — einmalig stabilisiert
   const options = useMemo(() => {
@@ -84,7 +85,9 @@ function LyricsQuestion({
     if (selected === null || isRevealing) return;
     setIsRevealing(true);
     const isCorrect = options[selected]?.isFake ?? false;
-    onAnswer(isCorrect, isCorrect ? LYRICS_POINTS : 0);
+    // Lyrics-Cheat: Fix 1 Punkt, sonst 4 Punkte
+    const points = isCorrect ? (cheatActive ? 1 : LYRICS_POINTS) : 0;
+    onAnswer(isCorrect, points);
     onReveal();
   }
 
@@ -103,6 +106,33 @@ function LyricsQuestion({
         <p className="text-sm opacity-60 mt-1 font-medium">
           Welche Zeile ist <span style={{ color: 'var(--color-error)' }}>NICHT echt</span>?
         </p>
+
+        {/* Cheat-Button */}
+        {!isRevealing && !cheatActive && (
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setCheatActive(true)}
+            className="mt-4 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full border border-yellow-500/30 text-yellow-500/60 hover:text-yellow-500 hover:bg-yellow-500/10 transition-all mx-auto"
+          >
+            🔍 Musik hören (nur 1 Pkt Fix)
+          </motion.button>
+        )}
+
+        {/* Cheat Player */}
+        {cheatActive && !isRevealing && (
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="w-full max-w-xs mx-auto mt-2"
+          >
+            <MusicPlayer 
+              youtubeLink={song.links.youtube}
+              startSeconds={song.previewTimestamp?.start ?? 0}
+              blurred={false}
+            />
+          </motion.div>
+        )}
       </motion.div>
 
       {/* Lyrics-Optionen */}

@@ -85,6 +85,7 @@ export function SongCard({ song, showHints = false, isAdmin = false, onEdit, onP
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className="group relative bg-[#1a1a1e] rounded-[2rem] shadow-2xl transition-all duration-500 overflow-hidden border border-white/5 flex flex-col h-full hover:border-blue-500/30 hover:shadow-blue-500/10"
+      style={{ backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
     >
       {/* Invisible audio player on hover */}
       {hovering && song.links.youtube && (

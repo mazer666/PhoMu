@@ -52,6 +52,7 @@
 - Amazon Music (YouTube fallback).
 - Provider fallback logic (broken link -> next provider).
 - Apple Music: deferred (requires Apple Developer Account).
+- Automatisierte YouTube-Playlist-Verarbeitung implementieren
 - **Criteria:** Spotify preview plays. Fallback works when provider link is invalid.
 
 ## Phase 8: Projector/TV Mode

@@ -37,14 +37,15 @@ interface VibeCheckModeProps {
 export function VibeCheckMode({ song, onAnswer }: VibeCheckModeProps) {
   const [selected, setSelected] = useState<string | null>(null);
   const [answered, setAnswered] = useState(false);
+  const [cheatActive, setCheatActive] = useState(false);
 
   function handleSelect(mood: string) {
     if (answered) return;
     const isCorrect = song.mood.includes(mood);
     setSelected(mood);
     setAnswered(true);
-    // Vibe-Check: 2 Punkte für richtige Stimmung
-    onAnswer(isCorrect, isCorrect ? 2 : 0);
+    // Vibe-Check: 2 Punkte Basis — wenn Cheat aktiv: nur 1 Punkt
+    onAnswer(isCorrect, isCorrect ? (cheatActive ? 1 : 2) : 0);
   }
 
   // Sechs zufällige Stimmungen (inkl. mind. einer richtigen) — einmalig stabilisiert
@@ -86,6 +87,33 @@ export function VibeCheckMode({ song, onAnswer }: VibeCheckModeProps) {
       >
         Welche Stimmung passt zu diesem Song?
       </motion.p>
+
+      {/* Cheat-Button */}
+      {!answered && !cheatActive && (
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setCheatActive(true)}
+          className="text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full border border-yellow-500/30 text-yellow-500/60 hover:text-yellow-500 hover:bg-yellow-500/10 transition-all"
+        >
+          🔍 Musik hören & sehen (-1 Punkt)
+        </motion.button>
+      )}
+
+      {/* Cheat Player */}
+      {cheatActive && !answered && (
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="w-full max-w-xs"
+        >
+          <MusicPlayer 
+            youtubeLink={song.links.youtube}
+            startSeconds={song.previewTimestamp?.start ?? 0}
+            blurred={false}
+          />
+        </motion.div>
+      )}
 
       {/* Stimmungs-Grid */}
       <motion.div
