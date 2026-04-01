@@ -61,13 +61,34 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
   const videoId = useMemo(() => extractYouTubeId(youtubeLink), [youtubeLink]);
   const [key, setKey] = useState(0);
 
+  const [autoSkipCountdown, setAutoSkipCountdown] = useState<number | null>(null);
+  const skipTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
   const handleError = useCallback(() => {
     console.warn('❌ MusicPlayer Error detected.');
     setPlayerState('error');
     if (endCheckRef.current) clearInterval(endCheckRef.current);
-  }, []);
+    
+    // Start auto-skip countdown (10s)
+    setAutoSkipCountdown(10);
+    if (skipTimerRef.current) clearInterval(skipTimerRef.current);
+    skipTimerRef.current = setInterval(() => {
+      setAutoSkipCountdown(prev => {
+        if (prev === null || prev <= 1) {
+          if (skipTimerRef.current) clearInterval(skipTimerRef.current);
+          skipBrokenSong();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+  }, [skipBrokenSong]);
 
   const toggleDomain = useCallback(() => {
+    // Clear skip timer if toggling
+    if (skipTimerRef.current) clearInterval(skipTimerRef.current);
+    setAutoSkipCountdown(null);
+
     setActiveDomain(prev => prev === 'www.youtube.com' ? 'music.youtube.com' : 'www.youtube.com');
     setPlayerState('loading');
     setKey(prev => prev + 1);
@@ -75,17 +96,6 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
 
   useEffect(() => {
     if (!videoId || typeof window === 'undefined') return;
-
-    const playerId = `yt-player-${videoId}-${activeDomain.replace(/\./g, '-')}`;
-    
-    const loadApi = () => {
-      if (!window.YT) {
-        const tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        const firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
-      }
-    };
 
     const initPlayer = () => {
       if (!containerRef.current) return;
@@ -129,12 +139,23 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
             if (event.data === (window.YT?.PlayerState?.UNSTARTED ?? -1)) {
               // Timeout to check if it ever starts
               setTimeout(() => {
-                if (playerState === 'loading') handleError();
-              }, 4000);
+                if (playerState === 'loading' && playerRef.current?.getPlayerState() === (window.YT?.PlayerState?.UNSTARTED ?? -1)) {
+                  handleError();
+                }
+              }, 6000); // 6s timeout on mobile
             }
           }
         }
       });
+    };
+
+    const loadApi = () => {
+      if (!window.YT) {
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+      }
     };
 
     loadApi();
@@ -146,6 +167,7 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
 
     return () => {
       if (endCheckRef.current) { clearInterval(endCheckRef.current); endCheckRef.current = null; }
+      if (skipTimerRef.current) { clearInterval(skipTimerRef.current); skipTimerRef.current = null; }
       if (playerRef.current) {
         try { playerRef.current.destroy(); } catch(e) {}
       }
@@ -222,30 +244,36 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#121215] p-8 text-center"
+            className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-[#121215] p-6 text-center"
           >
-            <div className="w-20 h-20 bg-red-500/20 rounded-3xl flex items-center justify-center mb-6 border border-red-500/30">
-              <span className="text-4xl">⚠️</span>
+            <div className="w-16 h-16 bg-red-500/20 rounded-3xl flex items-center justify-center mb-4 border border-red-500/30">
+              <span className="text-3xl text-red-500">⚠️</span>
             </div>
             
-            <h2 className="text-2xl font-black uppercase tracking-tight mb-2 text-red-500">Video gesperrt</h2>
-            <p className="text-sm text-white/40 max-w-sm mb-8 leading-relaxed">
-              Dieses Video kann in deiner Region ggf. nicht abgespielt werden. Versuche den alternativen Player oder überspringe den Song.
+            <h2 className="text-xl font-black uppercase tracking-tight mb-1 text-red-500">Gesperrt oder Fehler</h2>
+            <p className="text-xs text-white/40 max-w-sm mb-6 leading-relaxed">
+              Video nicht verfügbar. Neuer Song wird automatisch gezogen …
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+            {autoSkipCountdown !== null && (
+              <div className="mb-6 px-4 py-1.5 bg-red-500/20 text-red-400 text-[10px] font-black uppercase tracking-[0.2em] rounded-full animate-pulse border border-red-400/20">
+                Skip in {autoSkipCountdown}s
+              </div>
+            )}
+
+            <div className="flex flex-col gap-3 w-full max-w-xs">
               <button
-                onClick={toggleDomain}
-                className="flex-1 bg-white text-black h-14 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl"
+                onClick={() => skipBrokenSong()}
+                className="w-full bg-[var(--color-accent)] text-white h-14 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-[var(--color-accent)]/20"
               >
-                Alternative Player ({activeDomain === 'www.youtube.com' ? 'Music' : 'Standard'})
+                JETZT ÜBERSPRINGEN
               </button>
               
               <button
-                onClick={() => skipBrokenSong()}
-                className="flex-1 bg-red-500/10 border border-red-500/20 text-red-500 h-14 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-red-500/20 transition-all"
+                onClick={toggleDomain}
+                className="w-full py-3 text-[10px] font-black uppercase tracking-widest text-white/30 hover:text-white transition-colors"
               >
-                Song überspringen
+                Alternative Player ({activeDomain === 'www.youtube.com' ? 'Music' : 'Standard'})
               </button>
             </div>
           </motion.div>

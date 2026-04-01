@@ -97,8 +97,9 @@ function LyricsQuestion({
         animate={{ opacity: 1, y: 0 }}
         className="text-center"
       >
-        <p className="text-xs uppercase tracking-widest opacity-50 mb-1">Artist</p>
+        <p className="text-xs uppercase tracking-widest opacity-50 mb-1">Song</p>
         <h3 className="text-2xl font-black">{song.artist}</h3>
+        <p className="text-lg font-bold opacity-70 mb-2">{song.title}</p>
         <p className="text-sm opacity-60 mt-1 font-medium">
           Welche Zeile ist <span style={{ color: 'var(--color-error)' }}>NICHT echt</span>?
         </p>

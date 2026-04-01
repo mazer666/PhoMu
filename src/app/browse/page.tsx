@@ -85,7 +85,14 @@ export default function BrowsePage() {
   }, [allSongs]);
 
   const filteredSongs = useMemo(() => {
-    let result = allSongs;
+    // Deduplizieren: gleicher Title+Artist nur einmal anzeigen
+    const seen = new Set<string>();
+    let result = allSongs.filter(s => {
+      const key = `${s.title.toLowerCase().trim()}|${s.artist.toLowerCase().trim()}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
     const q = filters.search.toLowerCase().trim();
     
     if (q) {

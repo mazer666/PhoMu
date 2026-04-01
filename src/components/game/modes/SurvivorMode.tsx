@@ -33,7 +33,7 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
   return (
     <div className="flex flex-col items-center justify-center min-h-[50vh] px-6 gap-8">
 
-      {/* Song-Infos (Titel verborgen) */}
+      {/* Song-Infos — Artist erst nach Antwort sichtbar */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -44,15 +44,29 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
             +3 Pkt bei richtiger Antwort
           </span>
         </div>
-        <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Artist</p>
-        <h3 className="text-3xl font-black mb-1">{song.artist}</h3>
-        <p className="opacity-50 text-sm">
-          {Math.floor(song.year / 10) * 10}er · {song.genre}
-        </p>
-        <div className="mt-4 w-64 mx-auto opacity-40 hover:opacity-100 transition-opacity">
+
+        {!answered ? (
+          <>
+            <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Hör genau hin …</p>
+            <h3 className="text-3xl font-black mb-1 opacity-20 select-none">???</h3>
+            <p className="opacity-30 text-sm italic">Artist wird nach deiner Antwort enthüllt</p>
+          </>
+        ) : (
+          <>
+            <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Artist</p>
+            <h3 className="text-3xl font-black mb-1">{song.artist}</h3>
+            <p className="text-lg font-bold opacity-70 mb-1">{song.title}</p>
+            <p className="opacity-50 text-sm">
+              {Math.floor(song.year / 10) * 10}er · {song.genre}
+            </p>
+          </>
+        )}
+
+        <div className="mt-4 w-64 mx-auto transition-opacity" style={{ opacity: answered ? 1 : 0.4 }}>
           <MusicPlayer 
             youtubeLink={song.links.youtube} 
-            startSeconds={song.previewTimestamp?.start ?? 0} 
+            startSeconds={song.previewTimestamp?.start ?? 0}
+            blurred={!answered}
           />
         </div>
       </motion.div>

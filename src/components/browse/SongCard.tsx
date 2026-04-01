@@ -9,6 +9,7 @@
  * Lyrics werden NICHT angezeigt (das wäre Spoiler!).
  */
 
+import { useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
@@ -63,14 +64,38 @@ export function SongCard({ song, showHints = false, isAdmin = false, onEdit, onP
   const youtubeUrl = buildYoutubeUrl(song.links.youtube);
   const decade = getDecade(song.year);
   const hasLyrics = song.lyrics !== null;
+  const [hovering, setHovering] = useState(false);
+  const hoverTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = useCallback(() => {
+    // Small delay to avoid accidental triggers when scrolling
+    hoverTimerRef.current = setTimeout(() => setHovering(true), 400);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
+    setHovering(false);
+  }, []);
 
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -8 }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className="group relative bg-[#1a1a1e] rounded-[2rem] shadow-2xl transition-all duration-500 overflow-hidden border border-white/5 flex flex-col h-full hover:border-blue-500/30 hover:shadow-blue-500/10"
     >
+      {/* Invisible audio player on hover */}
+      {hovering && song.links.youtube && (
+        <iframe
+          src={`https://www.youtube.com/embed/${song.links.youtube}?autoplay=1&start=${song.previewTimestamp?.start ?? 30}&controls=0&showinfo=0&modestbranding=1&rel=0&enablejsapi=1`}
+          allow="autoplay"
+          style={{ position: 'absolute', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }}
+          tabIndex={-1}
+          aria-hidden
+        />
+      )}
       {/* Cover Image Header */}
       <div className="relative aspect-[4/5] overflow-hidden bg-gray-900">
         {song.coverUrl ? (
