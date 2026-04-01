@@ -10,8 +10,9 @@
  */
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import type { GameMode } from '@/config/game-config';
 
 // ─── Modus-Icons ──────────────────────────────────────────────────
@@ -42,6 +43,10 @@ interface GameHeaderProps {
   pilotName?: string;
   /** Sekunden bis der Timer abläuft — null = kein Timer */
   timeLimitSeconds: number | null;
+  /** Fortschritt in Prozent (0-100) */
+  progressPercentage?: number;
+  /** Optionales Label für das Fortschritts-Ziel (z.B. "10", "100 Pkt") */
+  targetLabel?: string;
   /** Wird aufgerufen, wenn der Timer abläuft */
   onTimeUp?: () => void;
   /** Wird aufgerufen, wenn der Nutzer "Exit" drückt */
@@ -55,6 +60,8 @@ export function GameHeader({
   currentMode,
   pilotName,
   timeLimitSeconds,
+  progressPercentage = 0,
+  targetLabel,
   onTimeUp,
   onExit,
 }: GameHeaderProps) {
@@ -91,51 +98,78 @@ export function GameHeader({
     : secondsLeft > 10 ? 'var(--color-secondary)'
     : 'var(--color-error)';
 
+  const displayProgressLabel = useMemo(() => {
+    if (!targetLabel) return `Runde ${roundNumber}`;
+    // Wenn targetLabel z.B. "10" ist -> "Runde 3 / 10"
+    if (!isNaN(Number(targetLabel))) {
+      return `Runde ${roundNumber} / ${targetLabel}`;
+    }
+    // Wenn targetLabel z.B. "100 Pkt" -> "45 / 100 Pkt"
+    return `${roundNumber} / ${targetLabel}`;
+  }, [roundNumber, targetLabel]);
+
   return (
     <header
-      className="flex items-center gap-3 px-4 py-3 border-b sticky top-0 z-40 backdrop-blur-md"
+      className="flex flex-col sticky top-0 z-40 backdrop-blur-md"
       style={{
         backgroundColor: 'rgba(0,0,0,0.6)',
         borderColor: 'var(--color-border)',
       }}
     >
-      {/* Exit-Button */}
-      <button
-        onClick={handleExit}
-        className="text-lg opacity-60 hover:opacity-100 transition-opacity shrink-0"
-        aria-label="Spiel verlassen"
-        title="Zur Lobby"
-      >
-        ✕
-      </button>
-
-      {/* Modus-Badge */}
-      <div
-        className="flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-bold shrink-0"
-        style={{ backgroundColor: 'var(--color-bg-card)', border: '1px solid var(--color-border)' }}
-      >
-        <span aria-hidden>{MODE_ICONS[currentMode]}</span>
-        <span>{MODE_LABELS[currentMode]}</span>
+      {/* Subtle Progress Bar */}
+      <div className="w-full h-[3px] bg-white/10 overflow-hidden">
+         <motion.div 
+           initial={{ width: 0 }}
+           animate={{ width: `${Math.min(100, Math.max(0, progressPercentage))}%` }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
+           className="h-full"
+           style={{ backgroundColor: 'var(--color-accent)' }}
+         />
       </div>
 
-      {/* Runde + Pilot */}
-      <div className="flex-1 min-w-0">
-        <p className="text-sm font-bold leading-tight">Runde {roundNumber}</p>
-        {pilotName && (
-          <p className="text-xs opacity-50 truncate">🎮 {pilotName}</p>
+      <div className="flex items-center gap-3 px-4 py-3 border-b border-white/5">
+        {/* Exit-Button */}
+        <button
+          onClick={handleExit}
+          className="text-lg opacity-60 hover:opacity-100 transition-opacity shrink-0 pr-2"
+          aria-label="Spiel verlassen"
+          title="Zur Lobby"
+        >
+          ✕
+        </button>
+
+        {/* Modus-Badge */}
+        <div
+          className="flex items-center gap-1.5 px-3 py-1 rounded-xl text-sm font-bold shrink-0"
+          style={{ backgroundColor: 'var(--color-bg-card)', border: '1px solid var(--color-border)' }}
+        >
+          <span aria-hidden>{MODE_ICONS[currentMode]}</span>
+          <span className="hidden sm:inline">{MODE_LABELS[currentMode]}</span>
+        </div>
+
+        {/* Runde + Pilot */}
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-black tracking-tight leading-tight uppercase tabular-nums">
+            {displayProgressLabel}
+          </p>
+          {pilotName && (
+            <p className="text-[10px] uppercase font-black tracking-[0.1em] opacity-40 truncate">
+               {pilotName}
+            </p>
+          )}
+        </div>
+
+        {/* Timer */}
+        {secondsLeft !== null && (
+          <div
+            className="shrink-0 text-2xl font-black tabular-nums min-w-[3ch] text-right"
+            style={{ color: timerColor }}
+            aria-label={`${secondsLeft} Sekunden übrig`}
+          >
+            {secondsLeft}
+          </div>
         )}
       </div>
-
-      {/* Timer */}
-      {secondsLeft !== null && (
-        <div
-          className="shrink-0 text-2xl font-black tabular-nums min-w-[3ch] text-right"
-          style={{ color: timerColor }}
-          aria-label={`${secondsLeft} Sekunden übrig`}
-        >
-          {secondsLeft}
-        </div>
-      )}
     </header>
   );
 }

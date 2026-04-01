@@ -12,7 +12,7 @@
  */
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useMemo, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useGameStore } from '@/stores/game-store';
@@ -49,6 +49,7 @@ export default function GamePage() {
     turnOrder,
     currentTurnIndex,
     isGameOver,
+    gameStartTime,
     drawSong,
     advancePhase,
     submitAnswer,
@@ -59,6 +60,14 @@ export default function GamePage() {
   } = useGameStore();
 
   const [showScoreboard, setShowScoreboard] = useState(false);
+  const [now, setNow] = useState(Date.now());
+
+  // ── Zeit-Updater für Progress-Bar ─────────────────────────────
+  useEffect(() => {
+    if (config.endingCondition !== 'time') return;
+    const interval = setInterval(() => setNow(Date.now()), 2000);
+    return () => clearInterval(interval);
+  }, [config.endingCondition]);
 
   // ── Guard: kein Spiel → Lobby ──────────────────────────────────
   useEffect(() => {
@@ -186,6 +195,33 @@ export default function GamePage() {
     }
   }, [roundPhase, advancePhase]);
 
+  // ── Fortschrittsberechnung (Progress Bar) ─────────────────────
+  const progressData = useMemo(() => {
+    let percentage = 0;
+    let targetLabel = '';
+    let currentVal = currentRound;
+
+    if (config.endingCondition === 'rounds') {
+      const totalTurns = config.targetRounds * turnOrder.length;
+      percentage = (currentRound / totalTurns) * 100;
+      targetLabel = `${totalTurns}`;
+    } else if (config.endingCondition === 'points') {
+      const topScore = config.teamMode === 'individual'
+        ? Math.max(...players.map(p => p.score), 0)
+        : Math.max(...teams.map(t => t.score), 0);
+      percentage = (topScore / config.targetPoints) * 100;
+      targetLabel = `${config.targetPoints} Pkt`;
+      currentVal = topScore;
+    } else if (config.endingCondition === 'time' && gameStartTime) {
+      const elapsedMs = now - gameStartTime;
+      const targetMs = config.targetTimeMinutes * 60 * 1000;
+      percentage = (elapsedMs / targetMs) * 100;
+      targetLabel = `${config.targetTimeMinutes} Min`;
+      currentVal = Math.floor(elapsedMs / 60000);
+    }
+    return { percentage, targetLabel, currentVal };
+  }, [config, currentRound, turnOrder.length, players, teams, gameStartTime, now]);
+
   // Noch nicht bereit → nichts rendern (Redirect läuft)
   if (currentRound === 0 || players.length === 0) {
     return null;
@@ -198,10 +234,12 @@ export default function GamePage() {
     >
       {/* Header */}
       <GameHeader
-        roundNumber={currentRound}
+        roundNumber={progressData.currentVal}
         currentMode={currentMode}
         pilotName={pilot?.name}
         timeLimitSeconds={roundPhase === 'question' ? config.timeLimitSeconds : null}
+        progressPercentage={progressData.percentage}
+        targetLabel={progressData.targetLabel}
         onTimeUp={handleTimeUp}
         onExit={handleExit}
       />
