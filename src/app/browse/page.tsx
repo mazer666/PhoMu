@@ -71,10 +71,19 @@ export default function BrowsePage() {
   });
   const [showFilters, setShowFilters] = useState(false);
 
+  // Pagination State
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState<number | 'all'>(24);
+
   // Initiales Laden
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Reset page when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filters, sortBy, sortOrder, pageSize]);
 
   const genres = useMemo(() => getGenres(allSongs), [allSongs]);
   const decades = useMemo(() => getDecades(allSongs), [allSongs]);
@@ -119,6 +128,15 @@ export default function BrowsePage() {
     });
   }, [allSongs, filters, sortBy, sortOrder]);
 
+  // Paginated Songs
+  const paginatedSongs = useMemo(() => {
+    if (pageSize === 'all') return filteredSongs;
+    const start = (currentPage - 1) * pageSize;
+    return filteredSongs.slice(start, start + pageSize);
+  }, [filteredSongs, currentPage, pageSize]);
+
+  const totalPages = pageSize === 'all' ? 1 : Math.ceil(filteredSongs.length / pageSize);
+
   const handleSaveSong = useCallback((updated: PhomuSong) => {
     setAllSongs(prev => {
       const isExisting = prev.some(s => s.id === updated.id);
@@ -145,6 +163,7 @@ export default function BrowsePage() {
       onlyWithLyrics: false,
       onlyQR: false,
     });
+    setCurrentPage(1);
   };
 
   if (!mounted) return null;
@@ -316,15 +335,84 @@ export default function BrowsePage() {
 
         {/* Content Area */}
         <main className="flex-1">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-black uppercase">
-              {filteredSongs.length} <span className="text-blue-500">Ergebnisse</span>
-            </h2>
-            <div className="bg-white/5 px-4 py-2 rounded-xl border border-white/5">
-              <p className="text-[9px] font-black text-white/30 uppercase tracking-widest">Kollektion</p>
-              <p className="text-xs font-bold">Standard Pack 2026</p>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+            <div>
+              <h2 className="text-2xl font-black uppercase">
+                {filteredSongs.length} <span className="text-blue-500">Ergebnisse</span>
+              </h2>
+              <p className="text-[10px] font-black opacity-30 uppercase tracking-[0.2em]">Kollektion: Standard Pack 2026</p>
+            </div>
+            
+            <div className="flex items-center gap-3">
+              <div className="flex items-center bg-white/5 p-1 rounded-xl border border-white/10">
+                {[24, 48, 96, 'all'].map((size) => (
+                  <button
+                    key={size}
+                    onClick={() => setPageSize(size as any)}
+                    className={`px-3 py-1.5 rounded-lg text-[10px] font-black uppercase transition-all ${pageSize === size ? 'bg-blue-600 text-white shadow-lg' : 'text-white/40 hover:text-white'}`}
+                  >
+                    {size === 'all' ? 'Alle' : size}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
+
+          {/* Pagination Bar */}
+          {pageSize !== 'all' && totalPages > 1 && (
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-8 bg-white/5 p-3 rounded-[2rem] border border-white/5 backdrop-blur-md">
+              <PaginationButton icon="|←" onClick={() => setCurrentPage(1)} disabled={currentPage === 1} title="Anfang" />
+              <PaginationButton icon="←" onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1} title="Zurück" />
+              
+              <div className="h-8 w-px bg-white/10 mx-2 hidden sm:block" />
+
+              <div className="flex items-center gap-1">
+                {/* Dynamische Seitenzahlen */}
+                {Array.from({ length: Math.min(5, totalPages) }).map((_, i) => {
+                  let pageNum = currentPage;
+                  if (totalPages <= 5) pageNum = i + 1;
+                  else if (currentPage <= 3) pageNum = i + 1;
+                  else if (currentPage >= totalPages - 2) pageNum = totalPages - 4 + i;
+                  else pageNum = currentPage - 2 + i;
+
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => setCurrentPage(pageNum)}
+                      className={`w-10 h-10 rounded-xl text-xs font-black transition-all ${currentPage === pageNum ? 'bg-blue-600 text-white shadow-xl shadow-blue-600/20 scale-110' : 'bg-white/5 text-white/40 hover:bg-white/10'}`}
+                    >
+                      {pageNum}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="h-8 w-px bg-white/10 mx-2 hidden sm:block" />
+
+              <PaginationButton icon="→" onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages} title="Weiter" />
+              
+              <div className="flex items-center gap-1 ml-2">
+                 <button 
+                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 5))} 
+                   disabled={currentPage > totalPages - 5}
+                   className="px-3 py-2 rounded-xl bg-white/5 border border-white/5 text-[10px] font-black text-white/40 hover:text-blue-400 hover:bg-blue-400/10 transition-all disabled:opacity-20"
+                 >
+                   +5
+                 </button>
+                 <button 
+                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 10))} 
+                   disabled={currentPage > totalPages - 10}
+                   className="px-3 py-2 rounded-xl bg-white/5 border border-white/5 text-[10px] font-black text-white/40 hover:text-blue-400 hover:bg-blue-400/10 transition-all disabled:opacity-20"
+                 >
+                   +10
+                 </button>
+              </div>
+
+              <div className="h-8 w-px bg-white/10 mx-2 hidden sm:block" />
+              
+              <PaginationButton icon="→|" onClick={() => setCurrentPage(totalPages)} disabled={currentPage === totalPages} title="Ende" />
+            </div>
+          )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 pb-32">
             {adminMode && (
@@ -345,14 +433,14 @@ export default function BrowsePage() {
               </motion.button>
             )}
             
-            {filteredSongs.length === 0 ? (
+            {paginatedSongs.length === 0 ? (
               <div className="col-span-full py-32 flex flex-col items-center justify-center text-center opacity-20">
-                <span className="text-6xl mb-6"> Desert</span>
+                <span className="text-6xl mb-6">🏜️</span>
                 <p className="text-xl font-black uppercase tracking-widest">Keine Songs gefunden</p>
                 <p className="text-sm mt-2">Versuche es mit anderen Filtereinstellungen.</p>
               </div>
             ) : (
-              filteredSongs.map((song) => (
+              paginatedSongs.map((song) => (
                 <SongCard 
                   key={song.id} 
                   song={song} 
@@ -405,6 +493,29 @@ function FilterToggle({ label, active, onClick }: { label: string, active: boole
       <div className={`w-5 h-5 rounded-lg border-2 flex items-center justify-center transition-colors ${active ? 'border-blue-400 bg-blue-400 text-black shadow-lg shadow-blue-400/20' : 'border-white/10'}`}>
         {active && <span className="text-[10px] font-black">✓</span>}
       </div>
+    </button>
+  );
+}
+
+function PaginationButton({ 
+  icon, 
+  onClick, 
+  disabled, 
+  title 
+}: { 
+  icon: string, 
+  onClick: () => void, 
+  disabled: boolean, 
+  title: string 
+}) {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      title={title}
+      className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-sm font-black transition-all hover:bg-white/10 active:scale-95 disabled:opacity-20 disabled:pointer-events-none"
+    >
+      {icon}
     </button>
   );
 }

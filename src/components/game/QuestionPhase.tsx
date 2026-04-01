@@ -26,6 +26,8 @@ interface QuestionPhaseProps {
   onAnswered: (isCorrect: boolean, pointsAwarded: number, answeredInSeconds?: number) => void;
   /** Wird aufgerufen, wenn alle bereit sind zum Reveal */
   onReveal: () => void;
+  /** Wird aufgerufen, wenn das Video defekt ist oder neu gewürfelt werden soll */
+  onReroll?: () => void;
 }
 
 /** Modi, bei denen der "Alle fertig → Reveal"-Button angezeigt wird */
@@ -44,6 +46,7 @@ export function QuestionPhase({
   currentMode,
   onAnswered,
   onReveal,
+  onReroll,
 }: QuestionPhaseProps) {
   const handleAnswered = useCallback(
     (isCorrect: boolean, points: number, answeredInSeconds?: number) => {
@@ -53,7 +56,7 @@ export function QuestionPhase({
   );
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div className="w-full max-w-2xl mx-auto flex flex-col items-center">
       {/* Modus-spezifischer Inhalt */}
       {currentMode === 'survivor' && (
         <SurvivorMode song={song} onAnswer={handleAnswered} />
@@ -82,7 +85,7 @@ export function QuestionPhase({
       {/* Alle-fertig-Button → Reveal für alle Modi */}
       {MODES_WITH_REVEAL_BUTTON.includes(currentMode) && (
         <motion.div
-          className="flex justify-center mt-6 pb-8"
+          className="flex justify-center mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -96,6 +99,16 @@ export function QuestionPhase({
             Alle fertig → Reveal
           </button>
         </motion.div>
+      )}
+
+      {/* Reroll Button (Subtil) */}
+      {onReroll && (
+        <button
+          onClick={onReroll}
+          className="mt-12 mb-8 px-4 py-2 rounded-lg border border-white/5 text-[10px] font-black uppercase tracking-widest text-white/20 hover:text-white/60 hover:bg-white/5 transition-all"
+        >
+          🎲 Video kaputt? Neu würfeln
+        </button>
       )}
     </div>
   );

@@ -1,0 +1,84 @@
+/**
+ * DiceAnimation Component
+ * 
+ * Zeigt rollende Würfel und eine "Sorry"-Meldung,
+ * wenn ein Video defekt ist oder neu gezogen (Reroll) wird.
+ */
+'use client';
+
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+
+interface DiceAnimationProps {
+  isVisible: boolean;
+  onComplete?: () => void;
+}
+
+const DICE_ICON = '🎲';
+const DICE_COUNT = 3;
+
+export function DiceAnimation({ isVisible, onComplete }: DiceAnimationProps) {
+  const [showText, setShowText] = useState(false);
+
+  useEffect(() => {
+    if (isVisible) {
+      setTimeout(() => setShowText(true), 200);
+      const timer = setTimeout(() => {
+        setShowText(false);
+        onComplete?.();
+      }, 2500);
+      return () => clearTimeout(timer);
+    }
+    setShowText(false);
+  }, [isVisible, onComplete]);
+
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/40 backdrop-blur-sm pointer-events-none">
+          {/* Animated Dice Rolling Across */}
+          {Array.from({ length: DICE_COUNT }).map((_, i) => (
+            <motion.div
+              key={i}
+              initial={{ 
+                x: -500 - (i * 100), 
+                y: Math.random() * 200 - 100, 
+                rotate: 0,
+                opacity: 0 
+              }}
+              animate={{ 
+                x: 1000, 
+                y: Math.random() * 200 - 100, 
+                rotate: 1080 + (i * 360),
+                opacity: [0, 1, 1, 0] 
+              }}
+              transition={{ 
+                duration: 2.2, 
+                delay: i * 0.15,
+                ease: "easeOut"
+              }}
+              className="absolute text-8xl drop-shadow-2xl"
+            >
+              {DICE_ICON}
+            </motion.div>
+          ))}
+
+          {/* Animated "Sorry" Text */}
+          <motion.div
+            initial={{ scale: 0, opacity: 0, y: 50 }}
+            animate={showText ? { scale: 1.2, opacity: 1, y: 0 } : { scale: 1.5, opacity: 0, y: -100 }}
+            transition={{ type: "spring", stiffness: 200, damping: 12, delay: 0.3 }}
+            className="flex flex-col items-center gap-4 text-center z-10"
+          >
+            <div className="bg-red-500 text-white px-8 py-4 rounded-[2rem] shadow-2xl border-4 border-white">
+               <h3 className="text-6xl font-black italic uppercase tracking-tighter mix-blend-difference">SORRY!</h3>
+            </div>
+            <p className="text-white text-xl font-bold drop-shadow-lg">
+               Video geht gerade nicht. Wir würfeln neu...
+            </p>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
+  );
+}

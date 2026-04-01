@@ -31,6 +31,7 @@ import electronicSynth from './electronic-synth.json';
 import soulFunk from './soul-funk.json';
 import classicalOrchestral from './classical-orchestral.json';
 import grandFinale from './grand-finale.json';
+import youtubeImport from './youtube-import.json';
 
 import type { PhomuSong } from '@/types/song';
 
@@ -62,6 +63,7 @@ export const ALL_SONGS: PhomuSong[] = [
   ...(soulFunk.songs as any),
   ...(classicalOrchestral.songs as any),
   ...(grandFinale.songs as any),
+  ...(youtubeImport.songs as any),
 ];
 
 /** All available pack names extracted from data */

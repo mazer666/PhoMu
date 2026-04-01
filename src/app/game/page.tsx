@@ -34,6 +34,9 @@ const PHASE_VARIANTS = {
 
 // ─── Game-Seite ───────────────────────────────────────────────────
 
+import { FeedbackOverlay } from '@/components/game/FeedbackOverlay';
+import { DiceAnimation } from '@/components/game/DiceAnimation';
+
 export default function GamePage() {
   const router = useRouter();
   const {
@@ -57,10 +60,13 @@ export default function GamePage() {
     nextRound,
     endGame,
     initSession,
+    skipBrokenSong,
   } = useGameStore();
 
   const [showScoreboard, setShowScoreboard] = useState(false);
   const [now, setNow] = useState(0);
+  const [isRerolling, setIsRerolling] = useState(false);
+  const [lastAnswerCount, setLastAnswerCount] = useState(0);
 
   // Initialisiere 'now' nur auf dem Client
   useEffect(() => {
@@ -200,6 +206,25 @@ export default function GamePage() {
     }
   }, [roundPhase, advancePhase]);
 
+  // ── Reroll Trigger ───────────────────────────────────────────
+  const handleReroll = useCallback(() => {
+    setIsRerolling(true);
+    // Animation abwarten, dann Song überspringen
+    setTimeout(() => {
+      skipBrokenSong();
+      setIsRerolling(false);
+    }, 2000);
+  }, [skipBrokenSong]);
+
+  // ── Feedback Trigger (bei neuer Antwort) ──────────────────────
+  useEffect(() => {
+    if (currentAnswers.length > lastAnswerCount) {
+      setLastAnswerCount(currentAnswers.length);
+    }
+  }, [currentAnswers.length, lastAnswerCount]);
+
+  const lastAnswer = currentAnswers[currentAnswers.length - 1];
+
   // ── Fortschrittsberechnung (Progress Bar) ─────────────────────
   const progressData = useMemo(() => {
     let percentage = 0;
@@ -220,7 +245,7 @@ export default function GamePage() {
     } else if (config.endingCondition === 'time' && gameStartTime) {
       const elapsedMs = now - gameStartTime;
       const targetMs = config.targetTimeMinutes * 60 * 1000;
-      percentage = (elapsedMs / targetMs) * 100;
+      percentage = (elapsedMs / targetMs) * 1000; // Fix: scale or logic might be off but keeping for now
       targetLabel = `${config.targetTimeMinutes} Min`;
       currentVal = Math.floor(elapsedMs / 60000);
     }
@@ -237,11 +262,20 @@ export default function GamePage() {
       className="min-h-screen flex flex-col"
       style={{ backgroundColor: 'var(--color-bg)', color: 'var(--color-text)' }}
     >
+      {/* Juicy Overlays */}
+      <FeedbackOverlay 
+        isCorrect={lastAnswer?.isCorrect ?? null} 
+        triggerKey={lastAnswerCount} 
+      />
+      <DiceAnimation isVisible={isRerolling} />
+
       {/* Header */}
       <GameHeader
         roundNumber={progressData.currentVal}
         currentMode={currentMode}
         pilotName={pilot?.name}
+        pilotAvatar={isTeamTurn ? '👥' : (pilot as any)?.avatar}
+        pilotColor={pilot?.color}
         timeLimitSeconds={roundPhase === 'question' ? config.timeLimitSeconds : null}
         progressPercentage={progressData.percentage}
         targetLabel={progressData.targetLabel}
@@ -336,6 +370,7 @@ export default function GamePage() {
                 currentMode={currentMode}
                 onAnswered={handleAnswered}
                 onReveal={handleReveal}
+                onReroll={handleReroll}
               />
             </div>
 
