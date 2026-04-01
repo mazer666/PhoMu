@@ -66,8 +66,9 @@ function normalizeText(value: string): string {
     .normalize('NFKD')
     .replace(/\p{Diacritic}/gu, '')
     .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .replace(/\s+/g, ' ')
+    .replace(/\(.*?\)/g, ' ')
+    .replace(/\b(feat\.?|ft\.?|featuring|remaster(ed)?|version|edit|radio mix|live)\b/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 }
 
