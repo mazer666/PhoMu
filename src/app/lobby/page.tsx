@@ -261,7 +261,10 @@ export default function LobbyPage() {
                   {/* Game Ending Condition */}
                   <div className="bg-[var(--color-bg-card)]/50 p-6 rounded-3xl border border-[var(--color-border)] space-y-6">
                     <div className="flex flex-col gap-4">
-                      <label className="text-[10px] font-black opacity-40 uppercase tracking-widest text-center">Spiel-Ende nach...</label>
+                      <div className="text-center">
+                        <label className="text-[10px] font-black opacity-40 uppercase tracking-widest">Spiel-Ende nach...</label>
+                        <p className="text-[9px] opacity-30 uppercase tracking-[0.2em] mt-1">Nur die aktive Bedingung beendet das Spiel</p>
+                      </div>
                       <div className="grid grid-cols-3 gap-2 p-1 bg-white/5 rounded-2xl">
                         {(['points', 'rounds', 'time'] as const).map((mode) => (
                           <button

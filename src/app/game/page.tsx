@@ -60,7 +60,12 @@ export default function GamePage() {
   } = useGameStore();
 
   const [showScoreboard, setShowScoreboard] = useState(false);
-  const [now, setNow] = useState(Date.now());
+  const [now, setNow] = useState(0);
+
+  // Initialisiere 'now' nur auf dem Client
+  useEffect(() => {
+    setNow(Date.now());
+  }, []);
 
   // ── Zeit-Updater für Progress-Bar ─────────────────────────────
   useEffect(() => {
@@ -350,7 +355,10 @@ export default function GamePage() {
                     currentMode={currentMode}
                     answers={currentAnswers}
                     players={players}
+                    teams={teams}
                     winCondition={config.winCondition}
+                    endingCondition={config.endingCondition}
+                    isGameOver={isGameOver}
                     onNextRound={handleNextRound}
                     onEndGame={handleEndGame}
                     onOverrideCorrect={handleOverrideCorrect}

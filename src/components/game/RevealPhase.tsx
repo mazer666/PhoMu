@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import type { PhomuSong } from '@/types/song';
 import type { PlayerAnswer } from '@/types/game-state';
-import type { Player } from '@/types/player';
+import type { Player, Team } from '@/types/player';
 import type { GameMode } from '@/config/game-config';
 // ─── Props ────────────────────────────────────────────────────────
 
@@ -20,7 +20,10 @@ interface RevealPhaseProps {
   currentMode: GameMode;
   answers: PlayerAnswer[];
   players: Player[];
+  teams: Team[];
   winCondition: number;
+  endingCondition: 'rounds' | 'points' | 'time';
+  isGameOver: boolean;
   onNextRound: () => void;
   onEndGame: () => void;
   onOverrideCorrect?: () => void;
@@ -49,7 +52,10 @@ export function RevealPhase({
   currentMode,
   answers,
   players,
+  teams,
   winCondition,
+  endingCondition,
+  isGameOver,
   onNextRound,
   onEndGame,
   onOverrideCorrect,
@@ -59,8 +65,25 @@ export function RevealPhase({
 
   const [showPowerMenu, setShowPowerMenu] = useState(false);
 
-  // Prüfen ob irgendein Spieler den Gewinnscore erreicht hat
-  const winner = players.find((p) => p.score >= winCondition);
+  // Gewinner nur anzeigen, wenn Punkte-Modus UND jemand hat das Ziel erreicht,
+  // ODER wenn die Gameover-Condition via Store bereits wahr ist (Time/Rounds).
+  let winnerTitle: string | null = null;
+  const showWinUI = isGameOver || (endingCondition === 'points' && (
+    players.some((p) => p.score >= winCondition) || 
+    teams.some((t) => t.score >= winCondition)
+  ));
+
+  if (showWinUI) {
+    const topPlayer = [...players].sort((a, b) => b.score - a.score)[0];
+    const topTeam = [...teams].sort((a, b) => b.score - a.score)[0];
+    const isTeamMode = teams.length > 0;
+    
+    if (isTeamMode && topTeam) {
+      winnerTitle = `🏆 Team ${topTeam.name} hat gewonnen!`;
+    } else if (topPlayer) {
+      winnerTitle = `🏆 ${topPlayer.name} hat gewonnen!`;
+    }
+  }
 
   // Punkte-Zusammenfassung
   const scoringRows = answers
@@ -239,13 +262,13 @@ export function RevealPhase({
         transition={{ delay: 0.4 }}
         className="flex flex-col gap-3 mt-2"
       >
-        {winner ? (
+        {showWinUI ? (
           <>
             <p
               className="text-center font-black text-2xl"
               style={{ color: 'var(--color-secondary)' }}
             >
-              🏆 {winner.name} hat gewonnen!
+              {winnerTitle}
             </p>
             <button
               onClick={onEndGame}
