@@ -9,8 +9,9 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
+import { MusicPlayer } from '../MusicPlayer';
 
 // Alle möglichen Stimmungen (aus dem PhomuSong-Schema)
 const ALL_MOODS = [
@@ -97,34 +98,79 @@ export function VibeCheckMode({ song, onAnswer }: VibeCheckModeProps) {
           const isSelected = selected === mood;
           const isCorrectMood = song.mood.includes(mood);
 
-          let bgColor = 'var(--color-bg-card)';
-          let borderColor = 'var(--color-border)';
-          if (answered && isSelected && isCorrectMood) bgColor = 'var(--color-success)';
-          else if (answered && isSelected && !isCorrectMood) bgColor = 'var(--color-error)';
-          else if (answered && isCorrectMood) borderColor = 'var(--color-success)';
+          let bgColor = 'rgba(255,255,255,0.03)';
+          let borderColor = 'rgba(255,255,255,0.1)';
+          let textColor = 'rgba(255,255,255,0.6)';
+          let scale = 1;
+          let shadow = 'none';
+
+          if (answered) {
+            if (isCorrectMood) {
+              bgColor = 'rgba(34,197,94,0.2)';
+              borderColor = '#22c55e';
+              textColor = '#fff';
+              scale = isSelected ? 1.05 : 1;
+              shadow = '0 0 20px rgba(34,197,94,0.3)';
+            } else if (isSelected) {
+              bgColor = 'rgba(239,68,68,0.2)';
+              borderColor = '#ef4444';
+              textColor = '#fff';
+              scale = 0.95;
+            } else {
+              // Verblasst andere
+            }
+          }
 
           return (
-            <button
+            <motion.button
               key={mood}
               onClick={() => handleSelect(mood)}
               disabled={answered}
-              className="py-3 px-2 rounded-xl border text-sm font-bold transition-all disabled:cursor-default"
-              style={{ backgroundColor: bgColor, borderColor }}
+              animate={{ scale, opacity: (answered && !isCorrectMood && !isSelected) ? 0.3 : 1 }}
+              className="py-4 px-2 rounded-2xl border text-sm font-black transition-colors disabled:cursor-default"
+              style={{ 
+                backgroundColor: bgColor, 
+                borderColor, 
+                color: textColor,
+                boxShadow: shadow
+              }}
             >
               {mood}
-            </button>
+            </motion.button>
           );
         })}
       </motion.div>
 
       {answered && (
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-sm opacity-50"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="w-full max-w-sm space-y-4"
         >
-          {song.mood.includes(selected ?? '') ? '✅ Richtig!' : '❌ Falsch!'} Wartet auf das Reveal …
-        </motion.p>
+          <div className="p-4 rounded-3xl bg-green-500/10 border-2 border-green-500/30 text-center shadow-[0_0_20px_rgba(34,197,94,0.1)]">
+            <p className="text-[10px] font-black uppercase tracking-widest text-green-500 mb-1">Offizieller Vibe</p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {song.mood.map(m => (
+                <span key={m} className="px-4 py-2 rounded-full bg-green-500 text-white font-black text-sm shadow-[0_0_15px_rgba(34,197,94,0.4)]">
+                  {m}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="p-3 bg-white/5 rounded-2xl border border-white/10">
+            <MusicPlayer
+              youtubeLink={song.links.youtube}
+              startSeconds={song.previewTimestamp?.start ?? 0}
+              endSeconds={(song.previewTimestamp?.start ?? 0) + 60}
+              blurred={false}
+            />
+          </div>
+
+          <p className="text-center text-sm font-bold opacity-60">
+            {song.mood.includes(selected ?? '') ? '✨ Volltreffer!' : '🌑 Knapp daneben...'}
+          </p>
+        </motion.div>
       )}
     </div>
   );

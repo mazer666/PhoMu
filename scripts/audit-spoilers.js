@@ -4,9 +4,13 @@ const path = require('path');
 // Wir nutzen eine vereinfachte Version der Censor-Logik für das Script (da wir CommonJS brauchen)
 const SPOILER_MIN_LENGTH = 4;
 const EXCEPTIONS = [
-  'BTS', 'TLC', 'U2', 'REM', 'SIA', 'DMX', 'HIM', 'JLS', 'ELO', 'YES', 'AIR', 'ABC', '112', 'JAY', 'NWA', 'NAS'
+  'BTS', 'TLC', 'U2', 'REM', 'R.E.M.', 'SIA', 'DMX', 'HIM', 'JLS', 'ELO', 'YES', 'AIR', 'ABC', '112', 'JAY', 'ZAY', 'NWA', 'N.W.A.', 'NAS', 'E17',
+  '311', 'LFO', 'KRS', 'GZA', 'RZA', 'MIA', 'M.I.A.', 'GNR', 'G\'N\'R', 'NEO', 'BVB', 'STS', 'DÖF', 'DAF', 'Fettes Brot', 'Die Ärzte', '2Pac', '50 Cent'
 ];
-const IGNORE_WORDS = ['THE', 'AND', 'WITH', 'FROM', 'FEAT', 'THAT', 'THIS', 'YOUR'];
+const IGNORE_WORDS = [
+  'THE', 'AND', 'WITH', 'FROM', 'FEAT', 'THAT', 'THIS', 'YOUR', 'MINE', 'SOME',
+  'DER', 'DIE', 'DAS', 'UND', 'MIT', 'VON', 'FÜR', 'EINE', 'EINER', 'EINES'
+];
 
 function checkSpoiler(hint, artist, title) {
   if (!hint) return null;
