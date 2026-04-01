@@ -12,8 +12,27 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { GameState, GameConfig, GameRound, RoundPhase, PlayerAnswer } from '@/types/game-state';
-import type { Player } from '@/types/player';
+import type { Player, Team } from '@/types/player';
 import type { PhomuSong } from '@/types/song';
+
+// ─── Lustige Team-Namen ───────────────────────────────────────────
+
+const FUNNY_TEAM_NAMES = [
+  'Die Ohrwürmer', 'Stimmbruch Deluxe', 'Absolute Divas', 'Team Gänsehaut',
+  'Die Taktlosen', 'Bass im Gesicht', 'Die Plattenbosse', 'Vollplayback',
+  'Die Kopfhörer-Diebe', 'Team Zugabe', 'Karaoke-Katastrophe', 'Die Falschen Noten',
+  'Riff Raff', 'Die Discokugel-Gang', 'Team Eintagsfliege', 'Einfach zu laut',
+  'Die Hinterbänkler', 'Team Aufgedreht', 'Die Plattenspieler', 'Autotune-Verbot',
+  'Team Schallmauer', 'Die Dauerschleife', 'Mosh-Pit-Diplomaten', 'Team Bassgewicht',
+];
+
+const TEAM_COLORS = ['#FF6B35', '#118AB2', '#06D6A0', '#EF476F', '#9B5DE5', '#FFD166'];
+
+function pickTeamName(usedNames: string[]): string {
+  const available = FUNNY_TEAM_NAMES.filter(n => !usedNames.includes(n));
+  const pool = available.length > 0 ? available : FUNNY_TEAM_NAMES;
+  return pool[Math.floor(Math.random() * pool.length)]!;
+}
 import { PHOMU_CONFIG } from '@/config/game-config';
 
 // ─── Standardkonfiguration ────────────────────────────────────────
@@ -94,6 +113,18 @@ interface GameActions {
 
   /** Setzt den gesamten Fortschritt (XP) zurück */
   resetProgress: () => void;
+
+  /** Erstellt N Teams mit zufälligen lustigen Namen */
+  initTeams: (count: number) => void;
+
+  /** Fügt ein neues Team hinzu */
+  createTeam: (name?: string) => void;
+
+  /** Entfernt ein Team und hebt alle Zuordnungen auf */
+  removeTeam: (teamId: string) => void;
+
+  /** Weist einen Spieler einem Team zu (undefined = kein Team) */
+  assignPlayerToTeam: (playerId: string, teamId: string | undefined) => void;
 
   /** Setzt die initialen Timeline-Jahreszahlen (beim ersten Timeline-Zug) */
   initTimeline: (years: number[]) => void;
@@ -244,16 +275,37 @@ export const useGameStore = create<GameStore>()(
               ]
             : roundHistory;
 
+        const nextTurnIndex = turnOrder.length > 0
+          ? (currentTurnIndex + 1) % turnOrder.length
+          : 0;
+
+        // Bei Shifting-Teams: Spieler jede Runde neu mischen
+        const { teams, players, config: cfg } = get();
+        let updatedTeams = teams;
+        let updatedPlayers = players;
+        if (cfg.teamMode === 'shifting' && teams.length >= 2) {
+          const shuffled = [...players].sort(() => Math.random() - 0.5);
+          const newTeams: Team[] = teams.map(t => ({ ...t, playerIds: [] as string[] }));
+          shuffled.forEach((p, i) => {
+            newTeams[i % newTeams.length]!.playerIds.push(p.id);
+          });
+          updatedPlayers = players.map(p => {
+            const team = newTeams.find(t => t.playerIds.includes(p.id));
+            return { ...p, teamId: team?.id };
+          });
+          updatedTeams = newTeams;
+        }
+
         set({
           currentRound: currentRound + 1,
           roundPhase: 'drawing',
           currentMode: pickRandomMode(config.selectedModes),
           currentSong: null,
           currentAnswers: [],
-          currentTurnIndex: turnOrder.length > 0
-            ? (currentTurnIndex + 1) % turnOrder.length
-            : 0,
+          currentTurnIndex: nextTurnIndex,
           roundHistory: newHistory,
+          teams: updatedTeams,
+          players: updatedPlayers,
         });
       },
 
@@ -327,6 +379,7 @@ export const useGameStore = create<GameStore>()(
       resetScores() {
         set((state) => ({
           players: state.players.map((p) => ({ ...p, score: 0 })),
+          teams: state.teams.map((t) => ({ ...t, score: 0 })),
           currentRound: 0,
           roundHistory: [],
           playedSongIds: [],
@@ -373,6 +426,71 @@ export const useGameStore = create<GameStore>()(
         set({ totalXP: 0 });
       },
 
+      // ── initTeams ─────────────────────────────────────────────────
+      initTeams(count) {
+        const usedNames: string[] = [];
+        const teams: Team[] = Array.from({ length: count }, (_, i) => {
+          const name = pickTeamName(usedNames);
+          usedNames.push(name);
+          return {
+            id: crypto.randomUUID(),
+            name,
+            playerIds: [],
+            score: 0,
+            color: TEAM_COLORS[i % TEAM_COLORS.length]!,
+          };
+        });
+        set({ teams });
+      },
+
+      // ── createTeam ────────────────────────────────────────────────
+      createTeam(name) {
+        const { teams } = get();
+        const teamName = name ?? pickTeamName(teams.map(t => t.name));
+        const newTeam: Team = {
+          id: crypto.randomUUID(),
+          name: teamName,
+          playerIds: [],
+          score: 0,
+          color: TEAM_COLORS[teams.length % TEAM_COLORS.length]!,
+        };
+        set({ teams: [...teams, newTeam] });
+      },
+
+      // ── removeTeam ────────────────────────────────────────────────
+      removeTeam(teamId) {
+        const { teams, players } = get();
+        set({
+          teams: teams.filter(t => t.id !== teamId),
+          players: players.map(p =>
+            p.teamId === teamId ? { ...p, teamId: undefined } : p,
+          ),
+        });
+      },
+
+      // ── assignPlayerToTeam ────────────────────────────────────────
+      assignPlayerToTeam(playerId, teamId) {
+        const { teams, players } = get();
+        const player = players.find(p => p.id === playerId);
+        if (!player) return;
+        const oldTeamId = player.teamId;
+
+        set({
+          players: players.map(p =>
+            p.id === playerId ? { ...p, teamId } : p,
+          ),
+          teams: teams.map(t => {
+            if (t.id === oldTeamId) {
+              return { ...t, playerIds: t.playerIds.filter(id => id !== playerId) };
+            }
+            if (t.id === teamId) {
+              return { ...t, playerIds: [...t.playerIds, playerId] };
+            }
+            return t;
+          }),
+        });
+      },
+
       // ── initTimeline ──────────────────────────────────────────────
       initTimeline(years) {
         set({ timelineYears: [...years].sort((a, b) => a - b) });
@@ -402,6 +520,7 @@ export const useGameStore = create<GameStore>()(
       // Persistiere nun auch Progressions-Daten
       partialize: (state) => ({
         players: state.players,
+        teams: state.teams,
         config: state.config,
         sessionId: state.sessionId,
         totalXP: state.totalXP,

@@ -73,9 +73,13 @@ export default function GamePage() {
     }
   }, [isGameOver, router]);
 
-  // ── Aktiver Spieler (Pilot) ────────────────────────────────────
+  // ── Aktiver Spieler (Pilot) + nächster ────────────────────────
   const pilotId = turnOrder[currentTurnIndex];
   const pilot = players.find((p) => p.id === pilotId);
+  const nextPilotId = turnOrder.length > 1
+    ? turnOrder[(currentTurnIndex + 1) % turnOrder.length]
+    : undefined;
+  const nextPilot = players.find((p) => p.id === nextPilotId);
 
   // ── Handler: Karte gezogen ─────────────────────────────────────
   const handleCardDrawn = useCallback(
@@ -232,6 +236,9 @@ export default function GamePage() {
                 currentMode={currentMode}
                 playedSongIds={playedSongIds}
                 pilotName={pilot?.name}
+                pilotColor={pilot?.color}
+                nextPilotName={players.length > 1 ? nextPilot?.name : undefined}
+                nextPilotColor={nextPilot?.color}
                 onCardDrawn={handleCardDrawn}
               />
             </motion.div>

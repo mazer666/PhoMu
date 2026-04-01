@@ -49,7 +49,11 @@ const TEAM_MODE_OPTIONS: Array<{ value: TeamMode; label: string; description: st
 
 export default function LobbyPage() {
   const router = useRouter();
-  const { players, config, addPlayer, removePlayer, setConfig, initSession, startGame } = useGameStore();
+  const {
+    players, teams, config,
+    addPlayer, removePlayer, setConfig, initSession, startGame,
+    initTeams, createTeam, removeTeam, assignPlayerToTeam,
+  } = useGameStore();
 
   const [step, setStep] = useState(1);
   const [direction, setDirection] = useState(1);
@@ -88,6 +92,13 @@ export default function LobbyPage() {
     addPlayer(nameInput.trim(), avatar, color);
     // The useEffect will handle the next 'Spieler X' pre-fill
   }, [nameInput, players.length, addPlayer]);
+
+  const handleTeamModeChange = useCallback((mode: TeamMode) => {
+    setConfig({ teamMode: mode });
+    if ((mode === 'fixed' || mode === 'shifting') && teams.length === 0) {
+      initTeams(2);
+    }
+  }, [setConfig, initTeams, teams.length]);
 
   const handleStart = useCallback(() => {
     startGame();
@@ -282,19 +293,124 @@ export default function LobbyPage() {
                   </div>
 
                   {/* Team Mode */}
-                  <div>
-                    <label className="text-xs font-bold opacity-40 uppercase mb-2 block">Team Modus</label>
-                    <div className="grid grid-cols-3 gap-2">
-                      {TEAM_MODE_OPTIONS.map(o => (
-                        <button 
-                          key={o.value}
-                          onClick={() => setConfig({ teamMode: o.value })}
-                          className={`p-3 rounded-xl border-2 text-xs font-bold transition-all ${config.teamMode === o.value ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10' : 'border-white/10 opacity-60'}`}
-                        >
-                          {o.label}
-                        </button>
-                      ))}
+                  <div className="space-y-4">
+                    <div>
+                      <label className="text-xs font-bold opacity-40 uppercase mb-2 block">Team Modus</label>
+                      <div className="grid grid-cols-3 gap-2">
+                        {TEAM_MODE_OPTIONS.map(o => (
+                          <button
+                            key={o.value}
+                            onClick={() => handleTeamModeChange(o.value)}
+                            className={`p-3 rounded-xl border-2 text-xs font-bold transition-all ${config.teamMode === o.value ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10' : 'border-white/10 opacity-60'}`}
+                          >
+                            <div>{o.label}</div>
+                            <div className="opacity-60 font-normal mt-0.5">{o.description}</div>
+                          </button>
+                        ))}
+                      </div>
                     </div>
+
+                    {/* Team-Zuweisung: nur bei fixed/shifting */}
+                    {(config.teamMode === 'fixed' || config.teamMode === 'shifting') && teams.length > 0 && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        className="overflow-hidden space-y-4"
+                      >
+                        {/* Team-Übersicht */}
+                        <div className="grid grid-cols-2 gap-2">
+                          {teams.map((team) => (
+                            <div
+                              key={team.id}
+                              className="p-3 rounded-2xl border-2 space-y-1"
+                              style={{ borderColor: team.color + '66', background: team.color + '18' }}
+                            >
+                              <div className="flex items-center justify-between gap-1">
+                                <p className="font-black text-xs truncate" style={{ color: team.color }}>
+                                  {team.name}
+                                </p>
+                                {teams.length > 2 && (
+                                  <button
+                                    onClick={() => removeTeam(team.id)}
+                                    className="text-[10px] opacity-40 hover:opacity-80 shrink-0"
+                                  >
+                                    ✕
+                                  </button>
+                                )}
+                              </div>
+                              <div className="flex flex-wrap gap-1">
+                                {players
+                                  .filter(p => p.teamId === team.id)
+                                  .map(p => (
+                                    <span
+                                      key={p.id}
+                                      className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+                                      style={{ background: team.color + '33', color: team.color }}
+                                    >
+                                      {p.avatar} {p.name}
+                                    </span>
+                                  ))}
+                                {players.filter(p => p.teamId === team.id).length === 0 && (
+                                  <span className="text-[10px] opacity-30 italic">Leer</span>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Spieler zuweisen */}
+                        {config.teamMode === 'fixed' && players.length > 0 && (
+                          <div className="space-y-2">
+                            <p className="text-[10px] font-black uppercase opacity-40 tracking-widest">
+                              Spieler zuweisen
+                            </p>
+                            {players.map((player) => (
+                              <div key={player.id} className="flex items-center gap-2">
+                                <span className="text-sm w-5">{player.avatar}</span>
+                                <span className="flex-1 text-xs font-bold truncate">{player.name}</span>
+                                <div className="flex gap-1">
+                                  {teams.map((team) => (
+                                    <button
+                                      key={team.id}
+                                      onClick={() =>
+                                        assignPlayerToTeam(
+                                          player.id,
+                                          player.teamId === team.id ? undefined : team.id,
+                                        )
+                                      }
+                                      className="px-2 py-1 rounded-lg text-[10px] font-black transition-all"
+                                      style={{
+                                        background: player.teamId === team.id ? team.color : team.color + '22',
+                                        color: player.teamId === team.id ? '#fff' : team.color,
+                                        border: `1px solid ${team.color}44`,
+                                      }}
+                                    >
+                                      {team.name.split(' ')[0]}
+                                    </button>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {config.teamMode === 'shifting' && (
+                          <p className="text-xs opacity-50 text-center italic">
+                            Mix-Teams werden jede Runde automatisch neu gemischt
+                          </p>
+                        )}
+
+                        {/* Weiteres Team hinzufügen */}
+                        {teams.length < 4 && (
+                          <button
+                            onClick={() => createTeam()}
+                            className="w-full py-2 rounded-xl border border-dashed border-white/20 text-xs font-bold opacity-50 hover:opacity-80 transition-opacity"
+                          >
+                            + Team hinzufügen
+                          </button>
+                        )}
+                      </motion.div>
+                    )}
                   </div>
                 </div>
 

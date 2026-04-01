@@ -55,6 +55,9 @@ interface DrawingPhaseProps {
   currentMode: GameMode;
   playedSongIds: string[];
   pilotName?: string;
+  pilotColor?: string;
+  nextPilotName?: string;
+  nextPilotColor?: string;
   /** Wird aufgerufen, wenn eine Karte gezogen wurde */
   onCardDrawn: (song: PhomuSong) => void;
 }
@@ -65,6 +68,9 @@ export function DrawingPhase({
   currentMode,
   playedSongIds,
   pilotName,
+  pilotColor,
+  nextPilotName,
+  nextPilotColor,
   onCardDrawn,
 }: DrawingPhaseProps) {
   const meta = MODE_META[currentMode];
@@ -134,14 +140,21 @@ export function DrawingPhase({
 
       {/* Pilot-Info */}
       {pilotName && (
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.35 }}
-          className="text-sm opacity-50 mb-10"
+          className="flex flex-col items-center gap-1 mb-10"
         >
-          🎮 {pilotName} ist am Zug
-        </motion.p>
+          <p className="text-sm font-black" style={{ color: pilotColor ?? 'inherit' }}>
+            🎮 {pilotName} ist am Zug
+          </p>
+          {nextPilotName && (
+            <p className="text-xs opacity-40">
+              Danach: <span style={{ color: nextPilotColor ?? 'inherit' }}>{nextPilotName}</span>
+            </p>
+          )}
+        </motion.div>
       )}
 
       {/* Karte-Ziehen-Button */}
