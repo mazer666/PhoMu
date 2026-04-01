@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
 import { PHOMU_CONFIG } from '@/config/game-config';
 import { MusicPlayer } from '../MusicPlayer';
+import { censorHint } from '@/utils/censor-utils';
 
 interface HintMasterModeProps {
   song: PhomuSong;
@@ -59,18 +60,20 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
         </div>
       </div>
 
-      {/* Musik-Hinweis (Triggered @ 4 or 5) */}
+      {/* Musik-Hinweis (Triggered @ 4 or 5 OR upon manual reveal) */}
       <AnimatePresence>
-        {showMusic && !isRevealed && (
+        {(showMusic || isRevealed) && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             className="overflow-hidden"
           >
-            <div className="p-4 bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20 rounded-2xl space-y-3">
+            <div className={`p-4 border rounded-2xl space-y-3 transition-colors ${isRevealed ? 'bg-green-500/10 border-green-500/20' : 'bg-[var(--color-accent)]/10 border-[var(--color-accent)]/20'}`}>
               <div className="flex items-center gap-2">
-                <span className="text-lg">🔊</span>
-                <p className="text-[10px] font-black uppercase tracking-widest text-[var(--color-accent)]">Audio-Hinweis Aktiv</p>
+                <span className="text-lg">{isRevealed ? '🎵' : '🔊'}</span>
+                <p className={`text-[10px] font-black uppercase tracking-widest ${isRevealed ? 'text-green-500' : 'text-[var(--color-accent)]'}`}>
+                  {isRevealed ? 'Offizielle Auflösung' : 'Audio-Hinweis Aktiv'}
+                </p>
               </div>
               <MusicPlayer
                 youtubeLink={song.links.youtube}
@@ -78,7 +81,7 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
                 endSeconds={startSecs + 30}
                 blurred={!isRevealed}
               />
-              <p className="text-[9px] opacity-50 italic text-center">Swipe zum Enthüllen · max. 30 Sek.</p>
+              {!isRevealed && <p className="text-[9px] opacity-50 italic text-center">Wird nach 4 Tipps unblurred · max. 30 Sek.</p>}
             </div>
           </motion.div>
         )}
@@ -95,7 +98,7 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
               className={`p-5 rounded-2xl text-sm leading-relaxed border transition-all ${i === shownHints - 1 ? 'border-[var(--color-accent)] bg-white/5' : 'border-white/5 opacity-40'}`}
             >
               <span className="font-black opacity-20 mr-3 text-xs">0{i + 1}</span>
-              {hint}
+              {censorHint(hint, song.artist, song.title)}
             </motion.div>
           ))}
         </AnimatePresence>

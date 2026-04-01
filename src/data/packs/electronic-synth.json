@@ -21,11 +21,11 @@
       ],
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
-        "Kraftwerks größter kommerzieller Erfolg und ein Meilenstein des Synthpop.",
+        "[XXX]s größter kommerzieller Erfolg und ein Meilenstein des Synthpop.",
         "Besticht durch das unterkühlte, repetitive Synthesizer-Thema.",
         "Thematisiert den Glamour und die Distanziertheit der Modewelt.",
         "Pioniere aus Düsseldorf, die den Einsatz von Computern in der Musik revolutionierten.",
-        "Refrain: 'Sie ist ein Model und sie sieht gut aus! Ich nehm' sie heut' gerne mit zu mir nach Haus!'"
+        "Refrain: 'Sie ist ein [XXX] und sie sieht gut aus! Ich nehm' sie heut' gerne mit zu mir nach Haus!'"
       ],
       "lyrics": {
         "real": [
@@ -39,7 +39,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "GEnx9xS79Lc"
-      }
+      },
+      "coverUrl": "/covers/synth-kraftwerk-model.jpg"
     },
     {
       "id": "synth-depeche-silence",
@@ -56,7 +57,7 @@
       ],
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
-        "Inbegriff für den ausgereiften Depeche-Mode-Sound der frühen 90er.",
+        "Inbegriff für den ausgereiften [XXX]-[XXX]-Sound der frühen 90er.",
         "Besticht durch das ikonische Gitarren-Riff über elektronischen Beats.",
         "Thematisiert die Überflüssigkeit von Worten gegenüber tiefen Gefühlen.",
         "Das Video (Dave Gahan als König mit Klappstuhl) ist legendär.",
@@ -73,7 +74,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "aGSKrC7dGcY"
-      }
+      },
+      "coverUrl": "/covers/synth-depeche-silence.jpg"
     },
     {
       "id": "synth-neworder-monday",
@@ -92,7 +94,7 @@
       "hints": [
         "Einer der einflussreichsten Dance-Tracks aller Zeiten.",
         "Besticht durch den maschinenhaften Basslauf und den charakteristischen Drum-Computer-Einstieg.",
-        "New Order formierten sich aus den verbliebenen Mitgliedern von Joy Division.",
+        "New [XXX] formierten sich aus den verbliebenen Mitgliedern von Joy Division.",
         "Die 12-Zoll-Single war so aufwendig gestaltet, dass das Label pro verkauftem Exemplar Geld verlor.",
         "Refrain: 'How does it feel! To treat me like you do!'"
       ],
@@ -107,7 +109,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "FYH8DsU2WCk"
-      }
+      },
+      "coverUrl": "/covers/synth-neworder-monday.jpg"
     },
     {
       "id": "synth-petshop-girls",
@@ -127,7 +130,7 @@
         "Besticht durch die unterkühlten Sprechgesang-Strophen und das atmosphärische Saxophon.",
         "Thematisiert soziale Kontraste und das Nachtleben in London.",
         "Machte Neil Tennant und Chris Lowe weltweit zu Superstars des Synthpop.",
-        "Refrain: 'In a West End town, a dead end world! The East End boys and West End girls!'"
+        "Refrain: 'In a [XXX] End town, a dead end world! The East End [XXX] and [XXX] End [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -140,7 +143,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "p3j2NYZ8FKs"
-      }
+      },
+      "coverUrl": "/covers/synth-petshop-girls.jpg"
     },
     {
       "id": "synth-eurythmics-dreams",
@@ -160,7 +164,7 @@
         "Besticht durch den hypnotischen Synthesizer-Loop und Annie Lennox' markante Stimme.",
         "Thematisiert menschliches Verlangen und Machtverhältnisse ('Some of them want to use you').",
         "Wurde zu einem der am häufigsten gecoverten und gespielten Songs der 80er.",
-        "Refrain: 'Sweet dreams are made of this! Who am I to disagree?'"
+        "Refrain: '[XXX] [XXX] are [XXX] of this! Who am I to disagree?'"
       ],
       "lyrics": {
         "real": [
@@ -173,7 +177,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "qeMFqkcPYcg"
-      }
+      },
+      "coverUrl": "/covers/synth-eurythmics-dreams.jpg"
     },
     {
       "id": "synth-softcell-love",
@@ -194,7 +199,7 @@
         "Coverversion eines Northern-Soul-Songs (Gloria Jones), die das Original völlig transformierte.",
         "Thematisiert eine giftige, zerstörerische Beziehung.",
         "Einer der meistverkauften Songs der frühen 80er.",
-        "Refrain: 'Tainted love! Oh oh!'"
+        "Refrain: '[XXX] [XXX]! Oh oh!'"
       ],
       "lyrics": {
         "real": [
@@ -207,7 +212,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "XZVpR3Pk-r8"
-      }
+      },
+      "coverUrl": "/covers/synth-softcell-love.jpg"
     },
     {
       "id": "synth-humanleague-me",
@@ -227,7 +233,7 @@
         "Inbegriff für das Zwiegespräch zwischen Mann und Frau im Synthpop-Gewand.",
         "Thematisiert den Aufstieg eines Mädchens zum Star und die Besitzansprüche ihres Mentors.",
         "Phil Oakey hielt den Song anfangs für zu poppig für das Album 'Dare'.",
-        "Refrain: 'Don't you want me baby! Don't you want me oh!'"
+        "Refrain: '[XXX] you [XXX] me baby! [XXX] you [XXX] me oh!'"
       ],
       "lyrics": {
         "real": [
@@ -240,7 +246,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "uPudE8nDog0"
-      }
+      },
+      "coverUrl": "/covers/synth-humanleague-me.jpg"
     },
     {
       "id": "synth-tears-rule",
@@ -273,7 +280,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "aGCtTfUuVeaE"
-      }
+      },
+      "coverUrl": "/covers/synth-tears-rule.jpg"
     },
     {
       "id": "synth-bronski-boy",
@@ -306,7 +314,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "88sARuFu-tc"
-      }
+      },
+      "coverUrl": "/covers/synth-bronski-boy.jpg"
     },
     {
       "id": "synth-yazoo-dontgo",
@@ -326,7 +335,7 @@
         "Besticht durch das energetische Synthesizer-Thema und Alison Moyets kräftige Soul-Stimme.",
         "Ein Inbegriff für den treibenden britischen Wave-Sound.",
         "Vince Clarke (ex-Depeche Mode) war für die Elektronik verantwortlich.",
-        "Refrain: 'Don't go! Don't go!'"
+        "Refrain: '[XXX] go! [XXX] go!'"
       ],
       "lyrics": {
         "real": [
@@ -339,7 +348,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "_sQGwDeambg"
-      }
+      },
+      "coverUrl": "/covers/synth-yazoo-dontgo.jpg"
     },
     {
       "id": "disco-daft-onetime",
@@ -358,8 +368,8 @@
       "hints": [
         "Inbegriff für den 'French House' Sound mit starker Auto-Tune Bearbeitung.",
         "Besticht durch den euphorischen Chorus und den stampfenden Beat.",
-        "Die Roboter-Masken von Daft Punk wurden mit diesem Album zum Kult.",
-        "Refrain: 'One more time! We're gonna celebrate!'"
+        "Die Roboter-Masken von [XXX] [XXX] wurden mit diesem Album zum Kult.",
+        "Refrain: 'One [XXX] [XXX]! We're gonna celebrate!'"
       ],
       "lyrics": {
         "real": [
@@ -372,7 +382,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "FGBhQbmPwH8"
-      }
+      },
+      "coverUrl": "/covers/disco-daft-onetime.jpg"
     },
     {
       "id": "disco-chem-heyboy",
@@ -392,7 +403,7 @@
         "Bekannt für den repetitiven Vocal-Sample im Club-Stil.",
         "Ein Inbegriff für den Big-Beat-Hype der späten 90er.",
         "Besticht durch den treibenden Breakbeat und die aggressive Synthesizer-Line.",
-        "Refrain: 'Hey boy, hey girl, superstar DJs, here we go!'"
+        "Refrain: 'Hey boy, hey [XXX], superstar DJs, here we go!'"
       ],
       "lyrics": {
         "real": [
@@ -405,7 +416,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "tpKCqp9CALQ"
-      }
+      },
+      "coverUrl": "/covers/disco-chem-heyboy.jpg"
     },
     {
       "id": "disco-fatboy-praise",
@@ -439,7 +451,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ruAi4VBoBSM"
-      }
+      },
+      "coverUrl": "/covers/disco-fatboy-praise.jpg"
     },
     {
       "id": "disco-under-slippy",
@@ -472,7 +485,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "mwVdYq9AT0w"
-      }
+      },
+      "coverUrl": "/covers/disco-under-slippy.jpg"
     },
     {
       "id": "disco-faithless-insomnia",
@@ -505,7 +519,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/disco-faithless-insomnia.jpg"
     },
     {
       "id": "disco-prodigy-fire",
@@ -525,7 +540,7 @@
         "Inbegriff für die Fusion aus elektronischer Musik und Punk-Attitüde.",
         "Besticht durch den verzerrten Basslauf und das aggressive Sampling.",
         "Keith Flint wurde durch das Musikvideo zum Gesicht des elektronischen Undergrounds.",
-        "Refrain: 'I'm the trouble starter, punkin' instigator! I'm the firestarter!'"
+        "Refrain: 'I'm the trouble starter, punkin' instigator! I'm the [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -538,7 +553,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "wmin5WkOuPw"
-      }
+      },
+      "coverUrl": "/covers/disco-prodigy-fire.jpg"
     },
     {
       "id": "disco-moby-go",
@@ -571,7 +587,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "p7T9t"
-      }
+      },
+      "coverUrl": "/covers/disco-moby-go.jpg"
     },
     {
       "id": "disco-massive-sympathy",
@@ -604,7 +621,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "u7K72X4eo_s"
-      }
+      },
+      "coverUrl": "/covers/disco-massive-sympathy.jpg"
     },
     {
       "id": "disco-chem-galvanize",
@@ -637,7 +655,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Xu3FTEmN-eg"
-      }
+      },
+      "coverUrl": "/covers/disco-chem-galvanize.jpg"
     },
     {
       "id": "disco-justice-dance",
@@ -670,7 +689,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "sy1dYFGkPUE"
-      }
+      },
+      "coverUrl": "/covers/disco-justice-dance.jpg"
     },
     {
       "id": "disco-kavinsky-nightcall",
@@ -690,7 +710,7 @@
         "Wurde durch das Intro zum Film 'Drive' weltberühmt.",
         "Inbegriff für die Synthwave-Welle der 2010er Jahre.",
         "Besticht durch den vocoder-verdeckten Gesang und die nächtliche Atmosphäre.",
-        "Refrain: 'I'm giving you a nightcall to tell you how I feel!'"
+        "Refrain: 'I'm giving you a [XXX] to tell you how I feel!'"
       ],
       "lyrics": {
         "real": [
@@ -703,7 +723,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "MV_3D8v97Y"
-      }
+      },
+      "coverUrl": "/covers/disco-kavinsky-nightcall.jpg"
     },
     {
       "id": "disco-daft-lucky",
@@ -721,10 +742,10 @@
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
         "Kombiniert klassisches Disco-Gefühl mit moderner Produktion.",
-        "Nile Rodgers' Gitarre und Pharrells Gesang machten den Song zum Welthit.",
+        "Nile Rodgers' Gitarre und [XXX]s Gesang machten den Song zum Welthit.",
         "Thematisiert den Optimismus und die Freude an der Nacht.",
         "Ein Inbegriff für den Erfolg des 'Handmade' Electronic-Stils.",
-        "Refrain: 'We're up all night to get lucky!'"
+        "Refrain: 'We're up all night to get [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -737,7 +758,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "CCHdMIEGaaM"
-      }
+      },
+      "coverUrl": "/covers/disco-daft-lucky.jpg"
     },
     {
       "id": "disco-disclosure-latch",
@@ -754,8 +776,8 @@
       ],
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
-        "Machte sowohl Disclosure als auch Sam Smith weltweit bekannt.",
-        "Besticht durch den synkopierten Rhythmus und Smiths kraftvolle Stimme.",
+        "Machte sowohl [XXX] als auch Sam [XXX] weltweit bekannt.",
+        "Besticht durch den synkopierten Rhythmus und [XXX]s kraftvolle Stimme.",
         "Thematisiert die absolute Bindung an eine andere Person.",
         "Refrain: 'Now I've got you in my space! I won't let go of you!'"
       ],
@@ -770,7 +792,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "93ASuAgKnpD"
-      }
+      },
+      "coverUrl": "/covers/disco-disclosure-latch.jpg"
     },
     {
       "id": "disco-avicii-levels",
@@ -790,7 +813,7 @@
         "Inbegriff für den weltweiten EDM-Boom der frühen 2010er Jahre.",
         "Samplet die Stimme von Etta James ('Something's Got a Hold on Me').",
         "Besticht durch das energetische, hochgepitchte Synthesizer-Thema.",
-        "Machte Tim Bergling alias Avicii zum Superstar.",
+        "Machte Tim Bergling alias [XXX] zum Superstar.",
         "Refrain: 'Oh sometimes I get a good feeling, yeah!'"
       ],
       "lyrics": {
@@ -804,7 +827,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "_ovdm2yX"
-      }
+      },
+      "coverUrl": "/covers/disco-avicii-levels.jpg"
     },
     {
       "id": "disco-swedish-child",
@@ -825,7 +849,7 @@
         "Thematisiert Kindheitserinnerungen und den Trost durch den Vater.",
         "Besticht durch den massiven Synthesizer-Drop und John Martins Gesang.",
         "War die Abschieds-Single der Gruppe vor ihrer mehrjährigen Pause.",
-        "Refrain: 'Don't you worry, don't you worry child! See heaven's got a plan for you!'"
+        "Refrain: '[XXX] you [XXX], [XXX] you [XXX] [XXX]! See heaven's got a plan for you!'"
       ],
       "lyrics": {
         "real": [
@@ -838,7 +862,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "1y6smkh6c-0"
-      }
+      },
+      "coverUrl": "/covers/disco-swedish-child.jpg"
     },
     {
       "id": "synth-omd-enola",
@@ -858,7 +883,7 @@
         "Besticht durch die fröhliche, fast kinderliedartige Synthesizer-Melodie.",
         "Thematisiert (im harten Kontrast zur Musik) den Abwurf der Atombombe auf Hiroshima.",
         "Ein Inbegriff für den intelligenten britischen Pop der frühen 80er.",
-        "Refrain: 'Enola gay, is mother proud of Little Boy today?'"
+        "Refrain: '[XXX] gay, is mother proud of Little Boy today?'"
       ],
       "lyrics": {
         "real": [
@@ -871,7 +896,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "d5XJ2GiR6Bo"
-      }
+      },
+      "coverUrl": "/covers/synth-omd-enola.jpg"
     },
     {
       "id": "synth-ultravox-vienna",
@@ -892,7 +918,7 @@
         "Besticht durch den dramatischen Aufbau, das Klavier-Solo und Midge Ures kraftvollen Gesang.",
         "Thematisiert eine flüchtige Begegnung in der nebligen Atmosphäre Wiens.",
         "Wurde zu einem der bekanntesten und einflussreichsten Lieder des Genres.",
-        "Refrain: 'This means nothing to me! This means nothing to me! Oh, Vienna!'"
+        "Refrain: 'This means nothing to me! This means nothing to me! Oh, [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -905,7 +931,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/synth-ultravox-vienna.jpg"
     },
     {
       "id": "synth-visage-grey",
@@ -926,7 +953,7 @@
         "Besticht durch die französischsprachigen Flüstermomente und den kühlen Beat.",
         "Thematisiert die Monotonie und das Verschwinden der Farben im Leben.",
         "Steve Strange wurde durch das exzentrische Musikvideo zur Stilikone.",
-        "Refrain: 'Ah, we fade to grey!'"
+        "Refrain: 'Ah, we [XXX] to [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -939,7 +966,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "eZHk4RwIp_g"
-      }
+      },
+      "coverUrl": "/covers/synth-visage-grey.jpg"
     },
     {
       "id": "synth-eury-rain",
@@ -960,7 +988,7 @@
         "Thematisiert Sehnsucht, Einsamkeit und die Wiederkehr schmerzhafter Gefühle.",
         "Besticht durch Annie Lennox' unterkühlte, aber leidenschaftliche Performance.",
         "Ein Inbegriff für den atmosphärischen 80er-Sound.",
-        "Refrain: 'Here comes the rain again! Falling on my head like a memory!'"
+        "Ref[XXX]: '[XXX] [XXX] the [XXX] [XXX]! Falling on my head like a memory!'"
       ],
       "lyrics": {
         "real": [
@@ -973,7 +1001,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/synth-eury-rain.jpg"
     },
     {
       "id": "synth-depeche-jesus",
@@ -1007,7 +1036,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "u1xrNaTO1bI"
-      }
+      },
+      "coverUrl": "/covers/synth-depeche-jesus.jpg"
     },
     {
       "id": "synth-petshop-sin",
@@ -1041,7 +1071,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/synth-petshop-sin.jpg"
     },
     {
       "id": "synth-tears-mad",
@@ -1074,7 +1105,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "u1xrNaTO1bI"
-      }
+      },
+      "coverUrl": "/covers/synth-tears-mad.jpg"
     },
     {
       "id": "synth-talktalk-life",
@@ -1095,7 +1127,7 @@
         "Thematisiert Selbstbestimmung und den Widerstand gegen äußere Erwartungen.",
         "Wurde Jahre später durch das Cover von No Doubt erneut zum Welthit.",
         "Ein Inbegriff für anspruchsvollen 80er-Pop.",
-        "Refrain: 'It's my life! Don't forget!'"
+        "Refrain: 'It's my [XXX]! Don't forget!'"
       ],
       "lyrics": {
         "real": [
@@ -1108,7 +1140,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "cFH5JgyZK1I"
-      }
+      },
+      "coverUrl": "/covers/synth-talktalk-life.jpg"
     },
     {
       "id": "synth-aha-take",
@@ -1129,7 +1162,7 @@
         "Unvergesslich durch den extrem hohen Falsett-Gesang von Morten Harket im Refrain.",
         "Das Comic-Style Musikvideo setzte technische Maßstäbe und ist legendär.",
         "Ein Inbegriff für skandinavischen Pop-Export der 80er.",
-        "Refrain: 'Take on me! (Take on me)! Take me on! (Take me on)!'"
+        "Refrain: '[XXX] on me! ([XXX] on me)! [XXX] me on! ([XXX] me on)!'"
       ],
       "lyrics": {
         "real": [
@@ -1142,7 +1175,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "djV11Xbc914"
-      }
+      },
+      "coverUrl": "/covers/synth-aha-take.jpg"
     },
     {
       "id": "synth-alpha-forever",
@@ -1163,7 +1197,7 @@
         "Besticht durch die feierliche Melodie und Marian Golds klaren Gesang.",
         "Wurde zu einem weltweiten Standard für Abschlussfeiern und emotionale Momente.",
         "Ein deutsches Synthpop-Aushängeschild der 80er.",
-        "Refrain: 'Forever young! I want to be forever young!'"
+        "Refrain: '[XXX] [XXX]! I want to be [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1176,7 +1210,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/synth-alpha-forever.jpg"
     },
     {
       "id": "synth-frankie-relax",
@@ -1196,7 +1231,7 @@
         "Wurde berühmt durch das zeitweilige Verbot durch die BBC aufgrund sexueller Anspielungen.",
         "Besticht durch die wuchtige Trevor-Horn-Produktion und den pulsierenden Bass.",
         "Ein massiver Club-Hit und Inbegriff für den provokanten Pop der 80er.",
-        "Refrain: 'Relax! Don't do it! When you want to go to it!'"
+        "Refrain: '[XXX]! Don't do it! When you want to go to it!'"
       ],
       "lyrics": {
         "real": [
@@ -1209,7 +1244,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Yem_iEHiyJ0"
-      }
+      },
+      "coverUrl": "/covers/synth-frankie-relax.jpg"
     },
     {
       "id": "synth-dead-round",
@@ -1229,7 +1265,7 @@
         "Inbegriff für den rasanten 'Stock Aitken Waterman' Sound.",
         "Besticht durch den treibenden Beat und Pete Burns exzentrische Stimme.",
         "Ein absoluter Klassiker jeder 80er-Jahre Party.",
-        "Refrain: 'You spin me right round, baby, right round! Like a record, baby, right round round round!'"
+        "Refrain: 'You [XXX] me right [XXX], baby, right [XXX]! Like a record, baby, right [XXX] [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1242,7 +1278,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/synth-dead-round.jpg"
     },
     {
       "id": "synth-rick-never",
@@ -1259,10 +1296,10 @@
       ],
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
-        "Wurde Jahrzehnte später durch das Internet-Mem 'Rickrolling' weltweit erneut zum Kult.",
-        "Besticht durch Rick Astleys überraschend tiefe Soul-Stimme über dem typischen 80er-Synth-Beat.",
+        "Wurde Jahrzehnte später durch das Internet-Mem '[XXX]rolling' weltweit erneut zum Kult.",
+        "Besticht durch [XXX] [XXX]s überraschend tiefe Soul-Stimme über dem typischen 80er-Synth-Beat.",
         "Thematisiert unerschütterliche Loyalität in einer Beziehung.",
-        "Refrain: 'Never gonna give you up! Never gonna let you down!'"
+        "Refrain: '[XXX] [XXX] [XXX] you up! [XXX] [XXX] let you down!'"
       ],
       "lyrics": {
         "real": [
@@ -1275,7 +1312,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "dQw4w9WgXcQ"
-      }
+      },
+      "coverUrl": "/covers/synth-rick-never.jpg"
     },
     {
       "id": "synth-kim-kids",
@@ -1294,8 +1332,8 @@
       "hints": [
         "Besticht durch das energetische Synthesizer-Thema und Kims kraftvolle Rock-Stimme.",
         "Thematisiert den jugendlichen Aufbruch und das Lebensgefühl einer neuen Generation.",
-        "Machte Kim Wilde über Nacht zum Star des britischen Pop.",
-        "Refrain: 'We're the kids in America! (Whoa-oh)!'"
+        "Machte Kim [XXX] über Nacht zum Star des britischen Pop.",
+        "Refrain: 'We're the [XXX] in [XXX]! (Whoa-oh)!'"
       ],
       "lyrics": {
         "real": [
@@ -1308,7 +1346,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "r_GH66"
-      }
+      },
+      "coverUrl": "/covers/synth-kim-kids.jpg"
     },
     {
       "id": "synth-nena-luft",
@@ -1327,9 +1366,9 @@
       "hints": [
         "Der weltweit erfolgreichste deutschsprachige Titel des Synth-orientierten New Wave.",
         "Thematisiert (im Schatten des Kalten Krieges) die Gefahr eines versehentlich ausgelösten Atomkriegs.",
-        "Besticht durch den energetischen Basslauf und Nenas charakteristische Stimme.",
+        "Besticht durch den energetischen Basslauf und [XXX]s charakteristische Stimme.",
         "Ein Inbegriff für den deutschen Musik-Export der 80er.",
-        "Refrain: '99 Luftballons! Auf ihrem Weg zum Horizont!'"
+        "Refrain: '99 [XXX]! Auf ihrem Weg zum Horizont!'"
       ],
       "lyrics": {
         "real": [
@@ -1342,7 +1381,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Lur-S"
-      }
+      },
+      "coverUrl": "/covers/synth-nena-luft.jpg"
     },
     {
       "id": "synth-falco-amadeus",
@@ -1360,9 +1400,9 @@
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
         "Einziges deutschsprachiges Lied, das jemals Platz 1 der US-Billboard-Charts erreichte.",
-        "Kombiniert elektronische Beats mit Rap-Elementen und barockem Pathos.",
-        "Thematisiert das Leben von Wolfgang Amadeus Mozart als 'erster Punk der Geschichte'.",
-        "Refrain: 'Amadeus, Amadeus! Amadeus, Amadeus, Amadeus! Amadeus, Amadeus, Amade-Amadeus!'"
+        "Kombiniert elektronische Beats mit Rap-Elementen und ba[XXX]em Pathos.",
+        "Thematisiert das Leben von Wolfgang [XXX] Mozart als 'erster Punk der Geschichte'.",
+        "Refrain: '[XXX], [XXX]! [XXX], [XXX], [XXX]! [XXX], [XXX], Amade-[XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1375,7 +1415,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "cVikZ8Oe_gb0"
-      }
+      },
+      "coverUrl": "/covers/synth-falco-amadeus.jpg"
     },
     {
       "id": "house-kygo-firestone",
@@ -1395,7 +1436,7 @@
         "Inbegriff für den Aufstieg des 'Tropical House' Genres.",
         "Besticht durch den entspannten, sonnigen Synthesizer-Sound und den fließenden Beat.",
         "Machte den norwegischen Produzenten weltweit zu einem der größten Stars der Szene.",
-        "Refrain: 'We light up the world! Like a firestone!'"
+        "Refrain: 'We light up the world! Like a [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1408,7 +1449,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "9ScvVInX"
-      }
+      },
+      "coverUrl": "/covers/house-kygo-firestone.jpg"
     },
     {
       "id": "house-major-leanon",
@@ -1429,7 +1471,7 @@
         "Besticht durch den indisch-inspirierten Sound und MØs markante Stimme.",
         "Thematisiert Zusammenhalt und den Wunsch, jemanden zum Anlehnen zu haben.",
         "Ein Inbegriff für den globalen Crossover-Erfolg elektronischer Musik.",
-        "Refrain: 'Blow a kiss, fire a gun! We all need someone to lean on!'"
+        "Refrain: 'Blow a kiss, fire a gun! We all need someone to [XXX] on!'"
       ],
       "lyrics": {
         "real": [
@@ -1442,7 +1484,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/house-major-leanon.jpg"
     },
     {
       "id": "house-chain-closer",
@@ -1461,8 +1504,8 @@
       "hints": [
         "Dominierte monatelang die Charts weltweit und prägte den Sound des 'Future Bass'.",
         "Thematisiert das Wiedersehen mit einer alten Liebe und das Gefühl, nie wirklich weggewesen zu sein.",
-        "Besticht durch den eingängigen Synthesizer-Akkord und das Duett zwischen Andrew Taggart und Halsey.",
-        "Refrain: 'So baby pull me closer! In the back seat of your Rover!'"
+        "Besticht durch den eingängigen Synthesizer-Akkord und das Duett zwischen Andrew Taggart und [XXX].",
+        "Refrain: 'So baby pull me [XXX]! In the back seat of your Rover!'"
       ],
       "lyrics": {
         "real": [
@@ -1475,7 +1518,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/house-chain-closer.jpg"
     },
     {
       "id": "house-marsh-happier",
@@ -1493,9 +1537,9 @@
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
         "Kontrastiert eine traurige Botschaft (Trennung) mit einem hochenergetischen Beat.",
-        "Besticht durch Marshmellos typische Synthesizer-Produktion und Dan Smiths leidenschaftliche Stimme.",
+        "Besticht durch [XXX]s typische Synthesizer-Produktion und Dan Smiths leidenschaftliche Stimme.",
         "Das Musikvideo über einen geliebten Hund wurde zum Internet-Tränenzieher.",
-        "Refrain: 'I want you to be happier! I want you to be happier!'"
+        "Refrain: 'I want you to be [XXX]! I want you to be [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1508,7 +1552,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "m7Bc3pLyij0"
-      }
+      },
+      "coverUrl": "/covers/house-marsh-happier.jpg"
     },
     {
       "id": "house-garrix-animals",
@@ -1525,10 +1570,10 @@
       ],
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
-        "Der Durchbruch für das damals erst 17-jährige Wunderkind Martin Garrix.",
+        "Der Durchbruch für das damals erst 17-jährige Wunderkind [XXX] [XXX].",
         "Inbegriff für den 'Big Room House' Sound mit dem markanten, minimalistischen Drop.",
         "Ein absolutes Monster auf jedem Festival-Hauptbühne.",
-        "Refrain: 'We're the f'ing animals!'"
+        "Refrain: 'We're the f'ing [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1541,7 +1586,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gCYcHz2k5x0"
-      }
+      },
+      "coverUrl": "/covers/house-garrix-animals.jpg"
     },
     {
       "id": "house-afrojack-control",
@@ -1559,9 +1605,9 @@
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
         "Inbegriff für den 'Dutch House' Sound mit hohem Synthesizer-Thema.",
-        "Machte Afrojack weltweit bekannt.",
-        "Besticht durch Eva Simons kraftvolle Club-Stimme.",
-        "Refrain: 'I want you to take over control!'"
+        "Machte [XXX] weltweit bekannt.",
+        "Besticht durch Eva [XXX] kraftvolle Club-Stimme.",
+        "Refrain: 'I want you to [XXX] [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1574,7 +1620,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/house-afrojack-control.jpg"
     },
     {
       "id": "house-guetta-titanium",
@@ -1591,10 +1638,10 @@
       ],
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
-        "Kombiniert Guettas Club-Produktion mit Sias gewaltiger Stimmgewalt.",
-        "Thematisiert Unverwüstlichkeit gegenüber Kritik und Angriffen ('I am titanium').",
+        "Kombiniert [XXX]s Club-Produktion mit Sias gewaltiger Stimmgewalt.",
+        "Thematisiert Unverwüstlichkeit gegenüber Kritik und Angriffen ('I am [XXX]').",
         "Einer der größten Hymnen der modernen elektronischen Musik.",
-        "Refrain: 'You shoot me down but I won't fall! I am titanium!'"
+        "Refrain: 'You shoot me down but I won't fall! I am [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1607,7 +1654,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "JRfuAAtZ"
-      }
+      },
+      "coverUrl": "/covers/house-guetta-titanium.jpg"
     },
     {
       "id": "disco-skrillex-scary",
@@ -1641,7 +1689,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "WSeNSzJ2-Jw"
-      }
+      },
+      "coverUrl": "/covers/disco-skrillex-scary.jpg"
     },
     {
       "id": "house-zedd-clarity",
@@ -1659,7 +1708,7 @@
       "pack": "Electronic & Synthpop Voyage",
       "hints": [
         "Thematisiert eine komplizierte, fast schon zerstörerische Liebe, die man dennoch braucht.",
-        "Besticht durch die brillante Produktion des deutschen Produzenten Zedd und Foxes' leidenschaftliche Stimme.",
+        "Besticht durch die brillante Produktion des deutschen Produzenten [XXX] und [XXX]' leidenschaftliche Stimme.",
         "Gewann einen Grammy für die beste Dance-Aufnahme.",
         "Refrain: 'If our love is tragedy, why are you my remedy? 'Cause you are the piece of me I wish I didn't need!'"
       ],
@@ -1674,7 +1723,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "IsuVMdnF8A0"
-      }
+      },
+      "coverUrl": "/covers/house-zedd-clarity.jpg"
     }
   ]
 }

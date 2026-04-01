@@ -23,7 +23,7 @@
         "Dieser Song ist die inoffizielle Hymne jeder WG-Party mit einer Akustikgitarre.",
         "Das Musikvideo ist in Schwarz-Weiß gehalten und zeigt die Bandmitglieder in einem Raum sitzend.",
         "Wurde von Noel Gallagher geschrieben und von seinem Bruder Liam gesungen.",
-        "Der Begriff 'Wonderwall' stammt von einem Album von George Harrison.",
+        "Der Begriff '[XXX]' stammt von einem Album von George Harrison.",
         "Refrain: 'Because maybe, you're gonna be the one that saves me...'"
       ],
       "lyrics": {
@@ -37,7 +37,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "6hzrDeceEKc"
-      }
+      },
+      "coverUrl": "/covers/90s-oasis-wonderwall.jpg"
     },
     {
       "id": "90s-rem-losing-my-religion",
@@ -58,7 +59,7 @@
         "Der Titel ist eine Südstaaten-Redewendung für 'die Beherrschung verlieren' oder 'am Ende seiner Geduld sein'.",
         "Das Video ist voller religiöser und klassisch-künstlerischer Anspielungen.",
         "Sänger Michael Stipe tanzt im Video auf eine sehr markante, energetische Weise.",
-        "Refrain: 'That's me in the corner, that's me in the spotlight, losing my religion.'"
+        "Refrain: 'That's me in the corner, that's me in the spotlight, [XXX] my [XXX].'"
       ],
       "lyrics": {
         "real": [
@@ -71,7 +72,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "xwtdhWltSIg"
-      }
+      },
+      "coverUrl": "/covers/90s-rem-losing-my-religion.jpg"
     },
     {
       "id": "90s-alanis-morissette-ironic",
@@ -105,7 +107,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Jne9t8sHpUc"
-      }
+      },
+      "coverUrl": "/covers/90s-alanis-morissette-ironic.jpg"
     },
     {
       "id": "90s-sinéad-oconnor-nothing-compares",
@@ -139,7 +142,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "0-EF60neguk"
-      }
+      },
+      "coverUrl": "/covers/90s-sinéad-oconnor-nothing-compares.jpg"
     },
     {
       "id": "90s-radiohead-creep",
@@ -160,7 +164,7 @@
         "Berühmt für die plötzlichen, lauten Gitarren-Schläge ('Chuck-chuck') vor dem Refrain.",
         "Basiert harmonisch auf 'The Air That I Breathe' von den Hollies (was zu Rechtsstreitigkeiten führte).",
         "Die Hymne für alle Außenseiter und Menschen mit Minderwertigkeitskomplexen.",
-        "Refrain: 'But I'm a creep, I'm a weirdo, what the hell am I doing here?'"
+        "Refrain: 'But I'm a [XXX], I'm a weirdo, what the hell am I doing here?'"
       ],
       "lyrics": {
         "real": [
@@ -173,7 +177,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "XFkzRNyygfk"
-      }
+      },
+      "coverUrl": "/covers/90s-radiohead-creep.jpg"
     },
     {
       "id": "90s-blind-melon-no-rain",
@@ -194,7 +199,7 @@
         "Ein großer Hit der Hippie-beeinflussten Alternative-Szene der frühen 90er.",
         "Der Sänger Shannon Hoon starb tragischerweise kurz nach dem Erfolg der Band.",
         "Der Text drückt das Gefühl aus, sich in seiner eigenen kleinen Welt wohler zu fühlen.",
-        "Refrain: 'And I wonder if you'll notice me when I'm gone...'"
+        "Ref[XXX]: 'And I wonder if you'll notice me when I'm gone...'"
       ],
       "lyrics": {
         "real": [
@@ -207,7 +212,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "3qVPNONdF58"
-      }
+      },
+      "coverUrl": "/covers/90s-blind-melon-no-rain.jpg"
     },
     {
       "id": "90s-extreme-more-than-words",
@@ -224,11 +230,11 @@
       ],
       "pack": "90s Unplugged",
       "hints": [
-        "Wurde oft fälschlicherweise für einen Song einer reinen Akustik-Band gehalten, obwohl Extreme eigentlich eine Funk-Metal-Band waren.",
+        "Wurde oft fälschlicherweise für einen Song einer reinen Akustik-Band gehalten, obwohl [XXX] eigentlich eine Funk-Metal-Band waren.",
         "Der Song handelt davon, Liebe durch Taten statt durch bloße Worte zu beweisen.",
         "Ein reines Duett aus Akustikgitarre und zweistimmigem Gesang.",
         "Das Video zeigt die Bandmitglieder entspannt sitzend beim Spielen.",
-        "Refrain: 'More than words to show you feel that your love for me is real.'"
+        "Refrain: '[XXX] [XXX] [XXX] to show you feel that your love for me is real.'"
       ],
       "lyrics": {
         "real": [
@@ -241,7 +247,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "UrIiLvg58SY"
-      }
+      },
+      "coverUrl": "/covers/90s-extreme-more-than-words.jpg"
     },
     {
       "id": "90s-cranberries-zombie",
@@ -262,7 +269,7 @@
         "Der markante Jodel-Gesang von Dolores O'Riordan im Refrain ist unverwechselbar.",
         "Das Video zeigt die Sängerin goldbemalt vor einem Kreuz im Kreis von Kindern.",
         "Einer der meistgespielten Rocksongs der 90er Jahre.",
-        "Refrain: 'In your head, in your head, zombie, zombie, zombie!'"
+        "Refrain: 'In your head, in your head, [XXX], [XXX], [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -275,7 +282,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "6Ejga4kJUts"
-      }
+      },
+      "coverUrl": "/covers/90s-cranberries-zombie.jpg"
     },
     {
       "id": "90s-verve-bitter-sweet-symphony",
@@ -309,7 +317,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "1lyu1KKwC74"
-      }
+      },
+      "coverUrl": "/covers/90s-verve-bitter-sweet-symphony.jpg"
     },
     {
       "id": "90s-counting-crows-mr-jones",
@@ -328,9 +337,9 @@
       "hints": [
         "Der Song handelt von zwei Musikern, die davon träumen, berühmt zu werden, um mehr Aufmerksamkeit von Frauen zu bekommen.",
         "Adam Duritz, der Sänger mit den markanten Dreadlocks, singt den Song mit viel Leidenschaft.",
-        "Mr. Jones ist ein echter Freund des Sängers (Marty Jones).",
+        "Mr. [XXX] ist ein echter Freund des Sängers (Marty [XXX]).",
         "Enthält viele Referenzen an Kunst und Berühmtheit.",
-        "Refrain: 'Mr. Jones and me tell each other fairy tales...'"
+        "Refrain: 'Mr. [XXX] and me tell each other fairy tales...'"
       ],
       "lyrics": {
         "real": [
@@ -343,7 +352,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "-oqAU5VxFWs"
-      }
+      },
+      "coverUrl": "/covers/90s-counting-crows-mr-jones.jpg"
     },
     {
       "id": "90s-eric-clapton-tears-in-heaven",
@@ -364,7 +374,7 @@
         "Ein Kernstück des 'Unplugged'-Albums von MTV.",
         "Gewann drei Grammys, darunter Record of the Year.",
         "Handelt von der Frage, ob man sich im Himmel wiedererkennt.",
-        "Refrain: 'Would you know my name if I saw you in heaven?'"
+        "Refrain: 'Would you know my name if I saw you in [XXX]?'"
       ],
       "lyrics": {
         "real": [
@@ -377,7 +387,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "JxPj3GAYYZ0"
-      }
+      },
+      "coverUrl": "/covers/90s-eric-clapton-tears-in-heaven.jpg"
     },
     {
       "id": "90s-no-doubt-dont-speak",
@@ -398,7 +409,7 @@
         "Im Video sieht man die Spannungen innerhalb der Band während ihres Aufstiegs zum Ruhm.",
         "Markierte den weltweiten Durchbruch der Ska-beeinflussten Band.",
         "Bekannt für das melancholische Gitarren-Solo und Gwens emotionalen Gesang.",
-        "Refrain: 'Don't speak, I know just what you're saying, so please stop explaining...'"
+        "Refrain: '[XXX] [XXX], I know just what you're saying, so please stop explaining...'"
       ],
       "lyrics": {
         "real": [
@@ -411,7 +422,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "TR3Vdo5etCQ"
-      }
+      },
+      "coverUrl": "/covers/90s-no-doubt-dont-speak.jpg"
     },
     {
       "id": "90s-goo-goo-dolls-iris",
@@ -445,7 +457,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "NdYWuo9OFAw"
-      }
+      },
+      "coverUrl": "/covers/90s-goo-goo-dolls-iris.jpg"
     },
     {
       "id": "90s-jewel-who-will-save-your-soul",
@@ -466,7 +479,7 @@
         "Bekannt für den fast gejodelten Gesangsstil der Strophen.",
         "Das Video zeigt die Sängerin in einer öffentlichen Toilette singend (Symbol für Einsamkeit).",
         "Thematisiert die Oberflächlichkeit und Sinnsuche in der Gesellschaft.",
-        "Refrain: 'Who will save your soul after all the lies that you told?'"
+        "Refrain: 'Who [XXX] [XXX] your [XXX] after all the lies that you told?'"
       ],
       "lyrics": {
         "real": [
@@ -479,7 +492,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "0wBDDAZkNtk"
-      }
+      },
+      "coverUrl": "/covers/90s-jewel-who-will-save-your-soul.jpg"
     },
     {
       "id": "90s-sheryl-crow-all-i-wanna-do",
@@ -497,10 +511,10 @@
       "pack": "90s Unplugged",
       "hints": [
         "Basiert auf einem Gedicht namens 'Fun' von Wyn Cooper.",
-        "Der Song fängt das entspannte Lebensgefühl von LA ein ('All I wanna do is have some fun').",
+        "Der Song fängt das entspannte Lebensgefühl von LA ein ('All I [XXX] do is have some fun').",
         "Gewann den Grammy für den Record of the Year 1995.",
         "Das Video zeigt die Sängerin entspannt in einer Bar und auf den Straßen.",
-        "Refrain: 'All I wanna do is have some fun, I got a feeling I'm not the only one.'"
+        "Refrain: 'All I [XXX] do is have some fun, I got a feeling I'm not the only one.'"
       ],
       "lyrics": {
         "real": [
@@ -513,7 +527,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "hG9C0VwruXE"
-      }
+      },
+      "coverUrl": "/covers/90s-sheryl-crow-all-i-wanna-do.jpg"
     },
     {
       "id": "90s-natalie-imbruglia-torn",
@@ -547,7 +562,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "VV1XWJN3nJo"
-      }
+      },
+      "coverUrl": "/covers/90s-natalie-imbruglia-torn.jpg"
     },
     {
       "id": "90s-sixpence-kiss-me",
@@ -568,7 +584,7 @@
         "Ein Paradebeispiel für den unbeschwerten, akustischen Pop-Sound der späten 90er.",
         "Die Band hat einen religiösen Hintergrund, was man dem Song aber nicht direkt anhört.",
         "Der Refrain fordert zu einem Kuss unter dem 'Milchlicht' (milky twilight) auf.",
-        "Refrain: 'Kiss me out of the bearded barley...'"
+        "Refrain: '[XXX] me out of the bearded barley...'"
       ],
       "lyrics": {
         "real": [
@@ -581,7 +597,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "hII0JXUJNDo"
-      }
+      },
+      "coverUrl": "/covers/90s-sixpence-kiss-me.jpg"
     },
     {
       "id": "90s-semisonic-closing-time",
@@ -602,7 +619,7 @@
         "Wird oft in Bars als letztes Lied des Abends gespielt.",
         "Bekannt für den Spruch: 'You don't have to go home, but you can't stay here.'",
         "Ein One-Hit-Wonder der späten 90er Jahre.",
-        "Refrain: 'Closing time, open all the doors and let you out into the world.'"
+        "Refrain: '[XXX] [XXX], open all the doors and let you out into the world.'"
       ],
       "lyrics": {
         "real": [
@@ -615,7 +632,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "xGytDsqkQY8"
-      }
+      },
+      "coverUrl": "/covers/90s-semisonic-closing-time.jpg"
     },
     {
       "id": "90s-third-eye-blind-semi-charmed",
@@ -649,7 +667,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "beINamVRGy4"
-      }
+      },
+      "coverUrl": "/covers/90s-third-eye-blind-semi-charmed.jpg"
     },
     {
       "id": "90s-soul-asylum-runaway-train",
@@ -670,7 +689,7 @@
         "Thematisiert Depression und das Gefühl, die Kontrolle über sein Leben zu verlieren.",
         "Gewann den Grammy für den Best Rock Song 1994.",
         "Ein Meilenstein des gefühlvollen Alternative Rock der frühen 90er.",
-        "Refrain: 'Runaway train, never going back, wrong way on a one-way track.'"
+        "Refrain: '[XXX] [XXX], never going back, wrong way on a one-way track.'"
       ],
       "lyrics": {
         "real": [
@@ -683,7 +702,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "S5O9O5S9S"
-      }
+      },
+      "coverUrl": "/covers/90s-soul-asylum-runaway-train.jpg"
     },
     {
       "id": "unplugged-clapton-layla",
@@ -701,10 +721,10 @@
       "pack": "90s Unplugged",
       "hints": [
         "Wandelte den ursprünglichen Hard-Rock-Hit der Dominos in eine sanfte Shuffle-Nummer um.",
-        "Das MTV Unplugged Album von Eric Clapton wurde zum meistverkauften Live-Album aller Zeiten.",
+        "Das MTV Unplugged Album von [XXX] [XXX] wurde zum meistverkauften Live-Album aller Zeiten.",
         "Besticht durch das entspannte Tempo und die Akustik-Gitarren-Soli.",
         "Ein absolutes Highlight der 90er Jahre Live-Auftritte.",
-        "Refrain: 'Layla, you've got me on my knees, Layla, I'm begging, darling please!'"
+        "Refrain: '[XXX], you've got me on my knees, [XXX], I'm begging, darling please!'"
       ],
       "lyrics": {
         "real": [
@@ -716,8 +736,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "kseSoguuiCs"
-      }
+        "youtube": "1KjPyEY7DQ4"
+      },
+      "coverUrl": "/covers/unplugged-clapton-layla.jpg"
     },
     {
       "id": "unplugged-aic-nutshell",
@@ -751,7 +772,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "89j-6xpdq4"
-      }
+      },
+      "coverUrl": "/covers/unplugged-aic-nutshell.jpg"
     },
     {
       "id": "unplugged-pearl-jam-black",
@@ -785,7 +807,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "DeumyOzKqgI"
-      }
+      },
+      "coverUrl": "/covers/unplugged-pearl-jam-black.jpg"
     },
     {
       "id": "unplugged-no-doubt-speak",
@@ -806,7 +829,7 @@
         "Das Video zeigt die Spannungen innerhalb der Band durch den plötzlichen Erfolg.",
         "Bekannt für das melodiöse Akustik-Gitarren-Solo von Tom Dumont.",
         "Wurde 1996 zur meistgespielten Radio-Single weltweit.",
-        "Refrain: 'Don't speak, I know just what you're saying!'"
+        "Refrain: '[XXX] [XXX], I know just what you're saying!'"
       ],
       "lyrics": {
         "real": [
@@ -819,7 +842,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "8WYHDfJDPDc"
-      }
+      },
+      "coverUrl": "/covers/unplugged-no-doubt-speak.jpg"
     },
     {
       "id": "unplugged-tori-amos-crucify",
@@ -836,11 +860,11 @@
       ],
       "pack": "90s Unplugged",
       "hints": [
-        "Tori Amos ist bekannt für ihr virtuoses Klavierspiel und provokante Texte.",
+        "[XXX] [XXX] ist bekannt für ihr virtuoses Klavierspiel und provokante Texte.",
         "Handelt von Selbstbestrafung und dem Erwartungsdruck der Gesellschaft.",
         "Ihre Stimme wechselt oft zwischen fragilem Flüstern und kraftvollem Gesang.",
         "Ein Meilenstein des Introspektiven Folk-Pop der 90er.",
-        "Refrain: 'Why do we crucify ourselves? Every day...'"
+        "Refrain: 'Why do we [XXX] ourselves? Every day...'"
       ],
       "lyrics": {
         "real": [
@@ -853,7 +877,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/unplugged-tori-amos-crucify.jpg"
     },
     {
       "id": "unplugged-sheryl-crow-wanna-do",
@@ -872,9 +897,9 @@
       "hints": [
         "Basiert auf dem Gedicht 'Disco Detroit' von Wyn Cooper.",
         "Der locker-flockige Sound vermittelt das Gefühl eines entspannten Nachmittags in L.A.",
-        "Wurde zu Sheryl Crows endgültigem Durchbruch als Solo-Künstlerin.",
+        "Wurde zu [XXX] [XXX]s endgültigem Durchbruch als Solo-Künstlerin.",
         "Besticht durch den entspannten Vibe und das eingängige Riff.",
-        "Refrain: 'All I wanna do is have some fun, I got a feeling I'm not the only one!'"
+        "Refrain: 'All I [XXX] do is have some fun, I got a feeling I'm not the only one!'"
       ],
       "lyrics": {
         "real": [
@@ -887,7 +912,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "xwtdhWltSIg"
-      }
+      },
+      "coverUrl": "/covers/unplugged-sheryl-crow-wanna-do.jpg"
     },
     {
       "id": "unplugged-alanis-morissette-ironic",
@@ -905,7 +931,7 @@
       "pack": "90s Unplugged",
       "hints": [
         "Handelt von ironischen (und manche sagen, eigentlich nur unglücklichen) Situationen.",
-        "Das Musikvideo mit den vier verschiedenen Alanis-Charakteren im Auto ist Kult.",
+        "Das Musikvideo mit den vier verschiedenen [XXX]-Charakteren im Auto ist Kult.",
         "Zementierte ihren Status als Stimme einer rebellischen Generation von Frauen.",
         "Einer der am meist zitierten Songs der 90er Jahre.",
         "Refrain: 'It's like ra-a-ain on your wedding day, it's a free ride when you've already paid!'"
@@ -921,7 +947,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "JGwWNGJdvx8"
-      }
+      },
+      "coverUrl": "/covers/unplugged-alanis-morissette-ironic.jpg"
     },
     {
       "id": "unplugged-counting-crows-mr-jones",
@@ -940,9 +967,9 @@
       "hints": [
         "Adam Duritz singt hier über die Träume, berühmt zu werden.",
         "Die Akustik-Instrumente und die leidenschaftliche Performance machten den Song zum Hit.",
-        "Mr. Jones ist der Bassist einer befreundeten Band des Sängers.",
+        "Mr. [XXX] ist der Bassist einer befreundeten Band des Sängers.",
         "Ein Inbegriff der College-Rock-Bewegung der frühen 90er.",
-        "Refrain: 'Mr. Jones and me, tell each other fairy tales!'"
+        "Refrain: 'Mr. [XXX] and me, tell each other fairy tales!'"
       ],
       "lyrics": {
         "real": [
@@ -955,7 +982,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "-tJYN-eG1zk"
-      }
+      },
+      "coverUrl": "/covers/unplugged-counting-crows-mr-jones.jpg"
     },
     {
       "id": "unplugged-googoo-dolls-iris",
@@ -989,7 +1017,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "NdYWuo9OFAw"
-      }
+      },
+      "coverUrl": "/covers/unplugged-googoo-dolls-iris.jpg"
     },
     {
       "id": "unplugged-oasis-wonderwall",
@@ -1023,7 +1052,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "6hzrDeceEKc"
-      }
+      },
+      "coverUrl": "/covers/unplugged-oasis-wonderwall.jpg"
     },
     {
       "id": "unplugged-hootie-only-wanna",
@@ -1044,7 +1074,7 @@
         "Der Song ist voller Anspielungen auf Bob Dylan (z.B. 'Idiot Wind').",
         "Wurde zu einer der größten Überraschungshits der 90er Jahre.",
         "Besticht durch sein entspanntes Tempo und die sonnige Ausstrahlung.",
-        "Refrain: 'I only wanna be with you!'"
+        "Refrain: 'I [XXX] [XXX] be with you!'"
       ],
       "lyrics": {
         "real": [
@@ -1057,7 +1087,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Ln6WQqRDrCo"
-      }
+      },
+      "coverUrl": "/covers/unplugged-hootie-only-wanna.jpg"
     },
     {
       "id": "unplugged-jewel-save-soul",
@@ -1074,11 +1105,11 @@
       ],
       "pack": "90s Unplugged",
       "hints": [
-        "Jewels Durchbruch, nachdem sie jahrelang in einem Transporter gelebt und in Cafés gespielt hatte.",
+        "[XXX]s Durchbruch, nachdem sie jahrelang in einem Transporter gelebt und in Cafés gespielt hatte.",
         "Ihr einzigartiger Gesangsstil mit kleinen 'Yodels' ist ihr Markenzeichen.",
         "Handelt von Heuchelei und der Suche nach echter Tiefe in der Gesellschaft.",
         "Ein Paradebeispiel für den Folk-Boom der 90er Jahre.",
-        "Refrain: 'Who will save your soul? After all the lies that you told!'"
+        "Refrain: 'Who [XXX] [XXX] your [XXX]? After all the lies that you told!'"
       ],
       "lyrics": {
         "real": [
@@ -1091,7 +1122,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "DeumyOzKqgI"
-      }
+      },
+      "coverUrl": "/covers/unplugged-jewel-save-soul.jpg"
     },
     {
       "id": "unplugged-imbruglia-torn",
@@ -1108,7 +1140,7 @@
       ],
       "pack": "90s Unplugged",
       "hints": [
-        "Eigentlich eine Cover-Version der Band Ednaswap, aber Natalies Version wurde zum Welthit.",
+        "Eigentlich eine Cover-Version der Band Ednaswap, aber [XXX]s Version wurde zum Welthit.",
         "Das Video mit dem sich abbauenden Filmset untermauert das Gefühl der Zerbrechlichkeit.",
         "Besticht durch den perfekten Mix aus Melancholie und Pop-Sensibilität.",
         "Wurde zu einer der meistgespielten Radio-Singles aller Zeiten.",
@@ -1125,7 +1157,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "VV1XWJN3nJo"
-      }
+      },
+      "coverUrl": "/covers/unplugged-imbruglia-torn.jpg"
     },
     {
       "id": "unplugged-radiohead-high-dry",
@@ -1146,7 +1179,7 @@
         "Wurde ursprünglich als Parodie auf eine Rod-Stewart-Ballade geschrieben.",
         "Thom Yorkes unnachahmlicher Falsett-Gesang im Refrain ist das Herzstück.",
         "Thematisiert den schnellen Ruhm und das anschließende Fallenlassen.",
-        "Refrain: 'Don't leave me high, don't leave me dry!'"
+        "Refrain: 'Don't leave me [XXX], don't leave me dry!'"
       ],
       "lyrics": {
         "real": [
@@ -1159,7 +1192,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "rt8AdNwTTUI"
-      }
+      },
+      "coverUrl": "/covers/unplugged-radiohead-high-dry.jpg"
     },
     {
       "id": "unplugged-cranberries-linger",
@@ -1193,7 +1227,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "G6Kspj3OO0s"
-      }
+      },
+      "coverUrl": "/covers/unplugged-cranberries-linger.jpg"
     }
   ]
 }

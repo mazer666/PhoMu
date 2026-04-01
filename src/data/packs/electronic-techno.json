@@ -24,7 +24,7 @@
         "Der Song beschreibt die kühle Faszination einer Modeikone.",
         "Erreichte Jahre nach Veröffentlichung Platz 1 der britischen Charts.",
         "Bekannt für die minimalistischen Melodien und den fast roboterhaften Gesang.",
-        "Refrain: 'Sie ist ein Model und sie sieht gut aus!'"
+        "Refrain: 'Sie ist ein [XXX] und sie sieht gut aus!'"
       ],
       "lyrics": {
         "real": [
@@ -37,7 +37,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "XFkzRNyygfk"
-      }
+      },
+      "coverUrl": "/covers/electro-kraftwerk-das-model.jpg"
     },
     {
       "id": "electro-underworld-born-slippy",
@@ -71,7 +72,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "mwVdYq9AT0w"
-      }
+      },
+      "coverUrl": "/covers/electro-underworld-born-slippy.jpg"
     },
     {
       "id": "electro-daft-punk-around-the-world",
@@ -91,8 +93,8 @@
         "Der Text besteht ausschließlich aus dem titelgebenden Satz (144 Mal!).",
         "Das Musikvideo von Michel Gondry zeigt verschiedene Tanzgruppen, die jeweils ein Instrument repräsentieren.",
         "Ein Paradebeispiel für den hypnotischen House-Sound der 90er.",
-        "Daft Punk begründeten damit ihren Status als Ikonen der elektronischen Musik.",
-        "Refrain: 'Around the world, around the world...'"
+        "[XXX] [XXX] begründeten damit ihren Status als Ikonen der elektronischen Musik.",
+        "Refrain: '[XXX] the [XXX], [XXX] the [XXX]...'"
       ],
       "lyrics": {
         "real": [
@@ -105,7 +107,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "LKYPYj2XX80"
-      }
+      },
+      "coverUrl": "/covers/electro-daft-punk-around-the-world.jpg"
     },
     {
       "id": "electro-chem-bros-galvanize",
@@ -126,7 +129,7 @@
         "Der Rap-Gesang stammt von Q-Tip (A Tribe Called Quest).",
         "Gewann den Grammy für die beste Dance-Aufnahme 2006.",
         "Ein extrem kraftvoller Song, der oft in der Werbung und bei Sportevents genutzt wird.",
-        "Refrain: 'World, the time has come to... galvanize!'"
+        "Refrain: 'World, the time has come to... [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -139,7 +142,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Xu3FTEmN-eg"
-      }
+      },
+      "coverUrl": "/covers/electro-chem-bros-galvanize.jpg"
     },
     {
       "id": "electro-fatboy-slim-praise-you",
@@ -159,8 +163,8 @@
         "Das Video zeigt eine (scheinbar) dilettantische Tanzgruppe vor einem Kino in LA.",
         "Basiert auf einem Sample von Camille Yarbrough.",
         "Thematisiert Dankbarkeit und Wertschätzung gegenüber einem geliebten Menschen.",
-        "Einer der entspanntesten und gleichzeitig tanzbarsten Hits von Fatboy Slim.",
-        "Refrain: 'I have to praise you like I should!'"
+        "Einer der entspanntesten und gleichzeitig tanzbarsten Hits von [XXX] [XXX].",
+        "Refrain: 'I have to [XXX] you like I should!'"
       ],
       "lyrics": {
         "real": [
@@ -173,7 +177,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ruAi4VBoBSM"
-      }
+      },
+      "coverUrl": "/covers/electro-fatboy-slim-praise-you.jpg"
     },
     {
       "id": "electro-paul-kalkbrenner-sky-and-sand",
@@ -190,11 +195,11 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Titelsong des Films 'Berlin Calling', in dem Paul Kalkbrenner auch die Hauptrolle spielt.",
+        "Titelsong des Films 'Berlin Calling', in dem [XXX] [XXX] auch die Hauptrolle spielt.",
         "Hielt sich über 100 Wochen in den deutschen Single-Charts.",
-        "Den Gesang lieferte Pauls Bruder Fritz Kalkbrenner.",
+        "Den Gesang lieferte [XXX]s Bruder Fritz [XXX].",
         "Wurde zur Hymne des modernen Berliner Nachtlebens.",
-        "Refrain: 'And we build a castle in the sky and in the sand...'"
+        "Refrain: 'And we build a castle in the sky and in the [XXX]...'"
       ],
       "lyrics": {
         "real": [
@@ -207,7 +212,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "8ybFb_wKlvQ"
-      }
+      },
+      "coverUrl": "/covers/electro-paul-kalkbrenner-sky-and-sand.jpg"
     },
     {
       "id": "electro-avicii-wake-me-up",
@@ -228,7 +234,7 @@
         "Der Soulig-Gesang stammt von Aloe Blacc.",
         "Wurde nach der Premiere beim Ultra Music Festival 2013 zunächst skeptisch aufgenommen, bevor er zum Welthit wurde.",
         "Thematisiert das Erwachsenwerden und die Sinnsuche.",
-        "Refrain: 'So wake me up when it's all over, when I'm wiser and I'm older!'"
+        "Refrain: 'So [XXX] me up when it's all over, when I'm wiser and I'm older!'"
       ],
       "lyrics": {
         "real": [
@@ -241,7 +247,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "IcrbM1l_BoI"
-      }
+      },
+      "coverUrl": "/covers/electro-avicii-wake-me-up.jpg"
     },
     {
       "id": "electro-shm-dont-you-worry",
@@ -262,7 +269,7 @@
         "Besticht durch den euphorischen Refrain und die kraftvolle Stimme von John Martin.",
         "Thematisiert Ratschläge des Vaters an seinen Sohn in schwierigen Zeiten.",
         "Ein Paradebeispiel für den Stadion-EDM-Sound der frühen 2010er.",
-        "Refrain: 'Don't you worry, don't you worry, child! See, heaven's got a plan for you!'"
+        "Refrain: '[XXX] you [XXX], [XXX] you [XXX], [XXX]! See, heaven's got a plan for you!'"
       ],
       "lyrics": {
         "real": [
@@ -275,7 +282,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "1y6smkh6c-0"
-      }
+      },
+      "coverUrl": "/covers/electro-shm-dont-you-worry.jpg"
     },
     {
       "id": "electro-calvin-harris-summer",
@@ -292,7 +300,7 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Calvin Harris übernahm hier ausnahmsweise selbst den Gesang.",
+        "[XXX] [XXX] übernahm hier ausnahmsweise selbst den Gesang.",
         "Wurde zum meistgestreamten Song des Sommers 2014 weltweit.",
         "Bekannt für den extrem eingängigen Synthesizer-Drop.",
         "Handelt von einer flüchtigen Sommerliebe.",
@@ -309,7 +317,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ebXbLfLACGM"
-      }
+      },
+      "coverUrl": "/covers/electro-calvin-harris-summer.jpg"
     },
     {
       "id": "electro-guetta-titanium",
@@ -327,7 +336,7 @@
       "pack": "Electronic & Techno",
       "hints": [
         "Sollte ursprünglich von Katy Perry oder Mary J. Blige gesungen werden.",
-        "Machte Sia als Sängerin im EDM-Bereich weltberühmt.",
+        "Machte [XXX] als Sängerin im EDM-Bereich weltberühmt.",
         "Thematisiert innere Stärke und Unverwundbarkeit gegenüber Angriffen.",
         "Besitzt eine der kraftvollsten Refrain-Explosionen der Ära.",
         "Refrain: 'I'm bulletproof, nothing to lose, fire away, fire away!'"
@@ -343,7 +352,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "JRfuAukYTKg"
-      }
+      },
+      "coverUrl": "/covers/electro-guetta-titanium.jpg"
     },
     {
       "id": "electro-faithless-insomnia",
@@ -377,7 +387,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "P8JEm4d6Wu4"
-      }
+      },
+      "coverUrl": "/covers/electro-faithless-insomnia.jpg"
     },
     {
       "id": "electro-robert-miles-children",
@@ -409,7 +420,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "eqHlC6Nrr80"
-      }
+      },
+      "coverUrl": "/covers/electro-robert-miles-children.jpg"
     },
     {
       "id": "electro-darude-sandstorm",
@@ -441,7 +453,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "y6120QOlsfU"
-      }
+      },
+      "coverUrl": "/covers/electro-darude-sandstorm.jpg"
     },
     {
       "id": "electro-tiesto-adagio",
@@ -459,7 +472,7 @@
       "pack": "Electronic & Techno",
       "hints": [
         "Eine moderne Trance-Interpretation des klassischen Werks von Samuel Barber.",
-        "Tiësto gilt als einer der Wegbereiter des modernen EDM-Superstar-Daseins.",
+        "[XXX] gilt als einer der Wegbereiter des modernen EDM-Superstar-Daseins.",
         "Der Track beginnt ruhig und steigert sich in einen gewaltigen Synthesizer-Orkan.",
         "Wurde oft als beste Trance-Aufnahme aller Zeiten bezeichnet.",
         "Völlig ohne Text, nur reine emotionale Energie."
@@ -473,7 +486,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "2EaE0_gQLw0"
-      }
+      },
+      "coverUrl": "/covers/electro-tiesto-adagio.jpg"
     },
     {
       "id": "electro-deadmau5-strobe",
@@ -492,7 +506,7 @@
       "hints": [
         "Einer der am meisten geschätzten Tracks im Progressive House.",
         "Dauert in der Album-Version über 10 Minuten und baut sich extrem langsam auf.",
-        "Der Künstler Deadmau5 ist bekannt für seinen riesigen Mäusekopf-Helm.",
+        "Der Künstler [XXX] ist bekannt für seinen riesigen Mäusekopf-Helm.",
         "Thematisiert (instrumental) die hypnotische Kraft von Club-Beleuchtung.",
         "Gilt unter Fans als sein Meisterwerk."
       ],
@@ -505,7 +519,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "tKi9HiYps"
-      }
+      },
+      "coverUrl": "/covers/electro-deadmau5-strobe.jpg"
     },
     {
       "id": "electro-disclosure-latch",
@@ -522,7 +537,7 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Markierte den Durchbruch sowohl für Disclosure als auch für Sam Smith.",
+        "Markierte den Durchbruch sowohl für [XXX] als auch für Sam [XXX].",
         "Mischt moderne House-Beats mit klassischem Soul-Gesang im Falsett.",
         "Der ungewöhnliche 6/8-Takt verleiht dem Song ein besonderes Swing-Gefühl.",
         "Wurde zu einem der einflussreichsten UK-House-Tracks der 2010er.",
@@ -539,7 +554,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "93ASUImTedo"
-      }
+      },
+      "coverUrl": "/covers/electro-disclosure-latch.jpg"
     },
     {
       "id": "electro-zedd-clarity",
@@ -556,9 +572,9 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Der in Deutschland aufgewachsene Zedd gewann hiermit einen Grammy.",
+        "Der in Deutschland aufgewachsene [XXX] gewann hiermit einen Grammy.",
         "Thematisiert eine komplizierte, fast toxische Beziehung ('If our love is tragedy, why are you my remedy?').",
-        "Bekannt für den glasklaren Sound und die kraftvolle Stimme von Foxes.",
+        "Bekannt für den glasklaren Sound und die kraftvolle Stimme von [XXX].",
         "Ein Meilenstein des emotionalen EDM-Pop.",
         "Refrain: 'Cause you are the piece of me I wish I didn't need!'"
       ],
@@ -573,7 +589,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "IXXxciRUMzE"
-      }
+      },
+      "coverUrl": "/covers/electro-zedd-clarity.jpg"
     },
     {
       "id": "electro-martin-garrix-animals",
@@ -590,7 +607,7 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Machte den damals erst 17-jährigen Garrix zum Weltstar.",
+        "Machte den damals erst 17-jährigen [XXX] zum Weltstar.",
         "Der 'Plonk'-Drop ist eines der bekanntesten Geräusche der EDM-Geschichte.",
         "Thematisiert den animalischen Trieb auf der Tanzfläche.",
         "Wurde zur Hymne der 'Big Room House'-Ära.",
@@ -606,7 +623,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gCYcHz2k5x0"
-      }
+      },
+      "coverUrl": "/covers/electro-martin-garrix-animals.jpg"
     },
     {
       "id": "electro-marshmello-happier",
@@ -623,10 +641,10 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Marshmello tritt immer mit einer weißen, marshmallow-förmigen Maske auf.",
+        "[XXX] tritt immer mit einer weißen, marshmallow-förmigen Maske auf.",
         "Das Musikvideo über ein Mädchen und ihren Hund rührte Millionen zu Tränen.",
         "Thematisiert den schmerzhaften Entschluss, jemanden gehen zu lassen, damit er glücklicher wird.",
-        "Kombiniert Bastilles Indie-Pop-Sound mit modernem EDM.",
+        "Kombiniert [XXX]s Indie-Pop-Sound mit modernem EDM.",
         "Refrain: 'Then only for a minute, I want to change my mind...'"
       ],
       "lyrics": {
@@ -640,7 +658,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "m7Bc3pLyij0"
-      }
+      },
+      "coverUrl": "/covers/electro-marshmello-happier.jpg"
     },
     {
       "id": "electro-kygo-firestone",
@@ -657,7 +676,7 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Kygo gilt als der Pionier des 'Tropical House' Genres.",
+        "[XXX] gilt als der Pionier des 'Tropical House' Genres.",
         "Der charakteristische, flötenartige Synthesizer-Sound ist weltbekannt.",
         "Handelt von einem inneren Feuer und einer tiefen Verbindung.",
         "Der Song verbreitet direkt Urlaubsstimmung.",
@@ -674,7 +693,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "9Sc-ir2UwGU"
-      }
+      },
+      "coverUrl": "/covers/electro-kygo-firestone.jpg"
     },
     {
       "id": "electro-prodigy-firestarter",
@@ -708,7 +728,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "wmin5WkOuPw"
-      }
+      },
+      "coverUrl": "/covers/electro-prodigy-firestarter.jpg"
     },
     {
       "id": "electro-chemical-boygirl",
@@ -729,7 +750,7 @@
         "Der Track ist ein Paradebeispiel für die hypnotische Kraft von Big Beat.",
         "Wurde zu einem festen Bestandteil jeder Clubnacht um die Jahrtausendwende.",
         "Das Video mit den tanzenden Skeletten ist legendär.",
-        "Refrain: 'Hey boy, hey girl! Superstar DJs, here we go!'"
+        "Refrain: 'Hey boy, hey [XXX]! Superstar DJs, here we go!'"
       ],
       "lyrics": {
         "real": [
@@ -742,7 +763,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "tpKCqp9CALQ"
-      }
+      },
+      "coverUrl": "/covers/electro-chemical-boygirl.jpg"
     },
     {
       "id": "electro-fatboy-righthere",
@@ -763,7 +785,7 @@
         "Das Video zeigt die Evolution des Lebens in nur wenigen Minuten.",
         "Die orchestralen Streicher verleihen dem Beat eine epische Dimension.",
         "Ein Inbegriff für die kreative Sample-Kunst von Norman Cook.",
-        "Refrain: 'Right here, right now! Right here, right now!'"
+        "Refrain: '[XXX] [XXX], [XXX] now! [XXX] [XXX], [XXX] now!'"
       ],
       "lyrics": {
         "real": [
@@ -776,7 +798,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ub747pprmJ8"
-      }
+      },
+      "coverUrl": "/covers/electro-fatboy-righthere.jpg"
     },
     {
       "id": "electro-faithless-insomnia",
@@ -810,7 +833,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "P8JEm4d6nRE"
-      }
+      },
+      "coverUrl": "/covers/electro-faithless-insomnia.jpg"
     },
     {
       "id": "electro-darude-sandstorm",
@@ -842,7 +866,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "y6120QOlsfU"
-      }
+      },
+      "coverUrl": "/covers/electro-darude-sandstorm.jpg"
     },
     {
       "id": "electro-robert-miles-children",
@@ -874,7 +899,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "CC5ca6Hsb2Q"
-      }
+      },
+      "coverUrl": "/covers/electro-robert-miles-children.jpg"
     },
     {
       "id": "electro-atb-9pm",
@@ -908,7 +934,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "9hbu9toStfc"
-      }
+      },
+      "coverUrl": "/covers/electro-atb-9pm.jpg"
     },
     {
       "id": "electro-paulvandyk-angel",
@@ -927,7 +954,7 @@
       "hints": [
         "Gilt als einer der einflussreichsten Trance-Tracks aller Zeiten.",
         "Die euphorische Melodie ist ein Inbegriff für die goldene Ära des Trance.",
-        "Paul van Dyk zementierte damit seinen Weltruf als DJ und Produzent.",
+        "[XXX] van Dyk zementierte damit seinen Weltruf als DJ und Produzent.",
         "Gänsehaut-Garantie auf jedem Rave weltweit.",
         "Refrain: (Instrumental)"
       ],
@@ -940,7 +967,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "2wnzgR06or0"
-      }
+      },
+      "coverUrl": "/covers/electro-paulvandyk-angel.jpg"
     },
     {
       "id": "electro-tiesto-adagio",
@@ -958,9 +986,9 @@
       "pack": "Electronic & Techno",
       "hints": [
         "Eine Trance-Interpretation des klassischen Werks von Samuel Barber.",
-        "Tiëstos Version wurde zu einer der bekanntesten Club-Hymnen der 2000er.",
+        "[XXX]s Version wurde zu einer der bekanntesten Club-Hymnen der 2000er.",
         "Der gewaltige Aufbau führt zu einem der intensivsten Drops der Elektronik-Geschichte.",
-        "Ein Symbol für Tiëstos Status als 'Godfather of Trance'.",
+        "Ein Symbol für [XXX]s Status als 'Godfather of Trance'.",
         "Refrain: (Instrumental)"
       ],
       "lyrics": {
@@ -972,7 +1000,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "2EaE0_Y"
-      }
+      },
+      "coverUrl": "/covers/electro-tiesto-adagio.jpg"
     },
     {
       "id": "electro-deadmau5-strobe",
@@ -1004,7 +1033,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "tKi9HIp"
-      }
+      },
+      "coverUrl": "/covers/electro-deadmau5-strobe.jpg"
     },
     {
       "id": "electro-skrillex-scary",
@@ -1038,7 +1068,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "WSeNSzJ2-Jw"
-      }
+      },
+      "coverUrl": "/covers/electro-skrillex-scary.jpg"
     },
     {
       "id": "electro-shm-worry-child",
@@ -1057,9 +1088,9 @@
       "hints": [
         "Die Abschieds-Single der Gruppe (vor ihrer langen Pause).",
         "Thematisiert nostalgische Erinnerungen an die Kindheit und väterlichen Rat.",
-        "John Martins kraftvoller Gesang über dem euphorischen EDM-Beat.",
+        "[XXX] [XXX]s kraftvoller Gesang über dem euphorischen EDM-Beat.",
         "Wurde zu einer der größten Hymnen der modernen EDM-Ära.",
-        "Refrain: 'Don't you worry, don't you worry, child! See heaven's got a plan for you!'"
+        "Refrain: '[XXX] you [XXX], [XXX] you [XXX], [XXX]! See heaven's got a plan for you!'"
       ],
       "lyrics": {
         "real": [
@@ -1072,7 +1103,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "1y6smkh6c-0"
-      }
+      },
+      "coverUrl": "/covers/electro-shm-worry-child.jpg"
     },
     {
       "id": "electro-zedd-clarity",
@@ -1089,8 +1121,8 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Zedd ist ein deutscher Produzent, der in den USA zum Superstar wurde.",
-        "Foxes' verletzlicher Gesang bildet den Kern dieser emotionalen Club-Hymne.",
+        "[XXX] ist ein deutscher Produzent, der in den USA zum Superstar wurde.",
+        "[XXX]' verletzlicher Gesang bildet den Kern dieser emotionalen Club-Hymne.",
         "Thematisiert die verwirrende Anziehungskraft einer schwierigen Beziehung.",
         "Besticht durch die glasklare Produktion und den euphorischen Refrain.",
         "Refrain: 'If our love is tragedy, why are you my remedy?'"
@@ -1106,7 +1138,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "IxxstCcZGE"
-      }
+      },
+      "coverUrl": "/covers/electro-zedd-clarity.jpg"
     },
     {
       "id": "electro-disclosure-latch",
@@ -1123,9 +1156,9 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Der Song, der Sam Smith weltweit bekannt machte.",
-        "Disclosure kombinierten hier modernen UK Garage mit Soul-Gesang.",
-        "Besticht durch den ungewöhnlichen Takt und Sam Smiths Falsett-Stimme.",
+        "Der Song, der Sam [XXX] weltweit bekannt machte.",
+        "[XXX] kombinierten hier modernen UK Garage mit Soul-Gesang.",
+        "Besticht durch den ungewöhnlichen Takt und Sam [XXX]s Falsett-Stimme.",
         "Ein Inbegriff für den Deep-House-Revival der frühen 2010er.",
         "Refrain: 'Now I've got you in my space, I won't let go of you!'"
       ],
@@ -1140,7 +1173,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "93ASuAgK"
-      }
+      },
+      "coverUrl": "/covers/electro-disclosure-latch.jpg"
     },
     {
       "id": "electro-kygo-firestone",
@@ -1157,11 +1191,11 @@
       ],
       "pack": "Electronic & Techno",
       "hints": [
-        "Kygos großer Durchbruch und der Inbegriff des 'Tropical House' Sounds.",
+        "[XXX]s großer Durchbruch und der Inbegriff des 'Tropical House' Sounds.",
         "Besticht durch die sanften Panflöten-Synthesizer und den entspannten Beat.",
-        "Conrad Sewells gefühlvoller Gesang passt perfekt zur melancholischen Grundstimmung.",
+        "[XXX] [XXX]s gefühlvoller Gesang passt perfekt zur melancholischen Grundstimmung.",
         "Wurde zum Sommerhit des Jahres 2015.",
-        "Refrain: 'Our hearts are like firestones! And when they strike, we feel the love!'"
+        "Refrain: 'Our hearts are like [XXX]s! And when they strike, we feel the love!'"
       ],
       "lyrics": {
         "real": [
@@ -1174,7 +1208,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "9Sc-ir"
-      }
+      },
+      "coverUrl": "/covers/electro-kygo-firestone.jpg"
     }
   ]
 }

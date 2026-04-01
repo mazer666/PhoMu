@@ -47,6 +47,19 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
     }
   }, []);
 
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    swipeStartX.current = e.clientX;
+  }, []);
+
+  const handleMouseUp = useCallback((e: React.MouseEvent) => {
+    if (swipeStartX.current === null) return;
+    const dx = e.clientX - swipeStartX.current;
+    swipeStartX.current = null;
+    if (Math.abs(dx) >= SWIPE_THRESHOLD) {
+      setVideoRevealed(v => !v);
+    }
+  }, []);
+
   const [activeDomain, setActiveDomain] = useState<'music.youtube.com' | 'www.youtube.com'>(
     preferredPlayer === 'music' ? 'music.youtube.com' : 'www.youtube.com'
   );
@@ -65,6 +78,20 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
       firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
     }
   }, []);
+
+  const handleError = useCallback(() => {
+    if (activeDomain === 'music.youtube.com') {
+      console.log('🔄 Fallback to Standard YouTube...');
+      setActiveDomain('www.youtube.com');
+      setPlayerState('fallback');
+    } else {
+      setPlayerState('error');
+      // Auto-Skip for Random Draws after delay
+      if (currentSongSource === 'random') {
+        setTimeout(() => skipBrokenSong(), 3000);
+      }
+    }
+  }, [activeDomain, currentSongSource, skipBrokenSong]);
 
   // 2. Player Initialisieren / Re-Initialisieren bei Domain-Wechsel
   useEffect(() => {
@@ -136,21 +163,8 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
         try { playerRef.current.destroy(); } catch(e) {}
       }
     };
-  }, [videoId, activeDomain]); // Re-run when domain changes (fallback)
+  }, [videoId, activeDomain, muted, startSeconds, endSeconds, handleError, playerState]); // Re-run when domain changes (fallback)
 
-  const handleError = () => {
-    if (activeDomain === 'music.youtube.com') {
-      console.log('🔄 Fallback to Standard YouTube...');
-      setActiveDomain('www.youtube.com');
-      setPlayerState('fallback');
-    } else {
-      setPlayerState('error');
-      // Auto-Skip for Random Draws after delay
-      if (currentSongSource === 'random') {
-        setTimeout(() => skipBrokenSong(), 3000);
-      }
-    }
-  };
 
   if (!videoId) {
     return <div className="h-40 flex items-center justify-center opacity-30 border rounded-2xl italic">Kein Video verfügbar</div>;
@@ -168,6 +182,8 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
             style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', background: 'rgba(0,0,0,0.4)' }}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
           >
             <span className="text-3xl">🎵</span>
             <div className="flex items-center gap-2 opacity-60">
@@ -182,6 +198,8 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
             className="absolute inset-0 z-20 flex flex-col items-center justify-end pb-3 select-none"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
           >
             <p className="text-[9px] font-black uppercase tracking-widest opacity-40 bg-black/40 px-3 py-1 rounded-full">
               Swipe zum Verbergen

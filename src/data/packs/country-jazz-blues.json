@@ -23,8 +23,8 @@
         "Einer der bekanntesten Songs des 'Man in Black'.",
         "Besticht durch den markanten 'Boom-Chicka-Boom'-Rhythmus.",
         "Der Text ist ein Treueschwur an seine erste Frau Vivian.",
-        "Johnny Cash summte zu Beginn jeder Strophe, um den richtigen Ton zu finden.",
-        "Refrain: 'Because you're mine, I walk the line!'"
+        "[XXX] [XXX] summte zu Beginn jeder Strophe, um den richtigen Ton zu finden.",
+        "Refrain: 'Because you're mine, I [XXX] the [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -37,7 +37,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Lq0fUa0_8"
-      }
+      },
+      "coverUrl": "/covers/country-johnny-cash-walk-the-line.jpg"
     },
     {
       "id": "country-dolly-parton-jolene",
@@ -55,10 +56,10 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Ein verzweifeltes Flehen an eine Frau mit 'flammend rotem Haar'.",
-        "Dolly Parton schrieb diesen Song am selben Tag wie 'I Will Always Love You'.",
+        "[XXX] [XXX] schrieb diesen Song am selben Tag wie 'I Will Always Love You'.",
         "Bekannt für das schnelle, virtuose Gitarren-Picking.",
         "Thematisiert die Angst, den Ehemann an eine schönere Frau zu verlieren.",
-        "Refrain: 'Jolene, Jolene, Jolene, Jolene! I'm begging of you please don't take my man!'"
+        "Refrain: '[XXX], [XXX], [XXX], [XXX]! I'm begging of you please don't take my man!'"
       ],
       "lyrics": {
         "real": [
@@ -71,7 +72,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Lq0fUa0_8"
-      }
+      },
+      "coverUrl": "/covers/country-dolly-parton-jolene.jpg"
     },
     {
       "id": "jazz-louis-armstrong-wonderful",
@@ -89,10 +91,10 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Eine Hymne auf den Frieden und die Schönheit der Natur.",
-        "Armstrongs raue, herzliche Stimme macht das Lied unverwechselbar.",
+        "[XXX]s raue, herzliche Stimme macht das Lied unverwechselbar.",
         "Wurde erst Jahre nach Veröffentlichung durch den Film 'Good Morning, Vietnam' ein Riesen-Hit.",
         "Ein zeitloser Evergreen, der oft bei feierlichen Anlässen gespielt wird.",
-        "Refrain: 'And I think to myself... what a wonderful world!'"
+        "Refrain: 'And I think to myself... [XXX] a [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -105,7 +107,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "rBrd_3VMC3c"
-      }
+      },
+      "coverUrl": "/covers/jazz-louis-armstrong-wonderful.jpg"
     },
     {
       "id": "jazz-ella-fitzgerald-summertime",
@@ -123,10 +126,10 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Stammt ursprünglich aus der Oper 'Porgy and Bess' von George Gershwin.",
-        "Ella Fitzgeralds Version gilt als eine der maßgeblichen Interpretationen.",
+        "[XXX] [XXX]s Version gilt als eine der maßgeblichen Interpretationen.",
         "Thematisiert die drückende Hitze und die Ruhe eines Sommertages im Süden.",
         "Die Melodie ist hypnotisch und wiegend aufgebaut.",
-        "Refrain: 'Summertime, and the livin' is easy...'"
+        "Refrain: '[XXX], and the livin' is easy...'"
       ],
       "lyrics": {
         "real": [
@@ -139,7 +142,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "L5xafQXg1yI"
-      }
+      },
+      "coverUrl": "/covers/jazz-ella-fitzgerald-summertime.jpg"
     },
     {
       "id": "blues-bb-king-thrill-is-gone",
@@ -156,11 +160,11 @@
       ],
       "pack": "Country, Jazz & Blues",
       "hints": [
-        "B.B. King ist bekannt für seine Gitarre, die er 'Lucille' nannte.",
+        "B.B. [XXX] ist bekannt für seine Gitarre, die er 'Lucille' nannte.",
         "Der Song markierte seinen Durchbruch im Mainstream-Markt.",
         "Handelt vom schmerzhaften Ende einer leidenschaftlichen Liebe.",
         "Sein gefühlvolles Gitarrenspiel setzt hier Maßstäbe im Blues.",
-        "Refrain: 'The thrill is gone, the thrill is gone away for good!'"
+        "Refrain: 'The [XXX] is [XXX], the [XXX] is [XXX] away for good!'"
       ],
       "lyrics": {
         "real": [
@@ -173,7 +177,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "SgXSomPE_FY"
-      }
+      },
+      "coverUrl": "/covers/blues-bb-king-thrill-is-gone.jpg"
     },
     {
       "id": "jazz-ray-charles-georgia",
@@ -190,11 +195,11 @@
       ],
       "pack": "Country, Jazz & Blues",
       "hints": [
-        "Wurde 1979 zur offiziellen Hymne des US-Bundesstaates Georgia ernannt.",
-        "Ray Charles kombiniert hier meisterhaft Jazz-, Soul- und Gospel-Einflüsse.",
+        "Wurde 1979 zur offiziellen Hymne des US-Bundesstaates [XXX] ernannt.",
+        "Ray [XXX] kombiniert hier meisterhaft Jazz-, Soul- und Gospel-Einflüsse.",
         "Thematisiert die tiefe Sehnsucht nach der Heimat und einer alten Liebe.",
         "Seine gefühlvolle Klavierbegleitung und der volle Orchestersound sind legendär.",
-        "Refrain: 'Georgia, Georgia, the whole day through, just an old sweet song keeps Georgia on my mind!'"
+        "Refrain: '[XXX], [XXX], the whole day through, just an old sweet song keeps [XXX] on my [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -207,7 +212,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "fRgWBN8yt_E"
-      }
+      },
+      "coverUrl": "/covers/jazz-ray-charles-georgia.jpg"
     },
     {
       "id": "blues-muddy-waters-hoochie",
@@ -226,9 +232,9 @@
       "hints": [
         "Ein Inbegriff des elektrischen Chicago Blues.",
         "Der Song handelt von Aberglaube, Voodoo und männlichem Selbstbewusstsein.",
-        "Muddy Waters gilt als einer der wichtigsten Einflüsse auf den modernen Rock'n'Roll.",
+        "[XXX] [XXX] gilt als einer der wichtigsten Einflüsse auf den modernen Rock'n'Roll.",
         "Bekannt für das markante Stop-and-Go Riff der Mundharmonika und Gitarre.",
-        "Refrain: 'I'm a hoochie coochie man, the whole world knows I'm here!'"
+        "Refrain: 'I'm a [XXX] [XXX] man, the whole world knows I'm here!'"
       ],
       "lyrics": {
         "real": [
@@ -241,7 +247,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "e_l6A7krjrQ"
-      }
+      },
+      "coverUrl": "/covers/blues-muddy-waters-hoochie.jpg"
     },
     {
       "id": "jazz-nina-simone-feeling-good",
@@ -259,10 +266,10 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Stammt ursprünglich aus dem Musical 'The Roar of the Greasepaint – The Smell of the Crowd'.",
-        "Nina Simones Version gilt als die kraftvollste und bekannteste Interpretation.",
+        "[XXX] [XXX]s Version gilt als die kraftvollste und bekannteste Interpretation.",
         "Thematisiert den Neuanfang und die Befreiung der Seele.",
-        "Die Kombination aus Simones stolzem Gesang und den mächtigen Bläsern ist grandios.",
-        "Refrain: 'It's a new dawn, it's a new day, it's a new life for me... and I'm feeling good!'"
+        "Die Kombination aus [XXX]s stolzem Gesang und den mächtigen Bläsern ist grandios.",
+        "Refrain: 'It's a new dawn, it's a new day, it's a new life for me... and I'm [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -275,7 +282,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "D5Y11hwjMNs"
-      }
+      },
+      "coverUrl": "/covers/jazz-nina-simone-feeling-good.jpg"
     },
     {
       "id": "jazz-miles-davis-so-what",
@@ -294,9 +302,9 @@
       "hints": [
         "Eröffnungstrack des meistverkauften Jazzalbums aller Zeiten, 'Kind of Blue'.",
         "Ein Meilenstein des modalen Jazz, der völlig neue Ausdrucksmöglichkeiten schuf.",
-        "Besticht durch den entspannten Basslauf zu Beginn und die kühle Trompete von Miles.",
+        "Besticht durch den entspannten Basslauf zu Beginn und die kühle Trompete von [XXX].",
         "Völlig ohne Text (Instrumental), lebt aber von der Improvisationskunst.",
-        "Der 'So What'-Ruf des Pianos am Anfang ist ein Klassiker der Jazzgeschichte."
+        "Der 'So [XXX]'-Ruf des Pianos am Anfang ist ein Klassiker der Jazzgeschichte."
       ],
       "lyrics": {
         "real": [
@@ -307,7 +315,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ylXk1LBvIqU"
-      }
+      },
+      "coverUrl": "/covers/jazz-miles-davis-so-what.jpg"
     },
     {
       "id": "country-shania-twain-woman",
@@ -328,7 +337,7 @@
         "Wurde zu einer Hymne der weiblichen Selbstbestimmung und Freude.",
         "Das Musikvideo mit der Band im Hintergrund ist eine Hommage an Robert Palmers 'Addicted to Love'.",
         "Besticht durch das markante Gitarren-Intro und den energischen Refrain.",
-        "Refrain: 'Let's go girls! Man! I feel like a woman!'"
+        "Refrain: 'Let's go girls! Man! I [XXX] [XXX] a [XXX]'"
       ],
       "lyrics": {
         "real": [
@@ -341,7 +350,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ZJL4UGSbeFg"
-      }
+      },
+      "coverUrl": "/covers/country-shania-twain-woman.jpg"
     },
     {
       "id": "country-john-denver-country-roads",
@@ -359,10 +369,10 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Eine Hymne auf den US-Bundesststaat West Virginia.",
-        "Wurde zu einem der bekanntesten und meistgesungenen Country-Songs aller Zeiten.",
+        "Wurde zu einem der bekanntesten und meistgesungenen [XXX]-Songs aller Zeiten.",
         "Der Text beschreibt die Sehnsucht nach Heimat und die Schönheit der Blue Ridge Mountains.",
-        "John Denver schrieb den Song gemeinsam mit Bill und Taffy Danoff.",
-        "Refrain: 'Country roads, take me home, to the place I belong!'"
+        "[XXX] [XXX] schrieb den Song gemeinsam mit Bill und Taffy Danoff.",
+        "Refrain: '[XXX] [XXX], [XXX] me [XXX], to the place I belong!'"
       ],
       "lyrics": {
         "real": [
@@ -375,7 +385,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "1vrEljMfXYo"
-      }
+      },
+      "coverUrl": "/covers/country-john-denver-country-roads.jpg"
     },
     {
       "id": "country-willie-nelson-road-again",
@@ -393,10 +404,10 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Thematisiert das Leben auf Tournee und die Liebe zum Reisen.",
-        "Willie Nelson schrieb den Text spontan auf eine Kotztüte während eines Fluges.",
+        "[XXX] [XXX] schrieb den Text spontan auf eine Kotztüte während eines Fluges.",
         "Besticht durch den federnden 'Shuffle'-Rhythmus.",
         "Gewann den Grammy für den besten Country-Song 1981.",
-        "Refrain: 'On the road again, just can't wait to get on the road again!'"
+        "Refrain: 'On the [XXX] [XXX], just can't wait to get on the [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -409,7 +420,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "dBN86y30Ufc"
-      }
+      },
+      "coverUrl": "/covers/country-willie-nelson-road-again.jpg"
     },
     {
       "id": "country-kenny-rogers-gambler",
@@ -429,7 +441,7 @@
         "Erzählt die Geschichte einer Begegnung mit einem alten Spieler in einem Zug.",
         "Der Text enthält lebensweise Ratschläge, die auf das Leben und das Pokerspiel übertragen werden können.",
         "War ein riesiger Crossover-Hit in den Country- und Pop-Charts.",
-        "Markierte den endgültigen Durchbruch für Kenny Rogers.",
+        "Markierte den endgültigen Durchbruch für [XXX] [XXX].",
         "Refrain: 'You got to know when to hold 'em, know when to fold 'em!'"
       ],
       "lyrics": {
@@ -443,7 +455,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "7hx4gdlfamo"
-      }
+      },
+      "coverUrl": "/covers/country-kenny-rogers-gambler.jpg"
     },
     {
       "id": "blues-etta-james-at-last",
@@ -461,10 +474,10 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Einer der romantischsten Songs aller Zeiten, oft auf Hochzeiten gespielt.",
-        "Etta James' kraftvolle, seelenvolle Stimme macht das Lied unvergesslich.",
+        "[XXX] [XXX]' kraftvolle, seelenvolle Stimme macht das Lied unvergesslich.",
         "Das orchestrale Arrangement verleiht dem Song eine zeitlose Eleganz.",
         "Thematisiert das Ende einer langen Suche nach der großen Liebe.",
-        "Refrain: 'At last, my love has come along!'"
+        "Refrain: 'At [XXX], my love has come along!'"
       ],
       "lyrics": {
         "real": [
@@ -477,7 +490,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "S-cbOl96RFM"
-      }
+      },
+      "coverUrl": "/covers/blues-etta-james-at-last.jpg"
     },
     {
       "id": "jazz-billie-holiday-fruit",
@@ -496,7 +510,7 @@
       "hints": [
         "Ein erschütternder Protestsong gegen den Rassismus und die Lynchjustiz in den USA.",
         "Die 'seltsamen Früchte' im Titel sind eine Metapher für gelynchte Schwarze an Bäumen.",
-        "Billie Holiday riskierte mit der Aufführung des Songs ihre Karriere und Sicherheit.",
+        "[XXX] [XXX] riskierte mit der Aufführung des Songs ihre Karriere und Sicherheit.",
         "Wurde 1999 vom Time Magazine zum 'Song des Jahrhunderts' gekürt.",
         "Ein extrem wichtiges und bedrückendes Dokument der Zeitgeschichte."
       ],
@@ -511,7 +525,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Web007rzSOI"
-      }
+      },
+      "coverUrl": "/covers/jazz-billie-holiday-fruit.jpg"
     },
     {
       "id": "jazz-nat-king-cole-love",
@@ -529,7 +544,7 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Ein charmanter, eleganter Song, der das Wort 'Love' buchstabiert.",
-        "Nat King Coles sanfte 'Bariton'-Stimme ist das Markenzeichen des Titels.",
+        "Nat [XXX] [XXX]s sanfte 'Bariton'-Stimme ist das Markenzeichen des Titels.",
         "Wurde in vielen Filmen und Werbespots verwendet.",
         "Vermittelt pure Lebensfreude und romantische Leichtigkeit.",
         "Refrain: 'L is for the way you look at me!'"
@@ -545,7 +560,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ir_LJ5dvS2w"
-      }
+      },
+      "coverUrl": "/covers/jazz-nat-king-cole-love.jpg"
     },
     {
       "id": "blues-robert-johnson-crossroad",
@@ -562,11 +578,11 @@
       ],
       "pack": "Country, Jazz & Blues",
       "hints": [
-        "Die Legende besagt, Robert Johnson habe an einer Kreuzung seine Seele dem Teufel verkauft, um Gitarre spielen zu lernen.",
-        "Ein Inbegriff des rohen, akustischen Delta Blues.",
+        "Die Legende besagt, [XXX] [XXX] habe an einer Kreuzung seine Seele dem Teufel verkauft, um Gitarre spielen zu lernen.",
+        "Ein Inbegriff des rohen, akustischen Delta [XXX].",
         "Beeinflusste Generationen von Rockgitarristen (Eric Clapton, Keith Richards).",
-        "Die Aufnahme besticht durch Johnsons klagenden Gesang und sein fesselndes Spiel.",
-        "Refrain: 'I went to the crossroad, fell down on my knees!'"
+        "Die Aufnahme besticht durch [XXX]s klagenden Gesang und sein fesselndes Spiel.",
+        "Refrain: 'I went to the [XXX][XXX], fell down on my knees!'"
       ],
       "lyrics": {
         "real": [
@@ -579,7 +595,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "GsB_cGdgPTo"
-      }
+      },
+      "coverUrl": "/covers/blues-robert-johnson-crossroad.jpg"
     },
     {
       "id": "blues-howlin-wolf-smokestack",
@@ -596,7 +613,7 @@
       ],
       "pack": "Country, Jazz & Blues",
       "hints": [
-        "Bekannt für den markanten, fast geisterhaften Heul-Gesang von Howlin' Wolf.",
+        "Bekannt für den markanten, fast geisterhaften Heul-Gesang von [XXX] [XXX].",
         "Basiert auf einem hypnotischen, eintönigen Gitarren-Riff.",
         "Thematisiert das Gefühl von Rastlosigkeit und Sehnsucht.",
         "Ein Klassiker des Chess Records Labels aus Chicago.",
@@ -613,7 +630,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "O7D-1RG-VRk"
-      }
+      },
+      "coverUrl": "/covers/blues-howlin-wolf-smokestack.jpg"
     },
     {
       "id": "jazz-norah-jones-dont-know-why",
@@ -630,11 +648,11 @@
       ],
       "pack": "Country, Jazz & Blues",
       "hints": [
-        "Markierte den globalen Durchbruch von Norah Jones.",
+        "Markierte den globalen Durchbruch von [XXX] [XXX].",
         "Gewann drei Grammys, darunter Record of the Year und Song of the Year.",
-        "Besticht durch den sanften Klaviersound und Norahs intime Stimme.",
+        "Besticht durch den sanften Klaviersound und [XXX]s intime Stimme.",
         "Ein Paradebeispiel für modernen, pop-orientierten Jazz.",
-        "Refrain: 'I don't know why I didn't come!'"
+        "Refrain: 'I [XXX] [XXX] why I didn't come!'"
       ],
       "lyrics": {
         "real": [
@@ -647,7 +665,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "tO4dxvguQDk"
-      }
+      },
+      "coverUrl": "/covers/jazz-norah-jones-dont-know-why.jpg"
     },
     {
       "id": "country-garth-brooks-friends",
@@ -668,7 +687,7 @@
         "Handelt von einem Mann, der uneingeladen auf der Hochzeit seiner Ex-Freundin auftaucht.",
         "Wurde zu einer der bekanntesten Hymnen der modernen Country-Musik.",
         "Besitzt einen gewaltigen Mitsing-Refrain.",
-        "Refrain: 'I got friends in low places, where the whiskey drowns and the beer chases...'"
+        "Refrain: 'I got [XXX] in low [XXX], where the whiskey drowns and the beer chases...'"
       ],
       "lyrics": {
         "real": [
@@ -681,7 +700,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "mvCgSqPZ4EM"
-      }
+      },
+      "coverUrl": "/covers/country-garth-brooks-friends.jpg"
     },
     {
       "id": "jazz-louis-jordan-boogie",
@@ -701,8 +721,8 @@
         "Einer der größten Hits der Jump-Blues-Ära nach dem Zweiten Weltkrieg.",
         "Kombiniert Blues-Strukturen mit schnellem Jazz-Swing.",
         "Thematisiert die Heimkehr eines Soldaten mit dem Zug.",
-        "Louis Jordan gilt als einer der wichtigsten Vorläufer des Rock'n'Roll.",
-        "Refrain: 'Choo choo, choo choo ch'boogie!'"
+        "[XXX] [XXX] gilt als einer der wichtigsten Vorläufer des Rock'n'Roll.",
+        "Refrain: '[XXX] [XXX], [XXX] [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -715,7 +735,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "S-cbOl96RFM"
-      }
+      },
+      "coverUrl": "/covers/jazz-louis-jordan-boogie.jpg"
     },
     {
       "id": "jazz-cab-calloway-minnie",
@@ -733,8 +754,8 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Berühmt für den 'Hi-De-Hi-De-Ho' Call-and-Response-Gesang.",
-        "Cab Calloway war einer der schillerndsten Entertainer der Cotton Club Ära.",
-        "Der Song handelt von Minnie und ihrem wilden Leben im New Yorker Untergrund.",
+        "Cab [XXX] war einer der schillerndsten Entertainer der Cotton Club Ära.",
+        "Der Song handelt von [XXX] und ihrem wilden Leben im New Yorker Untergrund.",
         "Erreichte durch den Film 'The Blues Brothers' in den 80ern erneut Kultstatus.",
         "Ein absolutes Fest für das Publikum zum Mitmachen."
       ],
@@ -749,7 +770,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "8mq4UT4VnbE"
-      }
+      },
+      "coverUrl": "/covers/jazz-cab-calloway-minnie.jpg"
     },
     {
       "id": "country-carter-family-circle",
@@ -767,10 +789,10 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Einer der einflussreichsten Songs in der Geschichte der Country-Musik.",
-        "Besticht durch den typischen 'Three-Part Harmony' Gesang der Carters.",
+        "Besticht durch den typischen 'Three-Part Harmony' Gesang der [XXX]s.",
         "Thematisiert den Abschied von einer geliebten Person und die Hoffnung auf ein Wiedersehen im Jenseits.",
         "Wurde von unzähligen Künstlern (z.B. Johnny Cash) gecovert.",
-        "Refrain: 'Will the circle be unbroken, by and by, Lord, by and by?'"
+        "Refrain: 'Will the [XXX] be [XXX], by and by, Lord, by and by?'"
       ],
       "lyrics": {
         "real": [
@@ -783,7 +805,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ZJL4UGSbeFg"
-      }
+      },
+      "coverUrl": "/covers/country-carter-family-circle.jpg"
     },
     {
       "id": "country-patsy-cline-crazy",
@@ -801,10 +824,10 @@
       "pack": "Country, Jazz & Blues",
       "hints": [
         "Geschrieben von dem damals noch unbekannten Willie Nelson.",
-        "Patsy Clines glasklare, emotionale Stimme ist das Herzstück des Songs.",
+        "[XXX] [XXX]s glasklare, emotionale Stimme ist das Herzstück des Songs.",
         "Gilt als einer der am häufigsten in Jukeboxen gespielten Songs aller Zeiten.",
         "Handelt von der Erkenntnis, dass man aus Liebe unvernünftige Dinge tut.",
-        "Refrain: 'I'm crazy for feelin' so lonely... crazy for feelin' so blue!'"
+        "Refrain: 'I'm [XXX] for feelin' so lonely... [XXX] for feelin' so blue!'"
       ],
       "lyrics": {
         "real": [
@@ -817,7 +840,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "YWKeuYcDAoo"
-      }
+      },
+      "coverUrl": "/covers/country-patsy-cline-crazy.jpg"
     },
     {
       "id": "blues-robert-cray-smoking-gun",
@@ -834,11 +858,11 @@
       ],
       "pack": "Country, Jazz & Blues",
       "hints": [
-        "Robert Cray modernisierte den Blues in den 80er Jahren mit seinem 'Clean' Gitarrensound.",
+        "[XXX] [XXX] modernisierte den Blues in den 80er Jahren mit seinem 'Clean' Gitarrensound.",
         "Der Song handelt von Eifersucht und einem vermeintlichen Betrug.",
         "War ein seltener Blues-Hit in den Billboard Pop-Charts.",
         "Besticht durch sein knackiges, präzises Gitarrenspiel.",
-        "Refrain: 'I'm standing here with a smoking gun!'"
+        "Refrain: 'I'm standing here with a [XXX] gun!'"
       ],
       "lyrics": {
         "real": [
@@ -851,7 +875,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "mvCgSqPZ4EM"
-      }
+      },
+      "coverUrl": "/covers/blues-robert-cray-smoking-gun.jpg"
     }
   ]
 }

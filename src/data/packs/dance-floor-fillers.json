@@ -21,10 +21,10 @@
       "pack": "Dance Floor Fillers",
       "hints": [
         "Einer der erfolgreichsten Eurodance-Songs der 90er Jahre, produziert in Deutschland.",
-        "Der Rap-Teil enthält die (berühmt-berüchtigte) Zeile: 'I'm serious as cancer when I say rhythm is a dancer'.",
+        "Der Rap-Teil enthält die (berühmt-berüchtigte) Zeile: 'I'm serious as cancer when I say [XXX] is a [XXX]'.",
         "Der Song basiert auf einem Sample von 'Automan' von Newcleus.",
         "Das Video spielt in einem futuristischen Space-Setting mit viel Nebel.",
-        "Refrain: 'Rhythm is a dancer, it's a soul's companion...'"
+        "Refrain: '[XXX] is a [XXX], it's a soul's companion...'"
       ],
       "lyrics": {
         "real": [
@@ -37,7 +37,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "KlyXNRrsk4A"
-      }
+      },
+      "coverUrl": "/covers/dance-snap-rhythm-is-a-dancer.jpg"
     },
     {
       "id": "dance-dr-alban-its-my-life",
@@ -56,7 +57,7 @@
       "hints": [
         "Gesungen von einem gelernten Zahnarzt aus Schweden (mit nigerianischen Wurzeln).",
         "Der Song ruft dazu auf, sein eigenes Leben zu leben und sich nicht reinreden zu lassen.",
-        "Markanter Refrain mit der Zeile 'It's my life, take it or leave it'.",
+        "Markanter Refrain mit der Zeile 'It's my [XXX], take it or leave it'.",
         "Wurde in einer berühmten Tampon-Werbung in Deutschland verwendet.",
         "Refrain: 'Stop bugging me, stop bothering me, stop bugging me, stop forcing me!'"
       ],
@@ -71,7 +72,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "oW0VovnyjPY"
-      }
+      },
+      "coverUrl": "/covers/dance-dr-alban-its-my-life.jpg"
     },
     {
       "id": "dance-haddaway-what-is-love",
@@ -91,7 +93,7 @@
         "Unsterblich geworden durch den 'Night at the Roxbury'-Sketch bei SNL (mit dem seitlichen Kopf-Nicken).",
         "Der Sänger stammt aus Trinidad und Tobago, startete seine Karriere aber in Köln.",
         "Der Song war ein Nummer-1-Hit in fast ganz Europa.",
-        "Refrain: 'What is love? Baby don't hurt me, don't hurt me, no more.'",
+        "Refrain: '[XXX] is [XXX]? Baby don't hurt me, don't hurt me, no more.'",
         "Wurde Jahre später durch Internet-Memes erneut zum Kult."
       ],
       "lyrics": {
@@ -105,7 +107,8 @@
       "isOne_hit_wonder": true,
       "links": {
         "youtube": "HEXWRTEbj1I"
-      }
+      },
+      "coverUrl": "/covers/dance-haddaway-what-is-love.jpg"
     },
     {
       "id": "dance-culture-beat-mr-vain",
@@ -126,7 +129,7 @@
         "Thematisiert Eitelkeit und Selbstverliebtheit auf der Tanzfläche.",
         "Der Song hat ein sehr schnelles Tempo und einen treibenden Bass.",
         "War 1993 die erfolgreichste Single in Europa.",
-        "Refrain: 'Call him Mr. Vain, call him Mr. Wrong, call him Mr. Insane!'"
+        "Refrain: 'Call him Mr. [XXX], call him Mr. Wrong, call him Mr. Insane!'"
       ],
       "lyrics": {
         "real": [
@@ -139,7 +142,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "ZMtf_ouMTHw"
-      }
+      },
+      "coverUrl": "/covers/dance-culture-beat-mr-vain.jpg"
     },
     {
       "id": "dance-corona-rhythm-of-the-night",
@@ -159,7 +163,7 @@
         "Ein Klassiker des italienischen Eurodance-Booms.",
         "Die Sängerin im Video (Olga de Souza) lieh nur ihr Gesicht, die Stimme stammte von Jenny B.",
         "Wurde oft missverstanden als 'This is the Reebok or the Nike'.",
-        "Refrain: 'This is the rhythm of the night, the night, oh yeah.'",
+        "Refrain: 'This is the [XXX] of the [XXX], the [XXX], oh yeah.'",
         "Erreichte Jahre später durch den Film 'The Last Workshop' und Memes erneut Popularität."
       ],
       "lyrics": {
@@ -173,7 +177,8 @@
       "isOne_hit_wonder": true,
       "links": {
         "youtube": "OnT58cIJSpw"
-      }
+      },
+      "coverUrl": "/covers/dance-corona-rhythm-of-the-night.jpg"
     },
     {
       "id": "dance-la-bouche-be-my-lover",
@@ -194,7 +199,7 @@
         "Die Sängerin Melanie Thornton hatte eine der stärksten Stimmen des Genres.",
         "Ikonischer Beginn mit 'La da da dee da da da da...'.",
         "War ein riesiger Charterfolg in den USA und Europa.",
-        "Refrain: 'Be my lover, wanna be my lover, go and be my lover!'"
+        "Refrain: 'Be my [XXX], wanna be my [XXX], go and be my [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -207,7 +212,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "ViP87WipSm0"
-      }
+      },
+      "coverUrl": "/covers/dance-la-bouche-be-my-lover.jpg"
     },
     {
       "id": "dance-scatman-john-scatman",
@@ -228,7 +234,7 @@
         "Der Song vermischt Scat-Gesang mit Eurodance-Beats.",
         "Thematisiert den Umgang mit Stottern und die Überwindung von Hindernissen.",
         "Wurde im Alter von 52 Jahren zum Weltstar.",
-        "Refrain: 'I'm the Scatman! Ski-ba-bop-ba-dop-bop!'"
+        "Refrain: 'I'm the [XXX]! Ski-ba-bop-ba-dop-bop!'"
       ],
       "lyrics": {
         "real": [
@@ -241,7 +247,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "Hy8kmNEo1i8"
-      }
+      },
+      "coverUrl": "/covers/dance-scatman-john-scatman.jpg"
     },
     {
       "id": "dance-gala-freed-from-desire",
@@ -259,10 +266,10 @@
       "pack": "Dance Floor Fillers",
       "hints": [
         "Wurde Jahrzehnte später zur Hymne in Fußball- und Dartstadien ('Will Grigg's on fire').",
-        "Die Sängerin Gala stammt aus Italien und schrieb den Song über buddhistische Themen.",
+        "Die Sängerin [XXX] stammt aus Italien und schrieb den Song über buddhistische Themen.",
         "Der eingängige 'Na-na-na-na-na-na-na'-Teil ist das Markenzeichen des Songs.",
         "Ein Song über die Freiheit von materialistischen Begierden.",
-        "Refrain: 'Freed from desire, mind and senses purified!'"
+        "Refrain: '[XXX] from [XXX], mind and senses purified!'"
       ],
       "lyrics": {
         "real": [
@@ -275,7 +282,8 @@
       "isOne_hit_wonder": true,
       "links": {
         "youtube": "p3l7fgvrEKM"
-      }
+      },
+      "coverUrl": "/covers/dance-gala-freed-from-desire.jpg"
     },
     {
       "id": "dance-spice-girls-wannabe",
@@ -309,7 +317,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "gJLIiF15wjQ"
-      }
+      },
+      "coverUrl": "/covers/dance-spice-girls-wannabe.jpg"
     },
     {
       "id": "dance-backstreet-boys-everybody",
@@ -330,7 +339,7 @@
         "Einer der größten Hits der Boygroup-Ära der späten 90er.",
         "Produziert von Max Martin in Schweden.",
         "Der markante Bass-Synthesizer leitet den atmosphärischen Song ein.",
-        "Refrain: 'Everybody! Rock your body! Backstreet's back, alright!'"
+        "Refrain: '[XXX]! Rock your body! [XXX]'s back, alright!'"
       ],
       "lyrics": {
         "real": [
@@ -343,7 +352,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "6M6samPEMpM"
-      }
+      },
+      "coverUrl": "/covers/dance-backstreet-boys-everybody.jpg"
     },
     {
       "id": "dance-eiffel-65-blue",
@@ -364,7 +374,7 @@
         "Das Video zeigt computeranimierte Außerirdische auf einem blauen Planeten.",
         "Der markante Autotune-Effekt auf der Stimme war damals wegweisend für das Genre.",
         "Wurde zu einem der größten globalen Chart-Erfolge für eine italienische Band.",
-        "Refrain: 'I'm blue, da ba dee da ba di...'"
+        "Refrain: 'I'm [XXX], da ba dee da ba di...'"
       ],
       "lyrics": {
         "real": [
@@ -377,7 +387,8 @@
       "isOne_hit_wonder": true,
       "links": {
         "youtube": "68ugkg9RePc"
-      }
+      },
+      "coverUrl": "/covers/dance-eiffel-65-blue.jpg"
     },
     {
       "id": "dance-vengaboys-boom-boom",
@@ -398,7 +409,7 @@
         "Der Song handelt vom Wunsch, die Nacht gemeinsam im Schlafzimmer zu verbringen.",
         "Ein absoluter Party-Garant auf jeder 90er-Feier.",
         "Der Refrain hat einen extrem eingängigen Rhythmus, den man sofort mitschreit.",
-        "Refrain: 'Boom, boom, boom, boom! I want you in my room!'"
+        "Refrain: '[XXX], [XXX], [XXX], [XXX]! I want you in my room!'"
       ],
       "lyrics": {
         "real": [
@@ -411,7 +422,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "gD8UfYKZ9qk"
-      }
+      },
+      "coverUrl": "/covers/dance-vengaboys-boom-boom.jpg"
     },
     {
       "id": "dance-alice-deejay-better-off-alone",
@@ -430,7 +442,7 @@
       "hints": [
         "Einer der bekanntesten Trance-Hymnen der späten 90er.",
         "Die markante Synthesizer-Melodie erkennt man nach der ersten Sekunde.",
-        "Die Sängerin stellt im Song immer wieder dieselbe Frage: 'Do you think you're better off alone?'",
+        "Die Sängerin stellt im Song immer wieder dieselbe Frage: 'Do you think you're [XXX] off [XXX]?'",
         "Wurde Jahre später von David Guetta ('Play Hard') gesampelt.",
         "Ein minimalistisches Meisterwerk des Dance-Pop."
       ],
@@ -445,7 +457,8 @@
       "isOne_hit_wonder": true,
       "links": {
         "youtube": "Lgs9QUtWc3M"
-      }
+      },
+      "coverUrl": "/covers/dance-alice-deejay-better-off-alone.jpg"
     },
     {
       "id": "dance-darude-sandstorm",
@@ -472,7 +485,8 @@
       "isOne_hit_wonder": true,
       "links": {
         "youtube": "y6120QOlsfU"
-      }
+      },
+      "coverUrl": "/covers/dance-darude-sandstorm.jpg"
     },
     {
       "id": "dance-faithless-insomnia",
@@ -506,7 +520,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "P8JEm4d6Wu4"
-      }
+      },
+      "coverUrl": "/covers/dance-faithless-insomnia.jpg"
     },
     {
       "id": "dance-prodigy-firestarter",
@@ -540,7 +555,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "wmin5WkOuPw"
-      }
+      },
+      "coverUrl": "/covers/dance-prodigy-firestarter.jpg"
     },
     {
       "id": "dance-chemical-bros-hey-boy-girl",
@@ -557,11 +573,11 @@
       ],
       "pack": "Dance Floor Fillers",
       "hints": [
-        "Das gesamte Lied dreht sich um eine repetitive Sprachzeile: 'Hey boy, hey girl...'.",
+        "Das gesamte Lied dreht sich um eine repetitive Sprachzeile: 'Hey boy, hey [XXX]...'.",
         "Ein Meilenstein des Big Beat, der Rock-Energie in den Club brachte.",
         "Die Melodie wird durch verzerrte Acid-Synthesizer getrieben.",
         "Das Musikvideo mit den tanzenden Skeletten ist unvergesslich.",
-        "Refrain: 'Hey boy, hey girl, superstars, here we go!'"
+        "Refrain: 'Hey boy, hey [XXX], superstars, here we go!'"
       ],
       "lyrics": {
         "real": [
@@ -574,7 +590,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "tpKCqp9CALQ"
-      }
+      },
+      "coverUrl": "/covers/dance-chemical-bros-hey-boy-girl.jpg"
     },
     {
       "id": "dance-fatboy-slim-rockafeller",
@@ -608,7 +625,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "nm6DO_7px1I"
-      }
+      },
+      "coverUrl": "/covers/dance-fatboy-slim-rockafeller.jpg"
     },
     {
       "id": "dance-daft-punk-one-more-time",
@@ -628,8 +646,8 @@
         "Das Video ist im Anime-Stil (Interstella 5555) gehalten.",
         "Einer der bekanntesten House-Tracks aller Zeiten mit markantem Autotune-Gesang.",
         "Die Melodie ist extrem lebensfroh und feiert den Moment.",
-        "Das Duo Daft Punk trat stets in Roboter-Helmen auf.",
-        "Refrain: 'One more time, we're gonna celebrate!'"
+        "Das Duo [XXX] [XXX] trat stets in Roboter-Helmen auf.",
+        "Refrain: 'One [XXX] [XXX], we're gonna celebrate!'"
       ],
       "lyrics": {
         "real": [
@@ -642,7 +660,8 @@
       "isOne_hit_wonder": false,
       "links": {
         "youtube": "FGBhQbmPwH8"
-      }
+      },
+      "coverUrl": "/covers/dance-daft-punk-one-more-time.jpg"
     },
     {
       "id": "dance-modjo-lady",
@@ -663,7 +682,7 @@
         "Ein Paradebeispiel für den eleganten French House der Jahrtausendwende.",
         "Das Video zeigt eine Gruppe von Freunden bei einem Roadtrip.",
         "Einer der entspanntesten und gleichzeitig tanzbarsten Hits der Ära.",
-        "Refrain: 'Lady, hear me tonight, 'cause my feeling is just so right!'"
+        "Refrain: '[XXX], hear me tonight, 'cause my feeling is just so right!'"
       ],
       "lyrics": {
         "real": [
@@ -676,7 +695,8 @@
       "isOne_hit_wonder": true,
       "links": {
         "youtube": "S5O9O5S9S"
-      }
+      },
+      "coverUrl": "/covers/dance-modjo-lady.jpg"
     },
     {
       "id": "dance-madonna-vogue",
@@ -697,7 +717,7 @@
         "Der Sprechgesang im Mittelteil zählt Ikonen des alten Hollywood auf.",
         "Ein Meilenstein der House-beeinflussten Pop-Musik der frühen 90er.",
         "Das Schwarz-Weiß-Video von David Fincher ist pure Kunst.",
-        "Refrain: 'Strike a pose! Vogue, vogue, vogue!'"
+        "Refrain: 'Strike a pose! [XXX], [XXX], [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -710,7 +730,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "GuJQSAiODqI"
-      }
+      },
+      "coverUrl": "/covers/dance-madonna-vogue.jpg"
     },
     {
       "id": "dance-mj-billie-jean",
@@ -729,7 +750,7 @@
       "hints": [
         "Besitzt eine der berühmtesten Basslinien der Musikgeschichte.",
         "Bei der Aufführung dieses Songs bei 'Motown 25' zeigte MJ zum ersten Mal den Moonwalk.",
-        "Handelt von einem Groupie, das behauptet, Michael sei der Vater ihres Kindes.",
+        "Handelt von einem Groupie, das behauptet, [XXX] sei der Vater ihres Kindes.",
         "Produziert von Quincy Jones, obwohl er die Basslinie anfangs zu lang fand.",
         "Ein absolutes Dauerbrenner-Highlight auf jeder Tanzfläche."
       ],
@@ -744,7 +765,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Zi_XLOBDo_Y"
-      }
+      },
+      "coverUrl": "/covers/dance-mj-billie-jean.jpg"
     },
     {
       "id": "dance-daft-punk-one-more",
@@ -765,7 +787,7 @@
         "Der Inbegriff des 'French House' Sounds um die Jahrtausendwende.",
         "Das Anime-Musikvideo ist Teil des Films 'Interstella 5555'.",
         "Ein Inbegriff für unbeschwerte Party-Energie.",
-        "Refrain: 'One more time, we're gonna celebrate!'"
+        "Refrain: 'One [XXX] [XXX], we're gonna celebrate!'"
       ],
       "lyrics": {
         "real": [
@@ -778,7 +800,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "FGBhQbmPwH8"
-      }
+      },
+      "coverUrl": "/covers/dance-daft-punk-one-more.jpg"
     },
     {
       "id": "dance-lady-gaga-bad-romance",
@@ -798,8 +821,8 @@
         "Einer der visuell und akustisch einflussreichsten Pop-Songs der 2000er.",
         "Der 'Rah-rah-ah-ah-ah'-Hook ist sofortiges Erkennungsmerkmal.",
         "Thematisiert die Anziehung zu toxischen Beziehungen.",
-        "Das Video definierte Gagas avantgardistischen Status endgültig.",
-        "Refrain: 'I want your love and I want your revenge, you and me could write a bad romance!'"
+        "Das Video definierte [XXX]s avantgardistischen Status endgültig.",
+        "Refrain: 'I want your love and I want your revenge, you and me could write a bad [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -812,7 +835,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "qrO4YZeyl0I"
-      }
+      },
+      "coverUrl": "/covers/dance-lady-gaga-bad-romance.jpg"
     },
     {
       "id": "dance-katy-perry-firework",
@@ -830,10 +854,10 @@
       "pack": "Dance Floor Fillers",
       "hints": [
         "Eine Hymne auf Selbstwertgefühl und die eigene Einzigartigkeit.",
-        "Katy Perrys erfolgreichster Song, der oft bei großen Events gespielt wird.",
+        "[XXX] [XXX]s erfolgreichster Song, der oft bei großen Events gespielt wird.",
         "Der Refrain baut eine gewaltige Energie auf, die zur Explosion passt.",
         "Wurde zu einem festen Bestandteil von Silvester-Playlists weltweit.",
-        "Refrain: 'Cause baby, you're a firework! Come on, show 'em what you're worth!'"
+        "Refrain: 'Cause baby, you're a [XXX]! Come on, show 'em what you're worth!'"
       ],
       "lyrics": {
         "real": [
@@ -846,7 +870,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "QGJuMBdaqIw"
-      }
+      },
+      "coverUrl": "/covers/dance-katy-perry-firework.jpg"
     },
     {
       "id": "dance-guetta-titanium",
@@ -880,7 +905,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "JRfuAukYTKg"
-      }
+      },
+      "coverUrl": "/covers/dance-guetta-titanium.jpg"
     },
     {
       "id": "dance-avicii-wake-me",
@@ -898,10 +924,10 @@
       "pack": "Dance Floor Fillers",
       "hints": [
         "Revolutionierte den EDM-Sound durch die Kombination mit Folk-Gitarren.",
-        "Aloe Blaccs markante Soul-Stimme über Aviciis treibendem Beat.",
+        "[XXX] [XXX]s markante Soul-Stimme über [XXX]s treibendem Beat.",
         "Löste bei der Premiere am Ultra Music Festival gemischte Reaktionen aus, wurde dann aber zum Welthit.",
-        "Ein Symbol für Aviciis bahnbrechende musikalische Vision.",
-        "Refrain: 'So wake me up when it's all over, when I'm wiser and I'm older!'"
+        "Ein Symbol für [XXX]s bahnbrechende musikalische Vision.",
+        "Refrain: 'So [XXX] me up when it's all over, when I'm wiser and I'm older!'"
       ],
       "lyrics": {
         "real": [
@@ -914,7 +940,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "I_izvAbhExY"
-      }
+      },
+      "coverUrl": "/covers/dance-avicii-wake-me.jpg"
     },
     {
       "id": "dance-calvin-harris-summer",
@@ -931,11 +958,11 @@
       ],
       "pack": "Dance Floor Fillers",
       "hints": [
-        "Calvin Harris übernimmt hier selbst den Gesang.",
+        "[XXX] [XXX] übernimmt hier selbst den Gesang.",
         "Der Inbegriff des Sommer-Club-Sounds der 2014er Saison.",
         "Besticht durch den euphorischen Synthesizer-Drop im Refrain.",
         "Vermittelt das perfekte Gefühl von Freiheit und warmen Nächten.",
-        "Refrain: 'When I met you in the summer, to my heartbeat sound!'"
+        "Refrain: 'When I met you in the [XXX], to my heartbeat sound!'"
       ],
       "lyrics": {
         "real": [
@@ -948,7 +975,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ebXbLfLACGM"
-      }
+      },
+      "coverUrl": "/covers/dance-calvin-harris-summer.jpg"
     },
     {
       "id": "dance-dua-lipa-start-now",
@@ -969,7 +997,7 @@
         "Besitzt eine extrem mitreißende Basslinie.",
         "Handelt davon, dass man über eine alte Liebe hinweg ist und sich nicht mehr stören lässt.",
         "Ein Paradebeispiel für den Erfolg ihres Albums 'Future Nostalgia'.",
-        "Refrain: 'Don't show up, don't come out, don't start caring about me now!'"
+        "Refrain: '[XXX] show up, [XXX] come out, [XXX] [XXX] caring about me now!'"
       ],
       "lyrics": {
         "real": [
@@ -982,7 +1010,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "oygrmJFKYZY"
-      }
+      },
+      "coverUrl": "/covers/dance-dua-lipa-start-now.jpg"
     },
     {
       "id": "dance-weeknd-feel-face",
@@ -1001,9 +1030,9 @@
       "hints": [
         "Produziert von Max Martin, inspiriert durch Michael Jacksons Funk-Sound.",
         "Thematisiert auf metaphorische Weise eine intensive Anziehung (oder Sucht).",
-        "Besticht durch den harten, trockenen Beat und The Weeknds gefühlvollen Gesang.",
+        "Besticht durch den harten, trockenen Beat und The [XXX]s gefühlvollen Gesang.",
         "Wurde zu seinem endgültigen Durchbruch im Pop-Olymp.",
-        "Refrain: 'I can't feel my face when I'm with you, but I love it!'"
+        "Refrain: 'I [XXX] [XXX] my [XXX] when I'm with you, but I love it!'"
       ],
       "lyrics": {
         "real": [
@@ -1016,7 +1045,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "KEI4qSrkPAs"
-      }
+      },
+      "coverUrl": "/covers/dance-weeknd-feel-face.jpg"
     },
     {
       "id": "dance-bruno-uptown-funk",
@@ -1033,8 +1063,8 @@
       ],
       "pack": "Dance Floor Fillers",
       "hints": [
-        "Eine moderne Hommage an den Minneapolis-Sound und den Funk der 80er.",
-        "Die Zusammenarbeit zwischen Mark Ronson und Bruno Mars wurde zum Dauerbrenner.",
+        "Eine moderne Hommage an den Minneapolis-Sound und den [XXX] der 80er.",
+        "Die Zusammenarbeit zwischen [XXX] [XXX] und [XXX] [XXX] wurde zum Dauerbrenner.",
         "Bekannt für den extrem coolen Vibe und die Bläser-Sätze.",
         "Wurde zu einem der erfolgreichsten Songs des Jahrzehnts.",
         "Refrain: 'Don't believe me, just watch!'"
@@ -1050,7 +1080,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "OPf0AuLS"
-      }
+      },
+      "coverUrl": "/covers/dance-bruno-uptown-funk.jpg"
     },
     {
       "id": "dance-jt-can-stop",
@@ -1084,7 +1115,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "rutF6n"
-      }
+      },
+      "coverUrl": "/covers/dance-jt-can-stop.jpg"
     },
     {
       "id": "dance-maroon5-jagger",
@@ -1101,11 +1133,11 @@
       ],
       "pack": "Dance Floor Fillers",
       "hints": [
-        "Eine Hommage an die Tanzbewegungen von Mick Jagger.",
+        "Eine Hommage an die Tanzbewegungen von Mick [XXX].",
         "Besticht durch den markanten Pfeif-Hook am Anfang.",
-        "Die Zusammenarbeit zwischen Adam Levine und Christina Aguilera war ein Megahit.",
+        "Die Zusammenarbeit zwischen Adam Levine und [XXX] [XXX] war ein Megahit.",
         "Vermittelt ein Gefühl von Lockerheit und Selbstbewusstsein.",
-        "Refrain: 'I got the moves like Jagger, I got the moves like Jagger!'"
+        "Refrain: 'I got the [XXX] [XXX] [XXX], I got the [XXX] [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1118,7 +1150,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "iEPTlhBmwRg"
-      }
+      },
+      "coverUrl": "/covers/dance-maroon5-jagger.jpg"
     },
     {
       "id": "dance-pitbull-everything",
@@ -1136,10 +1169,10 @@
       "pack": "Dance Floor Fillers",
       "hints": [
         "Inbegriff des 'Electronic Dance Pop' Booms der frühen 2010er.",
-        "Ne-Yos Hook kombiniert mit Pitbulls Rap-Parts.",
+        "Ne-Yos Hook kombiniert mit [XXX]s Rap-Parts.",
         "Wurde zu einer der meistverkauften digitalen Singles aller Zeiten.",
         "Ein absolutes Muss für jede Clubnacht jener Ära.",
-        "Refrain: 'Tonight I want all of you tonight, give me everything tonight!'"
+        "Refrain: 'Tonight I want all of you tonight, [XXX] me [XXX] tonight!'"
       ],
       "lyrics": {
         "real": [
@@ -1152,7 +1185,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "0x-FMquRkK0"
-      }
+      },
+      "coverUrl": "/covers/dance-pitbull-everything.jpg"
     },
     {
       "id": "dance-lmfao-party-rock",
@@ -1171,9 +1205,9 @@
       "hints": [
         "Löste den weltweiten 'Shuffle'-Tanzboom aus.",
         "Der Refrain 'Every day I'm shufflin'' wurde zum geflügelten Wort.",
-        "Ein Inbegriff für übertriebenen, spaßigen Party-Sound.",
+        "Ein Inbegriff für übertriebenen, spaßigen [XXX]-Sound.",
         "Das Musikvideo parodiert den Film '28 Days Later'.",
-        "Refrain: 'Party rock is in the house tonight! Everybody just have a good time!'"
+        "Refrain: '[XXX] [XXX] is in the house tonight! Everybody just have a good time!'"
       ],
       "lyrics": {
         "real": [
@@ -1186,7 +1220,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "KQ6zr6kCPj8"
-      }
+      },
+      "coverUrl": "/covers/dance-lmfao-party-rock.jpg"
     }
   ]
 }

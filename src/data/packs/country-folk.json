@@ -21,11 +21,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Johnny Cashs erfolgreichster Song, mitgeschrieben von June Carter.",
+        "[XXX] [XXX]s erfolgreichster Song, mitgeschrieben von June Carter.",
         "Besticht durch die markante Mariachi-Trompete im Intro.",
         "Thematisiert die zerstörerische und zugleich faszinierende Kraft der Liebe.",
         "Ein absolutes Aushängeschild für den Sound des 'Man in Black'.",
-        "Refrain: 'And it burns, burns, burns! The ring of fire!'"
+        "Refrain: 'And it burns, burns, burns! The [XXX] of [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -38,7 +38,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "It7107"
-      }
+      },
+      "coverUrl": "/covers/country-cash-fire.jpg"
     },
     {
       "id": "country-dolly-jolene",
@@ -55,11 +56,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Dolly Partons verzweifelter Appell an eine Frau, die ihren Mann stehlen könnte.",
-        "Besticht durch das treibende Akustikgitarren-Riff und Partons flehende Stimme.",
-        "Basiert angeblich auf einer echten Begegnung Partons mit einer Bankangestellten.",
+        "[XXX] [XXX]s verzweifelter Appell an eine Frau, die ihren Mann stehlen könnte.",
+        "Besticht durch das treibende Akustikgitarren-Riff und [XXX]s flehende Stimme.",
+        "Basiert angeblich auf einer echten Begegnung [XXX]s mit einer Bankangestellten.",
         "Ein zeitloser Klassiker, der unzählige Male gecovert wurde.",
-        "Refrain: 'Jolene, Jolene, Jolene, Jolene! I'm begging of you please don't take my man!'"
+        "Refrain: '[XXX], [XXX], [XXX], [XXX]! I'm begging of you please don't take my man!'"
       ],
       "lyrics": {
         "real": [
@@ -72,7 +73,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-dolly-jolene.jpg"
     },
     {
       "id": "country-willie-road",
@@ -90,10 +92,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Die ultimative Hymne für das Leben auf Tournee.",
-        "Besticht durch den entspannten Shuffel-Rhythmus und Nelsons markantes Gitarrenspiel.",
+        "Besticht durch den entspannten Shuffel-Rhythmus und [XXX]s markantes Gitarrenspiel.",
         "Thematisiert die Freiheit und die Liebe zur Bühne und zu Freunden.",
         "Ein Inbegriff für den Lebensgeist des Outlaw Country.",
-        "Refrain: 'On the road again! Goin' places that I've never been!'"
+        "Refrain: 'On the [XXX] [XXX]! Goin' places that I've never been!'"
       ],
       "lyrics": {
         "real": [
@@ -106,7 +108,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "dBN86y30Ufc"
-      }
+      },
+      "coverUrl": "/covers/country-willie-road.jpg"
     },
     {
       "id": "country-denver-roads",
@@ -126,8 +129,8 @@
         "Besingt die Schönheit von West Virginia, obwohl die Songwriter den Staat damals kaum kannten.",
         "Eine der bekanntesten Mitsing-Hymnen weltweit.",
         "Thematisiert Heimweh und die tiefe Verbindung zur ländlichen Heimat.",
-        "John Denvers klarer, optimistischer Gesang ist das Markenzeichen.",
-        "Refrain: 'Country roads, take me home! To the place I belong!'"
+        "[XXX] [XXX]s klarer, optimistischer Gesang ist das Markenzeichen.",
+        "Refrain: '[XXX] [XXX], [XXX] me [XXX]! To the place I belong!'"
       ],
       "lyrics": {
         "real": [
@@ -140,7 +143,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-denver-roads.jpg"
     },
     {
       "id": "country-rogers-gambler",
@@ -159,7 +163,7 @@
       "hints": [
         "Erzählt die Geschichte einer Begegnung mit einem alten Spieler im Zug.",
         "Besticht durch die Lebensweisheiten im Refrain, die als Metapher für das Leben dienen.",
-        "Kenny Rogers' rauchige Erzählerstimme machte den Song zum Welthit.",
+        "[XXX] [XXX]' rauchige Erzählerstimme machte den Song zum Welthit.",
         "Ein Inbegriff für Country-Storytelling.",
         "Refrain: 'You've got to know when to hold 'em! Know when to fold 'em!'"
       ],
@@ -174,7 +178,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "n8_YGWwD62s"
-      }
+      },
+      "coverUrl": "/covers/country-rogers-gambler.jpg"
     },
     {
       "id": "country-shania-man",
@@ -194,7 +199,7 @@
         "Einer der größten Crossover-Hits zwischen Country und Pop.",
         "Besticht durch das markante Intro ('Let's go girls!') und die kraftvolle Produktion.",
         "Thematisiert weibliche Freiheit und pure Lebenslust.",
-        "Shania Twains Energie machte sie zur Queen des Country-Pop.",
+        "[XXX] [XXX]s Energie machte sie zur Queen des Country-Pop.",
         "Refrain: 'Oh, oh, oh, go totally crazy! Forget I'm a lady!'"
       ],
       "lyrics": {
@@ -208,7 +213,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-shania-man.jpg"
     },
     {
       "id": "country-garth-friends",
@@ -227,9 +233,9 @@
       "hints": [
         "Die ultimative Kneipen-Hymne der 90er Jahre.",
         "Thematisiert das Gefühl, sich in bodenständiger Umgebung wohler zu fühlen als in der High Society.",
-        "Besticht durch den eingängigen Chorus und Garth Brooks' charismatische Stimme.",
+        "Besticht durch den eingängigen Chorus und [XXX] [XXX]' charismatische Stimme.",
         "Ein Inbegriff für den massiven Erfolg des modernen Country.",
-        "Refrain: 'I got friends in low places! Where the whiskey drowns and the beer chases!'"
+        "Refrain: 'I got [XXX] in low [XXX]! Where the whiskey drowns and the beer chases!'"
       ],
       "lyrics": {
         "real": [
@@ -242,7 +248,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "oCq-XZ0bwZs"
-      }
+      },
+      "coverUrl": "/covers/country-garth-friends.jpg"
     },
     {
       "id": "country-strait-amarillo",
@@ -260,10 +267,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Inbegriff für den Sound des Rodeo-Lebens.",
-        "Besticht durch das wunderschöne Fiddle-Solo und Straits perfekten Country-Gesang.",
+        "Besticht durch das wunderschöne Fiddle-Solo und [XXX]s perfekten Country-Gesang.",
         "Thematisiert die Härte und die Schönheit des Lebens als Cowboy.",
-        "George Strait gilt als der 'King of Country'.",
-        "Refrain: 'Amarillo by morning! Up from San Antone!'"
+        "[XXX] [XXX] gilt als der 'King of Country'.",
+        "Refrain: '[XXX] by [XXX]! Up from San Antone!'"
       ],
       "lyrics": {
         "real": [
@@ -276,7 +283,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-strait-amarillo.jpg"
     },
     {
       "id": "country-jackson-chattahoochee",
@@ -293,11 +301,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Besticht durch den rasanten Uptempo-Beat und das humorvolle Musikvideo (Alan Jackson auf Wasserski).",
+        "Besticht durch den rasanten Uptempo-Beat und das humorvolle Musikvideo ([XXX] [XXX] auf Wasserski).",
         "Thematisiert Jugendstreiche und das Erwachsenwerden am Fluss.",
         "Ein Inbegriff für den fröhlichen Country-Sound der frühen 90er.",
         "Gewann mehrere Country Music Awards als 'Single des Jahres'.",
-        "Refrain: 'Way down yonder on the Chattahoochee! It gets hotter than a hoochie coochie!'"
+        "Refrain: 'Way down yonder on the [XXX]! It gets hotter than a hoochie coochie!'"
       ],
       "lyrics": {
         "real": [
@@ -310,7 +318,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "JW5UEW2kYvc"
-      }
+      },
+      "coverUrl": "/covers/country-jackson-chattahoochee.jpg"
     },
     {
       "id": "country-tim-live",
@@ -328,7 +337,7 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Thematisiert den bewussten Umgang mit dem Leben nach einer Schockdiagnose.",
-        "Inspiriert durch den Krebstod von Tim McGraws Vater (Tug McGraw).",
+        "Inspiriert durch den Krebstod von Tim [XXX]s Vater (Tug [XXX]).",
         "Besticht durch die tiefgründigen Lyrics und die emotionale Performance.",
         "Wurde zu einer Hymne für Lebensfreude und Wertschätzung.",
         "Refrain: 'I went skydivin'! I went Rocky Mountain climbin'!'"
@@ -344,7 +353,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-tim-live.jpg"
     },
     {
       "id": "country-faith-breathe",
@@ -362,10 +372,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Ein massiver Crossover-Erfolg, der wochenlang die Pop-Charts dominierte.",
-        "Faith Hills sanfte, aber kraftvolle Stimme steht im Zentrum dieser Ballade.",
+        "[XXX] [XXX]s sanfte, aber kraftvolle Stimme steht im Zentrum dieser Ballade.",
         "Thematisiert die Magie eines intimen Moments mit dem geliebten Menschen.",
         "Besticht durch das elegante Arrangement und die romantische Stimmung.",
-        "Refrain: 'I can feel you breathe! It's washing over me!'"
+        "Refrain: 'I can feel you [XXX]! It's washing over me!'"
       ],
       "lyrics": {
         "real": [
@@ -378,7 +388,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "yCmsZUN4r_s"
-      }
+      },
+      "coverUrl": "/covers/country-faith-breathe.jpg"
     },
     {
       "id": "country-carrie-cheats",
@@ -396,7 +407,7 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Die ultimative Rache-Hymne einer betrogenen Frau.",
-        "Carrie Underwood demoliert im Song (symbolisch) das Auto ihres untreuen Freundes.",
+        "[XXX] [XXX] demoliert im Song (symbolisch) das Auto ihres untreuen Freundes.",
         "Besticht durch die aggressive Attitüde und den kraftvollen Rock-Country-Sound.",
         "Machte die American-Idol-Gewinnerin zum Superstar.",
         "Refrain: 'I dug my key into the side of his pretty little souped-up four-wheel drive!'"
@@ -412,7 +423,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-carrie-cheats.jpg"
     },
     {
       "id": "country-taylor-love",
@@ -430,9 +442,9 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Eine moderne Interpretation von Romeo und Julia mit einem Happy End.",
-        "Taylor Swifts Durchbruch im internationalen Mainstream.",
+        "[XXX] [XXX]s Durchbruch im internationalen Mainstream.",
         "Besticht durch das Banjo-Intro und den märchenhaften Aufbau.",
-        "Ein Inbegriff für den frühen, country-geprägten Stil von Taylor Swift.",
+        "Ein Inbegriff für den frühen, country-geprägten Stil von [XXX] [XXX].",
         "Refrain: 'Romeo, take me somewhere we can be alone! I'll be waiting!'"
       ],
       "lyrics": {
@@ -446,7 +458,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "lEMeFbxUZks"
-      }
+      },
+      "coverUrl": "/covers/country-taylor-love.jpg"
     },
     {
       "id": "country-stapleton-whiskey",
@@ -464,10 +477,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Eine Coverversion des David Allan Coe/George Jones Klassikers mit Soul-Einschlag.",
-        "Chris Stapletons gewaltige Stimme und das reduzierte Blues-Riff sind ikonisch.",
+        "[XXX] [XXX]s gewaltige Stimme und das reduzierte Blues-Riff sind ikonisch.",
         "Thematisiert die heilende und berauschende Kraft einer neuen Liebe.",
         "Wurde zu einem der meistgespielten modernen Country-Songs.",
-        "Refrain: 'You're as smooth as Tennessee whiskey! You're as sweet as strawberry wine!'"
+        "Refrain: 'You're as smooth as [XXX] [XXX]! You're as sweet as strawberry wine!'"
       ],
       "lyrics": {
         "real": [
@@ -480,7 +493,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "DeE8W"
-      }
+      },
+      "coverUrl": "/covers/country-stapleton-whiskey.jpg"
     },
     {
       "id": "country-combs-hurricane",
@@ -498,10 +512,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Thematisiert das plötzliche Wiedersehen mit einer verflossenen Liebe als Naturereignis.",
-        "Luke Combs' kraftvolle, ehrliche Stimme machte ihn zum Gesicht des modernen Country.",
+        "[XXX] [XXX]' kraftvolle, ehrliche Stimme machte ihn zum Gesicht des modernen Country.",
         "Besticht durch den treibenden Rhythmus und den eingängigen Chorus.",
         "Ein Inbegriff für den Erfolg des 'Everyman' Country.",
-        "Refrain: 'Then you rolled in with your hair in the wind! Just like a hurricane!'"
+        "Refrain: 'Then you rolled in with your hair in the wind! Just like a [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -514,7 +528,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-combs-hurricane.jpg"
     },
     {
       "id": "country-wallen-glasses",
@@ -532,7 +547,7 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Thematisiert den Versuch, Liebeskummer durch Alkohol zu betäuben.",
-        "Morgan Wallens markante Stimme und der moderne Beat prägten den Sound der späten 2010er.",
+        "[XXX] [XXX]s markante Stimme und der moderne Beat prägten den Sound der späten 2010er.",
         "Ein absoluter Mega-Hit im Streaming-Bereich.",
         "Refrain: 'Poor me, pour me another drink! 'Cause I don't wanna feel a thing!'"
       ],
@@ -547,7 +562,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "DeE8W"
-      }
+      },
+      "coverUrl": "/covers/country-wallen-glasses.jpg"
     },
     {
       "id": "country-kacey-arrow",
@@ -566,9 +582,9 @@
       "hints": [
         "Besticht durch seine liberale, für Country-Verhältnisse progressive Botschaft.",
         "Thematisiert Akzeptanz, Individualität und das Gehen des eigenen Weges.",
-        "Kacey Musgraves' entspannter Gesang und der Akustik-Groove sind das Markenzeichen.",
+        "[XXX] [XXX]' entspannter Gesang und der Akustik-Groove sind das Markenzeichen.",
         "Ein Inbegriff für den modernen, weltoffenen Country-Stil.",
-        "Refrain: 'Follow your arrow wherever it points!'"
+        "Refrain: '[XXX] your [XXX] wherever it points!'"
       ],
       "lyrics": {
         "real": [
@@ -581,7 +597,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-kacey-arrow.jpg"
     },
     {
       "id": "country-maren-church",
@@ -599,7 +616,7 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Erklärt das Autofahren und Musikhören zur spirituellen Erfahrung.",
-        "Besticht durch den Soul-Einschlag und Maren Morris' kraftvolle Stimme.",
+        "Besticht durch den Soul-Einschlag und [XXX] [XXX]' kraftvolle Stimme.",
         "Thematisiert Freiheit, Authentizität und die heilende Kraft der Musik.",
         "Ein Inbegriff für den frischen Wind in Nashville.",
         "Refrain: 'Can I get a hallelujah! Can I get an amen!'"
@@ -615,7 +632,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ouWQ25O-Mcg"
-      }
+      },
+      "coverUrl": "/covers/country-maren-church.jpg"
     },
     {
       "id": "country-zacbrown-chicken",
@@ -636,7 +654,7 @@
         "Thematisiert Essen, Patriotismus und die Liebe zur Heimat.",
         "Besticht durch den fröhlichen Rhythmus und die wunderbaren Harmonien.",
         "Ein absoluter Party-Garant auf jedem Country-Festival.",
-        "Refrain: 'You know I like my chicken fried! And a cold beer on a Friday night!'"
+        "Refrain: 'You know I like my [XXX] [XXX]! And a cold beer on a Friday night!'"
       ],
       "lyrics": {
         "real": [
@@ -649,7 +667,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-zacbrown-chicken.jpg"
     },
     {
       "id": "country-oldcrow-wagon",
@@ -670,7 +689,7 @@
         "Eine der am häufigsten gespielten Folk-Hymnen des 21. Jahrhunderts.",
         "Thematisiert eine Reise per Anhalter durch den US-Süden.",
         "Besticht durch die Geige und den ansteckenden Mitsing-Schwung.",
-        "Refrain: 'Rock me mama like a wagon wheel! Rock me mama anyway you feel!'"
+        "Refrain: 'Rock me mama like a [XXX] [XXX]! Rock me mama anyway you feel!'"
       ],
       "lyrics": {
         "real": [
@@ -683,7 +702,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "1gX1EP6mG-E"
-      }
+      },
+      "coverUrl": "/covers/country-oldcrow-wagon.jpg"
     },
     {
       "id": "country-chicks-earl",
@@ -704,7 +724,7 @@
         "Besticht durch die freche Attitüde und das rasante Musikvideo.",
         "Thematisiert weibliche Freundschaft und Gerechtigkeit.",
         "Ein absoluter Klassiker des Trios.",
-        "Refrain: 'Goodbye Earl! We need a break!'"
+        "Refrain: '[XXX] [XXX]! We need a break!'"
       ],
       "lyrics": {
         "real": [
@@ -717,7 +737,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-chicks-earl.jpg"
     },
     {
       "id": "country-mumford-lion",
@@ -735,7 +756,7 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Machte den Indie-Folk mit Banjo und Kontrabass weltweit massentauglich.",
-        "Besticht durch den treibenden Rhythmus und Marcus Mumfords raue Stimme.",
+        "Besticht durch den treibenden Rhythmus und Marcus [XXX]s raue Stimme.",
         "Thematisiert Selbstvorwürfe und Fehltritte.",
         "Wurde zu einer Hymne der frühen 2010er Jahre.",
         "Refrain: 'But it was not your fault but mine! And it was your heart on the line!'"
@@ -751,7 +772,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "X7bHe--mp1g"
-      }
+      },
+      "coverUrl": "/covers/country-mumford-lion.jpg"
     },
     {
       "id": "country-lumineers-hohey",
@@ -785,7 +807,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-lumineers-hohey.jpg"
     },
     {
       "id": "country-simon-silence",
@@ -805,7 +828,7 @@
         "Die ultimative Folk-Ballade über mangelnde Kommunikation.",
         "Besticht durch die perfekten Harmonien der beiden Sänger.",
         "Wurde zum Inbegriff für die Nachdenklichkeit der Mittsechziger Jahre.",
-        "Berühmt als Teil des Soundtracks zum Film 'The Graduate'.",
+        "Berühmt als Teil des [XXX]tracks zum Film 'The Graduate'.",
         "Refrain: 'Hello darkness, my old friend! I've come to talk with you again!'"
       ],
       "lyrics": {
@@ -819,7 +842,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "4fW7z"
-      }
+      },
+      "coverUrl": "/covers/country-simon-silence.jpg"
     },
     {
       "id": "country-dylan-blowing",
@@ -838,9 +862,9 @@
       "hints": [
         "Die Protesthymne der Bürgerrechts- und Friedensbewegung schlechthin.",
         "Thematisiert essenzielle menschliche Fragen nach Freiheit und Gerechtigkeit.",
-        "Bob Dylans akustische Gitarre und die Mundharmonika sind ikonisch.",
+        "Bob [XXX]s akustische Gitarre und die Mundharmonika sind ikonisch.",
         "Ein Inbegriff für den intellektuellen Folk der 60er Jahre.",
-        "Refrain: 'The answer, my friend, is blowin' in the wind!'"
+        "Refrain: 'The answer, my friend, is [XXX] in the [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -853,7 +877,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-dylan-blowing.jpg"
     },
     {
       "id": "folk-joan-rust",
@@ -870,11 +895,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Joan Baez blickt in diesem Song auf ihre Beziehung zu Bob Dylan zurück.",
+        "[XXX] [XXX] blickt in diesem Song auf ihre Beziehung zu Bob Dylan zurück.",
         "Besticht durch die feine Akustikgitarre und die literarische Brillanz der Lyrics.",
         "Thematisiert Nostalgie, Zeit und den Schmerz früherer Lieben.",
         "Inbegriff für den anspruchsvollen Singer-Songwriter Folk der 70er.",
-        "Refrain: 'Diamonds and rust! Yes, I've seen it all!'"
+        "Refrain: '[XXX] and [XXX]! Yes, I've seen it all!'"
       ],
       "lyrics": {
         "real": [
@@ -887,7 +912,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "eHyl8a394-M"
-      }
+      },
+      "coverUrl": "/covers/folk-joan-rust.jpg"
     },
     {
       "id": "folk-joni-taxi",
@@ -905,7 +931,7 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Ein Inbegriff für den frühen Umwelt-Aktivismus in der Popmusik.",
-        "Besticht durch die markante Gitarren-Begleitung und Jonis helle Stimme.",
+        "Besticht durch die markante Gitarren-Begleitung und [XXX]s helle Stimme.",
         "Thematisiert (humorvoll verpackt) die Zerstörung der Natur durch den Menschen.",
         "Refrain: 'Don't it always seem to go! That you don't know what you've got 'til it's gone!'"
       ],
@@ -920,7 +946,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/folk-joni-taxi.jpg"
     },
     {
       "id": "folk-neil-gold",
@@ -937,11 +964,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Neil Youngs einziger Nummer-1-Hit in den USA.",
+        "[XXX] [XXX]s einziger Nummer-1-Hit in den USA.",
         "Besticht durch die Mundharmonika und den entspannten Akustik-Groove.",
         "Thematisiert die Suche nach einem reinen Herzen und Beständigkeit im Leben.",
         "Ein absoluter Meilenstein der Musikgeschichte.",
-        "Refrain: 'And I'm gettin' old! Searchin' for a heart of gold!'"
+        "Refrain: 'And I'm gettin' old! Searchin' for a [XXX] of [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -954,7 +981,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "WZn9QZykx10"
-      }
+      },
+      "coverUrl": "/covers/folk-neil-gold.jpg"
     },
     {
       "id": "folk-james-rain",
@@ -972,10 +1000,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Zutiefst persönlicher Song über persönliche Kämpfe und den Verlust einer Freundin.",
-        "Besticht durch das feine Gitarrenpicking und James Taylors beruhigende Stimme.",
+        "Besticht durch das feine Gitarrenpicking und [XXX] [XXX]s beruhigende Stimme.",
         "Thematisiert Verzweiflung, Hoffnung und die Suche nach Führung.",
         "Ein Kernstück des 'Gentle Folk' der frühen 70er.",
-        "Refrain: 'I've seen fire and I've seen rain! I've seen sunny days that I thought would never end!'"
+        "Ref[XXX]: 'I've seen [XXX] and I've seen [XXX]! I've seen sunny days that I thought would never end!'"
       ],
       "lyrics": {
         "real": [
@@ -988,7 +1016,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/folk-james-rain.jpg"
     },
     {
       "id": "folk-cat-father",
@@ -1006,7 +1035,7 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Besticht durch das Zwiegespräch zwischen einem vorsichtigen Vater und einem stürmischen Sohn.",
-        "Cat Stevens singt beide Rollen mit unterschiedlichen Stimmlagen.",
+        "Cat [XXX] singt beide Rollen mit unterschiedlichen Stimmlagen.",
         "Thematisiert den Generationenkonflikt und das Bedürfnis nach Veränderung.",
         "Ein Inbegriff für Folk-Storytelling mit tiefem moralischem Kern.",
         "Refrain: 'I am old but I'm happy!'"
@@ -1022,7 +1051,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "P6zaCV4niKk"
-      }
+      },
+      "coverUrl": "/covers/folk-cat-father.jpg"
     },
     {
       "id": "folk-don-pie",
@@ -1043,7 +1073,7 @@
         "Thematisiert den Wandel der amerikanischen Kultur der 50er und 60er Jahre.",
         "Besticht durch den mitsing-tauglichen Refrain und die symbolreichen Strophen.",
         "Einer der längsten und berühmtesten Songs der Musikgeschichte.",
-        "Refrain: 'Bye, bye, Miss American Pie! Drove my Chevy to the levee!'"
+        "Refrain: 'Bye, bye, Miss [XXX] Pie! Drove my Chevy to the levee!'"
       ],
       "lyrics": {
         "real": [
@@ -1056,7 +1086,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/folk-don-pie.jpg"
     },
     {
       "id": "folk-jim-bottle",
@@ -1074,10 +1105,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Zutiefst romantische Ballade über den Wunsch, Zeit einzufrieren.",
-        "Jim Croce schrieb das Stück für seinen neugeborenen Sohn kurz vor seinem tödlichen Flugzeugabsturz.",
+        "Jim [XXX] schrieb das Stück für seinen neugeborenen Sohn kurz vor seinem tödlichen Flugzeugabsturz.",
         "Besticht durch das zerbrechliche Gitarrenpicking und die unschuldige Melodie.",
         "Thematisiert Vergänglichkeit und tiefe persönliche Bindung.",
-        "Refrain: 'If I could save time in a bottle! The first thing that I'd like to do!'"
+        "Refrain: 'If I could save [XXX] in a [XXX]! The first thing that I'd like to do!'"
       ],
       "lyrics": {
         "real": [
@@ -1090,7 +1121,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "i6rLH-X5fR8"
-      }
+      },
+      "coverUrl": "/covers/folk-jim-bottle.jpg"
     },
     {
       "id": "folk-gordon-sundown",
@@ -1107,11 +1139,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Gordon Lightfoots größter Erfolg, geprägt von einem dunklen, fast bedrohlichen Beat.",
+        "[XXX] [XXX]s größter Erfolg, geprägt von einem dunklen, fast bedrohlichen Beat.",
         "Thematisiert Eifersucht und Misstrauen in einer Beziehung.",
-        "Besticht durch den charakteristischen akustischen Groove und Lightfoots Bariton.",
+        "Besticht durch den charakteristischen akustischen Groove und [XXX]s Bariton.",
         "Ein Inbegriff für den kanadischen Folk-Exporthit.",
-        "Refrain: 'Sundown, you better take care! If I find you been creepin' 'round my back stairs!'"
+        "Refrain: '[XXX], you better take care! If I find you been creepin' 'round my back stairs!'"
       ],
       "lyrics": {
         "real": [
@@ -1124,7 +1156,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/folk-gordon-sundown.jpg"
     },
     {
       "id": "country-townes-pancho",
@@ -1144,7 +1177,7 @@
         "Inbegriff für poetisches Country-Storytelling über zwei Outlaws.",
         "Thematisiert Verrat, Einsamkeit und das bittere Ende einer Freundschaft.",
         "Besonders populär durch das Cover von Willie Nelson und Waylon Jennings.",
-        "Townes Van Zandt gilt als einer der brillantesten Texter seiner Generation.",
+        "[XXX] Van [XXX] gilt als einer der brillantesten Texter seiner Generation.",
         "Refrain: 'All the Federales say, they could've had him any day!'"
       ],
       "lyrics": {
@@ -1158,7 +1191,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "cOctHMWoYyc"
-      }
+      },
+      "coverUrl": "/covers/country-townes-pancho.jpg"
     },
     {
       "id": "country-guyclark-train",
@@ -1179,7 +1213,7 @@
         "Thematisiert Generationenbindung, Altern und den unvermeidlichen Abschied.",
         "Besticht durch die bildstarke Sprache und das ehrliche Gefühl.",
         "Ein Meilenstein des progressiven Country.",
-        "Refrain: 'Like Desperados waiting for a train!'"
+        "Refrain: 'Like [XXX] [XXX] for a [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1192,7 +1226,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-guyclark-train.jpg"
     },
     {
       "id": "country-kris-mcgee",
@@ -1209,7 +1244,7 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Kristoffersons Meisterwerk über Freiheit und das Loslassen.",
+        "[XXX]s Meisterwerk über Freiheit und das Loslassen.",
         "Unsterblich gemacht durch die Coverversion von Janis Joplin.",
         "Thematisiert eine Reise per Anhalter und die Einsicht, dass Freiheit nur ein anderes Wort für 'nichts zu verlieren' ist.",
         "Ein Inbegriff für den Geist der frühen 70er Jahre.",
@@ -1226,7 +1261,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "5Cg-j0X09Ag"
-      }
+      },
+      "coverUrl": "/covers/country-kris-mcgee.jpg"
     },
     {
       "id": "country-waylon-cowboys",
@@ -1247,7 +1283,7 @@
         "Thematisiert (mit Augenzwinkern) das unstete und schwierige Leben eines Ranchers.",
         "Besticht durch den charakteristischen federnden Rhythmus und die rauen Stimmen des Duos.",
         "Ein Song voller purer Western-Attitüde.",
-        "Refrain: 'Mammas don't let your babies grow up to be cowboys!'"
+        "Refrain: '[XXX] [XXX] let your [XXX] [XXX] up to be [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1260,7 +1296,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-waylon-cowboys.jpg"
     },
     {
       "id": "country-merle-mama",
@@ -1277,7 +1314,7 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Reflektiert Haggards eigene Zeit im Gefängnis und seine Reue.",
+        "Reflektiert [XXX]s eigene Zeit im Gefängnis und seine Reue.",
         "Besticht durch den typischen Bakersfield-Sound (klirrende Gitarren).",
         "Thematisiert jugendliche Rebellion trotz aller mütterlichen Bemühungen.",
         "Ein Grundpfeiler des ehrlichen, harten Country.",
@@ -1294,7 +1331,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "loT_pYzi3Vw"
-      }
+      },
+      "coverUrl": "/covers/country-merle-mama.jpg"
     },
     {
       "id": "country-tammy-stand",
@@ -1312,10 +1350,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Inbegriff für traditionelle Familienwerte (und oft kontrovers diskutiert).",
-        "Besticht durch Wynettes dramatische stimmliche Darbietung im Refrain.",
+        "Besticht durch [XXX]s dramatische stimmliche Darbietung im Refrain.",
         "Thematisiert Loyalität in schwierigen Zeiten.",
         "Ein weltweiter Mega-Hit für die 'First Lady of Country Music'.",
-        "Refrain: 'Stand by your man! Give him two arms to cling to!'"
+        "Refrain: '[XXX] by your man! Give him two arms to cling to!'"
       ],
       "lyrics": {
         "real": [
@@ -1328,7 +1366,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-tammy-stand.jpg"
     },
     {
       "id": "country-loretta-daughter",
@@ -1345,11 +1384,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Die Lebensgeschichte von Loretta Lynn, geboren in ärmlichen Verhältnissen in Butcher Hollow.",
+        "Die Lebensgeschichte von [XXX] [XXX], geboren in ärmlichen Verhältnissen in Butcher Hollow.",
         "Besticht durch die ehrlichen Beschreibungen des ländlichen Lebens.",
         "Machte die harte Arbeit der Bergleute und den Stolz der Appalachia-Region weithin bekannt.",
         "Inbegriff für Authentizität im Country.",
-        "Refrain: 'Well, I was born a coal miner's daughter! In a cabin on a hill!'"
+        "Refrain: 'Well, I was born a [XXX] [XXX] [XXX]! In a cabin on a hill!'"
       ],
       "lyrics": {
         "real": [
@@ -1362,7 +1401,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "5VhOPHR47qE"
-      }
+      },
+      "coverUrl": "/covers/country-loretta-daughter.jpg"
     },
     {
       "id": "country-patsy-crazy",
@@ -1380,10 +1420,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Geschrieben von einem damals noch unbekannten Willie Nelson.",
-        "Besticht durch Patsy Clines unerreichte stimmliche Eleganz und Emotionalität.",
+        "Besticht durch [XXX] [XXX]s unerreichte stimmliche Eleganz und Emotionalität.",
         "Thematisiert das Gefühl, sich gegen jede Vernunft in Liebe verloren zu haben.",
         "Ein Inbegriff für den edlen Nashville-Sound.",
-        "Refrain: 'I'm crazy for feeling so lonely! I'm crazy for feeling so blue!'"
+        "Refrain: 'I'm [XXX] for feeling so lonely! I'm [XXX] for feeling so blue!'"
       ],
       "lyrics": {
         "real": [
@@ -1396,7 +1436,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "DeE8W"
-      }
+      },
+      "coverUrl": "/covers/country-patsy-crazy.jpg"
     },
     {
       "id": "country-hank-heart",
@@ -1414,10 +1455,10 @@
       "pack": "Country & Folk Classics",
       "hints": [
         "Einer der wichtigsten Songs der Country-Geschichte.",
-        "Hank Williams prophezeit seinem untreuen Partner schlaflose Nächte voller Reue.",
-        "Besticht durch die weinerliche Steel-Gitarre und Williams' ehrliche Emotion.",
+        "[XXX] [XXX] prophezeit seinem untreuen Partner schlaflose Nächte voller Reue.",
+        "Besticht durch die weinerliche Steel-Gitarre und [XXX]' ehrliche Emotion.",
         "Ein Inbegriff für den Honky-Tonk Sound.",
-        "Refrain: 'Your cheatin' heart! Will tell on you!'"
+        "Refrain: 'Your [XXX] [XXX]! Will tell on you!'"
       ],
       "lyrics": {
         "real": [
@@ -1430,7 +1471,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-hank-heart.jpg"
     },
     {
       "id": "country-billmonroe-blue",
@@ -1447,11 +1489,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Inbegriff für den Bluegrass-Sound (Acoustic instruments, fast tempo).",
-        "Thematisiert Herzschmerz unter dem blauen Mond von Kentucky.",
-        "Weltbekannt geworden auch durch die Rockabilly-Version von Elvis Presley.",
-        "Bill Monroe gilt als der 'Father of Bluegrass'.",
-        "Refrain: 'Blue moon of Kentucky keep on shining!'"
+        "Inbegriff für den [XXX]grass-Sound (Acoustic instruments, fast tempo).",
+        "Thematisiert Herzschmerz unter dem blauen Mond von [XXX].",
+        "Weltbekannt geworden auch durch die Rocka[XXX]y-Version von Elvis Presley.",
+        "[XXX] [XXX] gilt als der 'Father of [XXX]grass'.",
+        "Refrain: '[XXX] [XXX] of [XXX] keep on shining!'"
       ],
       "lyrics": {
         "real": [
@@ -1464,7 +1506,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "4syA9aNnNa0"
-      }
+      },
+      "coverUrl": "/covers/country-billmonroe-blue.jpg"
     },
     {
       "id": "country-earl-breakdown",
@@ -1481,7 +1524,7 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Besticht durch das bahnbrechende Drei-Finger-Picking von Earl Scruggs auf dem Banjo.",
+        "Besticht durch das bahnbrechende Drei-Finger-Picking von Earl [XXX] auf dem Banjo.",
         "Ein Instrumentaltitel, der zur Standard-Referenz für Banjo-Virtuosität wurde.",
         "Oft verwendet für rasante Verfolgungsjagden im Film (z.B. Bonnie and Clyde).",
         "Ein Inbegriff für den High-Speed Bluegrass.",
@@ -1496,7 +1539,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-earl-breakdown.jpg"
     },
     {
       "id": "country-alison-nothing",
@@ -1513,11 +1557,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Inbegriff für Alison Krauss' glasklare Engel-Stimme.",
+        "Inbegriff für [XXX] [XXX]' glasklare Engel-Stimme.",
         "Thematisiert die Kraft der non-verbalen Kommunikation in der Liebe.",
         "Besticht durch das feine Bluegrass-Arrangement (Geige, Mandoline).",
         "Einer ihrer größten kommerziellen Erfolge.",
-        "Refrain: 'You say it best! When you say nothing at all!'"
+        "Refrain: 'You say it best! [XXX] you say [XXX] at all!'"
       ],
       "lyrics": {
         "real": [
@@ -1530,7 +1574,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "TXr62_RVVuo"
-      }
+      },
+      "coverUrl": "/covers/country-alison-nothing.jpg"
     },
     {
       "id": "country-billy-dust",
@@ -1547,11 +1592,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Inbegriff für das Genre-Update des Bluegrass durch Billy Strings.",
+        "Inbegriff für das Genre-Update des Bluegrass durch [XXX] [XXX].",
         "Thematisiert Drogenproblematik und Gefängnis auf fast schon fröhlich rasantem Tempo.",
         "Besticht durch die unglaubliche Geschwindigkeit und Präzision an der Gitarre.",
         "Ein viraler Hit, der das Genre für ein junges Publikum öffnete.",
-        "Refrain: 'Twenty-five to life for a dusty baggie!'"
+        "Refrain: 'Twenty-five to life for a [XXX]y [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1564,7 +1609,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "DeE8W"
-      }
+      },
+      "coverUrl": "/covers/country-billy-dust.jpg"
     },
     {
       "id": "country-colter-devil",
@@ -1581,11 +1627,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Besticht durch Colter Walls unglaublich tiefe, raue Baritonstimme.",
+        "Besticht durch [XXX] [XXX]s unglaublich tiefe, raue Baritonstimme.",
         "Thematisiert okkulte Begegnungen und den Teufel in modernem Gewand.",
         "Kombiniert archetypische Western-Themen mit minimalistischem Picking.",
         "Ein Inbegriff für den düsteren 'Real Country' Revitalisierungstrend.",
-        "Refrain: 'But the devil wears a suit and tie!'"
+        "Refrain: 'But the [XXX] [XXX] a [XXX] and tie!'"
       ],
       "lyrics": {
         "real": [
@@ -1598,7 +1644,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-colter-devil.jpg"
     },
     {
       "id": "country-tyler-road",
@@ -1617,7 +1664,7 @@
       "hints": [
         "Inbegriff für den Erfolg des unabhängigen Americana-Sounds ohne Nashville-Hochglanz.",
         "Thematisiert das Leben am Rande der Gesellschaft und die Flucht vor dem Alltag.",
-        "Besticht durch Tyler Childers' leidenschaftliche, raue Stimme.",
+        "Besticht durch [XXX] [XXX]' leidenschaftliche, raue Stimme.",
         "Wurde zu einer modernen Hymne der Country-Underground-Szene.",
         "Refrain: 'Keep your nose on the grindstone and out of the coke!'"
       ],
@@ -1632,7 +1679,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "LjftvOLs0Y0"
-      }
+      },
+      "coverUrl": "/covers/country-tyler-road.jpg"
     },
     {
       "id": "country-sturgill-turtles",
@@ -1653,7 +1701,7 @@
         "Thematisiert spirituelle Erfahrungen (und psychedelische Drogen) als Weg zur Erkenntnis.",
         "Besticht durch den entspannten, klassischen Waylon-Jennings-Vibe mit modernen Inhalten.",
         "Ein Inbegriff für den Aufstieg des intelligenten Country.",
-        "Refrain: 'Turtles all the way down! It's turtles all the way down!'"
+        "Refrain: '[XXX] all the way [XXX]! It's [XXX] all the way [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1666,7 +1714,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/country-sturgill-turtles.jpg"
     },
     {
       "id": "country-zach-orange",
@@ -1683,11 +1732,11 @@
       ],
       "pack": "Country & Folk Classics",
       "hints": [
-        "Wurde zum viralen Streaming-Phänomen und machte Zach Bryan zum Superstar.",
+        "Wurde zum viralen Streaming-Phänomen und machte [XXX] [XXX] zum Superstar.",
         "Thematisiert die verzweifelte Sehnsucht und das Ende einer Liebe bei Sonnenuntergang.",
         "Besticht durch die raue, fast schon ungefilterte Emotionalität und die akustische Klarheit.",
         "Ein Inbegriff für den Erfolg des authentischen Singer-Songwriter-Stils.",
-        "Refrain: 'Something in the orange, tells me we're not done!'"
+        "Refrain: '[XXX] in the [XXX], tells me we're not done!'"
       ],
       "lyrics": {
         "real": [
@@ -1700,7 +1749,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "DeE8W"
-      }
+      },
+      "coverUrl": "/covers/country-zach-orange.jpg"
     }
   ]
 }

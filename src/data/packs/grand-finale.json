@@ -38,7 +38,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "H5v3kku4y6Q"
-      }
+      },
+      "coverUrl": "/covers/finale-harry-asitwas.jpg"
     },
     {
       "id": "finale-miley-flowers",
@@ -59,7 +60,7 @@
         "Besticht durch den entspannten Groove, der an Bruno Mars erinnert.",
         "Antwortsong auf Bruno Mars' 'When I Was Your Man'.",
         "Wurde zu einem der schnellsten Songs, der 1 Milliarde Streams erreichte.",
-        "Refrain: 'I can buy myself flowers! Write my name in the sand!'"
+        "Refrain: 'I can buy myself [XXX]! Write my name in the sand!'"
       ],
       "lyrics": {
         "real": [
@@ -72,7 +73,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "G7KNmW9a75Y"
-      }
+      },
+      "coverUrl": "/covers/finale-miley-flowers.jpg"
     },
     {
       "id": "finale-taylor-antihero",
@@ -89,7 +91,7 @@
       ],
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
-        "Inbegriff für Taylors selbstkritische und ehrliche Songwriter-Phase.",
+        "Inbegriff für [XXX]s selbstkritische und ehrliche Songwriter-Phase.",
         "Besticht durch den pulsierenden 80er-Jahre-Synth-Sound.",
         "Thematisiert Selbstzweifel und das Gefühl, das eigene größte Problem zu sein.",
         "Bekannt für die Zeile: 'It's me, hi, I'm the problem, it's me'.",
@@ -106,7 +108,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "b1kbLwvqugk"
-      }
+      },
+      "coverUrl": "/covers/finale-taylor-antihero.jpg"
     },
     {
       "id": "finale-sza-killbill",
@@ -126,7 +129,7 @@
         "Inspiriert durch die gleichnamige Filmreihe von Quentin Tarantino.",
         "Thematisiert Rachegelüste gegenüber einem Ex-Partner auf humorvoll-makabre Weise.",
         "Besticht durch den entspannten, atmosphärischen R&B-Groove.",
-        "Refrain: 'I might kill my ex, not the best idea!'"
+        "Refrain: 'I might [XXX] my ex, not the best idea!'"
       ],
       "lyrics": {
         "real": [
@@ -139,7 +142,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-sza-killbill.jpg"
     },
     {
       "id": "finale-weeknd-blinding",
@@ -159,7 +163,7 @@
         "Einer der erfolgreichsten Songs aller Zeiten (Platz 1 der Billboard All-Time Charts).",
         "Besticht durch den extrem eingängigen 80er-Jahre-Synthesizer-Rhythmus.",
         "Thematisiert das Verlangen und die nächtliche Fahrt durch die Stadt.",
-        "Refrain: 'I said, ooh, I'm blinded by the lights!'"
+        "Refrain: 'I said, ooh, I'm blinded by the [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -172,7 +176,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "4NRXx6U8ABQ"
-      }
+      },
+      "coverUrl": "/covers/finale-weeknd-blinding.jpg"
     },
     {
       "id": "finale-dualipa-levitating",
@@ -205,7 +210,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "TUVcZfQe-Kw"
-      }
+      },
+      "coverUrl": "/covers/finale-dualipa-levitating.jpg"
     },
     {
       "id": "finale-olivia-drivers",
@@ -222,7 +228,7 @@
       ],
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
-        "Durchbruch-Hit für Olivia Rodrigo und eines der größten Musik-Phänomene des Jahres 2021.",
+        "Durchbruch-Hit für [XXX] [XXX] und eines der größten Musik-Phänomene des Jahres 2021.",
         "Thematisiert den Liebeskummer einer Teenagerin direkt nach Erhalt des Führerscheins.",
         "Besticht durch den dramatischen Brückenteil und die ehrlichen Lyrics.",
         "Refrain: 'And I know we weren't perfect but I've never felt this way for no-one!'"
@@ -238,7 +244,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-olivia-drivers.jpg"
     },
     {
       "id": "finale-badbunny-titi",
@@ -258,7 +265,7 @@
         "Inbegriff für den weltweiten Triumph des spanischsprachigen Pop.",
         "Thematisiert humorvoll die Fragen der Tanten nach der aktuellen Freundin.",
         "Besticht durch den plötzlichen Rhythmuswechsel und die pulsierende Energie.",
-        "Bad Bunny war mehrere Jahre in Folge der meistgestreamte Künstler weltweit."
+        "Bad [XXX] war mehrere Jahre in Folge der meistgestreamte Künstler weltweit."
       ],
       "lyrics": {
         "real": [
@@ -271,7 +278,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Cr8K88UcO0s"
-      }
+      },
+      "coverUrl": "/covers/finale-badbunny-titi.jpg"
     },
     {
       "id": "finale-glass-waves",
@@ -304,7 +312,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "mRD0-GxqHVo"
-      }
+      },
+      "coverUrl": "/covers/finale-glass-waves.jpg"
     },
     {
       "id": "finale-katebush-running",
@@ -323,9 +332,9 @@
       "hints": [
         "Erlebte 2022 durch die Serie 'Stranger Things' ein beispielloses globales Comeback.",
         "Thematisiert den Wunsch, die Rollen mit dem Partner zu tauschen, um sich besser zu verstehen.",
-        "Besticht durch den hypnotischen Drum-Beat und Kate Bushs leidenschaftlichen Gesang.",
+        "Besticht durch den hypnotischen Drum-Beat und [XXX] [XXX]s leidenschaftlichen Gesang.",
         "Ein Inbegriff für den intelligenten Pop der 80er.",
-        "Refrain: 'And if I only could! I'd make a deal with God!'"
+        "Refrain: 'And if I only could! I'd make a [XXX] with God!'"
       ],
       "lyrics": {
         "real": [
@@ -338,7 +347,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "wp43OdtAAkM"
-      }
+      },
+      "coverUrl": "/covers/finale-katebush-running.jpg"
     },
     {
       "id": "finale-fleetwood-dreams",
@@ -372,7 +382,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-fleetwood-dreams.jpg"
     },
     {
       "id": "finale-elton-dua-cold",
@@ -389,10 +400,10 @@
       ],
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
-        "Mashup aus mehreren Elton John Klassikern (Rocket Man, Sacrifice, Kiss the Bride).",
+        "Mashup aus mehreren [XXX] [XXX] Klassikern (Rocket Man, Sacrifice, Kiss the Bride).",
         "Kombiniert zwei Generationen der britischen Pop-Elite.",
         "Besticht durch den entspannten Disco-Groove und den nostalgischen Charme.",
-        "Bescherte Elton John seinen ersten Nummer-1-Hit seit Jahrzehnten.",
+        "Bescherte [XXX] [XXX] seinen ersten Nummer-1-Hit seit Jahrzehnten.",
         "Refrain: 'And I think it's gonna be a long, long time!'"
       ],
       "lyrics": {
@@ -406,7 +417,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "ruAi4VBoBSM"
-      }
+      },
+      "coverUrl": "/covers/finale-elton-dua-cold.jpg"
     },
     {
       "id": "finale-rema-calm",
@@ -427,7 +439,7 @@
         "Besticht durch den hypnotischen, entspannten Rhythmus und die süßliche Melodie.",
         "Thematisiert Flirts und das Genießen des Augenblicks.",
         "Wurde zu einem der meistgespielten Songs in Clubs und Radios weltweit.",
-        "Refrain: 'Baby calm down! Calm down!'"
+        "Refrain: 'Baby [XXX] [XXX]! [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -440,7 +452,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-rema-calm.jpg"
     },
     {
       "id": "finale-sam-kim-unholy",
@@ -473,7 +486,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "Uq9gPaIzbe8"
-      }
+      },
+      "coverUrl": "/covers/finale-sam-kim-unholy.jpg"
     },
     {
       "id": "finale-doja-sayso",
@@ -491,7 +505,7 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Wurde durch eine TikTok-Tanz-Challenge zum Megahit.",
-        "Besticht durch den sommerlichen Disco-Sound und Doja Cats geschmeidigen Rap-Part.",
+        "Besticht durch den sommerlichen Disco-Sound und [XXX] Cats geschmeidigen Rap-Part.",
         "Inbegriff für den Sound der frühen 2020er Jahre.",
         "Refrain: 'Day to night to morning, keep with me in the moment!'"
       ],
@@ -506,7 +520,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-doja-sayso.jpg"
     },
     {
       "id": "finale-billie-happier",
@@ -525,8 +540,8 @@
       "hints": [
         "Besticht durch den extremen Kontrast zwischen leisem Ukulelen-Beginn und lautem Rock-Finale.",
         "Thematisiert die Befreiung aus einer toxischen Beziehung.",
-        "Inbegriff für Billies musikalische Weiterentwicklung.",
-        "Refrain: 'When I'm away from you, I'm happier than ever!'"
+        "Inbegriff für [XXX]s musikalische Weiterentwicklung.",
+        "Refrain: 'When I'm away from you, I'm [XXX] [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -539,7 +554,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "5GJWxDKyk3A"
-      }
+      },
+      "coverUrl": "/covers/finale-billie-happier.jpg"
     },
     {
       "id": "finale-lilnas-montero",
@@ -572,7 +588,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "6swm"
-      }
+      },
+      "coverUrl": "/covers/finale-lilnas-montero.jpg"
     },
     {
       "id": "finale-silksonic-leave",
@@ -593,7 +610,7 @@
         "Besticht durch die makellosen Harmonien und den geschmeidigen Groove.",
         "Thematisiert (mit viel Schmelz in der Stimme) die Einladung zu einem romantischen Abend.",
         "Gewann mehrere Grammys, inklusive Song des Jahres.",
-        "Refrain: 'I'm lascia' the door open! (I'm lascia' the door open)'"
+        "Refrain: 'I'm lascia' the [XXX] [XXX]! (I'm lascia' the [XXX] [XXX])'"
       ],
       "lyrics": {
         "real": [
@@ -606,7 +623,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "adLGHcj_fmA"
-      }
+      },
+      "coverUrl": "/covers/finale-silksonic-leave.jpg"
     },
     {
       "id": "finale-lizzo-time",
@@ -624,9 +642,9 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Inbegriff für Optimismus und das Überwinden schwerer Zeiten.",
-        "Besticht durch den mitreißenden Klavier-Lauf und Lizzos ansteckendes Charisma.",
+        "Besticht durch den mitreißenden Klavier-Lauf und [XXX]s ansteckendes Charisma.",
         "Wurde zu einer der wichtigsten Gute-Laune-Hymnen nach der Pandemie.",
-        "Refrain: 'It's about damn time!'"
+        "Refrain: 'It's [XXX] [XXX] [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -639,7 +657,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "IXXxciRUMzE"
-      }
+      },
+      "coverUrl": "/covers/finale-lizzo-time.jpg"
     },
     {
       "id": "finale-ed-shivers",
@@ -672,7 +691,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "IlV7Rhv"
-      }
+      },
+      "coverUrl": "/covers/finale-ed-shivers.jpg"
     },
     {
       "id": "finale-adele-easy",
@@ -689,10 +709,10 @@
       ],
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
-        "Adeles Rückkehr nach mehrjähriger Pause und Auftakt zum Album '30'.",
-        "Besticht durch das emotionale Klavier-Thema und Adeles unverkennbare Stimmgewalt.",
+        "[XXX]s Rückkehr nach mehrjähriger Pause und Auftakt zum Album '30'.",
+        "Besticht durch das emotionale Klavier-Thema und [XXX]s unverkennbare Stimmgewalt.",
         "Thematisiert die Bitte um Verständnis für die eigene Vergangenheit und Fehler.",
-        "Refrain: 'Go easy on me, baby! I was still a child!'"
+        "Refrain: 'Go [XXX] on me, baby! I was still a child!'"
       ],
       "lyrics": {
         "real": [
@@ -705,7 +725,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "U3ASuAgKnpD"
-      }
+      },
+      "coverUrl": "/covers/finale-adele-easy.jpg"
     },
     {
       "id": "finale-justin-peaches",
@@ -725,7 +746,7 @@
         "Inbegriff für den entspannten, sommerlichen R&B-Pop der frühen 2020er.",
         "Besticht durch den sanften Groove und die wechselnden Gesangsparts.",
         "Thematisiert das Reisen und die Liebe (von Georgia bis Kalifornien).",
-        "Refrain: 'I got my peaches out in Georgia! (Ooh, yeah, shit)!'"
+        "Refrain: 'I got my [XXX] out in Georgia! (Ooh, yeah, shit)!'"
       ],
       "lyrics": {
         "real": [
@@ -738,7 +759,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-justin-peaches.jpg"
     },
     {
       "id": "finale-gayle-abcdefu",
@@ -771,7 +793,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "NaFd8ucHLuo"
-      }
+      },
+      "coverUrl": "/covers/finale-gayle-abcdefu.jpg"
     },
     {
       "id": "finale-maneskin-beggin",
@@ -790,8 +813,8 @@
       "hints": [
         "Coverversion eines 60er-Jahre Klassikers (Four Seasons), die 2021 weltberühmt wurde.",
         "Besticht durch den rauen, rockigen Gesang von Damiano David.",
-        "Måneskin gewannen den Eurovision Song Contest und brachten Rock zurück in die Charts.",
-        "Refrain: 'I'm beggin', beggin' you! Put your loving hand out, baby!'"
+        "[XXX] gewannen den Eurovision Song Contest und brachten Rock zurück in die Charts.",
+        "Refrain: 'I'm [XXX], [XXX] you! Put your loving hand out, baby!'"
       ],
       "lyrics": {
         "real": [
@@ -804,7 +827,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "6sw"
-      }
+      },
+      "coverUrl": "/covers/finale-maneskin-beggin.jpg"
     },
     {
       "id": "finale-benson-beautiful",
@@ -822,7 +846,7 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Der erste große globale Megahit des Jahres 2024.",
-        "Besticht durch den plötzlichen Ausbruch in den Refrain mit Bensons gewaltiger Stimme.",
+        "Besticht durch den plötzlichen Ausbruch in den Refrain mit [XXX]s gewaltiger Stimme.",
         "Thematisiert die Angst, all die schönen Dinge im Leben wieder zu verlieren.",
         "Refrain: 'Please stay! I want you, I need you, oh God!'"
       ],
@@ -837,7 +861,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-benson-beautiful.jpg"
     },
     {
       "id": "finale-teddy-lose",
@@ -855,10 +880,10 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Inbegriff für das Soul-Revival der Jahre 2023/2024.",
-        "Besticht durch Teddy Swims' gewaltige, raue Stimme und das dramatische Arrangement.",
+        "Besticht durch [XXX] [XXX]' gewaltige, raue Stimme und das dramatische Arrangement.",
         "Thematisiert den Kontrollverlust in einer intensiven Beziehung.",
         "Wurde zu einem der größten Überraschungshits weltweit.",
-        "Refrain: 'I lose control, when you're not next to me!'"
+        "Refrain: 'I [XXX] [XXX], when you're not next to me!'"
       ],
       "lyrics": {
         "real": [
@@ -871,7 +896,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "Qh8QwVYOSVU"
-      }
+      },
+      "coverUrl": "/covers/finale-teddy-lose.jpg"
     },
     {
       "id": "finale-noah-stick",
@@ -888,7 +914,7 @@
       ],
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
-        "Besticht durch die akustische Gitarre und Noah Kahans herzzerreißendes Songwriting.",
+        "Besticht durch die akustische Gitarre und [XXX] [XXX]s herzzerreißendes Songwriting.",
         "Inbegriff für das Folk-Revival der frühen 2020er Jahre.",
         "Thematisiert Heimatgefühle, Einsamkeit und den grauen Übergang zwischen Herbst und Winter in Vermont.",
         "Wurde zum Globalhit durch seine ehrliche, bodenständige Art.",
@@ -905,7 +931,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-noah-stick.jpg"
     },
     {
       "id": "finale-hozier-sweet",
@@ -922,8 +949,8 @@
       ],
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
-        "Bescherte Hozier 10 Jahre nach 'Take Me To Church' erneut einen Nummer-1-Hit.",
-        "Besticht durch den markanten Bass-Groove und Hoziers tiefe, seelenvolle Stimme.",
+        "Bescherte [XXX] 10 Jahre nach 'Take Me To Church' erneut einen Nummer-1-Hit.",
+        "Besticht durch den markanten Bass-Groove und [XXX]s tiefe, seelenvolle Stimme.",
         "Thematisiert (mit einem Augenzwinkern) unterschiedliche Lebensstile: Die gesunde Routine gegen den nächtlichen Exzess.",
         "Refrain: 'I think I'll take my whiskey neat! My coffee black and my bed at three!'"
       ],
@@ -938,7 +965,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "NTpbbQUBbuo"
-      }
+      },
+      "coverUrl": "/covers/finale-hozier-sweet.jpg"
     },
     {
       "id": "finale-sabrina-espresso",
@@ -956,10 +984,10 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Inbegriff für das sommerliche Pop-Revival von 2024.",
-        "Besticht durch den federleichten Disco-Funky Vibe und Sabrinas freche Delivery.",
-        "Thematisiert Selbstbewusstsein und die Wirkung einer Person wie ein doppelter Espresso.",
+        "Besticht durch den federleichten Disco-Funky Vibe und [XXX]s freche Delivery.",
+        "Thematisiert Selbstbewusstsein und die Wirkung einer Person wie ein doppelter [XXX].",
         "Wurde über Nacht zum globalen Ohrwurm.",
-        "Refrain: 'That's that me, espresso!'"
+        "Refrain: 'That's that me, [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -972,7 +1000,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "1y6smkh6c-0"
-      }
+      },
+      "coverUrl": "/covers/finale-sabrina-espresso.jpg"
     },
     {
       "id": "finale-billie-barbie",
@@ -991,7 +1020,7 @@
       "hints": [
         "Sorgte im Barbie-Film für den emotionalen Höhepunkt.",
         "Fragt nach dem Sinn des Daseins und der eigenen Identität jenseits der Erwartungen.",
-        "Besticht durch Billies gehauchten Gesang und das minimalistische Klavier.",
+        "Besticht durch [XXX]s gehauchten Gesang und das minimalistische Klavier.",
         "Gewann den Oscar für den besten Filmsong.",
         "Refrain: 'I used to float, now I just fall down! I used to know, but I'm not sure now!'"
       ],
@@ -1006,7 +1035,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-billie-barbie.jpg"
     },
     {
       "id": "finale-ryan-ken",
@@ -1027,7 +1057,7 @@
         "Eine wunderbare Parodie auf 80er-Jahre-Rockballaden und 'Kenergy'.",
         "Thematisiert das Gefühl, immer nur die Nummer zwei zu sein ('And I'm enough, and I'm great at doing stuff').",
         "Slash von Guns N' Roses spielte die Gitarre auf dem Track.",
-        "Refrain: 'I'm just Ken! Anywhere else I'd be a ten!'"
+        "Refrain: 'I'm [XXX] Ken! Anywhere else I'd be a ten!'"
       ],
       "lyrics": {
         "real": [
@@ -1040,7 +1070,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "ru1LC9lW20Q"
-      }
+      },
+      "coverUrl": "/covers/finale-ryan-ken.jpg"
     },
     {
       "id": "finale-dua-barbie",
@@ -1058,9 +1089,9 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Inbegriff für das schillernde Disco-Gefühl des Barbie-Films.",
-        "Besticht durch den pulsierenden Beat und Dua Lipas unerschütterlichen Optimismus.",
+        "Besticht durch den pulsierenden Beat und Dua [XXX]s unerschütterlichen Optimismus.",
         "Thematisiert das Weitertanzen, auch wenn das Herz brennt.",
-        "Refrain: 'Watch me dance, dance the night away! My heart could be burning but you won't see it on my face!'"
+        "Refrain: 'Watch me [XXX], [XXX] the [XXX] away! My heart could be burning but you won't see it on my face!'"
       ],
       "lyrics": {
         "real": [
@@ -1073,7 +1104,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-dua-barbie.jpg"
     },
     {
       "id": "finale-tate-greedy",
@@ -1091,9 +1123,9 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Inbegriff für den energetischen 'Main Pop Girl' Sound von 2023.",
-        "Besticht durch den rasanten Rhythmus und Tates selbstbewusste Performance.",
+        "Besticht durch den rasanten Rhythmus und [XXX]s selbstbewusste Performance.",
         "Wurde weltweit durch Tanz-Videos auf Social Media populär.",
-        "Refrain: 'I would want myself too! I'm greedy!'"
+        "Refrain: 'I would want myself too! I'm [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1106,7 +1138,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "To4SWGZkEPk"
-      }
+      },
+      "coverUrl": "/covers/finale-tate-greedy.jpg"
     },
     {
       "id": "finale-jack-lovin",
@@ -1124,8 +1157,8 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Samplet einen klassischen R&B-Track (Delbert McClinton) und macht daraus einen modernen Clubhit.",
-        "Besticht durch Jack Harlows lockeren Flow und die gute Laune.",
-        "Refrain: 'I'm not on you, I'm just lovin' on me!'"
+        "Besticht durch [XXX] [XXX]s lockeren Flow und die gute Laune.",
+        "Refrain: 'I'm not on you, I'm just [XXX]' on me!'"
       ],
       "lyrics": {
         "real": [
@@ -1138,7 +1171,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-jack-lovin.jpg"
     },
     {
       "id": "finale-kenya-strangers",
@@ -1156,9 +1190,9 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Erreichte als einer der wenigen reinen Drum & Bass Tracks die Spitze der Charts.",
-        "Kenya Grace produzierte den Song in ihrem eigenen Schlafzimmer.",
+        "[XXX] [XXX] produzierte den Song in ihrem eigenen Schlafzimmer.",
         "Thematisiert den Zyklus von Kennenlernen und Fremdwerden.",
-        "Refrain: 'We'll just be strangers again!'"
+        "Refrain: 'We'll just be [XXX] again!'"
       ],
       "lyrics": {
         "real": [
@@ -1171,7 +1205,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "S2TaAcwC_zI"
-      }
+      },
+      "coverUrl": "/covers/finale-kenya-strangers.jpg"
     },
     {
       "id": "finale-peggy-nanana",
@@ -1191,7 +1226,7 @@
         "Kombiniert 90er-Jahre Eurodance-Vibes mit moderner Produktion.",
         "Besticht durch den eingängigen Synthesizer-Loop und den sommerlichen Vibe.",
         "Wurde zu DER Club-Hymne des Jahres 2023.",
-        "Refrain: 'It goes like nanana, nanana, nanana!'"
+        "Refrain: 'It [XXX] like [XXX], [XXX], [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1204,7 +1239,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "ruAi4VBoBSM"
-      }
+      },
+      "coverUrl": "/covers/finale-peggy-nanana.jpg"
     },
     {
       "id": "finale-calvin-miracle",
@@ -1222,9 +1258,9 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Inbegriff für das Trance-Revival der 90er Jahre im Jahr 2023.",
-        "Besticht durch den rasanten Beat und Ellies engelhafte Stimme.",
+        "Besticht durch den rasanten Beat und [XXX]s engelhafte Stimme.",
         "Thematisiert den Wunsch nach einem Wunder in der Liebe.",
-        "Refrain: 'Are you gonna be a miracle? (Miracle)'"
+        "Refrain: 'Are you gonna be a [XXX]? ([XXX])'"
       ],
       "lyrics": {
         "real": [
@@ -1237,7 +1273,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-calvin-miracle.jpg"
     },
     {
       "id": "finale-raye-prada",
@@ -1255,9 +1292,9 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Galt als einer der einflussreichsten Club-Tracks des Jahres 2023.",
-        "Besticht durch RAYE's markante Stimme und den treibenden Beat.",
+        "Besticht durch [XXX]'s markante Stimme und den treibenden Beat.",
         "Wurde weltweit durch Remixes und soziale Kanäle zum Hit.",
-        "Refrain: 'In the Prada in the night!'"
+        "Refrain: 'In the [XXX] in the night!'"
       ],
       "lyrics": {
         "real": [
@@ -1270,7 +1307,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "zFMYL0XQ3lA"
-      }
+      },
+      "coverUrl": "/covers/finale-raye-prada.jpg"
     },
     {
       "id": "finale-tyla-water",
@@ -1288,9 +1326,9 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Machte den südafrikanischen 'Amapiano' Sound weltweit populär.",
-        "Besticht durch die Kombination aus tiefen Bässen und Tylas geschneidigem R&B-Gesang.",
+        "Besticht durch die Kombination aus tiefen Bässen und [XXX]s geschneidigem R&B-Gesang.",
         "Thematisiert (mit viel Eleganz) das Verlangen nach Erfrischung und Leidenschaft.",
-        "Refrain: 'Make me sweat, make me hotter! Make me lose my breath, make me water!'"
+        "Refrain: 'Make me sweat, make me hotter! Make me lose my breath, make me [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1303,7 +1341,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-tyla-water.jpg"
     },
     {
       "id": "finale-mitski-love",
@@ -1322,9 +1361,9 @@
       "hints": [
         "Inbegriff für traurigen, atmosphärischen Indie-Pop der 2020er.",
         "Thematisiert den Wunsch, die eigene Liebe als bleibendes Erbe im Universum zu hinterlassen.",
-        "Besticht durch das sanfte Klavier und Mitskis zerbrechliche Stimme.",
+        "Besticht durch das sanfte Klavier und [XXX]s zerbrechliche Stimme.",
         "Wurde zum Kult-Soundtrack für emotionale Momente online.",
-        "Refrain: 'Nothing in the world belongs to me! But my love, mine, all mine!'"
+        "Refrain: 'Nothing in the world belongs to me! But my [XXX], [XXX], all [XXX]!'"
       ],
       "lyrics": {
         "real": [
@@ -1337,7 +1376,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "vx4kLgnFexo"
-      }
+      },
+      "coverUrl": "/covers/finale-mitski-love.jpg"
     },
     {
       "id": "finale-arctic-yours",
@@ -1357,7 +1397,7 @@
         "Erlebte 2023 durch Social Media ein beispielloses globales Comeback.",
         "Basiert auf einem Gedicht von John Cooper Clarke.",
         "Besticht durch den schleppenden Rhythmus und Alex Turners unterkühlten Charme.",
-        "Refrain: 'I wanna be your vacuum cleaner! Breathing in your dust!'"
+        "Refrain: 'I [XXX] be your vacuum cleaner! Breathing in your dust!'"
       ],
       "lyrics": {
         "real": [
@@ -1370,7 +1410,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-arctic-yours.jpg"
     },
     {
       "id": "finale-kushner-daylight",
@@ -1387,7 +1428,7 @@
       ],
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
-        "Besticht durch den extrem tiefen, fast sakralen Gesang von David Kushner.",
+        "Besticht durch den extrem tiefen, fast sakralen Gesang von [XXX] [XXX].",
         "Thematisiert den Kampf zwischen Gut und Böse in der eigenen Seele.",
         "Ein Inbegriff für 'gothic pop' Vibes von 2023.",
         "Refrain: 'Oh, I love it and I hate it at the same time! You and I drink the poison from the same vine!'"
@@ -1403,7 +1444,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-kushner-daylight.jpg"
     },
     {
       "id": "finale-loreen-tattoo",
@@ -1420,9 +1462,9 @@
       ],
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
-        "Gewanner den Eurovision Song Contest 2023 und machte Loreen zur zweifachen Siegerin.",
-        "Besticht durch die atmosphärische Inszenierung und Loreen's kraftvolle Stimme.",
-        "Thematisiert eine Liebe, die sich wie ein Tattoo in die Seele brennt.",
+        "Gewanner den Eurovision Song Contest 2023 und machte [XXX] zur zweifachen Siegerin.",
+        "Besticht durch die atmosphärische Inszenierung und [XXX]'s kraftvolle Stimme.",
+        "Thematisiert eine Liebe, die sich wie ein [XXX] in die Seele brennt.",
         "Refrain: 'I don't care about the world! I don't care about them all!'"
       ],
       "lyrics": {
@@ -1436,7 +1478,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "b3vJfR81xO0"
-      }
+      },
+      "coverUrl": "/covers/finale-loreen-tattoo.jpg"
     },
     {
       "id": "finale-sanchez-found",
@@ -1454,9 +1497,9 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Inbegriff für den nostalgischen 50er Jahre Sound in den 2020ern.",
-        "Besticht durch die sanfte Gitarre und Sanchez' klassischen Schmelz in der Stimme.",
+        "Besticht durch die sanfte Gitarre und [XXX]' klassischen Schmelz in der Stimme.",
         "Thematisiert die Hingabe an die eine wahre Person.",
-        "Refrain: 'I would never fall in love again, until I found her!'"
+        "Refrain: 'I would never fall in love again, [XXX] I [XXX] her!'"
       ],
       "lyrics": {
         "real": [
@@ -1469,7 +1512,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-sanchez-found.jpg"
     },
     {
       "id": "finale-jvke-golden",
@@ -1489,7 +1533,7 @@
         "Besticht durch den rasanten Klavier-Lauf und die cinematische Atmosphäre.",
         "Wurde weltweit durch Videos von Sonnenuntergängen populär.",
         "Thematisiert den perfekten Moment mit der geliebten Person.",
-        "Refrain: 'It's your golden hour! (Ooh-ooh-ooh)!'"
+        "Refrain: 'It's your [XXX] [XXX]! (Ooh-ooh-ooh)!'"
       ],
       "lyrics": {
         "real": [
@@ -1502,7 +1546,8 @@
       "isOneHitWonder": true,
       "links": {
         "youtube": "PEM0Vs8jf1w"
-      }
+      },
+      "coverUrl": "/covers/finale-jvke-golden.jpg"
     },
     {
       "id": "finale-tom-love",
@@ -1553,7 +1598,7 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Erlebte 2023 ein unglaubliches globales Streaming-Comeback bei der Gen Z.",
-        "Thematisiert Eminems Liebe zu seiner Tochter Hailie und die Schwierigkeiten der Vergangenheit.",
+        "Thematisiert [XXX]s Liebe zu seiner Tochter Hailie und die Schwierigkeiten der Vergangenheit.",
         "Besticht durch den entspannten Beat und den fast gesungenen Rap.",
         "Refrain: 'Now hush-a-bye baby, don't you cry! Everything's gonna be alright!'"
       ],
@@ -1588,7 +1633,7 @@
         "Wurde 2022 durch Werbespots weltweit erneut zum massiven Chartstürmer.",
         "Inbegriff für Empowerment-Musik.",
         "Besticht durch den treibenden Rhythmus und Sias kraftvolle Stimme.",
-        "Refrain: 'I'm unstoppable! I'm a Porsche with no brakes!'"
+        "Refrain: 'I'm [XXX]! I'm a Porsche with no brakes!'"
       ],
       "lyrics": {
         "real": [
@@ -1634,7 +1679,8 @@
       "isOneHitWonder": false,
       "links": {
         "youtube": "gxEPV4kolz0"
-      }
+      },
+      "coverUrl": "/covers/finale-jungkook-seven.jpg"
     },
     {
       "id": "finale-taylor-cruel",
@@ -1652,7 +1698,7 @@
       "pack": "The Grand Finale: 2020s & Legends",
       "hints": [
         "Einer der seltenen Fälle, in denen ein Song Jahre nach Erscheinen durch Fan-Nachfrage zum offiziellen Nummer-1-Hit wurde (2023).",
-        "Besticht durch den rasanten Brückenteil (Bridge) und Taylors leidenschaftliche Delivery.",
+        "Besticht durch den rasanten Brückenteil (Bridge) und [XXX]s leidenschaftliche Delivery.",
         "Thematisiert den Rausch und die Unsicherheit einer Sommer-Romanze.",
         "Refrain: 'I love you, ain't that the worst thing you ever heard!'"
       ],
