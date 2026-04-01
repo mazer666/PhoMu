@@ -21,36 +21,50 @@ export function pickRandomSong({
   currentMode 
 }: PickerOptions): PhomuSong | null {
   
-  // 1. Grundgesamtheit filtern (Packs, Difficulty, QR)
-  let pool = ALL_SONGS;
-  
+  let basePool = ALL_SONGS;
   if (selectedPacks && selectedPacks.length > 0) {
-    pool = pool.filter(s => selectedPacks.includes(s.pack));
+    basePool = ALL_SONGS.filter(s => selectedPacks.includes(s.pack));
+  }
+  if (basePool.length === 0) basePool = ALL_SONGS; // Absoluter Fallback
+
+  let pool = basePool;
+
+  // Optionale Filter (Difficulty, QR) anwenden. Falls diese zu 0 Songs führen, ignorieren wir sie (Soft-Fallback)
+  if (onlyQRCompatible) {
+    const qrPool = pool.filter(s => s.isQRCompatible);
+    if (qrPool.length > 0) pool = qrPool;
   }
   
   if (difficulty !== 'all') {
-    pool = pool.filter(s => s.difficulty === difficulty);
+    const diffPool = pool.filter(s => s.difficulty === difficulty);
+    if (diffPool.length > 0) pool = diffPool;
   }
-  
-  if (onlyQRCompatible) {
-    pool = pool.filter(s => s.isQRCompatible);
-  }
-  
-  // 2. Modus-Spezifische Filter (z.B. Lyrics Labyrinth nur für Songs mit Lyrics)
+
+  // 2. Modus-Spezifische Filter (z.B. Lyrics Labyrinth braucht zwingend Lyrics)
+  let modePool = pool;
   if (currentMode === 'lyrics') {
-    pool = pool.filter(s => s.lyrics !== null);
+    modePool = pool.filter(s => s.lyrics !== null);
   } else if (currentMode) {
-    pool = pool.filter(s => s.supportedModes?.includes(currentMode as GameMode));
+    modePool = pool.filter(s => s.supportedModes?.includes(currentMode as GameMode));
+  }
+
+  if (modePool.length > 0) {
+    pool = modePool;
+  } else if (currentMode === 'lyrics') {
+     // Hard-Fallback für Lyrics: Wenn der Pool 0 ist, müssen wir zwingend auf die BasePool (ignorierte Difficulty/QR) zurückgreifen
+     const absoluteLyricsPool = basePool.filter(s => s.lyrics !== null);
+     if (absoluteLyricsPool.length > 0) pool = absoluteLyricsPool;
   }
 
   // 3. Noch nicht gespielte Songs bevorzugen
   const available = pool.filter((s) => !playedIds.includes(s.id));
 
-  // Wenn alles gespielt wurde, von vorne beginnen (Sicherheit)
+  // Wenn alles gespielt wurde, ignorieren wir playedIds für ältere Songs
   if (available.length === 0) {
     const recentlyPlayed = playedIds.slice(-5);
     const fallback = pool.filter((s) => !recentlyPlayed.includes(s.id));
     const finalPool = fallback.length > 0 ? fallback : pool;
+    if (finalPool.length === 0) return null; // Extrem unwahrscheinlich
     return finalPool[Math.floor(Math.random() * finalPool.length)] ?? null;
   }
 

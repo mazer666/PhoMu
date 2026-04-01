@@ -158,12 +158,14 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
 
   return (
     <div className={`relative w-full aspect-video rounded-[2rem] overflow-hidden bg-black shadow-2xl transition-all ${className}`}>
-      {/* Target Player */}
-      <div 
-        ref={containerRef} 
-        key={key}
-        className={`w-full h-full transition-all duration-1000 ${videoRevealed ? 'opacity-100 scale-100' : 'opacity-0 scale-110 pointer-events-none'}`} 
-      />
+      {/* Target Player Wrapper */}
+      <div className={`w-full h-full transition-all duration-1000 origin-center ${(!videoRevealed && blurred) ? 'opacity-50 blur-[60px] scale-125 pointer-events-none' : 'opacity-100 blur-none scale-100'}`}>
+        <div 
+          ref={containerRef} 
+          key={key}
+          className="w-full h-full"
+        />
+      </div>
 
       {/* Swipe Overlay */}
       <AnimatePresence>

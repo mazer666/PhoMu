@@ -304,8 +304,8 @@ export default function LobbyPage() {
                         </div>
                       )}
                       {config.endingCondition === 'time' && (
-                        <div className="grid grid-cols-4 gap-2">
-                          {[30, 60, 120, 240].map(v => (
+                        <div className="grid grid-cols-4 sm:grid-cols-4 gap-2">
+                          {[30, 60, 90, 120, 150, 180, 210, 240].map(v => (
                             <button
                               key={v}
                               onClick={() => setConfig({ targetTimeMinutes: v })}
@@ -428,20 +428,41 @@ export default function LobbyPage() {
                               className="p-4 rounded-3xl border-2 space-y-3"
                               style={{ borderColor: team.color + '44', background: team.color + '10' }}
                             >
-                              <div className="flex items-center justify-between">
-                                <input 
-                                  value={team.name}
-                                  onChange={(e) => {
-                                    const next = teams.map(t => t.id === team.id ? { ...t, name: e.target.value } : t);
-                                    useGameStore.setState({ teams: next });
-                                  }}
-                                  className="bg-transparent font-black text-sm outline-none w-full"
-                                  style={{ color: team.color }}
-                                />
+                              <div className="flex items-center justify-between gap-2">
+                                <div className="flex bg-white/5 rounded-lg flex-1">
+                                  <input 
+                                    value={team.name}
+                                    onChange={(e) => {
+                                      const next = teams.map(t => t.id === team.id ? { ...t, name: e.target.value } : t);
+                                      useGameStore.setState({ teams: next });
+                                    }}
+                                    className="bg-transparent font-black px-2 py-1 text-sm outline-none w-full"
+                                    style={{ color: team.color }}
+                                  />
+                                  <button
+                                    onClick={() => {
+                                      // Get an unused name by temporarily taking current teams into account
+                                      const used = teams.map(t => t.name);
+                                      useGameStore.getState().createTeam(); // We will use a custom shuffle directly via a quick inline or a new action. 
+                                      // Wait, a better way is to call createTeam without actually adding? No. I'll just change the name directly using a local list or dispatch an event, but I can't easily access pickTeamName since it's unexported. Let's just create a quick inline list of funny names if we need to shuffle.
+                                      // Let's use a standard array here for shuffling
+                                      const FUNNY_NAMES = ['Die Ohrwürmer', 'Stimmbruch Deluxe', 'Absolute Divas', 'Team Gänsehaut', 'Die Taktlosen', 'Bass im Gesicht', 'Die Plattenbosse', 'Vollplayback', 'Die Kopfhörer-Diebe', 'Team Zugabe', 'Karaoke-Katastrophe', 'Die Falschen Noten', 'Riff Raff', 'Die Discokugel-Gang', 'Team Eintagsfliege', 'Einfach zu laut', 'Die Hinterbänkler', 'Team Aufgedreht', 'Die Plattenspieler', 'Autotune-Verbot', 'Team Schallmauer', 'Die Dauerschleife', 'Mosh-Pit-Diplomaten', 'Team Bassgewicht'];
+                                      const available = FUNNY_NAMES.filter(n => !used.includes(n));
+                                      const randomName = (available.length > 0 ? available : FUNNY_NAMES)[Math.floor(Math.random() * (available.length > 0 ? available.length : FUNNY_NAMES.length))];
+                                      const next = teams.map(t => t.id === team.id ? { ...t, name: randomName } : t);
+                                      useGameStore.setState({ teams: next });
+                                    }}
+                                    className="w-8 flex items-center justify-center opacity-40 hover:opacity-100 transition-opacity"
+                                    title="Anderer lustiger Name"
+                                  >
+                                    🎲
+                                  </button>
+                                </div>
                                 {teams.length > 2 && (
                                   <button
                                     onClick={() => removeTeam(team.id)}
-                                    className="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center text-xs opacity-40 hover:opacity-100 transition-opacity"
+                                    className="w-8 h-8 rounded-full bg-red-500/10 text-red-500 flex items-center justify-center text-xs opacity-60 hover:opacity-100 hover:bg-red-500/20 transition-all font-black"
+                                    title="Team löschen"
                                   >
                                     ✕
                                   </button>
@@ -501,13 +522,19 @@ export default function LobbyPage() {
                           </div>
                         )}
                         
-                        {teams.length < 4 && (
+                        {teams.length < Math.max(2, Math.floor(players.length / 2)) && teams.length < 8 && (
                           <button 
                             onClick={() => createTeam()}
                             className="w-full py-3 rounded-2xl border-2 border-dashed border-white/10 text-xs font-bold opacity-40 hover:opacity-100 hover:border-white/30 transition-all"
                           >
                             + Weiteres Team hinzufügen
                           </button>
+                        )}
+                        {players.length < 4 && (
+                           <div className="text-center p-3 bg-red-500/10 border border-red-500/20 rounded-2xl mt-4">
+                             <p className="text-[10px] font-black uppercase tracking-widest text-red-400">Hinweis</p>
+                             <p className="text-xs text-red-400/80 mt-1">Für den Team-Modus werden mindestens 4 Spieler benötigt (min. 2 pro Team).</p>
+                           </div>
                         )}
                       </motion.div>
                     )}
