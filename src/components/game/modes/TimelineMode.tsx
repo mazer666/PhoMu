@@ -9,7 +9,8 @@
  */
 'use client';
 
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import type { PhomuSong } from '@/types/song';
 import { getAllSongs } from '@/utils/song-picker';
 import { useGameStore } from '@/stores/game-store';
@@ -97,16 +98,20 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
   const [selectedSlot, setSelectedSlot] = useState<number | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
   const [removalState, setRemovalState] = useState<RemovalState>('none');
+  const [cheatActive, setCheatActive] = useState(false);
 
   const numSlots = timelineYears.length + 1;
 
   // Nach korrekter Antwort: Jahr hinzufügen + ggf. Entfernungs-Logik
-  function handleReveal() {
+  const handleReveal = useCallback(() => {
     if (selectedSlot === null || isRevealed) return;
     const isCorrect = validSlotSet.has(selectedSlot);
     setIsRevealed(true);
     const answeredInSeconds = Math.max(1, Math.round((Date.now() - questionStartedAt.current) / 1000));
-    onAnswer(isCorrect, isCorrect ? points : 0, answeredInSeconds);
+    
+    // Penalize if cheat was used
+    const finalPoints = isCorrect ? Math.max(1, points - (cheatActive ? 2 : 0)) : 0;
+    onAnswer(isCorrect, finalPoints, answeredInSeconds);
 
     if (!isCorrect) return;
 
@@ -122,7 +127,18 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
       // Mehr als 10 Jahreszahlen → Spieler darf optional eine entfernen
       setRemovalState('choosing');
     }
-  }
+  }, [
+    selectedSlot, 
+    isRevealed, 
+    validSlotSet, 
+    onAnswer, 
+    points, 
+    cheatActive, 
+    song.year, 
+    timelineYears, 
+    addTimelineYear, 
+    removeTimelineYear
+  ]);
 
   function handleRemoveYear(year: number) {
     removeTimelineYear(year);
@@ -133,7 +149,7 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
 
   // Keyboard navigation
   useEffect(() => {
-    function onKey(e: KeyboardEvent) {
+    const onKey = (e: KeyboardEvent) => {
       if (isRevealed) return;
       const n = parseInt(e.key);
       if (!isNaN(n) && n >= 1 && n <= numSlots) setSelectedSlot(n - 1);
@@ -142,10 +158,10 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight')
         setSelectedSlot((p) => (p === null || p === numSlots - 1 ? 0 : p + 1));
       if ((e.key === 'Enter' || e.key === ' ') && selectedSlot !== null) handleReveal();
-    }
-    window.addEventListener('keydown', onKey as any);
-    return () => window.removeEventListener('keydown', onKey as any);
-  }, [selectedSlot, isRevealed, numSlots]);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [selectedSlot, isRevealed, numSlots, handleReveal]);
 
   return (
     <div className="flex flex-col px-4 py-6 gap-5 max-w-xl mx-auto pb-44">
@@ -159,11 +175,25 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
       <div className="text-center space-y-1">
         <h2 className="text-2xl font-black uppercase tracking-tight">
           {!isRevealed
-            ? 'Wann war dieser Song?'
+            ? (cheatActive ? `Das Jahr ist ${song.year} 📅` : 'Wann war dieser Song?')
             : selectedSlot !== null && validSlotSet.has(selectedSlot)
               ? 'Goldrichtig! ✨'
               : 'Leider daneben... 🌧️'}
         </h2>
+        
+        {/* Cheat Button */}
+        {!isRevealed && !cheatActive && (
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.3 }}
+            whileHover={{ opacity: 1, scale: 1.05 }}
+            onClick={() => setCheatActive(true)}
+            className="text-[10px] font-black uppercase tracking-widest border border-white/10 py-1.5 px-3 rounded-full hover:bg-white/5 transition-all mb-2"
+          >
+            🕵️ Musik-Cheat: Jahr enthüllen (-2 Pkt)
+          </motion.button>
+        )}
+
         <p className="opacity-40 text-[9px] font-black uppercase tracking-[0.2em]">
           {!isRevealed
             ? `${numSlots} Positionen · ${points} Punkte`

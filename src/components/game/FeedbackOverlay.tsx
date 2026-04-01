@@ -44,7 +44,7 @@ export function FeedbackOverlay({ isCorrect, triggerKey, onComplete }: FeedbackO
     const timer = setTimeout(() => {
       setActiveMessage(null);
       onComplete?.();
-    }, 1800);
+    }, 3600);
 
     return () => clearTimeout(timer);
   }, [isCorrect, triggerKey, onComplete]);

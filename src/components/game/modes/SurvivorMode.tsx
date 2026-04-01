@@ -83,42 +83,69 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
 
       {/* Antwort-Buttons */}
       {!answered ? (
-        <motion.div
-          className="flex gap-4 w-full max-w-xs"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          <button
-            onClick={() => handleChoice(true)}
-            className="flex-1 py-5 rounded-2xl text-lg font-black transition-colors hover:opacity-90"
-            style={{ backgroundColor: 'var(--color-error)' }}
+        <div className="flex flex-col gap-4 w-full max-w-xs">
+          <motion.div
+            className="flex gap-4"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
           >
-            ✋ Ja
-          </button>
-          <button
-            onClick={() => handleChoice(false)}
-            className="flex-1 py-5 rounded-2xl text-lg font-black transition-colors hover:opacity-90"
-            style={{ backgroundColor: 'var(--color-success)' }}
+            <button
+              onClick={() => handleChoice(true)}
+              className="flex-1 py-5 rounded-2xl text-lg font-black transition-colors hover:opacity-90 shadow-lg shadow-red-500/20"
+              style={{ backgroundColor: 'var(--color-error)' }}
+            >
+              ✋ Ja
+            </button>
+            <button
+              onClick={() => handleChoice(false)}
+              className="flex-1 py-5 rounded-2xl text-lg font-black transition-colors hover:opacity-90 shadow-lg shadow-green-500/20"
+              style={{ backgroundColor: 'var(--color-success)' }}
+            >
+              🌟 Nein
+            </button>
+          </motion.div>
+          
+          {/* Music Cheat Button */}
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.4 }}
+            whileHover={{ opacity: 1, scale: 1.05 }}
+            onClick={() => {
+              // Cheat: Reveal but no points (or -1 penalty)
+              setAnswered(true);
+              onAnswer(true, -1);
+            }}
+            className="text-[10px] font-black uppercase tracking-widest border border-white/10 py-2 rounded-xl hover:bg-white/5 transition-all mt-4"
           >
-            🌟 Nein
-          </button>
-        </motion.div>
+            🕵️ Musik-Cheat: Artist enthüllen (-1 Pkt)
+          </motion.button>
+        </div>
       ) : (
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="text-center"
         >
-          <p className="text-5xl mb-3">
-            {choice === song.isOneHitWonder ? '✅' : '❌'}
-          </p>
-          <p className="font-bold">
-            {song.isOneHitWonder
-              ? 'Ja, ein One-Hit-Wonder!'
-              : 'Nein, ein echter Dauerstar!'}
-          </p>
-          <p className="text-sm opacity-50 mt-1">Wartet auf das Reveal …</p>
+          {choice !== null ? (
+            <>
+              <p className="text-5xl mb-3">
+                {choice === song.isOneHitWonder ? '✅' : '❌'}
+              </p>
+              <p className="font-bold">
+                {song.isOneHitWonder
+                  ? 'Ja, ein One-Hit-Wonder!'
+                  : 'Nein, ein echter Dauerstar!'}
+              </p>
+            </>
+          ) : (
+            <div className="bg-[var(--color-accent)]/10 p-4 rounded-2xl border border-[var(--color-accent)]/20">
+              <p className="text-2xl mb-1">🕵️</p>
+              <p className="text-sm font-bold uppercase tracking-tight text-[var(--color-accent)]">Cheat benutzt</p>
+              <p className="text-xs opacity-60">Infos wurden enthüllt (-1 Pkt)</p>
+            </div>
+          )}
+          <p className="text-sm opacity-50 mt-4 font-black uppercase tracking-[0.2em]">Wartet auf das Reveal …</p>
         </motion.div>
       )}
     </div>

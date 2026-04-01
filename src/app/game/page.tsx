@@ -76,7 +76,7 @@ export default function GamePage() {
   // ── Zeit-Updater für Progress-Bar ─────────────────────────────
   useEffect(() => {
     if (config.endingCondition !== 'time') return;
-    const interval = setInterval(() => setNow(Date.now()), 2000);
+    const interval = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(interval);
   }, [config.endingCondition]);
 
@@ -245,7 +245,7 @@ export default function GamePage() {
     } else if (config.endingCondition === 'time' && gameStartTime) {
       const elapsedMs = now - gameStartTime;
       const targetMs = config.targetTimeMinutes * 60 * 1000;
-      percentage = (elapsedMs / targetMs) * 1000; // Fix: scale or logic might be off but keeping for now
+      percentage = (elapsedMs / targetMs) * 100;
       targetLabel = `${config.targetTimeMinutes} Min`;
       currentVal = Math.floor(elapsedMs / 60000);
     }

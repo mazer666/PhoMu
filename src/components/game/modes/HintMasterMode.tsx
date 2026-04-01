@@ -25,6 +25,7 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
   const [showMusic, setShowMusic] = useState(false);
   const [done, setDone] = useState(false);
   const [wasCorrect, setWasCorrect] = useState<boolean | null>(null);
+  const [cheatUsed, setCheatUsed] = useState(false);
 
   const maxHints = song.hints.length;
   const points = PHOMU_CONFIG.HINT_MASTER_POINTS[shownHints - 1] ?? 1;
@@ -42,7 +43,10 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
     if (done) return;
     setWasCorrect(isCorrect);
     setDone(true);
-    onAnswer(isCorrect, isCorrect ? points : 0);
+    
+    // Penalize if cheat was used
+    const finalPoints = isCorrect ? Math.max(1, points - (cheatUsed ? 2 : 0)) : 0;
+    onAnswer(isCorrect, finalPoints);
   };
 
   return (
@@ -116,9 +120,22 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
             {shownHints < maxHints && (
               <button
                 onClick={handleNextHint}
-                className="w-full py-4 rounded-2xl border-2 border-white/10 font-black uppercase text-xs tracking-widest hover:bg-white/5 transition-all"
+                className="w-full py-4 rounded-2xl border-2 border-white/10 font-black uppercase text-xs tracking-widest hover:bg-white/5 transition-all outline-none"
               >
                 Nächster Hinweis → {PHOMU_CONFIG.HINT_MASTER_POINTS[shownHints] ?? 1} Pkt
+              </button>
+            )}
+
+            {/* Music Cheat Button (Only if music not already shown) */}
+            {!showMusic && shownHints < 4 && (
+              <button
+                onClick={() => {
+                  setShowMusic(true);
+                  setCheatUsed(true);
+                }}
+                className="w-full py-2 rounded-xl border border-white/5 text-[9px] font-black uppercase tracking-[0.2em] opacity-30 hover:opacity-100 hover:bg-white/5 transition-all mb-1"
+              >
+                🕵️ Musik-Cheat: Audio jetzt (-2 Pkt)
               </button>
             )}
 

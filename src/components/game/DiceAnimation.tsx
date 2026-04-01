@@ -7,7 +7,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 interface DiceAnimationProps {
   isVisible: boolean;
@@ -20,13 +20,21 @@ const DICE_COUNT = 3;
 export function DiceAnimation({ isVisible, onComplete }: DiceAnimationProps) {
   const [showText, setShowText] = useState(false);
 
+  // Pre-generate random positions to avoid impurity during render
+  const diceOffsets = useMemo(() => 
+    Array.from({ length: DICE_COUNT }).map(() => ({
+      yInitial: Math.random() * 200 - 100,
+      yAnimate: Math.random() * 200 - 100,
+    })),
+  []);
+
   useEffect(() => {
     if (isVisible) {
       setTimeout(() => setShowText(true), 200);
       const timer = setTimeout(() => {
         setShowText(false);
         onComplete?.();
-      }, 2500);
+      }, 5000);
       return () => clearTimeout(timer);
     }
     setShowText(false);
@@ -42,19 +50,19 @@ export function DiceAnimation({ isVisible, onComplete }: DiceAnimationProps) {
               key={i}
               initial={{ 
                 x: -500 - (i * 100), 
-                y: Math.random() * 200 - 100, 
+                y: diceOffsets[i]?.yInitial ?? 0, 
                 rotate: 0,
                 opacity: 0 
               }}
               animate={{ 
                 x: 1000, 
-                y: Math.random() * 200 - 100, 
+                y: diceOffsets[i]?.yAnimate ?? 0, 
                 rotate: 1080 + (i * 360),
                 opacity: [0, 1, 1, 0] 
               }}
               transition={{ 
-                duration: 2.2, 
-                delay: i * 0.15,
+                duration: 4.4, 
+                delay: i * 0.25,
                 ease: "easeOut"
               }}
               className="absolute text-8xl drop-shadow-2xl"

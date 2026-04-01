@@ -87,49 +87,78 @@ export function ModeSelector({ selectedModes, onChange }: ModeSelectorProps) {
     }
   }
 
+  function handleSelectAll() {
+    onChange(MODES.map(m => m.id));
+  }
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      {MODES.map((mode) => {
-        const isSelected = selectedModes.includes(mode.id);
+    <div className="space-y-4">
+      <div className="flex justify-between items-end px-1">
+        <div>
+          <p className="text-[10px] font-black uppercase opacity-40 tracking-widest leading-none">Rotation</p>
+          <p className="text-[10px] font-bold text-[var(--color-accent)] uppercase">
+            {selectedModes.length} von {MODES.length} ausgewählt
+          </p>
+        </div>
+        <button
+          onClick={handleSelectAll}
+          className="text-[10px] font-black uppercase underline decoration-[var(--color-accent)] opacity-60 hover:opacity-100"
+        >
+          Alle wählen
+        </button>
+      </div>
 
-        return (
-          <motion.button
-            key={mode.id}
-            onClick={() => toggleMode(mode.id)}
-            whileTap={{ scale: 0.97 }}
-            className={[
-              'text-left p-4 rounded-xl border-2 transition-colors',
-              isSelected
-                ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10 shadow-sm'
-                : 'border-[var(--color-border)] bg-[var(--color-bg-card)]/50 hover:border-white/40 hover:bg-white/10',
-            ].join(' ')}
-            aria-pressed={isSelected}
-          >
-            {/* Icon + Titel */}
-            <div className="flex items-start gap-3">
-              <span className="text-2xl leading-none mt-0.5" aria-hidden>
-                {mode.icon}
-              </span>
-              <div className="flex-1 min-w-0">
-                <p className="font-bold text-sm leading-tight">{mode.title}</p>
-                <p className="text-xs opacity-60 mt-1 leading-snug">{mode.description}</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3">
+        {MODES.map((mode, index) => {
+          const isSelected = selectedModes.includes(mode.id);
+
+          return (
+            <motion.button
+              key={mode.id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
+              onClick={() => toggleMode(mode.id)}
+              whileTap={{ scale: 0.97 }}
+              className={[
+                'text-left p-4 rounded-2xl border-2 transition-all',
+                isSelected
+                  ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10 shadow-lg shadow-[var(--color-accent)]/5'
+                  : 'border-white/5 bg-white/5 hover:border-white/20',
+              ].join(' ')}
+              aria-pressed={isSelected}
+            >
+              {/* Icon + Titel */}
+              <div className="flex items-start gap-3">
+                <span className="text-2xl leading-none mt-0.5" aria-hidden>
+                  {mode.icon}
+                </span>
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-sm leading-tight uppercase tracking-tight">{mode.title}</p>
+                  <p className="text-[10px] opacity-50 mt-1 leading-snug">{mode.description}</p>
+                </div>
               </div>
-            </div>
 
-            {/* Aktiv-Badge */}
-            {isSelected && (
-              <p className="mt-2 text-xs font-semibold text-[var(--color-accent)]">
-                ✓ Aktiv
-              </p>
-            )}
-
-            {/* Hinweis: letzter Modus kann nicht deaktiviert werden */}
-            {isSelected && selectedModes.length === 1 && (
-              <p className="mt-1 text-xs opacity-40">Mindestens ein Modus erforderlich</p>
-            )}
-          </motion.button>
-        );
-      })}
+              {/* Status Row */}
+              <div className="mt-3 flex items-center justify-between">
+                <div className="flex-1">
+                   {isSelected && (
+                     <div className="flex items-center gap-1.5">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
+                        <span className="text-[10px] font-black text-[var(--color-accent)] uppercase tracking-widest">Aktiv</span>
+                     </div>
+                   )}
+                </div>
+                
+                {/* Hinweis: letzter Modus kann nicht deaktiviert werden */}
+                {isSelected && selectedModes.length === 1 && (
+                  <p className="text-[9px] opacity-30 uppercase font-black">Erforderlich</p>
+                )}
+              </div>
+            </motion.button>
+          );
+        })}
+      </div>
     </div>
   );
 }

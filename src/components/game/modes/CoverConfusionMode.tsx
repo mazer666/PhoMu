@@ -33,6 +33,7 @@ export function CoverConfusionMode({ song, onAnswer, onReveal }: CoverConfusionM
   const [hintsUsed, setHintsUsed] = useState(0);
   const [phase, setPhase] = useState<Phase>('listening');
   const [wasCorrect, setWasCorrect] = useState<boolean | null>(null);
+  const [cheatActive, setCheatActive] = useState(false);
 
   // 50% chance for "Original or Cover" variation - stabilized in state
   const [variation] = useState(() => Math.random() > 0.5 ? 'who-is-it' : 'original-or-cover');
@@ -62,14 +63,16 @@ export function CoverConfusionMode({ song, onAnswer, onReveal }: CoverConfusionM
 
   function handleSelfAssess(correct: boolean) {
     setWasCorrect(correct);
-    onAnswer(correct, correct ? points : 0);
+    const finalPoints = correct ? Math.max(1, points - (cheatActive ? 2 : 0)) : 0;
+    onAnswer(correct, finalPoints);
     setPhase('done');
   }
 
   function handleChoice(artist: string) {
     const correct = artist === song.artist;
     setWasCorrect(correct);
-    onAnswer(correct, correct ? points : 0);
+    const finalPoints = correct ? Math.max(1, points - (cheatActive ? 2 : 0)) : 0;
+    onAnswer(correct, finalPoints);
     setPhase('done');
   }
 
@@ -154,6 +157,20 @@ export function CoverConfusionMode({ song, onAnswer, onReveal }: CoverConfusionM
                   ? `Hinweis holen → ${POINTS_BY_HINTS[hintsUsed + 1]} Pkt`
                   : `Letzter Hinweis: 3 Künstler zur Wahl → ${POINTS_BY_HINTS[3]} Pkt`}
               </button>
+
+              {/* Music Cheat Button */}
+              <motion.button
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.4 }}
+                whileHover={{ opacity: 1, scale: 1.05 }}
+                onClick={() => {
+                  setPhase('self-assess');
+                  setCheatActive(true);
+                }}
+                className="text-[10px] font-black uppercase tracking-widest border border-white/10 py-2 rounded-xl hover:bg-white/5 transition-all mt-2 w-full"
+              >
+                🕵️ Musik-Cheat: Artist enthüllen (-2 Pkt)
+              </motion.button>
             </>
           ) : (
             <div className="bg-white/5 p-6 rounded-[2rem] border border-white/10 text-center space-y-6">

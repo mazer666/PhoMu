@@ -162,7 +162,7 @@ export default function LobbyPage() {
                     onKeyDown={(e) => e.key === 'Enter' && handleAddPlayer()}
                     onFocus={(e) => e.target.select()}
                     placeholder="Name eingeben..."
-                    className="flex-1 min-w-0 bg-white/10 border border-[var(--color-border)] rounded-2xl px-4 py-4 focus:outline-none focus:border-[var(--color-accent)] font-bold text-sm"
+                    className="flex-1 min-w-0 bg-white/10 border border-white/5 rounded-2xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/50 focus:border-[var(--color-accent)] font-bold text-sm transition-all"
                   />
                   <Tooltip content="Spieler hinzufügen" position="top">
                     <button 
