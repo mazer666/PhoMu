@@ -27,8 +27,8 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
     const isCorrect = guessedOneHit === song.isOneHitWonder;
     setChoice(guessedOneHit);
     setAnswered(true);
-    // Survivor: 3 Punkte für richtige Antwort
-    onAnswer(isCorrect, isCorrect ? 3 : 0);
+    // Survivor: 3 Punkte, Cheat kostet -1 Pkt
+    onAnswer(isCorrect, isCorrect ? (cheatUsed ? 2 : 3) : 0);
   }
 
   return (
@@ -53,12 +53,12 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
                 boxShadow: '0 2px 8px rgba(251,146,60,0.6)',
               }}
             >
-              CHEAT -1 Pkt
+              +2 Pkt CHEAT
             </span>
           )}
         </div>
 
-        {!answered ? (
+        {!answered && !cheatUsed ? (
           <>
             <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Hör genau hin …</p>
             <h3 className="text-3xl font-black mb-1 opacity-20 select-none">???</h3>
@@ -69,17 +69,19 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
             <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Artist</p>
             <h3 className="text-3xl font-black mb-1">{song.artist}</h3>
             <p className="text-lg font-bold opacity-70 mb-1">{song.title}</p>
-            <p className="opacity-50 text-sm">
-              {Math.floor(song.year / 10) * 10}er · {song.genre}
-            </p>
+            {answered && (
+              <p className="opacity-50 text-sm">
+                {Math.floor(song.year / 10) * 10}er · {song.genre}
+              </p>
+            )}
           </>
         )}
 
-        <div className="mt-4 w-full max-w-sm mx-auto transition-opacity" style={{ opacity: answered ? 1 : 0.4 }}>
+        <div className="mt-4 w-full max-w-sm mx-auto transition-opacity" style={{ opacity: (answered || cheatUsed) ? 1 : 0.4 }}>
           <MusicPlayer
             youtubeLink={song.links.youtube}
             startSeconds={song.previewTimestamp?.start ?? 0}
-            blurred={!answered}
+            blurred={!answered && !cheatUsed}
           />
         </div>
       </motion.div>
@@ -120,19 +122,17 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
           </motion.div>
           
           {/* Music Cheat Button */}
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
-            whileHover={{ opacity: 1, scale: 1.05 }}
-            onClick={() => {
-              setCheatUsed(true);
-              setAnswered(true);
-              onAnswer(true, -1);
-            }}
-            className="text-[10px] font-black uppercase tracking-widest border border-white/10 py-2 rounded-xl hover:bg-white/5 transition-all mt-4"
-          >
-            🕵️ Musik-Cheat: Artist enthüllen (-1 Pkt)
-          </motion.button>
+          {!cheatUsed && (
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.4 }}
+              whileHover={{ opacity: 1, scale: 1.05 }}
+              onClick={() => setCheatUsed(true)}
+              className="text-[10px] font-black uppercase tracking-widest border border-white/10 py-2 rounded-xl hover:bg-white/5 transition-all mt-4"
+            >
+              🕵️ Musik-Cheat: Artist enthüllen (-1 Pkt)
+            </motion.button>
+          )}
         </div>
       ) : (
         <motion.div
