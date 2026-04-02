@@ -15,7 +15,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run --coverage",
     "test:watch": "vitest",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "validate-catalog:report": "npx tsx src/utils/validate-song-catalog.ts --write-report"
   },
   "dependencies": {
     "@emnapi/core": "^1.9.1",

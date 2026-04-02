@@ -53,6 +53,23 @@ interface DuplicateEntry {
   songs: Array<{ id: string; artist: string; title: string; year: number; packFile: string }>;
 }
 
+interface CatalogIssuesReport {
+  generatedAt: string;
+  packs: number;
+  songs: number;
+  schemaErrors: number;
+  schemaWarnings: number;
+  duplicateGroups: number;
+  allowedDuplicateGroups: number;
+  missingYears: number[];
+  topDuplicateGroups: DuplicateEntry[];
+}
+
+function writeIssuesReport(report: CatalogIssuesReport, reportPath: string): void {
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf-8');
+  console.log(`📝 Report geschrieben: ${path.relative(process.cwd(), reportPath)}`);
+}
+
 function normalizeText(value: string): string {
   return value
     .normalize('NFKD')
@@ -149,6 +166,12 @@ function main(): void {
   const allowedDuplicates = allDuplicates.length - duplicates.length;
   const currentYear = new Date().getFullYear();
   const missingYears = checkYearCoverage(packs, 1950, currentYear);
+  const shouldWriteReport = process.argv.includes('--write-report');
+  const reportArg = process.argv.find((arg) => arg.startsWith('--report-path='));
+  const reportPath = path.resolve(
+    process.cwd(),
+    reportArg ? reportArg.replace('--report-path=', '') : 'specifications/catalog_issues_report.json',
+  );
 
   console.log('🎛️  Phomu Katalog-Qualitätsgate');
   console.log(`Packs: ${packs.length}`);
@@ -171,6 +194,21 @@ function main(): void {
 
   if (missingYears.length > 0) {
     console.log(`\n❌ Fehlende Jahre: ${missingYears.join(', ')}`);
+  }
+
+  if (shouldWriteReport) {
+    const report: CatalogIssuesReport = {
+      generatedAt: new Date().toISOString(),
+      packs: packs.length,
+      songs: totalSongs,
+      schemaErrors: totalErrors,
+      schemaWarnings: totalWarnings,
+      duplicateGroups: duplicates.length,
+      allowedDuplicateGroups: allowedDuplicates,
+      missingYears,
+      topDuplicateGroups: duplicates.slice(0, 50),
+    };
+    writeIssuesReport(report, reportPath);
   }
 
   const strictMode = process.argv.includes('--strict');
