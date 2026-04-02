@@ -356,50 +356,124 @@ export default function LobbyPage() {
             >
               <div>
                 <h2 className="text-xl font-bold mb-2">Feintuning</h2>
-                <p className="text-sm opacity-60">Schwierigkeit, Zeitlimit und weitere Optionen.</p>
+                <p className="text-sm opacity-60">Alles optional. Defaults sind solide.</p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-xs font-bold opacity-40 uppercase ml-1">Schwierigkeit</label>
-                  <select
-                    value={config.difficulty}
-                    onChange={(e) => setConfig({ difficulty: e.target.value as Difficulty | 'all' })}
-                    className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)] p-4 rounded-2xl focus:border-[var(--color-accent)] outline-none transition-all"
-                  >
-                    {DIFFICULTY_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold opacity-40 uppercase ml-1">Zeitlimit pro Frage</label>
-                  <select
-                    value={config.timeLimitSeconds ?? ''}
-                    onChange={(e) => setConfig({ timeLimitSeconds: e.target.value ? Number(e.target.value) : null })}
-                    className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)] p-4 rounded-2xl focus:border-[var(--color-accent)] outline-none transition-all"
-                  >
-                    {TIME_LIMIT_OPTIONS.map(o => <option key={o.value ?? 'null'} value={o.value ?? ''}>{o.label}</option>)}
-                  </select>
+              <div className="space-y-6">
+                {/* Schwierigkeit */}
+                <div className="space-y-3">
+                  <p className="text-[10px] font-black uppercase tracking-widest opacity-40 ml-1">Schwierigkeit</p>
+                  <div className="grid grid-cols-4 gap-2">
+                    {([
+                      { value: 'all',    label: 'Alles',   emoji: '🌈', sub: 'Für alle' },
+                      { value: 'easy',   label: 'Leicht',  emoji: '😌', sub: 'Hits, die jeder kennt' },
+                      { value: 'medium', label: 'Mittel',  emoji: '🎯', sub: 'Etwas Grips nötig' },
+                      { value: 'hard',   label: 'Schwer',  emoji: '💀', sub: 'Nur für Nerds' },
+                    ] as const).map(o => (
+                      <motion.button
+                        key={o.value}
+                        whileTap={{ scale: 0.93 }}
+                        onClick={() => setConfig({ difficulty: o.value })}
+                        className={`relative flex flex-col items-center gap-1.5 py-4 px-2 rounded-2xl border-2 transition-all ${
+                          config.difficulty === o.value
+                            ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                            : 'border-white/8 bg-white/5 opacity-50 hover:opacity-80'
+                        }`}
+                      >
+                        <span className="text-2xl">{o.emoji}</span>
+                        <span className="text-[10px] font-black uppercase tracking-tight leading-none">{o.label}</span>
+                        {config.difficulty === o.value && (
+                          <motion.div
+                            layoutId="diff-indicator"
+                            className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-[var(--color-accent)] flex items-center justify-center"
+                          >
+                            <span className="text-[8px] font-black text-white">✓</span>
+                          </motion.div>
+                        )}
+                      </motion.button>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="bg-[var(--color-bg-card)] p-4 rounded-2xl border border-[var(--color-border)]">
-                  <label className="flex items-center justify-between text-sm font-bold cursor-pointer group">
-                    <div className="flex flex-col">
-                      <span>QR-Karten Modus</span>
-                      <span className="text-[9px] opacity-40 uppercase tracking-widest mt-1">Nur physische Karten</span>
-                    </div>
-                    <input type="checkbox" checked={config.onlyQRCompatible ?? false}
-                      onChange={(e) => setConfig({ onlyQRCompatible: e.target.checked })}
-                      className="accent-[var(--color-accent)] w-6 h-6 rounded-lg overflow-hidden transition-all group-active:scale-90" />
-                  </label>
+                {/* Zeitlimit pro Frage */}
+                <div className="space-y-3">
+                  <p className="text-[10px] font-black uppercase tracking-widest opacity-40 ml-1">Zeitlimit pro Frage</p>
+                  <div className="grid grid-cols-4 gap-2">
+                    {([
+                      { value: null, label: '∞',     sub: 'Kein Limit' },
+                      { value: 30,   label: '30s',   sub: 'Turbo' },
+                      { value: 60,   label: '60s',   sub: 'Normal' },
+                      { value: 120,  label: '2min',  sub: 'Gemütlich' },
+                    ] as const).map(o => (
+                      <motion.button
+                        key={o.value ?? 'null'}
+                        whileTap={{ scale: 0.93 }}
+                        onClick={() => setConfig({ timeLimitSeconds: o.value })}
+                        className={`flex flex-col items-center gap-1 py-4 px-2 rounded-2xl border-2 transition-all ${
+                          (config.timeLimitSeconds ?? null) === o.value
+                            ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                            : 'border-white/8 bg-white/5 opacity-50 hover:opacity-80'
+                        }`}
+                      >
+                        <span className="text-lg font-black tabular-nums" style={{ color: (config.timeLimitSeconds ?? null) === o.value ? 'var(--color-accent)' : 'inherit' }}>{o.label}</span>
+                        <span className="text-[9px] opacity-60 uppercase tracking-tight leading-none">{o.sub}</span>
+                      </motion.button>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="bg-[var(--color-bg-card)] p-4 rounded-2xl border border-[var(--color-border)]">
-                  <label className="flex items-center justify-between text-sm font-bold cursor-pointer group">
-                    <span>Zeitabzug</span>
-                    <input type="checkbox" checked={config.timeDecayEnabled}
-                      onChange={(e) => setConfig({ timeDecayEnabled: e.target.checked })}
-                      className="accent-[var(--color-accent)] w-6 h-6 rounded-lg overflow-hidden transition-all group-active:scale-90" />
-                  </label>
+                {/* Toggle-Optionen */}
+                <div className="space-y-3">
+                  <p className="text-[10px] font-black uppercase tracking-widest opacity-40 ml-1">Extras</p>
+                  <div className="grid grid-cols-1 gap-3">
+                    {/* QR-Karten */}
+                    <motion.button
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => setConfig({ onlyQRCompatible: !(config.onlyQRCompatible ?? false) })}
+                      className={`relative flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all ${
+                        config.onlyQRCompatible
+                          ? 'border-violet-500/60 bg-violet-500/10'
+                          : 'border-white/8 bg-white/5 opacity-60 hover:opacity-90'
+                      }`}
+                    >
+                      <span className="text-3xl shrink-0">📸</span>
+                      <div className="flex-1">
+                        <p className="text-sm font-black">QR-Karten Modus</p>
+                        <p className="text-[10px] opacity-50 mt-0.5">Nur Songs, die auf physischen Karten stehen.</p>
+                      </div>
+                      <div className={`w-11 h-6 rounded-full transition-all relative shrink-0 ${config.onlyQRCompatible ? 'bg-violet-500' : 'bg-white/10'}`}>
+                        <motion.div
+                          animate={{ x: config.onlyQRCompatible ? 22 : 2 }}
+                          transition={{ type: 'spring', stiffness: 500, damping: 28 }}
+                          className="absolute top-1 w-4 h-4 rounded-full bg-white shadow"
+                        />
+                      </div>
+                    </motion.button>
+
+                    {/* Zeitabzug */}
+                    <motion.button
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => setConfig({ timeDecayEnabled: !config.timeDecayEnabled })}
+                      className={`relative flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all ${
+                        config.timeDecayEnabled
+                          ? 'border-orange-500/60 bg-orange-500/10'
+                          : 'border-white/8 bg-white/5 opacity-60 hover:opacity-90'
+                      }`}
+                    >
+                      <span className="text-3xl shrink-0">⏳</span>
+                      <div className="flex-1">
+                        <p className="text-sm font-black">Zeitabzug</p>
+                        <p className="text-[10px] opacity-50 mt-0.5">Wer trödelt, verliert Punkte. Kein Mitleid.</p>
+                      </div>
+                      <div className={`w-11 h-6 rounded-full transition-all relative shrink-0 ${config.timeDecayEnabled ? 'bg-orange-500' : 'bg-white/10'}`}>
+                        <motion.div
+                          animate={{ x: config.timeDecayEnabled ? 22 : 2 }}
+                          transition={{ type: 'spring', stiffness: 500, damping: 28 }}
+                          className="absolute top-1 w-4 h-4 rounded-full bg-white shadow"
+                        />
+                      </div>
+                    </motion.button>
+                  </div>
                 </div>
               </div>
             </motion.div>
