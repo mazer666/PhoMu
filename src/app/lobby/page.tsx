@@ -77,7 +77,7 @@ export default function LobbyPage() {
 
   // ─── Hilfsfunktionen ────────────────────────────────────────────
 
-  const TOTAL_STEPS = 5;
+  const TOTAL_STEPS = 6;
 
   const canGoNext = useMemo(() => {
     if (step === 1) return players.length >= PHOMU_CONFIG.MIN_PLAYERS;
@@ -339,50 +339,6 @@ export default function LobbyPage() {
                   </div>
                 </div>
 
-                {/* Difficulty & Settings */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold opacity-40 uppercase ml-1">Schwierigkeit</label>
-                    <select
-                      value={config.difficulty}
-                      onChange={(e) => setConfig({ difficulty: e.target.value as Difficulty | 'all' })}
-                      className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)] p-4 rounded-2xl focus:border-[var(--color-accent)] outline-none transition-all"
-                    >
-                      {DIFFICULTY_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
-                    </select>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-xs font-bold opacity-40 uppercase ml-1">Zeitlimit pro Frage</label>
-                    <select
-                      value={config.timeLimitSeconds ?? ''}
-                      onChange={(e) => setConfig({ timeLimitSeconds: e.target.value ? Number(e.target.value) : null })}
-                      className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)] p-4 rounded-2xl focus:border-[var(--color-accent)] outline-none transition-all"
-                    >
-                      {TIME_LIMIT_OPTIONS.map(o => <option key={o.value ?? 'null'} value={o.value ?? ''}>{o.label}</option>)}
-                    </select>
-                  </div>
-
-                  <div className="bg-[var(--color-bg-card)] p-4 rounded-2xl border border-[var(--color-border)]">
-                    <label className="flex items-center justify-between text-sm font-bold cursor-pointer group">
-                      <div className="flex flex-col">
-                        <span>QR-Karten Modus</span>
-                        <span className="text-[9px] opacity-40 uppercase tracking-widest mt-1">Nur physische Karten</span>
-                      </div>
-                      <input type="checkbox" checked={config.onlyQRCompatible ?? false}
-                        onChange={(e) => setConfig({ onlyQRCompatible: e.target.checked })}
-                        className="accent-[var(--color-accent)] w-6 h-6 rounded-lg overflow-hidden transition-all group-active:scale-90" />
-                    </label>
-                  </div>
-
-                  <div className="bg-[var(--color-bg-card)] p-4 rounded-2xl border border-[var(--color-border)]">
-                    <label className="flex items-center justify-between text-sm font-bold cursor-pointer group">
-                      <span>Zeitabzug</span>
-                      <input type="checkbox" checked={config.timeDecayEnabled}
-                        onChange={(e) => setConfig({ timeDecayEnabled: e.target.checked })}
-                        className="accent-[var(--color-accent)] w-6 h-6 rounded-lg overflow-hidden transition-all group-active:scale-90" />
-                    </label>
-                  </div>
-                </div>
               </div>
             </motion.div>
           )}
@@ -390,6 +346,68 @@ export default function LobbyPage() {
           {step === 5 && (
             <motion.div
               key="step-5"
+              custom={direction}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              variants={variants}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="text-xl font-bold mb-2">Feintuning</h2>
+                <p className="text-sm opacity-60">Schwierigkeit, Zeitlimit und weitere Optionen.</p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <label className="text-xs font-bold opacity-40 uppercase ml-1">Schwierigkeit</label>
+                  <select
+                    value={config.difficulty}
+                    onChange={(e) => setConfig({ difficulty: e.target.value as Difficulty | 'all' })}
+                    className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)] p-4 rounded-2xl focus:border-[var(--color-accent)] outline-none transition-all"
+                  >
+                    {DIFFICULTY_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs font-bold opacity-40 uppercase ml-1">Zeitlimit pro Frage</label>
+                  <select
+                    value={config.timeLimitSeconds ?? ''}
+                    onChange={(e) => setConfig({ timeLimitSeconds: e.target.value ? Number(e.target.value) : null })}
+                    className="w-full bg-[var(--color-bg-card)] border border-[var(--color-border)] p-4 rounded-2xl focus:border-[var(--color-accent)] outline-none transition-all"
+                  >
+                    {TIME_LIMIT_OPTIONS.map(o => <option key={o.value ?? 'null'} value={o.value ?? ''}>{o.label}</option>)}
+                  </select>
+                </div>
+
+                <div className="bg-[var(--color-bg-card)] p-4 rounded-2xl border border-[var(--color-border)]">
+                  <label className="flex items-center justify-between text-sm font-bold cursor-pointer group">
+                    <div className="flex flex-col">
+                      <span>QR-Karten Modus</span>
+                      <span className="text-[9px] opacity-40 uppercase tracking-widest mt-1">Nur physische Karten</span>
+                    </div>
+                    <input type="checkbox" checked={config.onlyQRCompatible ?? false}
+                      onChange={(e) => setConfig({ onlyQRCompatible: e.target.checked })}
+                      className="accent-[var(--color-accent)] w-6 h-6 rounded-lg overflow-hidden transition-all group-active:scale-90" />
+                  </label>
+                </div>
+
+                <div className="bg-[var(--color-bg-card)] p-4 rounded-2xl border border-[var(--color-border)]">
+                  <label className="flex items-center justify-between text-sm font-bold cursor-pointer group">
+                    <span>Zeitabzug</span>
+                    <input type="checkbox" checked={config.timeDecayEnabled}
+                      onChange={(e) => setConfig({ timeDecayEnabled: e.target.checked })}
+                      className="accent-[var(--color-accent)] w-6 h-6 rounded-lg overflow-hidden transition-all group-active:scale-90" />
+                  </label>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {step === 6 && (
+            <motion.div
+              key="step-6"
               custom={direction}
               initial="enter"
               animate="center"
