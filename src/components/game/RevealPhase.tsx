@@ -183,7 +183,7 @@ function buildTimelineHeadlines(year: number): string[] {
 
 function TimelineReveal({ song }: { song: PhomuSong }) {
   const headlines = useMemo(() => buildTimelineHeadlines(song.year), [song.year]);
-  const headline = useMemo(() => pickDeterministic(headlines, `timeline:${song.id}:${song.year}`), [headlines, song.id, song.year]);
+  const headline = useMemo(() => pickDeterministic(headlines, `cover:${song.id}`), [headlines, song.id]);
 
   return (
     <motion.div
@@ -315,7 +315,7 @@ function VibeCheckReveal({ song }: { song: PhomuSong }) {
     'Offiziell bestätigt:',
     'Das ist die Energie dieses Songs:',
   ], []);
-  const headline = useMemo(() => pickDeterministic(headlines, `timeline:${song.id}:${song.year}`), [headlines, song.id, song.year]);
+  const headline = useMemo(() => pickDeterministic(headlines, `cover:${song.id}`), [headlines, song.id]);
 
   return (
     <motion.div
@@ -412,7 +412,7 @@ function CoverConfusionReveal({ song }: { song: PhomuSong }) {
     'Originalquelle bestätigt:',
     'Das haben die eigentlich erfunden:',
   ], []);
-  const headline = useMemo(() => pickDeterministic(headlines, `timeline:${song.id}:${song.year}`), [headlines, song.id, song.year]);
+  const headline = useMemo(() => pickDeterministic(headlines, `cover:${song.id}`), [headlines, song.id]);
 
   return (
     <motion.div
