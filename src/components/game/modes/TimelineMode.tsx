@@ -16,6 +16,68 @@ import { getAllSongs } from '@/utils/song-picker';
 import { useGameStore } from '@/stores/game-store';
 import { MusicPlayer } from '../MusicPlayer';
 
+// ─── Jahrzehnt-Hints für den Cheat ────────────────────────────────────────────
+
+function getDecadeHint(year: number): string {
+  const decade = Math.floor(year / 10) * 10;
+  const hints: Record<number, string[]> = {
+    1950: [
+      'Rock\'n\'Roll, Petticoats und Jukebox-Vibes.',
+      'Als Grease noch Realität war.',
+      'Vor dem Beatlemania. Klar vor dem Beatlemania.',
+      'Die Fünfziger rufen. Haartolle inklusive.',
+    ],
+    1960: [
+      'Flower Power, Mondlandung oder beides.',
+      'Irgendwas mit langen Haaren und Aufbruch.',
+      'Die 60er. Wahrscheinlich mit Gitarre.',
+      'British Invasion? Oder Summer of Love? Oder beides.',
+    ],
+    1970: [
+      'Disco, Glam oder Punk — die 70er hatten alles.',
+      'Schlaghosen-Ära. Keine Fragen.',
+      'Boogie Wonderland ruft — irgendwo in den 70ern.',
+      'Saturday Night Fever ist auch irgendwo in dieser Dekade.',
+    ],
+    1980: [
+      'Synthesizer, Schulterpolster, Schnurrbart.',
+      'Irgendwas mit Neonlicht und New Wave.',
+      'Die Achtziger. Definitiv die Achtziger.',
+      'Wenn du Cassettenspieler kannst, weißt du wo das hingehört.',
+      'MTV hat gerade erst erfunden was Musikvideo bedeutet.',
+    ],
+    1990: [
+      'Grunge ODER Eurodance ODER beides gleichzeitig.',
+      'Irgendwo zwischen Kurt Cobain und den Backstreet Boys.',
+      'Die Neunziger. Schnauzbart optional.',
+      'CD-Player, Discman, total analog aufgewachsen.',
+      'Britpop oder Techno? Genau — die 90er.',
+    ],
+    2000: [
+      'Nuller-Jahre. Tiefgeschnittene Jeans und Motorola Razr.',
+      'Als MySpace noch cool war.',
+      'Irgendwo in den 2000ern. iPod-Ära.',
+      'Pop-Punk oder R&B — auf jeden Fall Anfang des Jahrtausends.',
+      'Vor Spotify. Als Limewire noch das Ding war.',
+    ],
+    2010: [
+      'Zehnerjahre. EDM-Drop incoming.',
+      'Irgendwas mit Snapchat und Festival-Armbändern.',
+      'Die Zehner — zwischen Dubstep und Streaming-Boom.',
+      'Als alle plötzlich Bärte hatten.',
+      'Post-Gangnam Style Ära. Irgendwo in den 2010s.',
+    ],
+    2020: [
+      'Pandemie-Ära oder danach. Sehr frisch.',
+      'Neulich. Richtig neulich.',
+      'TikTok-Zeitalter — das ist aktuell.',
+      'Streaming only. Definitiv nach 2019.',
+    ],
+  };
+  const pool = hints[decade] ?? [`Irgendwann in den ${decade}ern.`];
+  return pool[Math.floor(Math.random() * pool.length)]!;
+}
+
 function randomInitialYears(count: number): number[] {
   const all = [...new Set(getAllSongs().map((s) => s.year))];
   const shuffled = all.sort(() => Math.random() - 0.5);
@@ -68,7 +130,7 @@ interface TimelineModeProps {
 type RemovalState = 'none' | 'choosing' | 'done';
 
 export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
-  const { timelineYears, initTimeline, addTimelineYear, removeTimelineYear, config } = useGameStore();
+  const { timelineYears, initTimeline, addTimelineYear, removeTimelineYear, config, awardPoints, turnOrder, currentTurnIndex } = useGameStore();
 
   // Einmalig initialisieren, wenn Timeline noch leer ist
   useEffect(() => {
@@ -99,6 +161,9 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
   const [isRevealed, setIsRevealed] = useState(false);
   const [removalState, setRemovalState] = useState<RemovalState>('none');
   const [cheatActive, setCheatActive] = useState(false);
+  const [cheatHint, setCheatHint] = useState<string>('');
+  const [jokerUsed, setJokerUsed] = useState(false);
+  const [jokerSlot, setJokerSlot] = useState<number | null>(null);
 
   const numSlots = timelineYears.length + 1;
 
@@ -145,6 +210,24 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
     setRemovalState('done');
   }
 
+  function handleJoker() {
+    if (jokerUsed || isRevealed) return;
+    // Find all wrong slots (not in validSlotSet)
+    const wrongSlots: number[] = [];
+    for (let i = 0; i < numSlots; i++) {
+      if (!validSlotSet.has(i)) wrongSlots.push(i);
+    }
+    if (wrongSlots.length === 0) return;
+    const pick = wrongSlots[Math.floor(Math.random() * wrongSlots.length)]!;
+    setJokerSlot(pick);
+    setJokerUsed(true);
+    // Deduct 1 point from current player's accumulated score
+    const pilotId = turnOrder[currentTurnIndex];
+    if (pilotId) awardPoints(pilotId, -1);
+    // Clear selection if the joker removed the selected slot
+    if (selectedSlot === pick) setSelectedSlot(null);
+  }
+
   const canProceed = isRevealed;
 
   // Keyboard navigation
@@ -175,7 +258,7 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
       <div className="text-center space-y-1">
         <h2 className="text-2xl font-black uppercase tracking-tight">
           {!isRevealed
-            ? (cheatActive ? `Das Jahr ist ${song.year} 📅` : 'Wann war dieser Song?')
+            ? 'Wann war dieser Song?'
             : selectedSlot !== null && validSlotSet.has(selectedSlot)
               ? 'Goldrichtig! ✨'
               : 'Leider daneben... 🌧️'}
@@ -187,11 +270,51 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.3 }}
             whileHover={{ opacity: 1, scale: 1.05 }}
-            onClick={() => setCheatActive(true)}
+            onClick={() => { setCheatActive(true); setCheatHint(getDecadeHint(song.year)); }}
             className="text-[10px] font-black uppercase tracking-widest border border-white/10 py-1.5 px-3 rounded-full hover:bg-white/5 transition-all mb-2"
           >
-            🕵️ Musik-Cheat: Jahr enthüllen (-2 Pkt)
+            🕵️ Jahrzehnt-Hint (-2 Pkt)
           </motion.button>
+        )}
+
+        {/* Cheat Hint Bubble */}
+        {!isRevealed && cheatActive && (
+          <motion.div
+            initial={{ opacity: 0, y: -6, scale: 0.92 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            className="mx-auto mt-1 mb-1 px-4 py-2 rounded-2xl text-center max-w-xs"
+            style={{ background: 'rgba(251,146,60,0.12)', border: '1.5px solid rgba(251,146,60,0.4)' }}
+          >
+            <p className="text-[11px] font-black italic text-orange-300 leading-snug">
+              🕵️ {cheatHint}
+            </p>
+          </motion.div>
+        )}
+
+        {/* Joker Button */}
+        {!isRevealed && !jokerUsed && numSlots > 3 && (
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.3 }}
+            whileHover={{ opacity: 1, scale: 1.05 }}
+            onClick={handleJoker}
+            className="text-[10px] font-black uppercase tracking-widest border border-yellow-500/20 py-1.5 px-3 rounded-full hover:bg-yellow-500/5 transition-all mb-1"
+            style={{ color: '#fbbf24' }}
+          >
+            🃏 Joker: Falschen Slot entfernen (-1 Pkt)
+          </motion.button>
+        )}
+
+        {/* Joker Used Badge */}
+        {!isRevealed && jokerUsed && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, rotate: -8 }}
+            animate={{ opacity: 1, scale: 1, rotate: -4 }}
+            className="mx-auto mt-1 mb-1 px-3 py-1 rounded-xl text-[10px] font-black uppercase tracking-tight text-black inline-block"
+            style={{ backgroundColor: '#fbbf24', boxShadow: '0 2px 10px rgba(251,191,36,0.6)' }}
+          >
+            🃏 Joker eingesetzt — 1 Slot weg
+          </motion.div>
         )}
 
         <div className="flex items-center justify-center gap-2">
@@ -250,6 +373,42 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
           const isTarget = selectedSlot === slotIdx;
           const yearAfter = timelineYears[slotIdx];
           const isAnswerCorrect = selectedSlot !== null && validSlotSet.has(selectedSlot);
+          const isJokerSlot = jokerSlot === slotIdx && !isRevealed;
+
+          // Joker slot: render as a visually removed / crossed-out slot, non-interactive
+          if (isJokerSlot) {
+            return (
+              <div key={slotIdx} className="flex flex-col">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 shrink-0 flex flex-col items-center">
+                    <div className="w-0.5 flex-1 bg-white/5 min-h-[8px]" />
+                    <div className="w-2 h-2 rounded-full bg-yellow-500/20 my-0.5 shrink-0" />
+                    <div className="w-0.5 flex-1 bg-white/5 min-h-[8px]" />
+                  </div>
+                  <div
+                    className={`flex-1 rounded-xl border-2 border-dashed flex items-center justify-center opacity-30 ${
+                      numSlots <= 5 ? 'h-20' : numSlots <= 7 ? 'h-16' : 'h-12'
+                    }`}
+                    style={{ borderColor: '#fbbf24', background: 'rgba(251,191,36,0.05)' }}
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-widest" style={{ color: '#fbbf24' }}>
+                      🃏 Joker
+                    </span>
+                  </div>
+                </div>
+                {yearAfter !== undefined && (
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 shrink-0 flex justify-center py-0.5">
+                      <div className="px-2.5 py-0.5 bg-[var(--color-bg-card)] border border-white/15 rounded-full shadow-md">
+                        <p className="text-[11px] font-black text-white leading-none">{yearAfter}</p>
+                      </div>
+                    </div>
+                    <div className="flex-1 h-px bg-white/5" />
+                  </div>
+                )}
+              </div>
+            );
+          }
 
           return (
             <div key={slotIdx} className="flex flex-col">

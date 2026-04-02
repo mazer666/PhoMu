@@ -57,15 +57,117 @@ const NEXT_ROUND_LABELS = [
 
 // ─── Modus-spezifische Reveal-Karten ─────────────────────────────
 
+function buildTimelineHeadlines(year: number): string[] {
+  const decade = Math.floor(year / 10) * 10;
+
+  // Generic year-based
+  const generic = [
+    `Jahrgang ${year}!`,
+    `Das war aus ${year}.`,
+    `${year} — eingetütet.`,
+    `Zeitkapsel: ${year}.`,
+    `${year}. Nicht ${year - 1}, nicht ${year + 1}.`,
+    `Der Song stammt aus ${year}.`,
+    `${year}. Exakt.`,
+    `${year}. So ist das.`,
+    `Anno ${year}.`,
+    `${year} war das Jahr.`,
+    `Der Song? ${year}. Gesetzt.`,
+    `${year}. Eingetütet, eingemauert, fertig.`,
+    `Richtig ist ${year}. Immer war es ${year}.`,
+    `Dieses Lied atmet ${year}.`,
+    `${year}. Man riecht es förmlich.`,
+    `Stempel drauf: ${year}.`,
+    `${year}. Kein Jahr davor, keins danach.`,
+    `Akte geschlossen: ${year}.`,
+    `${year}. Fakt. Unverrückbar.`,
+    `Das ist ${year}. Ende der Diskussion.`,
+    `${year} und kein bisschen älter.`,
+    `Von ${year}. Absolut von ${year}.`,
+    `${year} — das war die Antwort.`,
+    `Dieser Sound gehört zu ${year}.`,
+    `${year}, du Legende.`,
+    `Genau ${year}. Jetzt weißt du's.`,
+    `Jahreszahl enthüllt: ${year}.`,
+    `${year}. Wer das wusste, darf stolz sein.`,
+    `${year} war das Ding.`,
+    `${year}. Keine Diskussion, kein Widerspruch.`,
+  ];
+
+  // Decade-flavoured
+  const byDecade: Record<number, string[]> = {
+    1950: [
+      `${year}? Die 50er grüßen.`,
+      `Petticoat, Jukebox, ${year}.`,
+      `Rock'n'Roll-Ära — Jahrgang ${year}.`,
+      `Als Elvis noch frisch war. ${year}.`,
+    ],
+    1960: [
+      `${year}. Flower Power oder British Invasion?`,
+      `Swinging Sixties. Jahrgang ${year}.`,
+      `${year} — Beatlemania war irgendwo da.`,
+      `Summer of Love-Dekade: ${year}.`,
+      `${year}. Die Welt hat damals noch Gitarre gespielt.`,
+    ],
+    1970: [
+      `${year}. Disco oder Punk? Beides richtig.`,
+      `Schlaghosen-Jahrgang ${year}.`,
+      `${year}. Boogie Wonderland lässt grüßen.`,
+      `Glam, Funk, Prog — ${year}.`,
+      `${year}. Saturday Night war jede Nacht.`,
+      `${year}. Bee Gees oder Ramones, du weißt Bescheid.`,
+    ],
+    1980: [
+      `${year}. Synthesizer, Schulterpolster, Neonlicht.`,
+      `New Wave-Jahrgang ${year}.`,
+      `${year}. MTV hat's gerade erst erfunden.`,
+      `${year} — Kassette war das Medium.`,
+      `Achtziger-Klassiker: ${year}.`,
+      `${year}. Schnauzbart war Pflicht.`,
+      `${year}. Depeche Mode nickt wissend.`,
+      `${year}. Irgendwo zwischen Synthpop und Big Hair.`,
+    ],
+    1990: [
+      `${year}. Grunge trifft Eurodance — welcome to the 90s.`,
+      `Neunziger-Ding: ${year}.`,
+      `${year}. Kurt oder Kylie? Beides war da.`,
+      `${year} — CD-Player Pflichtausrüstung.`,
+      `${year}. Britpop, Techno, Boyband. Alles gleichzeitig.`,
+      `${year}. Als "Everybody" noch wirklich jeder kannte.`,
+      `${year}. MSN-Messenger-Ära, ungefähr.`,
+    ],
+    2000: [
+      `${year}. iPod-Ära. MySpace-Ära.`,
+      `Nullerjahre: ${year}.`,
+      `${year}. Tiefgeschnittene Jeans und Motorola Razr.`,
+      `${year}. Vor Spotify, nach Napster.`,
+      `${year}. Pop-Punk ODER R&B, pick one.`,
+      `${year} — Limewire hat diesen Song gemacht.`,
+      `${year}. Die Charts auf MTV gelesen.`,
+    ],
+    2010: [
+      `${year}. EDM-Drop-Dekade.`,
+      `Zehnerjahre-Sound: ${year}.`,
+      `${year}. Zwischen Dubstep und Streaming-Boom.`,
+      `${year}. Als alle plötzlich Bärte hatten.`,
+      `${year}. Festival-Armband-Ära.`,
+      `${year} — Snapchat war irgendwo da.`,
+      `${year}. Post-Gangnam-Style-Universum.`,
+    ],
+    2020: [
+      `${year}. Das ist verdammt nochmal aktuell.`,
+      `${year}. TikTok-Zeitalter.`,
+      `${year}. Streaming only, klar.`,
+      `${year}. Neulich. Richtig neulich.`,
+      `${year}. Jünger als der letzte Lockdown.`,
+    ],
+  };
+
+  return [...generic, ...(byDecade[decade] ?? [])];
+}
+
 function TimelineReveal({ song }: { song: PhomuSong }) {
-  const headlines = useMemo(() => [
-    `Jahrgang ${song.year}!`,
-    `Das war aus ${song.year}.`,
-    `${song.year} — eingetütet.`,
-    `Zeitkapsel: ${song.year}.`,
-    `${song.year}. Nicht ${song.year - 1}, nicht ${song.year + 1}.`,
-    `Der Song stammt aus ${song.year}.`,
-  ], [song.year]);
+  const headlines = useMemo(() => buildTimelineHeadlines(song.year), [song.year]);
   const headline = useMemo(() => headlines[Math.floor(Math.random() * headlines.length)]!, [headlines]);
 
   return (

@@ -345,7 +345,7 @@ export default function BrowsePage() {
             
             <div className="flex items-center gap-3">
               <div className="flex items-center bg-white/5 p-1 rounded-xl border border-white/10">
-                {[24, 48, 96, 'all'].map((size) => (
+                {[8, 24, 48, 96, 'all'].map((size) => (
                   <button
                     key={size}
                     onClick={() => setPageSize(size as any)}
@@ -452,6 +452,47 @@ export default function BrowsePage() {
               ))
             )}
           </div>
+
+          {/* Pagination Bar (Bottom) */}
+          {pageSize !== 'all' && totalPages > 1 && (
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-8 bg-white/5 p-3 rounded-[2rem] border border-white/5 backdrop-blur-md">
+              <PaginationButton icon="|←" onClick={() => setCurrentPage(1)} disabled={currentPage === 1} title="Anfang" />
+              <PaginationButton icon="←" onClick={() => setCurrentPage(p => Math.max(1, p - 1))} disabled={currentPage === 1} title="Zurück" />
+
+              <div className="h-8 w-px bg-white/10 mx-2 hidden sm:block" />
+
+              <div className="flex items-center gap-1">
+                {Array.from({ length: Math.min(5, totalPages) }).map((_, i) => {
+                  let pageNum = currentPage;
+                  if (totalPages <= 5) pageNum = i + 1;
+                  else if (currentPage <= 3) pageNum = i + 1;
+                  else if (currentPage >= totalPages - 2) pageNum = totalPages - 4 + i;
+                  else pageNum = currentPage - 2 + i;
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => setCurrentPage(pageNum)}
+                      className={`w-10 h-10 rounded-xl text-xs font-black transition-all ${currentPage === pageNum ? 'bg-blue-600 text-white shadow-xl shadow-blue-600/20 scale-110' : 'bg-white/5 text-white/40 hover:bg-white/10'}`}
+                    >
+                      {pageNum}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="h-8 w-px bg-white/10 mx-2 hidden sm:block" />
+
+              <PaginationButton icon="→" onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages} title="Weiter" />
+
+              <div className="flex items-center gap-1 ml-2">
+                <button onClick={() => setCurrentPage(p => Math.min(totalPages, p + 5))} disabled={currentPage > totalPages - 5} className="px-3 py-2 rounded-xl bg-white/5 border border-white/5 text-[10px] font-black text-white/40 hover:text-blue-400 hover:bg-blue-400/10 transition-all disabled:opacity-20">+5</button>
+                <button onClick={() => setCurrentPage(p => Math.min(totalPages, p + 10))} disabled={currentPage > totalPages - 10} className="px-3 py-2 rounded-xl bg-white/5 border border-white/5 text-[10px] font-black text-white/40 hover:text-blue-400 hover:bg-blue-400/10 transition-all disabled:opacity-20">+10</button>
+              </div>
+
+              <div className="h-8 w-px bg-white/10 mx-2 hidden sm:block" />
+              <PaginationButton icon="→|" onClick={() => setCurrentPage(totalPages)} disabled={currentPage === totalPages} title="Ende" />
+            </div>
+          )}
         </main>
       </div>
 
