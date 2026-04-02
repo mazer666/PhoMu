@@ -147,9 +147,13 @@ export function DrawingPhase({
 
   // AUTO-DRAW: Wenn wir nach einem Skip hier ankommen, automatisch ziehen
   useEffect(() => {
-    if (autoDrawIntent && !isDrawing) {
+    if (!autoDrawIntent || isDrawing) return;
+
+    const timer = setTimeout(() => {
       handleDraw();
-    }
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, [autoDrawIntent, isDrawing, handleDraw]);
 
   return (

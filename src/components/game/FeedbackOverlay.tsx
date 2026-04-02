@@ -25,10 +25,7 @@ export function FeedbackOverlay({ isCorrect, triggerKey, onComplete }: FeedbackO
   const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
-    if (isCorrect === null) {
-      setActiveMessage(null);
-      return;
-    }
+    if (isCorrect === null) return;
 
     const pool = isCorrect ? CORRECT_MESSAGES : WRONG_MESSAGES;
     const colors = isCorrect ? COLORS_CORRECT : COLORS_WRONG;
@@ -52,7 +49,7 @@ export function FeedbackOverlay({ isCorrect, triggerKey, onComplete }: FeedbackO
   return (
     <div className="fixed inset-0 z-[100] pointer-events-none flex items-center justify-center px-5">
       <AnimatePresence>
-        {activeMessage && (
+        {isCorrect !== null && activeMessage && (
           <motion.div
             key={activeMessage + triggerKey}
             initial={{ scale: 0.05, opacity: 0, rotate: rotation - 20, y: 80 }}
