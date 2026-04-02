@@ -12,6 +12,7 @@ import { ALL_SONGS as DATA_SONGS } from '@/data/packs';
 // ─── Daten laden & Storage ──────────────────────────────────────────────────
 
 const STORAGE_KEY = 'phomu-admin-songs';
+const PAGE_SIZE_OPTIONS = [8, 24, 48, 96, 'all'] as const;
 
 /** Lädt Songs aus localStorage oder Fallback auf JSON */
 function loadSongs(): PhomuSong[] {
@@ -339,10 +340,10 @@ export default function BrowsePage() {
             
             <div className="flex items-center gap-3">
               <div className="flex items-center bg-white/5 p-1 rounded-xl border border-white/10">
-                {[8, 24, 48, 96, 'all'].map((size) => (
+                {PAGE_SIZE_OPTIONS.map((size) => (
                   <button
                     key={size}
-                    onClick={() => setPageSize(size as any)}
+                    onClick={() => setPageSize(size)}
                     className={`px-3 py-1.5 rounded-lg text-[10px] font-black uppercase transition-all ${pageSize === size ? 'bg-blue-600 text-white shadow-lg' : 'text-white/40 hover:text-white'}`}
                   >
                     {size === 'all' ? 'Alle' : size}

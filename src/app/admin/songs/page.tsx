@@ -184,17 +184,13 @@ function SongRow({
 // ─── Haupt-Seite ───────────────────────────────────────────────────────────────
 
 export default function AdminSongsPage() {
-  const [songs, setSongs] = useState<AdminSong[]>([]);
+  const [songs, setSongs] = useState<AdminSong[]>(() => loadSongsFromStorage());
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [filterCompleteness, setFilterCompleteness] = useState<FilterCompleteness>('all');
   const [filterPack, setFilterPack] = useState<FilterPack>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [savedMessage, setSavedMessage] = useState('');
 
-  // Beim ersten Render: Songs aus localStorage oder JSON laden
-  useEffect(() => {
-    setSongs(loadSongsFromStorage());
-  }, []);
 
   // Alle verfügbaren Packs aus den Songs ermitteln
   const availablePacks = Array.from(new Set(songs.map((s) => s.pack)));

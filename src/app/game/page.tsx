@@ -107,6 +107,8 @@ export default function GamePage() {
     ? teams.find((t) => t.id === nextPilotId)
     : players.find((p) => p.id === nextPilotId);
 
+  const pilotAvatar = !isTeamTurn && pilot && 'avatar' in pilot ? pilot.avatar : '👥';
+
   // ── Handler: Karte gezogen ─────────────────────────────────────
   const handleCardDrawn = useCallback(
     (song: PhomuSong) => {
@@ -294,7 +296,7 @@ export default function GamePage() {
         roundNumber={progressData.currentVal}
         currentMode={currentMode}
         pilotName={pilot?.name}
-        pilotAvatar={isTeamTurn ? '👥' : (pilot as any)?.avatar}
+        pilotAvatar={pilotAvatar}
         pilotColor={pilot?.color}
         timeLimitSeconds={roundPhase === 'question' ? config.timeLimitSeconds : null}
         progressPercentage={progressData.percentage}
