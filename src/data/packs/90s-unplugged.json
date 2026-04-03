@@ -2,7 +2,7 @@
   "meta": {
     "pack": "90s Unplugged",
     "version": "1.0.0",
-    "updatedAt": "2026-04-04T00:09:28.640060"
+    "updatedAt": "2026-04-04T00:15:02.855018"
   },
   "songs": [
     {
@@ -726,7 +726,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "VV1XWJN3nJo"
+        "youtube": "VV1XWJN3nJo",
+        "spotify": "1Jaah2tmN9Hv81A87KZ1MU",
+        "amazonMusic": "B004NHDULW"
       },
       "coverUrl": "/covers/90s-natalie-imbruglia-torn.jpg",
       "supportedModes": [
@@ -770,7 +772,9 @@
       },
       "isOneHitWonder": true,
       "links": {
-        "youtube": "hII0JXUJNDo"
+        "youtube": "hII0JXUJNDo",
+        "spotify": "754kgU5rWscRTfvlsuEwFp",
+        "amazonMusic": "B07VRV4ZC6"
       },
       "coverUrl": "/covers/90s-sixpence-kiss-me.jpg",
       "supportedModes": [
@@ -814,7 +818,9 @@
       },
       "isOneHitWonder": true,
       "links": {
-        "youtube": "xGytDsqkQY8"
+        "youtube": "xGytDsqkQY8",
+        "spotify": "1A5V1sxyCLpKJezp75tUXn",
+        "amazonMusic": "B0DN3ZCKPZ"
       },
       "coverUrl": "/covers/90s-semisonic-closing-time.jpg",
       "supportedModes": [
@@ -858,7 +864,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "beINamVRGy4"
+        "youtube": "beINamVRGy4",
+        "spotify": "42et6fnHCw1HIPSrdPprMl",
+        "amazonMusic": "B002TEV6QC"
       },
       "coverUrl": "/covers/90s-third-eye-blind-semi-charmed.jpg",
       "supportedModes": [
@@ -902,7 +910,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "NRtvqT_wMeY"
+        "youtube": "NRtvqT_wMeY",
+        "spotify": "3Ib3SJV8ZXuLvDiDb2w1As",
+        "amazonMusic": "B001SNJEEQ"
       },
       "coverUrl": "/covers/90s-soul-asylum-runaway-train.jpg",
       "supportedModes": [
@@ -946,7 +956,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "-KG2O5PSCSs"
+        "youtube": "-KG2O5PSCSs",
+        "spotify": "0zxj7dVhYZq5ACyaDx5XIo",
+        "amazonMusic": "B0BH1ZSGCV"
       },
       "coverUrl": "/covers/unplugged-clapton-layla.jpg",
       "supportedModes": [
@@ -990,7 +1002,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "G23iLGhh9lo"
+        "youtube": "G23iLGhh9lo",
+        "spotify": "3QAE7ypzhNZzQxOjKCGHD9",
+        "amazonMusic": "B004HAMX2W"
       },
       "coverUrl": "/covers/unplugged-aic-nutshell.jpg",
       "supportedModes": [
@@ -1034,7 +1048,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "qgaRVvAKoqQ"
+        "youtube": "qgaRVvAKoqQ",
+        "spotify": "3xIaUb1WsnrqbJo6CsJMLO",
+        "amazonMusic": "B08HNFPM32"
       },
       "coverUrl": "/covers/unplugged-pearl-jam-black.jpg",
       "supportedModes": [
@@ -1078,7 +1094,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "dGBwsC0yJ8o"
+        "youtube": "dGBwsC0yJ8o",
+        "spotify": "23XtNOaLoZKhhKZe6Vz5Y8",
+        "amazonMusic": "B00VKECVXY"
       },
       "coverUrl": "/covers/unplugged-tori-amos-crucify.jpg",
       "supportedModes": [
@@ -1122,7 +1140,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "Ln6WQqRDrCo"
+        "youtube": "Ln6WQqRDrCo",
+        "spotify": "1OFKUn2VLafrHj7ybnap0Q",
+        "amazonMusic": "B002LQ0P7E"
       },
       "coverUrl": "/covers/unplugged-hootie-only-wanna.jpg",
       "supportedModes": [
