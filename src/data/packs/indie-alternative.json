@@ -32,7 +32,11 @@
           "You're just like an angel, your skin makes me cry",
           "I'm a creep, I'm a weirdo, what the hell am I doing here?"
         ],
-        "fake": "Walking through the rain, I'm calling out your name in vain"
+        "fake": [
+          "We are drunk like a donkey, your fur makes me try",
+          "Because your eyes are like flies, so I'm gonna die",
+          "You're right and just, for you trust, and you never rust"
+        ]
       },
       "isOneHitWonder": false,
       "links": {
@@ -65,8 +69,8 @@
       "pack": "Indie & Alternative",
       "hints": [
         "Das markante Bass-Riff wurde oft mit 'Eighties' von Killing Joke verglichen.",
-        "Einer der wenigen [XXX]-Songs mit einem optimistischeren Unterton ('[XXX] as you are, as you were').",
-        "Das Video zeigt die Band in einem dunklen, wässrigen Setting (Hommage an Nevermind-Cover).",
+        "Einer der wenigen Songs der Band mit einem optimistischeren Unterton.",
+        "Das Video zeigt die Band in einem dunklen, wässrigen Setting.",
         "Kurt Cobains Stimme ist hier besonders kehlig und melancholisch.",
         "Refrain: 'And I swear that I don't have a gun, no I don't have a gun...'"
       ],
@@ -76,7 +80,11 @@
           "As a friend, as a friend, as a known enemy",
           "Take your time, hurry up, choice is yours, don't be late"
         ],
-        "fake": "In the shadow of the night, I'm looking for the light of your heart"
+        "fake": [
+          "To be free, free as a bird, in the yard for the herd",
+          "As a fiend, as a fellow, as a strange new dream",
+          "Be a clock, take a step, judge it now, don't be late"
+        ]
       },
       "isOneHitWonder": false,
       "links": {
@@ -120,7 +128,10 @@
           "A better place to play, you said that you'd never been",
           "And so Sally can wait, she knows it's too late as we're walking on by"
         ],
-        "fake": "Nothing's gonna change my world, you're the only special girl"
+        "fake": [
+          "On your search for a place, you can stay, so you play for a while",
+          "So Sally wants to join, she needs to hurry or she'll miss the curry"
+        ]
       },
       "isOneHitWonder": false,
       "links": {
