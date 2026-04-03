@@ -12,6 +12,7 @@ import { useGameStore } from '@/stores/game-store';
 
 interface MusicPlayerProps {
   youtubeLink: string;
+  youtubeAlternatives?: string[];
   startSeconds?: number;
   /** Stoppt Wiedergabe automatisch nach dieser Sekunde (z.B. startSeconds + 30) */
   endSeconds?: number;
@@ -24,6 +25,9 @@ interface MusicPlayerProps {
 interface YTPlayerInstance {
   playVideo: () => void;
   pauseVideo: () => void;
+  setVolume: (volume: number) => void;
+  mute: () => void;
+  unMute: () => void;
   getCurrentTime: () => number;
   getPlayerState: () => number;
   destroy: () => void;
@@ -38,7 +42,7 @@ declare global {
   interface Window {
     onYouTubeIframeAPIReady: () => void;
     YT: {
-      Player: new (element: HTMLElement, options: Record<string, unknown>) => YTPlayerInstance;
+      Player: new (element: HTMLElement | string, options: Record<string, unknown>) => YTPlayerInstance;
       PlayerState: {
         UNSTARTED: number;
         PLAYING: number;
@@ -60,8 +64,15 @@ function extractYouTubeId(url: string): string | null {
   return match ? match[1] : url.length === 11 ? url : null;
 }
 
-export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred = false, className = '' }: MusicPlayerProps) {
-  const { preferredPlayer, skipBrokenSong } = useGameStore();
+export function MusicPlayer({
+  youtubeLink,
+  youtubeAlternatives,
+  startSeconds = 0,
+  endSeconds,
+  blurred = false,
+  className = '',
+}: MusicPlayerProps) {
+  const { preferredPlayer, skipBrokenSong, musicEnabled, musicVolume } = useGameStore();
 
   const [playerState, setPlayerState] = useState<'loading' | 'playing' | 'error' | 'paused'>('loading');
   const [videoRevealed, setVideoRevealed] = useState(false);
@@ -72,22 +83,25 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
   const playerRef = useRef<YTPlayerInstance | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const endCheckRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const videoId = useMemo(() => extractYouTubeId(youtubeLink), [youtubeLink]);
+  const fallbackQueue = useMemo(
+    () =>
+      [youtubeLink, ...(youtubeAlternatives ?? [])]
+        .map((link) => extractYouTubeId(link))
+        .filter((id): id is string => !!id),
+    [youtubeLink, youtubeAlternatives]
+  );
+  const [videoIndex, setVideoIndex] = useState(0);
+  const videoId = fallbackQueue[videoIndex] ?? null;
   const [key, setKey] = useState(0);
 
   const [autoSkipCountdown, setAutoSkipCountdown] = useState<number | null>(null);
   const skipTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const handleError = useCallback(() => {
-    console.warn('❌ MusicPlayer Error detected.');
-    setPlayerState('error');
-    if (endCheckRef.current) clearInterval(endCheckRef.current);
-    
-    // Start auto-skip countdown (10s)
+  const startAutoSkipCountdown = useCallback(() => {
     setAutoSkipCountdown(10);
     if (skipTimerRef.current) clearInterval(skipTimerRef.current);
     skipTimerRef.current = setInterval(() => {
-      setAutoSkipCountdown(prev => {
+      setAutoSkipCountdown((prev) => {
         if (prev === null || prev <= 1) {
           if (skipTimerRef.current) clearInterval(skipTimerRef.current);
           skipBrokenSong();
@@ -97,6 +111,26 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
       });
     }, 1000);
   }, [skipBrokenSong]);
+
+  const handleError = useCallback(() => {
+    if (endCheckRef.current) clearInterval(endCheckRef.current);
+
+    setVideoIndex((prev) => {
+      const next = prev + 1;
+      if (next < fallbackQueue.length) {
+        console.warn(`⚠️ MusicPlayer fallback ${next + 1}/${fallbackQueue.length}`);
+        setPlayerState('loading');
+        setAutoSkipCountdown(null);
+        setKey((k) => k + 1);
+        return next;
+      }
+
+      console.warn('❌ MusicPlayer Error detected. No fallback left.');
+      setPlayerState('error');
+      startAutoSkipCountdown();
+      return prev;
+    });
+  }, [fallbackQueue.length, startAutoSkipCountdown]);
 
   const toggleDomain = useCallback(() => {
     // Clear skip timer if toggling
@@ -131,6 +165,14 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
         events: {
           onReady: (event: YTPlayerEvent) => {
             setPlayerState('playing');
+            event.target.setVolume(Math.round(Math.max(0, Math.min(1, musicVolume)) * 100));
+            if (!musicEnabled) {
+              event.target.mute();
+              event.target.pauseVideo();
+              setPlayerState('paused');
+              return;
+            }
+            event.target.unMute();
             event.target.playVideo();
             
             if (endSeconds) {
@@ -186,7 +228,25 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
         try { playerRef.current.destroy(); } catch { /* noop */ }
       }
     };
-  }, [videoId, activeDomain, startSeconds, endSeconds, handleError, playerState]);
+  }, [videoId, activeDomain, startSeconds, endSeconds, handleError, playerState, musicEnabled, musicVolume]);
+
+  useEffect(() => {
+    if (!playerRef.current) return;
+    try {
+      playerRef.current.setVolume(Math.round(Math.max(0, Math.min(1, musicVolume)) * 100));
+      if (musicEnabled) {
+        playerRef.current.unMute();
+        if (playerState !== 'playing') {
+          playerRef.current.playVideo();
+        }
+      } else {
+        playerRef.current.mute();
+        playerRef.current.pauseVideo();
+      }
+    } catch {
+      // noop (e.g. player not ready)
+    }
+  }, [musicEnabled, musicVolume, playerState]);
 
   if (!videoId) {
     return <div className="h-40 flex items-center justify-center opacity-30 border rounded-2xl italic">Kein Video verfügbar</div>;
@@ -268,6 +328,12 @@ export function MusicPlayer({ youtubeLink, startSeconds = 0, endSeconds, blurred
             <p className="text-xs text-white/40 max-w-sm mb-6 leading-relaxed">
               Video nicht verfügbar. Neuer Song wird automatisch gezogen …
             </p>
+
+            {fallbackQueue.length > 1 && (
+              <p className="text-[10px] text-white/30 mb-3 uppercase tracking-widest">
+                Fallbacks getestet: {Math.min(videoIndex + 1, fallbackQueue.length)} / {fallbackQueue.length}
+              </p>
+            )}
 
             {autoSkipCountdown !== null && (
               <div className="mb-6 px-4 py-1.5 bg-red-500/20 text-red-400 text-[10px] font-black uppercase tracking-[0.2em] rounded-full animate-pulse border border-red-400/20">

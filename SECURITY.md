@@ -33,9 +33,17 @@ Aktualisiert: 2. April 2026
 
 ## 3.4 Bereits umgesetzt (Stabilisierung + Security-Baseline)
 - Admin-Cover-APIs sind per `x-admin-token` + `ADMIN_API_TOKEN` geschützt (401/503 bei fehlender Auth/Config).
+- `ADMIN_API_TOKEN` wird serverseitig auf Mindestlänge geprüft (Fehlkonfiguration führt zu 503).
 - Strikte Input-Validation für `artist`, `title`, `songId` und `imageUrl`.
 - Nur HTTPS und Allowlist für externe Cover-Hosts (`mzstatic.com`, `dzcdn.net`).
 - Externe Requests mit Timeout, Response-Typ-Prüfung und Bildgrößenlimit (5 MB).
+
+## 3.5 Token-Rotation (Admin API)
+- Rotation mindestens monatlich oder sofort bei Leak-Verdacht.
+- Neuen Token lokal erzeugen mit:
+  - `npm run security:rotate-admin-token`
+- Token nur im Secret-Store/Deployment-Environment setzen (`ADMIN_API_TOKEN`), nie committen.
+- Nach Rotation alten Token invalidieren und Admin-Clients aktualisieren.
 
 ## 4) Security-Verifikation
 - CI-Pflichtchecks:

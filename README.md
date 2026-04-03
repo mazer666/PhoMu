@@ -53,6 +53,9 @@ Der aktuelle Stand ist ein lauffähiger Prototyp mit vollständigem Core-Loop (L
 - `npm run typecheck`
 - `npm run lint` (derzeit nur Warnungen, keine Errors)
 - `npm run test`
+- `npm run test:e2e:install` (installiert Playwright Chromium)
+- `npm run test:e2e:install:linux` (installiert notwendige Linux-Systemlibs für Playwright)
+- `npm run test:e2e:smoke` (smoke flow via Playwright)
 - `npm run validate-songs`
 - `npm run validate-catalog`
 - `npm run build`
@@ -97,6 +100,10 @@ cp .env.example .env.local
 npm run typecheck
 npm run lint
 npm run test
+npm run test:e2e:install
+# nur auf Linux nötig, falls Browser-Libs fehlen:
+# npm run test:e2e:install:linux
+npm run test:e2e:smoke
 npm run validate-songs
 npm run validate-catalog
 npm run build

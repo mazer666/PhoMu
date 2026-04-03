@@ -1,18 +1,22 @@
 import { NextResponse } from 'next/server';
+import crypto from 'node:crypto';
 
 const DEFAULT_TIMEOUT_MS = 7000;
+const MIN_ADMIN_TOKEN_LENGTH = 32;
 
 function timingSafeEqual(a: string, b: string): boolean {
-  if (a.length !== b.length) return false;
-  let diff = 0;
-  for (let i = 0; i < a.length; i += 1) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
-  return diff === 0;
+  const aHash = crypto.createHash('sha256').update(a, 'utf8').digest();
+  const bHash = crypto.createHash('sha256').update(b, 'utf8').digest();
+  return crypto.timingSafeEqual(aHash, bHash);
 }
 
 export function assertAdminAccess(request: Request): NextResponse | null {
   const expectedToken = process.env.ADMIN_API_TOKEN;
   if (!expectedToken) {
     return NextResponse.json({ error: 'Admin API not configured' }, { status: 503 });
+  }
+  if (expectedToken.length < MIN_ADMIN_TOKEN_LENGTH) {
+    return NextResponse.json({ error: 'Admin API token too short' }, { status: 503 });
   }
 
   const providedToken = request.headers.get('x-admin-token') ?? '';

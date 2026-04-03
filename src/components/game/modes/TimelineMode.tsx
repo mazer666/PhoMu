@@ -251,7 +251,11 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
 
       {/* Musik Player */}
       {song.links?.youtube && (
-        <MusicPlayer youtubeLink={song.links.youtube} blurred={!isRevealed} />
+        <MusicPlayer
+          youtubeLink={song.links.youtube}
+          youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
+          blurred={!isRevealed}
+        />
       )}
 
       {/* Header */}

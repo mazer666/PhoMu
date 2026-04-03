@@ -37,8 +37,10 @@ const PHASE_VARIANTS = {
 import { FeedbackOverlay } from '@/components/game/FeedbackOverlay';
 import { DiceAnimation } from '@/components/game/DiceAnimation';
 import { LastRoundBanner } from '@/components/game/LastRoundBanner';
+import { InGameSettingsPanel } from '@/components/game/InGameSettingsPanel';
 import { pickLastRoundMessage } from '@/utils/last-round-messages';
 import type { LastRoundMessage } from '@/utils/last-round-messages';
+import { useGameAudioCues } from '@/hooks/useGameAudioCues';
 
 export default function GamePage() {
   const router = useRouter();
@@ -64,9 +66,12 @@ export default function GamePage() {
     endGame,
     initSession,
     skipBrokenSong,
+    sfxEnabled,
+    sfxVolume,
   } = useGameStore();
 
   const [showScoreboard, setShowScoreboard] = useState(false);
+  const [showInGameSettings, setShowInGameSettings] = useState(false);
   const [now, setNow] = useState(() => Date.now());
   const [isRerolling, setIsRerolling] = useState(false);
   const [lastRoundBannerMsg, setLastRoundBannerMsg] = useState<LastRoundMessage | null>(null);
@@ -243,6 +248,17 @@ export default function GamePage() {
 
   const lastAnswer = currentAnswers[currentAnswers.length - 1];
 
+  // Kurze Event-SFX (resilient, ohne Flow-Unterbrechung)
+  useGameAudioCues({
+    currentMode,
+    roundPhase,
+    answerCount: currentAnswers.length,
+    lastAnswerCorrect: lastAnswer?.isCorrect ?? null,
+    isGameOver,
+    sfxEnabled,
+    sfxVolume,
+  });
+
   // ── Fortschrittsberechnung (Progress Bar) ─────────────────────
   const progressData = useMemo(() => {
     let percentage = 0;
@@ -316,6 +332,16 @@ export default function GamePage() {
         🏆 Punkte
       </button>
 
+      {/* In-Game Settings (jederzeit erreichbar) */}
+      <button
+        onClick={() => setShowInGameSettings(true)}
+        className="fixed bottom-4 left-4 z-30 px-4 py-2 rounded-full text-sm font-bold shadow-lg transition-opacity hover:opacity-90"
+        style={{ backgroundColor: 'var(--color-bg-card)', border: '1px solid var(--color-border)' }}
+        aria-label="Spiel-Einstellungen öffnen"
+      >
+        ⚙️ Settings
+      </button>
+
       {/* Scoreboard Overlay */}
       <Scoreboard
         players={players}
@@ -324,6 +350,13 @@ export default function GamePage() {
         winCondition={config.winCondition}
         isOpen={showScoreboard}
         onClose={() => setShowScoreboard(false)}
+      />
+
+      <InGameSettingsPanel
+        isOpen={showInGameSettings}
+        onClose={() => setShowInGameSettings(false)}
+        onLeaveParty={handleExit}
+        onOpenFullSettings={() => router.push('/settings')}
       />
 
       {/* Phasen-Content mit Übergangsanimation */}
