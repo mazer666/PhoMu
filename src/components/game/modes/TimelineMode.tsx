@@ -252,8 +252,16 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
       {/* Musik Player */}
       {song.links?.youtube && (
         <MusicPlayer
+          songId={song.id}
+          songTitle={song.title}
+          songArtist={song.artist}
+          songPack={song.pack}
           youtubeLink={song.links.youtube}
           youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
+          spotifyLink={song.links.spotify}
+          spotifyFreePreview={song.links.spotifyFreePreview}
+          amazonMusicLink={song.links.amazonMusic}
+          amazonPrimePreview={song.links.amazonPrimePreview}
           blurred={!isRevealed}
         />
       )}

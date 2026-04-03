@@ -255,6 +255,42 @@ export function validateSong(song: unknown): SongValidationResult {
         });
       }
     }
+
+    const spotify = links['spotify'];
+    if (spotify !== undefined && spotify !== '') {
+      if (typeof spotify !== 'string') {
+        warnings.push(warn(songId, 'links.spotify', 'spotify sollte ein String sein (spotify:track:... oder URL)'));
+      } else if (!spotify.startsWith('spotify:track:') && !spotify.includes('open.spotify.com/track/')) {
+        warnings.push(warn(songId, 'links.spotify', `spotify sieht ungewöhnlich aus: "${spotify}"`));
+      }
+    }
+
+    const spotifyFreePreview = links['spotifyFreePreview'];
+    if (spotifyFreePreview !== undefined && spotifyFreePreview !== '') {
+      if (typeof spotifyFreePreview !== 'string') {
+        warnings.push(warn(songId, 'links.spotifyFreePreview', 'spotifyFreePreview sollte eine URL als String sein'));
+      } else if (!/^https?:\/\//.test(spotifyFreePreview)) {
+        warnings.push(warn(songId, 'links.spotifyFreePreview', `spotifyFreePreview ist keine gültige URL: "${spotifyFreePreview}"`));
+      }
+    }
+
+    const amazonMusic = links['amazonMusic'];
+    if (amazonMusic !== undefined && amazonMusic !== '') {
+      if (typeof amazonMusic !== 'string') {
+        warnings.push(warn(songId, 'links.amazonMusic', 'amazonMusic sollte ein String (URL) sein'));
+      } else if (!/^https?:\/\//.test(amazonMusic)) {
+        warnings.push(warn(songId, 'links.amazonMusic', `amazonMusic ist keine gültige URL: "${amazonMusic}"`));
+      }
+    }
+
+    const amazonPrimePreview = links['amazonPrimePreview'];
+    if (amazonPrimePreview !== undefined && amazonPrimePreview !== '') {
+      if (typeof amazonPrimePreview !== 'string') {
+        warnings.push(warn(songId, 'links.amazonPrimePreview', 'amazonPrimePreview sollte eine URL als String sein'));
+      } else if (!/^https?:\/\//.test(amazonPrimePreview)) {
+        warnings.push(warn(songId, 'links.amazonPrimePreview', `amazonPrimePreview ist keine gültige URL: "${amazonPrimePreview}"`));
+      }
+    }
   }
 
   // ── Warnungen (Song spielbar, aber unvollständig) ────────────────────────────

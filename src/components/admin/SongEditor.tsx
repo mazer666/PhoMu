@@ -85,6 +85,10 @@ export function SongEditor({ song, onSave, onCancel, variant = 'modal' }: SongEd
           <Input label="Land" value={form.country} onChange={v => setForm(p => ({ ...p, country: v.toUpperCase() }))} />
           <Input label="Genre" value={form.genre} onChange={v => setForm(p => ({ ...p, genre: v }))} />
           <Input label="YouTube ID/URL" value={form.links.youtube} onChange={v => setForm(p => ({ ...p, links: { ...p.links, youtube: v } }))} />
+          <Input label="Spotify URI/URL" value={form.links.spotify ?? ''} onChange={v => setForm(p => ({ ...p, links: { ...p.links, spotify: v || undefined } }))} />
+          <Input label="Spotify Free Preview URL" value={form.links.spotifyFreePreview ?? ''} onChange={v => setForm(p => ({ ...p, links: { ...p.links, spotifyFreePreview: v || undefined } }))} />
+          <Input label="Amazon Music URL" value={form.links.amazonMusic ?? ''} onChange={v => setForm(p => ({ ...p, links: { ...p.links, amazonMusic: v || undefined } }))} />
+          <Input label="Amazon Prime Preview URL" value={form.links.amazonPrimePreview ?? ''} onChange={v => setForm(p => ({ ...p, links: { ...p.links, amazonPrimePreview: v || undefined } }))} />
           <Input label="Cover URL" value={form.coverUrl ?? ''} onChange={v => setForm(p => ({ ...p, coverUrl: v || undefined }))} />
         </div>
 

@@ -11,8 +11,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useGameStore } from '@/stores/game-store';
 
 interface MusicPlayerProps {
+  songId?: string;
+  songTitle?: string;
+  songArtist?: string;
+  songPack?: string;
   youtubeLink: string;
   youtubeAlternatives?: string[];
+  spotifyLink?: string;
+  spotifyFreePreview?: string;
+  amazonMusicLink?: string;
+  amazonPrimePreview?: string;
   startSeconds?: number;
   /** Stoppt Wiedergabe automatisch nach dieser Sekunde (z.B. startSeconds + 30) */
   endSeconds?: number;
@@ -64,15 +72,30 @@ function extractYouTubeId(url: string): string | null {
   return match ? match[1] : url.length === 11 ? url : null;
 }
 
+function extractSpotifyTrackId(value?: string): string | null {
+  if (!value) return null;
+  if (value.startsWith('spotify:track:')) return value.replace('spotify:track:', '').trim() || null;
+  const match = value.match(/open\.spotify\.com\/track\/([a-zA-Z0-9]+)/);
+  return match ? match[1] : null;
+}
+
 export function MusicPlayer({
+  songId,
+  songTitle,
+  songArtist,
+  songPack,
   youtubeLink,
   youtubeAlternatives,
+  spotifyLink,
+  spotifyFreePreview,
+  amazonMusicLink,
+  amazonPrimePreview,
   startSeconds = 0,
   endSeconds,
   blurred = false,
   className = '',
 }: MusicPlayerProps) {
-  const { preferredPlayer, skipBrokenSong, musicEnabled, musicVolume } = useGameStore();
+  const { preferredPlayer, preferredMusicProvider, skipBrokenSong, musicEnabled, musicVolume } = useGameStore();
 
   const [playerState, setPlayerState] = useState<'loading' | 'playing' | 'error' | 'paused'>('loading');
   const [videoRevealed, setVideoRevealed] = useState(false);
@@ -95,7 +118,81 @@ export function MusicPlayer({
   const [key, setKey] = useState(0);
 
   const [autoSkipCountdown, setAutoSkipCountdown] = useState<number | null>(null);
+  const [reportStatus, setReportStatus] = useState<'idle' | 'sent' | 'rate-limited' | 'duplicate'>('idle');
   const skipTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const spotifyFreeAudioRef = useRef<HTMLAudioElement | null>(null);
+  const amazonPrimeAudioRef = useRef<HTMLAudioElement | null>(null);
+  const spotifyTrackId = useMemo(() => extractSpotifyTrackId(spotifyLink), [spotifyLink]);
+  const useSpotifyPremium = preferredMusicProvider === 'spotify-premium' && !!spotifyTrackId;
+  const useSpotifyFree = preferredMusicProvider === 'spotify-free' && !!spotifyFreePreview;
+  const useAmazonPrime = preferredMusicProvider === 'amazon-music' && !!amazonPrimePreview;
+
+  const handleReportMissing = useCallback(() => {
+    if (typeof window === 'undefined' || !songId) return;
+    const DEVICE_KEY = 'phomu-device-id';
+    const REPORT_KEY = 'phomu-missing-report-state-v1';
+    const HOUR_MS = 60 * 60 * 1000;
+    const MAX_PER_HOUR = 5;
+
+    const deviceId = localStorage.getItem(DEVICE_KEY) ?? crypto.randomUUID();
+    localStorage.setItem(DEVICE_KEY, deviceId);
+
+    const now = Date.now();
+    const raw = localStorage.getItem(REPORT_KEY);
+    const parsed = raw ? JSON.parse(raw) as { timestamps: number[]; songs: Record<string, number> } : { timestamps: [], songs: {} };
+    const recent = parsed.timestamps.filter((ts) => now - ts < HOUR_MS);
+
+    if (parsed.songs[songId]) {
+      setReportStatus('duplicate');
+      return;
+    }
+
+    if (recent.length >= MAX_PER_HOUR) {
+      setReportStatus('rate-limited');
+      return;
+    }
+
+    const region = (navigator.language.split('-')[1] ?? 'unknown').toUpperCase();
+    const issuePayload = {
+      songId,
+      songTitle: songTitle ?? null,
+      songArtist: songArtist ?? null,
+      songPack: songPack ?? null,
+      preferredMusicProvider,
+      hasYoutube: !!youtubeLink,
+      hasSpotify: !!spotifyLink,
+      hasSpotifyFreePreview: !!spotifyFreePreview,
+      hasAmazonMusic: !!amazonMusicLink,
+      hasAmazonPrimePreview: !!amazonPrimePreview,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      locale: navigator.language,
+      region,
+      deviceId,
+      timestamp: new Date(now).toISOString(),
+    };
+
+    const issueUrlBase = process.env.NEXT_PUBLIC_GITHUB_ISSUE_URL;
+    if (issueUrlBase) {
+      const issueUrl = new URL(issueUrlBase);
+      issueUrl.searchParams.set('title', `[Missing Link] ${songArtist ?? 'Unknown Artist'} - ${songTitle ?? songId}`);
+      issueUrl.searchParams.set('body', [
+        '## Missing Playback Report (Auto-generated)',
+        '',
+        '```json',
+        JSON.stringify(issuePayload, null, 2),
+        '```',
+      ].join('\n'));
+      window.open(issueUrl.toString(), '_blank', 'noopener,noreferrer');
+    } else {
+      void navigator.clipboard?.writeText(JSON.stringify(issuePayload, null, 2));
+    }
+
+    localStorage.setItem(REPORT_KEY, JSON.stringify({
+      timestamps: [...recent, now],
+      songs: { ...parsed.songs, [songId]: now },
+    }));
+    setReportStatus('sent');
+  }, [amazonMusicLink, amazonPrimePreview, preferredMusicProvider, songArtist, songId, songPack, songTitle, spotifyFreePreview, spotifyLink, youtubeLink]);
 
   const startAutoSkipCountdown = useCallback(() => {
     setAutoSkipCountdown(10);
@@ -143,7 +240,7 @@ export function MusicPlayer({
   }, []);
 
   useEffect(() => {
-    if (!videoId || typeof window === 'undefined') return;
+    if (useSpotifyPremium || useSpotifyFree || useAmazonPrime || !videoId || typeof window === 'undefined') return;
 
     const initPlayer = () => {
       if (!containerRef.current) return;
@@ -228,9 +325,10 @@ export function MusicPlayer({
         try { playerRef.current.destroy(); } catch { /* noop */ }
       }
     };
-  }, [videoId, activeDomain, startSeconds, endSeconds, handleError, playerState, musicEnabled, musicVolume]);
+  }, [videoId, activeDomain, startSeconds, endSeconds, handleError, playerState, musicEnabled, musicVolume, useSpotifyPremium, useSpotifyFree, useAmazonPrime]);
 
   useEffect(() => {
+    if (useSpotifyPremium || useSpotifyFree || useAmazonPrime) return;
     if (!playerRef.current) return;
     try {
       playerRef.current.setVolume(Math.round(Math.max(0, Math.min(1, musicVolume)) * 100));
@@ -246,9 +344,35 @@ export function MusicPlayer({
     } catch {
       // noop (e.g. player not ready)
     }
-  }, [musicEnabled, musicVolume, playerState]);
+  }, [musicEnabled, musicVolume, playerState, useSpotifyPremium, useSpotifyFree, useAmazonPrime]);
 
-  if (!videoId) {
+  useEffect(() => {
+    if (!useSpotifyFree || !spotifyFreeAudioRef.current) return;
+    const audio = spotifyFreeAudioRef.current;
+    audio.volume = Math.max(0, Math.min(1, musicVolume));
+    if (!musicEnabled) {
+      audio.pause();
+      return;
+    }
+    void audio.play().catch(() => {
+      // Autoplay can be blocked; user can still start via browser media controls.
+    });
+  }, [useSpotifyFree, musicEnabled, musicVolume, spotifyFreePreview]);
+
+  useEffect(() => {
+    if (!useAmazonPrime || !amazonPrimeAudioRef.current) return;
+    const audio = amazonPrimeAudioRef.current;
+    audio.volume = Math.max(0, Math.min(1, musicVolume));
+    if (!musicEnabled) {
+      audio.pause();
+      return;
+    }
+    void audio.play().catch(() => {
+      // Autoplay can be blocked; user can still start via browser media controls.
+    });
+  }, [useAmazonPrime, musicEnabled, musicVolume, amazonPrimePreview]);
+
+  if (!videoId && !useSpotifyPremium && !useSpotifyFree && !useAmazonPrime) {
     return <div className="h-40 flex items-center justify-center opacity-30 border rounded-2xl italic">Kein Video verfügbar</div>;
   }
 
@@ -355,6 +479,14 @@ export function MusicPlayer({
               >
                 Alternative Player ({activeDomain === 'www.youtube.com' ? 'Music' : 'Standard'})
               </button>
+
+              <button
+                onClick={handleReportMissing}
+                disabled={!songId}
+                className="w-full py-2.5 rounded-xl border border-white/20 text-[10px] font-black uppercase tracking-widest text-white/70 disabled:opacity-30 hover:bg-white/10 transition-colors"
+              >
+                Report Missing
+              </button>
             </div>
           </motion.div>
         )}
@@ -368,6 +500,72 @@ export function MusicPlayer({
         >
           Verbergen
         </button>
+      )}
+
+      {(preferredMusicProvider === 'spotify-free' || preferredMusicProvider === 'spotify-premium' || preferredMusicProvider === 'amazon-music') && (
+        <div className="absolute left-4 bottom-4 z-40 rounded-lg border border-white/10 bg-black/60 px-2 py-1 text-[9px] font-bold text-white/80">
+          {preferredMusicProvider === 'spotify-free'
+            ? 'Spotify Free: eingeschränkt (Preview). YouTube-Fallback aktiv.'
+            : preferredMusicProvider === 'spotify-premium'
+              ? 'Spotify: bei fehlender Premium-Wiedergabe wird YouTube genutzt.'
+              : 'Amazon Prime: eingeschränkt (Preview). YouTube-Fallback aktiv.'}
+        </div>
+      )}
+
+      {useSpotifyPremium && spotifyTrackId && (
+        <div className="absolute inset-0 z-50 bg-black p-3 sm:p-4">
+          <iframe
+            title="Spotify Premium Player"
+            src={`https://open.spotify.com/embed/track/${spotifyTrackId}?utm_source=generator`}
+            width="100%"
+            height="100%"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            className="w-full h-full rounded-2xl border border-white/10"
+          />
+        </div>
+      )}
+
+      {useSpotifyFree && spotifyFreePreview && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/90 p-6">
+          <audio ref={spotifyFreeAudioRef} src={spotifyFreePreview} preload="auto" />
+          <div className="text-center space-y-3">
+            <p className="text-lg font-black uppercase tracking-widest text-white">Spotify Free Preview</p>
+            <p className="text-xs text-white/60 max-w-md">
+              Free ist auf kurze Preview-Clips begrenzt. Wenn kein Preview-Link hinterlegt ist, nutzt Phomu automatisch YouTube.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {useAmazonPrime && amazonPrimePreview && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/90 p-6">
+          <audio ref={amazonPrimeAudioRef} src={amazonPrimePreview} preload="auto" />
+          <div className="text-center space-y-3">
+            <p className="text-lg font-black uppercase tracking-widest text-white">Amazon Prime Preview</p>
+            <p className="text-xs text-white/60 max-w-md">
+              Prime ist auf kurze Preview-Clips begrenzt. Wenn kein Preview-Link hinterlegt ist, nutzt Phomu automatisch YouTube.
+            </p>
+            {amazonMusicLink && (
+              <a
+                href={amazonMusicLink}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block mt-1 rounded-xl border border-white/20 px-3 py-2 text-[10px] font-black uppercase tracking-widest text-white/80 hover:bg-white/10"
+              >
+                Bei Amazon öffnen
+              </a>
+            )}
+          </div>
+        </div>
+      )}
+
+      {reportStatus !== 'idle' && (
+        <div className="absolute right-4 bottom-4 z-50 rounded-lg bg-black/70 px-2 py-1 text-[9px] font-bold text-white/80">
+          {reportStatus === 'sent' && 'Report erstellt'}
+          {reportStatus === 'rate-limited' && 'Rate limit: max 5/h je Gerät'}
+          {reportStatus === 'duplicate' && 'Für diesen Song bereits gemeldet'}
+        </div>
       )}
     </div>
   );

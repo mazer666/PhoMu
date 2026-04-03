@@ -150,9 +150,16 @@ export interface PhomuSong {
     youtubeAlternatives?: string[];
     /** Spotify track URI (spotify:track:xxx) or URL */
     spotify?: string;
+    /**
+     * Spotify Free preview URL (typically ~30s, mp3 preview endpoint).
+     * Optional and may be missing for many catalog entries.
+     */
+    spotifyFreePreview?: string;
     /** Apple Music track URL (future feature) */
     appleMusic?: string;
     /** Amazon Music URL — falls back to YouTube if missing */
     amazonMusic?: string;
+    /** Amazon Prime Music Preview-URL (falls verfügbar, meist kurze Vorschau) */
+    amazonPrimePreview?: string;
   };
 }

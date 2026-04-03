@@ -10,6 +10,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -82,15 +83,22 @@ export default function HomePage() {
       </motion.div>
 
       {/* Footer hint */}
-      <motion.p
-        className="mt-16 text-sm"
+      <motion.div
+        className="mt-16 text-sm text-center space-y-2"
         style={{ color: 'var(--color-text-secondary)' }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        GPL-3.0 &middot; Open Source &middot; Made with music
-      </motion.p>
+        <p>GPL-3.0 &middot; Open Source &middot; Made with music</p>
+        <p className="flex items-center justify-center gap-3 text-xs">
+          <Link href="/guide" className="underline hover:opacity-100 opacity-80">Spielhilfe</Link>
+          <span>&middot;</span>
+          <Link href="/privacy" className="underline hover:opacity-100 opacity-80">Privacy Notice</Link>
+          <span>&middot;</span>
+          <Link href="/terms" className="underline hover:opacity-100 opacity-80">Terms of Service</Link>
+        </p>
+      </motion.div>
     </main>
   );
 }

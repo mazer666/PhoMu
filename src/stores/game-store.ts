@@ -98,6 +98,9 @@ interface GameActions {
   /** Setzt den bevorzugten Player-Typ */
   setPreferredPlayer: (type: 'standard' | 'music') => void;
 
+  /** Setzt den bevorzugten Musikanbieter */
+  setPreferredMusicProvider: (provider: GameState['preferredMusicProvider']) => void;
+
   /** Audio-Einstellungen für Musik/SFX */
   setAudioSettings: (updates: Partial<Pick<GameState, 'musicEnabled' | 'musicVolume' | 'sfxEnabled' | 'sfxVolume'>>) => void;
 
@@ -169,6 +172,7 @@ function createInitialState(): GameState {
     // Global Progression & Preferences
     totalXP: 0,
     preferredPlayer: 'standard',
+    preferredMusicProvider: PHOMU_CONFIG.DEFAULT_MUSIC_PROVIDER,
     musicEnabled: true,
     musicVolume: 0.8,
     sfxEnabled: true,
@@ -415,6 +419,11 @@ export const useGameStore = create<GameStore>()(
         set({ preferredPlayer: type });
       },
 
+      // ── setPreferredMusicProvider ────────────────────────────────
+      setPreferredMusicProvider(provider) {
+        set({ preferredMusicProvider: provider });
+      },
+
       // ── setAudioSettings ─────────────────────────────────────────
       setAudioSettings(updates) {
         set((state) => ({
@@ -615,6 +624,7 @@ export const useGameStore = create<GameStore>()(
         sessionId: state.sessionId,
         totalXP: state.totalXP,
         preferredPlayer: state.preferredPlayer,
+        preferredMusicProvider: state.preferredMusicProvider,
         musicEnabled: state.musicEnabled,
         musicVolume: state.musicVolume,
         sfxEnabled: state.sfxEnabled,

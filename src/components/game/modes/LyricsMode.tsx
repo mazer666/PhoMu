@@ -127,8 +127,16 @@ function LyricsQuestion({
             className="w-full max-w-xs mx-auto mt-2"
           >
             <MusicPlayer 
+              songId={song.id}
+              songTitle={song.title}
+              songArtist={song.artist}
+              songPack={song.pack}
               youtubeLink={song.links.youtube}
               youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
+              spotifyLink={song.links.spotify}
+              spotifyFreePreview={song.links.spotifyFreePreview}
+              amazonMusicLink={song.links.amazonMusic}
+              amazonPrimePreview={song.links.amazonPrimePreview}
               startSeconds={song.previewTimestamp?.start ?? 0}
               blurred={false}
             />
@@ -189,8 +197,16 @@ function LyricsQuestion({
       {isRevealing && (
         <div style={{ display: 'none' }}>
            <MusicPlayer
+             songId={song.id}
+             songTitle={song.title}
+             songArtist={song.artist}
+             songPack={song.pack}
              youtubeLink={song.links.youtube}
              youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
+             spotifyLink={song.links.spotify}
+             spotifyFreePreview={song.links.spotifyFreePreview}
+             amazonMusicLink={song.links.amazonMusic}
+             amazonPrimePreview={song.links.amazonPrimePreview}
            />
         </div>
       )}
