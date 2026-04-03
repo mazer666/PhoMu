@@ -2,7 +2,7 @@
   "meta": {
     "pack": "2010s & 2020s Chart Toppers",
     "version": "1.0.0",
-    "updatedAt": "2026-03-30T16:34:30Z"
+    "updatedAt": "2026-04-03T22:03:45.648948"
   },
   "songs": [
     {
@@ -36,7 +36,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "JGwWNGJdvx8"
+        "youtube": "JGwWNGJdvx8",
+        "spotify": "7qiZfU4dY1lWllzX7mPBI3",
+        "amazonMusic": "B01N214BDK"
       },
       "coverUrl": "/covers/modern-ed-sheeran-shape.jpg",
       "supportedModes": [
@@ -80,7 +82,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "vkxJqKvh8lo"
+        "youtube": "vkxJqKvh8lo",
+        "spotify": "0cqRj7pUJDkTCEsJkx8snD",
+        "amazonMusic": "B00OXUXF64"
       },
       "coverUrl": "/covers/modern-taylor-swift-shake.jpg",
       "supportedModes": [
@@ -124,7 +128,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "rYEDA3JcQqw"
+        "youtube": "rYEDA3JcQqw",
+        "spotify": "4OSBTYWVwsQhGLF9NHvIbR",
+        "amazonMusic": "B004I1PAE8"
       },
       "coverUrl": "/covers/modern-adele-rolling-deep.jpg",
       "supportedModes": [
@@ -168,7 +174,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "mym4sKoAnKs"
+        "youtube": "mym4sKoAnKs",
+        "spotify": "1zi7xx7UVEFkmKfv06H8x0",
+        "amazonMusic": "B01F5XNXKK"
       },
       "coverUrl": "/covers/modern-drake-one-dance.jpg",
       "supportedModes": [
@@ -212,7 +220,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "DyDfgMOUjCI"
+        "youtube": "DyDfgMOUjCI",
+        "spotify": "2Fxmhks0bxGSBdJ92vM42m",
+        "amazonMusic": "B07N7VNZLY"
       },
       "coverUrl": "/covers/modern-billie-eilish-bad-guy.jpg",
       "supportedModes": [
@@ -256,7 +266,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "H5v3kku4y6Q"
+        "youtube": "H5v3kku4y6Q",
+        "spotify": "4Dvkj6JhhA12EX05fT7y2e",
+        "amazonMusic": "B09WTTL96T"
       },
       "coverUrl": "/covers/modern-harry-styles-as-it-was.jpg",
       "supportedModes": [
@@ -300,7 +312,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "G7KNmW9a75Y"
+        "youtube": "G7KNmW9a75Y",
+        "spotify": "7DSAEUvxU8FajXtRloy8M0",
+        "amazonMusic": "B0BS2SQ5BW"
       },
       "coverUrl": "/covers/modern-miley-cyrus-flowers.jpg",
       "supportedModes": [
@@ -344,7 +358,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "4NRXx6U8ABQ"
+        "youtube": "4NRXx6U8ABQ",
+        "spotify": "0VjIj9eoRru8nOpBzZwwJh",
+        "amazonMusic": "B086Q7RQLD"
       },
       "coverUrl": "/covers/modern-the-weeknd-blinding-lights.jpg",
       "supportedModes": [
@@ -388,7 +404,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "y6Sxv-sUYtM"
+        "youtube": "y6Sxv-sUYtM",
+        "spotify": "6NPVjNh8Jhru9xOmyQigds",
+        "amazonMusic": "B00GN0S9S8"
       },
       "coverUrl": "/covers/modern-pharrell-happy.jpg",
       "supportedModes": [
@@ -432,7 +450,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "2vjPBrBU-TM"
+        "youtube": "2vjPBrBU-TM",
+        "spotify": "2s1sdSqGcKxpPr5lCl7jAV",
+        "amazonMusic": "B00KMZI49M"
       },
       "coverUrl": "/covers/modern-sia-chandelier.jpg",
       "supportedModes": [
