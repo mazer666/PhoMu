@@ -79,8 +79,16 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
 
         <div className="mt-4 w-full max-w-sm mx-auto transition-opacity" style={{ opacity: (answered || cheatUsed) ? 1 : 0.4 }}>
           <MusicPlayer
+            songId={song.id}
+            songTitle={song.title}
+            songArtist={song.artist}
+            songPack={song.pack}
             youtubeLink={song.links.youtube}
             youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
+            spotifyLink={song.links.spotify}
+            spotifyFreePreview={song.links.spotifyFreePreview}
+            amazonMusicLink={song.links.amazonMusic}
+            amazonPrimePreview={song.links.amazonPrimePreview}
             startSeconds={song.previewTimestamp?.start ?? 0}
             blurred={!answered && !cheatUsed}
           />

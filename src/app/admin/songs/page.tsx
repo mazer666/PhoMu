@@ -47,7 +47,7 @@ const EMPTY_SONG: AdminSong = {
   hintEvidence: ['', '', '', '', ''],
   lyrics: null,
   isOneHitWonder: false,
-  links: { youtube: '' },
+  links: { youtube: '', spotify: '', spotifyFreePreview: '', amazonMusic: '', amazonPrimePreview: '' },
   supportedModes: ['timeline', 'hint-master', 'vibe-check', 'cover-confusion', 'survivor'],
   isQRCompatible: true,
 };

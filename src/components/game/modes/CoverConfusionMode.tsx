@@ -115,12 +115,20 @@ export function CoverConfusionMode({ song, onAnswer, onReveal }: CoverConfusionM
 
       {/* Music Player — gebluurt bis Antwort gegeben (Swipe zum Enthüllen) */}
       <MusicPlayer
+        songId={song.id}
+        songTitle={song.title}
+        songArtist={song.artist}
+        songPack={song.pack}
         youtubeLink={playLink}
         youtubeAlternatives={
           song.links.coverLink
             ? undefined
             : (song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined))
         }
+        spotifyLink={song.links.spotify}
+        spotifyFreePreview={song.links.spotifyFreePreview}
+        amazonMusicLink={song.links.amazonMusic}
+        amazonPrimePreview={song.links.amazonPrimePreview}
         startSeconds={song.previewTimestamp?.start ?? 0}
         blurred={phase !== 'done'}
       />

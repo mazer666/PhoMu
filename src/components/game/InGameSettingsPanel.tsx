@@ -50,6 +50,8 @@ export function InGameSettingsPanel({
   const {
     preferredPlayer,
     setPreferredPlayer,
+    preferredMusicProvider,
+    setPreferredMusicProvider,
     musicEnabled,
     musicVolume,
     sfxEnabled,
@@ -120,6 +122,33 @@ export function InGameSettingsPanel({
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p className="text-xs font-black uppercase tracking-widest opacity-70 mb-2">Musik-Anbieter</p>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+                  <button
+                    onClick={() => setPreferredMusicProvider('youtube')}
+                    className={`py-2 rounded-lg text-xs font-black ${preferredMusicProvider === 'youtube' ? 'bg-[var(--color-accent)] text-white' : 'opacity-50 hover:opacity-100 bg-black/30'}`}
+                  >
+                    YouTube
+                  </button>
+                  <button
+                    onClick={() => setPreferredMusicProvider('spotify-premium')}
+                    className={`py-2 rounded-lg text-xs font-black ${preferredMusicProvider === 'spotify-premium' ? 'bg-[var(--color-accent)] text-white' : 'opacity-50 hover:opacity-100 bg-black/30'}`}
+                  >
+                    Spotify
+                  </button>
+                  <button
+                    onClick={() => setPreferredMusicProvider('spotify-free')}
+                    className={`py-2 rounded-lg text-xs font-black ${preferredMusicProvider === 'spotify-free' ? 'bg-[var(--color-accent)] text-white' : 'opacity-50 hover:opacity-100 bg-black/30'}`}
+                  >
+                    Spotify Free
+                  </button>
+                  <button
+                    onClick={() => setPreferredMusicProvider('amazon-music')}
+                    className={`py-2 rounded-lg text-xs font-black ${preferredMusicProvider === 'amazon-music' ? 'bg-[var(--color-accent)] text-white' : 'opacity-50 hover:opacity-100 bg-black/30'}`}
+                  >
+                    Amazon Prime
+                  </button>
+                </div>
                 <p className="text-xs font-black uppercase tracking-widest opacity-70 mb-2">YouTube Player</p>
                 <div className="flex bg-black/30 p-1 rounded-xl">
                   <button

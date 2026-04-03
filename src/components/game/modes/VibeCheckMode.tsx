@@ -108,8 +108,16 @@ export function VibeCheckMode({ song, onAnswer }: VibeCheckModeProps) {
           className="w-full max-w-xs"
         >
           <MusicPlayer 
+            songId={song.id}
+            songTitle={song.title}
+            songArtist={song.artist}
+            songPack={song.pack}
             youtubeLink={song.links.youtube}
             youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
+            spotifyLink={song.links.spotify}
+            spotifyFreePreview={song.links.spotifyFreePreview}
+            amazonMusicLink={song.links.amazonMusic}
+            amazonPrimePreview={song.links.amazonPrimePreview}
             startSeconds={song.previewTimestamp?.start ?? 0}
             blurred={false}
           />
@@ -206,8 +214,16 @@ export function VibeCheckMode({ song, onAnswer }: VibeCheckModeProps) {
           {/* Music Integration */}
           <div className="p-1.5 bg-gradient-to-b from-white/10 to-transparent rounded-[2rem] border border-white/10 shadow-inner">
             <MusicPlayer
+              songId={song.id}
+              songTitle={song.title}
+              songArtist={song.artist}
+              songPack={song.pack}
               youtubeLink={song.links.youtube}
               youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
+              spotifyLink={song.links.spotify}
+              spotifyFreePreview={song.links.spotifyFreePreview}
+              amazonMusicLink={song.links.amazonMusic}
+              amazonPrimePreview={song.links.amazonPrimePreview}
               startSeconds={song.previewTimestamp?.start ?? 0}
               endSeconds={(song.previewTimestamp?.start ?? 0) + 120}
               blurred={false}

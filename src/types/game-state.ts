@@ -189,6 +189,9 @@ export interface GameState {
   /** Bevorzugter Player-Typ (Standard YouTube vs YouTube Music) */
   preferredPlayer: 'standard' | 'music';
 
+  /** Bevorzugter Musikanbieter (YouTube bleibt Standard) */
+  preferredMusicProvider: MusicProvider;
+
   /** Ob Hintergrundmusik abgespielt werden soll */
   musicEnabled: boolean;
 
