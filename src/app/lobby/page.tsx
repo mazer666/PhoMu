@@ -148,7 +148,7 @@ export default function LobbyPage() {
       </div>
 
       {/* Wizard Content Area — padding-bottom makes room for the fixed footer */}
-      <div className="flex-1 pb-64 overflow-x-hidden">
+      <div className="flex-1 pb-[max(12rem,env(safe-area-inset-bottom,0px)+10rem)] overflow-x-hidden">
         <AnimatePresence mode="wait" initial={false} custom={direction}>
           {step === 1 && (
             <motion.div

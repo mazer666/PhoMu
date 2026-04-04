@@ -546,36 +546,59 @@ export function RevealPhase({
       {currentMode === 'cover-confusion'  && <CoverConfusionReveal song={song} />}
 
       {/* ── Punkte-Zusammenfassung ────────────────────────────── */}
-      {scoringRows.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35 }}
-          className="rounded-2xl p-4"
-          style={{ backgroundColor: 'var(--color-bg-card)', border: '1px solid var(--color-border)' }}
-        >
-          <p className="text-sm font-bold opacity-70 mb-3">{scoringHeader}</p>
-          <div className="space-y-2">
-            {scoringRows.map(({ player, points }) => (
-              <div key={player.id} className="flex items-center gap-3">
-                <span className="text-lg" aria-hidden>{player.avatar ?? '🎵'}</span>
-                <span className="flex-1 font-semibold text-sm" style={{ color: player.color }}>
-                  {player.name}
-                </span>
-                <motion.span
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 }}
-                  className="font-black text-sm"
-                  style={{ color: 'var(--color-success)' }}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.35 }}
+        className="rounded-2xl overflow-hidden"
+        style={{ backgroundColor: 'var(--color-bg-card)', border: '1px solid var(--color-border)' }}
+      >
+        <div className="px-4 pt-4 pb-2">
+          <p className="text-xs font-black uppercase tracking-widest opacity-40">{scoringHeader}</p>
+        </div>
+        <div className="divide-y divide-white/5">
+          {[...players]
+            .sort((a, b) => b.score - a.score)
+            .map((player, rank) => {
+              const earned = answers.find((a) => a.playerId === player.id)?.pointsAwarded ?? 0;
+              const isTop = rank === 0;
+              return (
+                <div
+                  key={player.id}
+                  className="flex items-center gap-3 px-4 py-3"
+                  style={isTop ? { background: 'rgba(255,255,255,0.03)' } : {}}
                 >
-                  +{points}
-                </motion.span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      )}
+                  {/* Rang */}
+                  <span className="text-[10px] font-black opacity-30 w-4 tabular-nums text-right shrink-0">
+                    {rank + 1}
+                  </span>
+                  {/* Avatar */}
+                  <span className="text-lg shrink-0" aria-hidden>{player.avatar ?? '🎵'}</span>
+                  {/* Name */}
+                  <span className="flex-1 font-bold text-sm truncate" style={{ color: player.color }}>
+                    {player.name}
+                  </span>
+                  {/* Dieses-Runde-Delta */}
+                  {earned > 0 && (
+                    <motion.span
+                      initial={{ opacity: 0, y: -12, scale: 1.4 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ type: 'spring', stiffness: 500, damping: 20, delay: 0.5 + rank * 0.07 }}
+                      className="font-black text-sm px-2 py-0.5 rounded-lg"
+                      style={{ color: 'var(--color-success)', backgroundColor: 'rgba(34,197,94,0.12)' }}
+                    >
+                      +{earned}
+                    </motion.span>
+                  )}
+                  {/* Gesamtpunkte */}
+                  <span className="font-black text-sm tabular-nums opacity-80 w-10 text-right shrink-0">
+                    {player.score}
+                  </span>
+                </div>
+              );
+            })}
+        </div>
+      </motion.div>
 
       {/* ── Power-User Menü ───────────────────────────────────── */}
       <div className="flex justify-end">

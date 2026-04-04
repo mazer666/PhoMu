@@ -195,9 +195,15 @@ export function InGameSettingsPanel({
               </button>
               <button
                 onClick={() => { onClose(); router.push('/settings/game-rules'); }}
-                className="py-2.5 rounded-xl border border-white/15 text-xs font-black hover:bg-white/5 sm:col-span-3"
+                className="py-2.5 rounded-xl border border-white/15 text-xs font-black hover:bg-white/5 sm:col-span-2"
               >
                 🎮 Modi &amp; Packs ändern
+              </button>
+              <button
+                onClick={() => window.open('/projector', '_blank')}
+                className="py-2.5 rounded-xl border border-white/15 text-xs font-black hover:bg-white/5 sm:col-span-3"
+              >
+                📺 Projector-Modus öffnen
               </button>
               <button
                 onClick={onLeaveParty}

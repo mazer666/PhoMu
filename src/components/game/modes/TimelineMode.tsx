@@ -254,6 +254,14 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
   return (
     <div className="flex flex-col px-4 py-6 gap-5 max-w-xl mx-auto pb-44">
 
+      {/* Modus-Banner */}
+      <div className="w-full flex items-center justify-between bg-cyan-500/10 border border-cyan-500/20 rounded-2xl px-4 py-2.5">
+        <span className="text-[10px] font-black uppercase tracking-widest text-cyan-400">📅 Timeline</span>
+        <span className="text-[10px] font-black uppercase tracking-widest text-cyan-400/60">
+          {timelineYears.length} Jahreszahlen · {points} Pkt möglich
+        </span>
+      </div>
+
       {/* Musik Player */}
       {song.links?.youtube && (
         <MusicPlayer
