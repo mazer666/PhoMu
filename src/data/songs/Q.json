@@ -129,7 +129,8 @@
       ],
       "isQRCompatible": true,
       "packs": [
-        "Global Hits 1950-2026"
+        "Global Hits 1950-2026",
+        "YouTube Collection"
       ]
     },
     {
@@ -176,37 +177,6 @@
       "coverUrl": "/covers/piano-queen-bohemian.jpg",
       "packs": [
         "Piano & Power Ballads"
-      ]
-    },
-    {
-      "id": "yt-fJ9rUzIMcZQ",
-      "title": "Queen – Bohemian Rhapsody (Official Video Remastered)",
-      "artist": "Queen",
-      "year": 1975,
-      "country": "INT",
-      "genre": "Classic Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Queen – Bohemian Rhapsody (Official Video Remastered)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
-        "YouTube Collection"
       ]
     },
     {

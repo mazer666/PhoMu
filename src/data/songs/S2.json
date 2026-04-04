@@ -45,37 +45,7 @@
       "isQRCompatible": true,
       "coverUrl": "/covers/80s-spandau-ballet-true.jpg",
       "packs": [
-        "80s Pop Hits"
-      ]
-    },
-    {
-      "id": "yt-ITX-SEsyGRg",
-      "title": "True (2003 Remaster)",
-      "artist": "Spandau Ballet",
-      "year": 1983,
-      "country": "INT",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: True (2003 Remaster)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=ITX-SEsyGRg"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s Pop Hits",
         "YouTube Collection"
       ]
     },
@@ -1009,57 +979,9 @@
       "isQRCompatible": true,
       "packs": [
         "Electronic & Synthpop Voyage",
-        "Electronic & Techno"
+        "Electronic & Techno",
+        "YouTube Collection"
       ]
-    },
-    {
-      "id": "yt-1y6smkh6c-0",
-      "title": "Don't You Worry Child",
-      "artist": "Swedish House Mafia ft. John Martin",
-      "year": 2012,
-      "country": "INT",
-      "genre": "Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Emotional",
-        "Epic",
-        "Modern Hits",
-        "Popular",
-        "Powerful"
-      ],
-      "hints": [
-        "Die Abschieds-Single der Gruppe (vor ihrer langen Pause).",
-        "Thematisiert nostalgische Erinnerungen an die Kindheit und väterlichen Rat.",
-        "[XXX] [XXX]s kraftvoller Gesang über dem euphorischen EDM-Beat.",
-        "Wurde zu einer der größten Hymnen der modernen EDM-Ära.",
-        "Refrain: '[XXX] you [XXX], [XXX] you [XXX], [XXX]! See heaven's got a plan for you!'"
-      ],
-      "lyrics": {
-        "real": [
-          "My father said, 'Don't you worry, don't you worry, child'",
-          "See heaven's got a plan for you, don't you worry, don't you worry now",
-          "There was a time, I used to look into my father's eyes"
-        ],
-        "fake": "Dancing in the light, feeling so right, tonight"
-      },
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=1y6smkh6c-0"
-      },
-      "supportedModes": [
-        "cover-confusion",
-        "hint-master",
-        "lyrics-labyrinth",
-        "survivor",
-        "timeline",
-        "vibe-check"
-      ],
-      "isQRCompatible": true,
-      "packs": [
-        "YouTube Collection",
-        "Electronic & Techno"
-      ],
-      "coverUrl": "/covers/electro-shm-worry-child.jpg"
     },
     {
       "id": "metal-soad-chopsuey",

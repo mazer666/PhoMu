@@ -1124,37 +1124,7 @@
       ],
       "isQRCompatible": true,
       "packs": [
-        "Global Hits 1950-2026"
-      ]
-    },
-    {
-      "id": "yt-cYwDUonrGFQ",
-      "title": "Hound Dog (Official Lyric Video)",
-      "artist": "Elvis Presley",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Elvis Presley.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Hound Dog (Official Lyric Video)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=cYwDUonrGFQ"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Global Hits 1950-2026",
         "YouTube Collection"
       ]
     },

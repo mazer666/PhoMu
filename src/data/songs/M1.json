@@ -1499,37 +1499,6 @@
       ]
     },
     {
-      "id": "yt-OPf0YbXqDm0",
-      "title": "Uptown Funk  ft. Bruno Mars",
-      "artist": "Mark Ronson",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Mark Ronson.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Uptown Funk  ft. Bruno Mars",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=OPf0YbXqDm0"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
-        "YouTube Collection"
-      ]
-    },
-    {
       "id": "mark-ronson-uptown-funk-2014",
       "title": "Uptown Funk",
       "artist": "Mark Ronson ft. Bruno Mars",
@@ -1579,7 +1548,8 @@
       "packs": [
         "Global Hits 1950-2026",
         "youtube-import",
-        "Dance Floor Fillers"
+        "Dance Floor Fillers",
+        "YouTube Collection"
       ]
     },
     {

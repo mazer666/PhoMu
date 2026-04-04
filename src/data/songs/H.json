@@ -43,37 +43,7 @@
       "isQRCompatible": true,
       "isOneHitWonder": true,
       "packs": [
-        "Dance Floor Fillers"
-      ]
-    },
-    {
-      "id": "yt-dEOmR6b0IqM",
-      "title": "What Is Love (7\" Mix)",
-      "artist": "Haddaway",
-      "year": 1993,
-      "country": "INT",
-      "genre": "Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "80s Flashback"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre Pop.",
-        "Der Titel lautet: What Is Love (7\" Mix)",
-        "Playlist-Tag: 80s Flashback"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=dEOmR6b0IqM"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Dance Floor Fillers",
         "YouTube Collection"
       ]
     },
@@ -1428,37 +1398,6 @@
       "coverUrl": "/covers/movie-hugh-jackman-greatest-show.jpg",
       "packs": [
         "Movie Hits"
-      ]
-    },
-    {
-      "id": "yt-UscEO2ITyug",
-      "title": "Don't You Want Me",
-      "artist": "Human League",
-      "year": 1981,
-      "country": "INT",
-      "genre": "Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "80s Flashback"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre Pop.",
-        "Der Titel lautet: Don't You Want Me",
-        "Playlist-Tag: 80s Flashback"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=UscEO2ITyug"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
-        "YouTube Collection"
       ]
     }
   ]

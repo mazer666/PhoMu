@@ -712,37 +712,7 @@
       "isQRCompatible": true,
       "packs": [
         "Electronic & Synthpop Voyage",
-        "80s-pop"
-      ]
-    },
-    {
-      "id": "yt-R1MBI2tSHe0",
-      "title": "Blue Monday (2020 Digital Master)",
-      "artist": "New Order",
-      "year": 1983,
-      "country": "INT",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Blue Monday (2020 Digital Master)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=R1MBI2tSHe0"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s-pop",
         "YouTube Collection"
       ]
     },

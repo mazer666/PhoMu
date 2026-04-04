@@ -1394,7 +1394,8 @@
       "isQRCompatible": true,
       "coverUrl": "/covers/movie-celine-dion-my-heart-will-go-on.jpg",
       "packs": [
-        "Movie Hits"
+        "Movie Hits",
+        "YouTube Collection"
       ]
     },
     {
@@ -3660,37 +3661,6 @@
       "isOneHitWonder": false,
       "packs": [
         "Hip Hop Essentials"
-      ]
-    },
-    {
-      "id": "yt-9bFHsd3o1w0",
-      "title": "My Heart Will Go On (Official 25th Anniversary Alternate Music Video)",
-      "artist": "Céline Dion",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Céline Dion.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: My Heart Will Go On (Official 25th Anniversary Alternate Music Video)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=9bFHsd3o1w0"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
-        "YouTube Collection"
       ]
     },
     {

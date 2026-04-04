@@ -1678,37 +1678,7 @@
       "isQRCompatible": true,
       "packs": [
         "Electronic & Synthpop Voyage",
-        "80s-pop"
-      ]
-    },
-    {
-      "id": "yt-pJ2L1dh-dSo",
-      "title": "Relax (Come Fighting)",
-      "artist": "Frankie Goes to Hollywood",
-      "year": 1983,
-      "country": "INT",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Relax (Come Fighting)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=pJ2L1dh-dSo"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s-pop",
         "YouTube Collection"
       ]
     },

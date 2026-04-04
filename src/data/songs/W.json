@@ -232,37 +232,7 @@
       ],
       "isQRCompatible": true,
       "packs": [
-        "80s Flashback"
-      ]
-    },
-    {
-      "id": "yt-17t7SEsoKfE",
-      "title": "Wake Me Up Before You Go-Go (Remastered)",
-      "artist": "Wham!",
-      "year": 1984,
-      "country": "INT",
-      "genre": "Classic Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "60s/70s Legends"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre Classic Pop.",
-        "Der Titel lautet: Wake Me Up Before You Go-Go (Remastered)",
-        "Playlist-Tag: 60s/70s Legends"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=17t7SEsoKfE"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s Flashback",
         "YouTube Collection"
       ]
     },
@@ -349,37 +319,7 @@
       "coverUrl": "/covers/80s-whitney-dance.jpg",
       "packs": [
         "80s Pop Hits",
-        "80s Flashback"
-      ]
-    },
-    {
-      "id": "yt-6xzN8Nt0Pok",
-      "title": "I Wanna Dance with Somebody (Who Loves Me)",
-      "artist": "Whitney Houston",
-      "year": 1987,
-      "country": "INT",
-      "genre": "Classic Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "60s/70s Legends"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre Classic Pop.",
-        "Der Titel lautet: I Wanna Dance with Somebody (Who Loves Me)",
-        "Playlist-Tag: 60s/70s Legends"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=6xzN8Nt0Pok"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s Flashback",
         "YouTube Collection"
       ]
     },
@@ -431,37 +371,7 @@
       "packs": [
         "Global Hits 1950-2026",
         "piano-ballads",
-        "Movie Hits"
-      ]
-    },
-    {
-      "id": "yt-3JWTaaS7LdU",
-      "title": "I Will Always Love You (Official 4K Video)",
-      "artist": "Whitney Houston",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Whitney Houston.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: I Will Always Love You (Official 4K Video)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=3JWTaaS7LdU"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Movie Hits",
         "YouTube Collection"
       ]
     },

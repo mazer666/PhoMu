@@ -166,37 +166,7 @@
       ],
       "isQRCompatible": true,
       "packs": [
-        "Electronic & Synthpop Voyage"
-      ]
-    },
-    {
-      "id": "yt-2biSdr0uuo0",
-      "title": "Vienna (2008 Remaster)",
-      "artist": "Ultravox",
-      "year": 1980,
-      "country": "INT",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Vienna (2008 Remaster)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=2biSdr0uuo0"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Electronic & Synthpop Voyage",
         "YouTube Collection"
       ]
     },

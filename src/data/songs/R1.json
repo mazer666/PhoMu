@@ -597,37 +597,7 @@
       "coverUrl": "/covers/world-raycharles-roadjack.jpg",
       "packs": [
         "World, Reggae & Soul",
-        "soul-funk"
-      ]
-    },
-    {
-      "id": "yt-uSiHqxgE2d0",
-      "title": "Hit The Road Jack (Official Lyrics Video)",
-      "artist": "Ray Charles",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Ray Charles.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Hit The Road Jack (Official Lyrics Video)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=uSiHqxgE2d0"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "soul-funk",
         "YouTube Collection"
       ]
     },
@@ -1680,37 +1650,7 @@
         "Electronic & Synthpop Voyage",
         "80s-pop",
         "youtube-import",
-        "80s Flashback"
-      ]
-    },
-    {
-      "id": "yt-dQw4w9WgXcQ",
-      "title": "Never Gonna Give You Up  (4K Remaster)",
-      "artist": "Rick Astley",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Rick Astley.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Never Gonna Give You Up  (4K Remaster)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s Flashback",
         "YouTube Collection"
       ]
     },
@@ -2233,37 +2173,7 @@
       "isQRCompatible": true,
       "coverUrl": "/covers/80s-righeira-playa.jpg",
       "packs": [
-        "80s Pop Hits"
-      ]
-    },
-    {
-      "id": "yt-x0OMFm8FO90",
-      "title": "Vamos a la Playa (1983)",
-      "artist": "Righeira",
-      "year": 1983,
-      "country": "INT",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Vamos a la Playa (1983)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=x0OMFm8FO90"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s Pop Hits",
         "YouTube Collection"
       ]
     },
@@ -2348,37 +2258,6 @@
       ]
     },
     {
-      "id": "yt-CvBfHwUxHIk",
-      "title": "Umbrella (Orange Version)  ft. JAŸ-Z",
-      "artist": "Rihanna",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Rihanna.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Umbrella (Orange Version)  ft. JAŸ-Z",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=CvBfHwUxHIk"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
-        "YouTube Collection"
-      ]
-    },
-    {
       "id": "2000s-rihanna-umbrella",
       "title": "Umbrella",
       "artist": "Rihanna ft. Jay-Z",
@@ -2427,7 +2306,8 @@
       ],
       "isQRCompatible": true,
       "packs": [
-        "2000s Pop & RnB"
+        "2000s Pop & RnB",
+        "YouTube Collection"
       ]
     },
     {

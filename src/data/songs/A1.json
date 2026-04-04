@@ -30,7 +30,9 @@
         "fake": "Dancing in the light, feeling so right, all through the night"
       },
       "links": {
-        "youtube": "O3pyCGnZzYA"
+        "youtube": "O3pyCGnZzYA",
+        "spotify": "1gSDTZHemEViEBiXysrlo0",
+        "amazonMusic": "B0F3SFFFLQ"
       },
       "coverUrl": "/covers/hiphop-tribe-ickit.jpg",
       "supportedModes": [
@@ -103,37 +105,7 @@
         "Global Hits 1950-2026",
         "80s-pop",
         "youtube-import",
-        "80s Flashback"
-      ]
-    },
-    {
-      "id": "yt-djV11Xbc914",
-      "title": "Take On Me  [4K]",
-      "artist": "a-ha",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von a-ha.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Take On Me  [4K]",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=djV11Xbc914"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s Flashback",
         "YouTube Collection"
       ]
     },
@@ -219,7 +191,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=2R0a3mCRSpU"
+        "youtube": "https://www.youtube.com/watch?v=2R0a3mCRSpU",
+        "spotify": "7abGerACQx9G1OBqHYFKAb",
+        "amazonMusic": "B001SQOFWO"
       },
       "supportedModes": [
         "timeline"
@@ -250,7 +224,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=fOVLTlcKEH8"
+        "youtube": "https://www.youtube.com/watch?v=fOVLTlcKEH8",
+        "spotify": "4EmH2iRucAgCOnhuJRotUi",
+        "amazonMusic": "B0C8V88998"
       },
       "supportedModes": [
         "timeline"
@@ -290,7 +266,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "pAgnJDJN4VA"
+        "youtube": "pAgnJDJN4VA",
+        "spotify": "08mG3Y1vljYA6bvDt4Wqkj",
+        "amazonMusic": "B00O6HQ48K"
       },
       "supportedModes": [
         "timeline",
@@ -336,7 +314,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "l482T0yNkeo"
+        "youtube": "l482T0yNkeo",
+        "spotify": "2zYzyRzz6pRmhPzyfMEC8s",
+        "amazonMusic": "B00O6HNI2K"
       },
       "supportedModes": [
         "timeline",
@@ -373,7 +353,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=FpkawF5GWMI"
+        "youtube": "https://www.youtube.com/watch?v=FpkawF5GWMI",
+        "spotify": "6kWJvPfC4DgUpRsXKNa9z9",
+        "amazonMusic": "B013CHW07O"
       },
       "supportedModes": [
         "timeline"
@@ -412,7 +394,9 @@
         "fake": "In the shadow of the night, we're looking for the light of our broken soul"
       },
       "links": {
-        "youtube": "bvWRMAU6V-c"
+        "youtube": "bvWRMAU6V-c",
+        "spotify": "52xJxFP6TqMuO4Yt0eOkMz",
+        "amazonMusic": "B09LSHQ3GR"
       },
       "supportedModes": [
         "timeline",
@@ -458,7 +442,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "U3ASj1L6_sY"
+        "youtube": "U3ASj1L6_sY",
+        "spotify": "0gplL1WMoJ6iYaPgMCL0gX",
+        "amazonMusic": "B09J1HT2D3"
       },
       "coverUrl": "/covers/finale-adele-easy.jpg",
       "supportedModes": [
@@ -495,7 +481,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=YQHsXMglC9A"
+        "youtube": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+        "spotify": "1Yk0cQdMLx5RzzFTYwmuld",
+        "amazonMusic": "B0170UNLRQ"
       },
       "supportedModes": [
         "timeline"
@@ -590,7 +578,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "DeumyOzKqgI"
+        "youtube": "DeumyOzKqgI",
+        "spotify": "6VObnIkLVruX4UVyxWhlqm",
+        "amazonMusic": "B07C1DN16Z"
       },
       "supportedModes": [
         "timeline",
@@ -636,7 +626,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "hLQl3WQQoQ0"
+        "youtube": "hLQl3WQQoQ0",
+        "spotify": "3bNv3VuUOKgrf5hu3YcuRo",
+        "amazonMusic": "B004I1NA90"
       },
       "supportedModes": [
         "timeline",
@@ -682,7 +674,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "KrtWu8eBBek"
+        "youtube": "KrtWu8eBBek",
+        "spotify": "0E2ARPr6Anq8l4dwsu8hbP",
+        "amazonMusic": "B004B5T4CK"
       },
       "supportedModes": [
         "timeline",
@@ -730,7 +724,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "hHRNSeuvzlM"
+        "youtube": "hHRNSeuvzlM",
+        "spotify": "2K2Ji4ca76JNgoO6xG2QKm",
+        "amazonMusic": "B084P7KGQW"
       },
       "supportedModes": [
         "cover-confusion",
@@ -744,37 +740,7 @@
       "coverUrl": "/covers/rock-aerosmith-dream-on.jpg",
       "packs": [
         "Rock Anthems",
-        "piano-ballads"
-      ]
-    },
-    {
-      "id": "yt-89dGC8de0CA",
-      "title": "Dream On (Audio)",
-      "artist": "Aerosmith",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Aerosmith.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Dream On (Audio)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=89dGC8de0CA"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "piano-ballads",
         "YouTube Collection"
       ]
     },
@@ -799,7 +765,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=MhxCFXmR0E8"
+        "youtube": "https://www.youtube.com/watch?v=MhxCFXmR0E8",
+        "spotify": "5JL0aPP9mvMHx0IGXqcI5C",
+        "amazonMusic": "B0BZ9HM51N"
       },
       "supportedModes": [
         "timeline"
@@ -838,7 +806,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "adGVpCsf9N4"
+        "youtube": "adGVpCsf9N4",
+        "spotify": "5DdDbJvoaT8fqQMJkiGg4T",
+        "amazonMusic": "B0C8PJJXMM"
       },
       "coverUrl": "/covers/house-afrojack-control.jpg",
       "supportedModes": [
@@ -884,7 +854,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "ocIT67BAL4k"
+        "youtube": "ocIT67BAL4k",
+        "spotify": "5gP99M7O33N3qO37u362uB",
+        "amazonMusic": "B07ZMJK3CF"
       },
       "supportedModes": [
         "timeline",
@@ -930,7 +902,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "XXx6RDzR6eM"
+        "youtube": "XXx6RDzR6eM",
+        "spotify": "63xdwScd1Ai1GigAwQxE8y",
+        "amazonMusic": "B06XG24B2X"
       },
       "supportedModes": [
         "cover-confusion",
@@ -977,7 +951,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "otVH5cv9z1A"
+        "youtube": "otVH5cv9z1A",
+        "spotify": "1Let4BYaYSum46nAGO1i6v",
+        "amazonMusic": "B002G2CN2S"
       },
       "supportedModes": [
         "timeline",
@@ -2180,37 +2156,7 @@
       "isQRCompatible": true,
       "packs": [
         "Electronic & Synthpop Voyage",
-        "80s-pop"
-      ]
-    },
-    {
-      "id": "yt-9OUurVdRGsc",
-      "title": "Forever Young (2019 Remaster)",
-      "artist": "Alphaville",
-      "year": 1984,
-      "country": "DE",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Forever Young (2019 Remaster)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=9OUurVdRGsc"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s-pop",
         "YouTube Collection"
       ]
     },
@@ -3485,37 +3431,7 @@
         "Global Hits 1950-2026",
         "youtube-import",
         "World, Reggae & Soul",
-        "soul-funk"
-      ]
-    },
-    {
-      "id": "yt-A134hShx_gw",
-      "title": "Respect (Official Lyric Video)",
-      "artist": "Aretha Franklin",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Aretha Franklin.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Respect (Official Lyric Video)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=A134hShx_gw"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "soul-funk",
         "YouTube Collection"
       ]
     },

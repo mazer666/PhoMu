@@ -716,37 +716,7 @@
       "isQRCompatible": true,
       "coverUrl": "/covers/disney-mermaid-sea.jpg",
       "packs": [
-        "Kids & Disney Magic"
-      ]
-    },
-    {
-      "id": "yt-GC_mV1IpjWA",
-      "title": "Under the Sea (from The Little Mermaid)",
-      "artist": "Samuel E. Wright",
-      "year": 2016,
-      "country": "INT",
-      "genre": "Latin Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Latin Heat"
-      ],
-      "hints": [
-        "Ein Song von Samuel E. Wright.",
-        "Gefunden im Genre Latin Pop.",
-        "Der Titel lautet: Under the Sea (from The Little Mermaid)",
-        "Playlist-Tag: Latin Heat"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=GC_mV1IpjWA"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Kids & Disney Magic",
         "YouTube Collection"
       ]
     },
@@ -795,37 +765,7 @@
       "isQRCompatible": true,
       "coverUrl": "/covers/80s-sandra-magdalena.jpg",
       "packs": [
-        "80s Pop Hits"
-      ]
-    },
-    {
-      "id": "yt-sRo6O63l3nw",
-      "title": "(I'll Never Be) Maria Magdalena (Single Verison)",
-      "artist": "Sandra",
-      "year": 1985,
-      "country": "DE",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: (I'll Never Be) Maria Magdalena (Single Verison)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=sRo6O63l3nw"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s Pop Hits",
         "YouTube Collection"
       ]
     },
@@ -3053,37 +2993,7 @@
       "coverUrl": "/covers/80s-simple-minds-forget.jpg",
       "packs": [
         "80s Pop Hits",
-        "Movie Hits"
-      ]
-    },
-    {
-      "id": "yt-STgLfdt8u3U",
-      "title": "Don't You (Forget About Me) (Remastered 2001)",
-      "artist": "Simple Minds",
-      "year": 1985,
-      "country": "INT",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Don't You (Forget About Me) (Remastered 2001)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=STgLfdt8u3U"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Movie Hits",
         "YouTube Collection"
       ]
     },
@@ -3834,37 +3744,7 @@
       "isQRCompatible": true,
       "packs": [
         "Electronic & Synthpop Voyage",
-        "80s-pop"
-      ]
-    },
-    {
-      "id": "yt-EWZxFSo-XZY",
-      "title": "Tainted Love (Remastered 2023)",
-      "artist": "Soft Cell",
-      "year": 1981,
-      "country": "INT",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Tainted Love (Remastered 2023)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=EWZxFSo-XZY"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s-pop",
         "YouTube Collection"
       ]
     },

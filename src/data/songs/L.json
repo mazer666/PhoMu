@@ -1360,37 +1360,7 @@
       ],
       "isQRCompatible": true,
       "packs": [
-        "Hip Hop Essentials"
-      ]
-    },
-    {
-      "id": "yt-r7qovpFAGrQ",
-      "title": "Old Town Road  ft. Billy Ray Cyrus",
-      "artist": "Lil Nas X",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Lil Nas X.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Old Town Road  ft. Billy Ray Cyrus",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=r7qovpFAGrQ"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Hip Hop Essentials",
         "YouTube Collection"
       ]
     },
@@ -1518,7 +1488,8 @@
       "coverUrl": "/covers/rock-linkin-park-in-the-end.jpg",
       "packs": [
         "Rock Anthems",
-        "metal-hardcore"
+        "metal-hardcore",
+        "YouTube Collection"
       ]
     },
     {
@@ -2670,37 +2641,6 @@
       ]
     },
     {
-      "id": "yt-kJQP7kiw5Fk",
-      "title": "Despacito ft. Daddy Yankee",
-      "artist": "Luis Fonsi",
-      "year": 2017,
-      "country": "INT",
-      "genre": "Latin Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Latin Essentials"
-      ],
-      "hints": [
-        "Ein Song von Luis Fonsi.",
-        "Gefunden im Genre Latin Pop.",
-        "Der Titel lautet: Despacito ft. Daddy Yankee",
-        "Playlist-Tag: Latin Essentials"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=kJQP7kiw5Fk"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
-        "YouTube Collection"
-      ]
-    },
-    {
       "id": "yt-dgFgGrljh1I",
       "title": "Llueve Por Dentro",
       "artist": "Luis Fonsi",
@@ -2867,7 +2807,8 @@
       ],
       "isQRCompatible": true,
       "packs": [
-        "Global Hits 1950-2026"
+        "Global Hits 1950-2026",
+        "YouTube Collection"
       ]
     },
     {

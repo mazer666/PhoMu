@@ -363,37 +363,7 @@
       "isQRCompatible": true,
       "coverUrl": "/covers/disney-moana-welcome.jpg",
       "packs": [
-        "Kids & Disney Magic"
-      ]
-    },
-    {
-      "id": "yt-79DijItQXMM",
-      "title": "You're Welcome (from Moana/Official Video)",
-      "artist": "Dwayne Johnson",
-      "year": 2016,
-      "country": "INT",
-      "genre": "Latin Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Latin Heat"
-      ],
-      "hints": [
-        "Ein Song von Dwayne Johnson.",
-        "Gefunden im Genre Latin Pop.",
-        "Der Titel lautet: You're Welcome (from Moana/Official Video)",
-        "Playlist-Tag: Latin Heat"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=79DijItQXMM"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Kids & Disney Magic",
         "YouTube Collection"
       ]
     },

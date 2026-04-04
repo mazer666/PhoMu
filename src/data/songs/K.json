@@ -228,37 +228,7 @@
       "isQRCompatible": true,
       "coverUrl": "/covers/world-kaoma-lambada.jpg",
       "packs": [
-        "World, Reggae & Soul"
-      ]
-    },
-    {
-      "id": "yt-csaUvkYOkLY",
-      "title": "Lambada (1989)",
-      "artist": "Kaoma",
-      "year": 2016,
-      "country": "INT",
-      "genre": "Latin Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Latin Heat"
-      ],
-      "hints": [
-        "Ein Song von Kaoma.",
-        "Gefunden im Genre Latin Pop.",
-        "Der Titel lautet: Lambada (1989)",
-        "Playlist-Tag: Latin Heat"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=csaUvkYOkLY"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "World, Reggae & Soul",
         "YouTube Collection"
       ]
     },
@@ -1473,37 +1443,7 @@
       "isQRCompatible": true,
       "packs": [
         "Electronic & Synthpop Voyage",
-        "80s-pop"
-      ]
-    },
-    {
-      "id": "yt-i5HDfxDW7Ck",
-      "title": "Kids In America (2020 Remaster)",
-      "artist": "Kim Wilde",
-      "year": 1981,
-      "country": "INT",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Kids In America (2020 Remaster)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=i5HDfxDW7Ck"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s-pop",
         "YouTube Collection"
       ]
     },
@@ -1890,37 +1830,7 @@
       "isQRCompatible": true,
       "packs": [
         "Electronic & Synthpop Voyage",
-        "Electronic & Techno"
-      ]
-    },
-    {
-      "id": "yt-o0iga1eNgvA",
-      "title": "Das Model (2009 Remaster)",
-      "artist": "Kraftwerk",
-      "year": 1978,
-      "country": "DE",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Das Model (2009 Remaster)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=o0iga1eNgvA"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Electronic & Techno",
         "YouTube Collection"
       ]
     },

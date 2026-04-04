@@ -674,37 +674,7 @@
       "isQRCompatible": true,
       "packs": [
         "Global Hits 1950-2026",
-        "2010s & 2020s Chart Toppers"
-      ]
-    },
-    {
-      "id": "yt-H59xVMF4zxE",
-      "title": "Shake It Off (Taylor's Version)",
-      "artist": "Taylor Swift",
-      "year": 2023,
-      "country": "INT",
-      "genre": "Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Modern Hits"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre Pop.",
-        "Der Titel lautet: Shake It Off (Taylor's Version)",
-        "Playlist-Tag: Modern Hits"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=H59xVMF4zxE"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "2010s & 2020s Chart Toppers",
         "YouTube Collection"
       ]
     },
@@ -791,37 +761,7 @@
       "packs": [
         "Electronic & Synthpop Voyage",
         "80s-pop",
-        "80s Flashback"
-      ]
-    },
-    {
-      "id": "yt-QChwm0w9nxc",
-      "title": "Everybody Wants To Rule The World (Single Version)",
-      "artist": "Tears for Fears",
-      "year": 1985,
-      "country": "INT",
-      "genre": "NDW",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "German New Wave"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre NDW.",
-        "Der Titel lautet: Everybody Wants To Rule The World (Single Version)",
-        "Playlist-Tag: German New Wave"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=QChwm0w9nxc"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "80s Flashback",
         "YouTube Collection"
       ]
     },
@@ -1505,7 +1445,7 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "A_MjCqQoLLA",
+        "youtube": "mQER0A0ej0M",
         "spotify": "1eT2CjXwFXNx6oY5ydvzKU",
         "amazonMusic": "B07FT34Y26"
       },
@@ -1521,37 +1461,7 @@
       "isQRCompatible": true,
       "packs": [
         "60s & 70s Soul & Rock Legends",
-        "Global Hits 1950-2026"
-      ]
-    },
-    {
-      "id": "yt-mQER0A0ej0M",
-      "title": "Hey Jude (Remastered 2015)",
-      "artist": "The Beatles",
-      "year": 1968,
-      "country": "INT",
-      "genre": "Classic Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Hey Jude (Remastered 2015)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=mQER0A0ej0M"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Global Hits 1950-2026",
         "YouTube Collection"
       ]
     },
@@ -1697,7 +1607,8 @@
       ],
       "isQRCompatible": true,
       "packs": [
-        "2000s Pop & RnB"
+        "2000s Pop & RnB",
+        "YouTube Collection"
       ]
     },
     {
@@ -2683,7 +2594,8 @@
       "isQRCompatible": true,
       "packs": [
         "Electronic & Synthpop Voyage",
-        "80s-pop"
+        "80s-pop",
+        "YouTube Collection"
       ]
     },
     {
@@ -2729,68 +2641,7 @@
       "isQRCompatible": true,
       "coverUrl": "/covers/soul-isley-shout.jpg",
       "packs": [
-        "Soul & Funk Grooves"
-      ]
-    },
-    {
-      "id": "yt-DPVf01jXL7M",
-      "title": "Shout, Pts. 1 & 2",
-      "artist": "The Isley Brothers",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von The Isley Brothers.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Shout, Pts. 1 & 2",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=DPVf01jXL7M"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
-        "YouTube Collection"
-      ]
-    },
-    {
-      "id": "yt-UvynvnxZJ3Q",
-      "title": "I Want You Back",
-      "artist": "The Jackson 5",
-      "year": 1969,
-      "country": "INT",
-      "genre": "Classic Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "60s/70s Legends"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre Classic Pop.",
-        "Der Titel lautet: I Want You Back",
-        "Playlist-Tag: 60s/70s Legends"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=UvynvnxZJ3Q"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Soul & Funk Grooves",
         "YouTube Collection"
       ]
     },
@@ -3376,68 +3227,7 @@
       "isQRCompatible": true,
       "packs": [
         "60s & 70s Soul & Rock Legends",
-        "Rock Anthems"
-      ]
-    },
-    {
-      "id": "yt--dPEISUxAZo",
-      "title": "(I Can't Get No) Satisfaction (Mono)",
-      "artist": "The Rolling Stones",
-      "year": 1965,
-      "country": "INT",
-      "genre": "Classic Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "60s/70s Legends"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre Classic Pop.",
-        "Der Titel lautet: (I Can't Get No) Satisfaction (Mono)",
-        "Playlist-Tag: 60s/70s Legends"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=-dPEISUxAZo"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
-        "YouTube Collection"
-      ]
-    },
-    {
-      "id": "yt-nrIPxlFzDi0",
-      "title": "(I Can't Get No) Satisfaction (Official Lyric Video)",
-      "artist": "The Rolling Stones",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von The Rolling Stones.",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: (I Can't Get No) Satisfaction (Official Lyric Video)",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=nrIPxlFzDi0"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Rock Anthems",
         "YouTube Collection"
       ]
     },

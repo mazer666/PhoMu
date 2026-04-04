@@ -373,37 +373,6 @@
       ]
     },
     {
-      "id": "yt-eVTXPUF4Oz4",
-      "title": "Linkin Park",
-      "artist": "In The End [Official HD Music Video]",
-      "year": 1990,
-      "country": "INT",
-      "genre": "All-Time",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "Legends & Classics"
-      ],
-      "hints": [
-        "Ein Song von In The End [Official HD Music Video].",
-        "Gefunden im Genre All-Time.",
-        "Der Titel lautet: Linkin Park",
-        "Playlist-Tag: Legends & Classics"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=eVTXPUF4Oz4"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
-        "YouTube Collection"
-      ]
-    },
-    {
       "id": "world-innercircle-sweat",
       "title": "Sweat (A La La La La Long)",
       "artist": "Inner Circle",

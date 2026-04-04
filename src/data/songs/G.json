@@ -1299,37 +1299,7 @@
       ],
       "isQRCompatible": true,
       "packs": [
-        "Global Hits 1950-2026"
-      ]
-    },
-    {
-      "id": "yt-eEof53s5lmo",
-      "title": "I Will Survive (Extended Version)",
-      "artist": "Gloria Gaynor",
-      "year": 1978,
-      "country": "INT",
-      "genre": "Classic Pop",
-      "difficulty": "medium",
-      "mood": [
-        "Popular",
-        "60s/70s Legends"
-      ],
-      "hints": [
-        "Ein Song von Various Artists.",
-        "Gefunden im Genre Classic Pop.",
-        "Der Titel lautet: I Will Survive (Extended Version)",
-        "Playlist-Tag: 60s/70s Legends"
-      ],
-      "lyrics": null,
-      "isOneHitWonder": false,
-      "links": {
-        "youtube": "https://www.youtube.com/watch?v=eEof53s5lmo"
-      },
-      "supportedModes": [
-        "timeline"
-      ],
-      "isQRCompatible": false,
-      "packs": [
+        "Global Hits 1950-2026",
         "YouTube Collection"
       ]
     },
