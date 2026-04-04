@@ -61,7 +61,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/ideal-blaue-augen.jpg"
     },
     {
       "id": "yt-5QfMkWyLQyk",
@@ -620,7 +621,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/ivy-queen-yo-quiero-bailar.jpg"
     }
   ]
 }

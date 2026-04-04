@@ -21,7 +21,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=KWx1PmZk6PM"
+        "youtube": "https://www.youtube.com/watch?v=KWx1PmZk6PM",
+        "spotify": "0vF1CszQ1UqB2jscNfJ8Qe",
+        "amazonMusic": "B0BPK9NMNW"
       },
       "supportedModes": [
         "timeline"
@@ -62,7 +64,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "cPAbx5kgCJo"
+        "youtube": "cPAbx5kgCJo",
+        "spotify": "3KzemxaWSSiYtnzOokd0Rs",
+        "amazonMusic": "B01M71EYMH"
       },
       "supportedModes": [
         "timeline",

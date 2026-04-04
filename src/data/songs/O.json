@@ -233,7 +233,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/oingo-boingo-dead-man-s-party.jpg"
     },
     {
       "id": "yt-QvW61K2s0tA",
@@ -264,7 +265,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/ok-go-ok-go---the-one-moment---official-video.jpg"
     },
     {
       "id": "country-oldcrow-wagon",
@@ -391,7 +393,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/olivia-rodrigo-good-4-u.jpg"
     },
     {
       "id": "yt-_GWKkqNoyEA",
@@ -500,7 +503,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/orchestral-manoeuvres-in-the-dark-enola-gay--remastered-2003-.jpg"
     },
     {
       "id": "synth-omd-enola",
@@ -719,7 +723,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/ozuna-dile-que-tu-me-quieres----odisea.jpg"
     },
     {
       "id": "yt-cNhXH1etCwM",
@@ -750,7 +755,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/ozuna-en-la-intimidad.jpg"
     },
     {
       "id": "yt-rAb13TXc6mQ",
@@ -781,7 +787,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/ozuna-si-tu-marido-no-te-quiere--official-lyric-video-.jpg"
     }
   ]
 }

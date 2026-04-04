@@ -1602,7 +1602,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/franco-de-vita-tan-só-lo-tü--live--ft--alejandra-guzmán.jpg"
     },
     {
       "id": "jazz-sinatra-flyme",
@@ -1811,7 +1812,8 @@
       "packs": [
         "YouTube Collection",
         "youtube-import"
-      ]
+      ],
+      "coverUrl": "/covers/french-montana-ft--swae-lee-unforgettable.jpg"
     },
     {
       "id": "piano-freya-lost",
