@@ -85,7 +85,7 @@ export default function BrowsePage() {
     return () => {
       cancelled = true;
     };
-  }, [filters, sortBy, sortOrder, pageSize]);
+  }, [filters, sortBy, sortOrder, pageSize, adminMode]);
 
   const genres = useMemo(() => getGenres(allSongs), [allSongs]);
   const decades = useMemo(() => getDecades(allSongs), [allSongs]);
@@ -130,14 +130,20 @@ export default function BrowsePage() {
     });
   }, [allSongs, filters, sortBy, sortOrder]);
 
+  // Im Admin-Modus belegt der "+ New"-Button einen Grid-Platz → einen weniger laden
+  const effectivePageSize = useMemo(() => {
+    if (pageSize === 'all' || !adminMode) return pageSize;
+    return (pageSize as number) - 1;
+  }, [pageSize, adminMode]);
+
   // Paginated Songs
   const paginatedSongs = useMemo(() => {
-    if (pageSize === 'all') return filteredSongs;
-    const start = (currentPage - 1) * pageSize;
-    return filteredSongs.slice(start, start + pageSize);
-  }, [filteredSongs, currentPage, pageSize]);
+    if (effectivePageSize === 'all') return filteredSongs;
+    const start = (currentPage - 1) * (effectivePageSize as number);
+    return filteredSongs.slice(start, start + (effectivePageSize as number));
+  }, [filteredSongs, currentPage, effectivePageSize]);
 
-  const totalPages = pageSize === 'all' ? 1 : Math.ceil(filteredSongs.length / pageSize);
+  const totalPages = effectivePageSize === 'all' ? 1 : Math.ceil(filteredSongs.length / (effectivePageSize as number));
 
   const handleSaveSong = useCallback((updated: PhomuSong) => {
     setAllSongs(prev => {
