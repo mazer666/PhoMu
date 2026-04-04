@@ -29,7 +29,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/bruno-mars-treasure.jpg"
     },
     {
       "id": "piano-bruno-man",
@@ -137,7 +138,8 @@
       "isQRCompatible": false,
       "packs": [
         "YouTube Collection"
-      ]
+      ],
+      "coverUrl": "/covers/bts-permission-to-dance.jpg"
     },
     {
       "id": "world-bvsc-chan-chan",

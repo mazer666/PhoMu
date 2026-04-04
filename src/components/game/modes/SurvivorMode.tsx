@@ -44,9 +44,33 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[50vh] px-6 gap-8">
+    <div className="flex flex-col items-center justify-center min-h-[50vh] px-6 gap-6">
 
-      {/* Song-Infos — Artist erst nach Antwort sichtbar */}
+      {/* Modus-Banner */}
+      <div className="w-full max-w-sm flex items-center justify-between bg-red-500/10 border border-red-500/20 rounded-2xl px-4 py-2.5">
+        <span className="text-[10px] font-black uppercase tracking-widest text-red-400">💀 Survivor</span>
+        <span className="text-[10px] font-black uppercase tracking-widest text-red-400/60">One-Hit-Wonder?</span>
+      </div>
+
+      {/* Musik — läuft sofort, Artist bleibt verborgen */}
+      <div className="w-full max-w-sm mx-auto">
+        <MusicPlayer
+          songId={song.id}
+          songTitle={song.title}
+          songArtist={song.artist}
+          songPack={song.packs[0]}
+          youtubeLink={song.links.youtube}
+          youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
+          spotifyLink={song.links.spotify}
+          spotifyFreePreview={song.links.spotifyFreePreview}
+          amazonMusicLink={song.links.amazonMusic}
+          amazonPrimePreview={song.links.amazonPrimePreview}
+          startSeconds={song.previewTimestamp?.start ?? 0}
+          blurred={!answered && !cheatUsed}
+        />
+      </div>
+
+      {/* Song-Infos — Artist erst nach Antwort oder Cheat sichtbar */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -72,9 +96,9 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
 
         {!answered && !cheatUsed ? (
           <>
-            <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Hör genau hin …</p>
-            <h3 className="text-3xl font-black mb-1 opacity-20 select-none">???</h3>
-            <p className="opacity-30 text-sm italic">Artist wird nach deiner Antwort enthüllt</p>
+            <p className="text-xs uppercase tracking-widest opacity-50 mb-2">Artist</p>
+            <h3 className="text-4xl font-black mb-1 opacity-20 select-none tracking-widest">???</h3>
+            <p className="opacity-30 text-sm italic">wird nach deiner Antwort enthüllt</p>
           </>
         ) : (
           <>
@@ -88,23 +112,6 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
             )}
           </>
         )}
-
-        <div className="mt-4 w-full max-w-sm mx-auto transition-opacity" style={{ opacity: (answered || cheatUsed) ? 1 : 0.4 }}>
-          <MusicPlayer
-            songId={song.id}
-            songTitle={song.title}
-            songArtist={song.artist}
-            songPack={song.packs[0]}
-            youtubeLink={song.links.youtube}
-            youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
-            spotifyLink={song.links.spotify}
-            spotifyFreePreview={song.links.spotifyFreePreview}
-            amazonMusicLink={song.links.amazonMusic}
-            amazonPrimePreview={song.links.amazonPrimePreview}
-            startSeconds={song.previewTimestamp?.start ?? 0}
-            blurred={!answered && !cheatUsed}
-          />
-        </div>
       </motion.div>
 
       {/* Frage */}
@@ -141,17 +148,17 @@ export function SurvivorMode({ song, onAnswer }: SurvivorModeProps) {
               🌟 Nein
             </button>
           </motion.div>
-          
-          {/* Music Cheat Button */}
+
+          {/* Cheat: Artist früh enthüllen */}
           {!cheatUsed && !config.noCheatMode && (
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.4 }}
               whileHover={{ opacity: 1, scale: 1.05 }}
               onClick={handleCheat}
-              className="text-[10px] font-black uppercase tracking-widest border border-white/10 py-2 rounded-xl hover:bg-white/5 transition-all mt-4"
+              className="text-[10px] font-black uppercase tracking-widest border border-white/10 py-3 rounded-xl hover:bg-white/5 transition-all min-h-[44px]"
             >
-              🕵️ Musik-Cheat: Artist enthüllen (-1 Pkt)
+              🕵️ Cheat: Artist enthüllen (-1 Pkt)
             </motion.button>
           )}
         </div>
