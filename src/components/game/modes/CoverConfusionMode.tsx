@@ -131,7 +131,7 @@ export function CoverConfusionMode({ song, onAnswer, onReveal }: CoverConfusionM
         songId={song.id}
         songTitle={song.title}
         songArtist={song.artist}
-        songPack={song.pack}
+        songPack={song.packs[0]}
         youtubeLink={playLink}
         youtubeAlternatives={
           song.links.coverLink

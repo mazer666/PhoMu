@@ -4,7 +4,7 @@ import path from 'path';
 
 import { assertAdminAccess, parseHttpUrl, parseSongId } from '@/admin-api/_lib/security';
 
-const PACKS_DIR = path.join(process.cwd(), 'src/data/packs');
+const PACKS_DIR = path.join(process.cwd(), 'src/data/songs');
 const COVERS_DIR = path.join(process.cwd(), 'public/covers');
 const PACKS_LOCK_FILE = path.join(PACKS_DIR, '.covers-save.lock');
 const MAX_IMAGE_BYTES = 5 * 1024 * 1024;

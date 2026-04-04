@@ -14,7 +14,7 @@
 
 import { useState, useCallback } from 'react';
 import type { PhomuSong } from '@/types/song';
-import globalHitsRaw from '@/data/packs/global-hits.json';
+import { ALL_SONGS } from '@/data/songs';
 import { SongEditor } from '@/components/admin/SongEditor';
 
 // ─── Typen ────────────────────────────────────────────────────────────────────
@@ -42,7 +42,7 @@ const EMPTY_SONG: AdminSong = {
   genre: '',
   difficulty: 'medium',
   mood: [],
-  pack: 'Global Hits 1950-2026',
+  packs: ['Global Hits 1950-2026'],
   hints: ['', '', '', '', ''],
   hintEvidence: ['', '', '', '', ''],
   lyrics: null,
@@ -107,7 +107,7 @@ function loadSongsFromStorage(): AdminSong[] {
     // localStorage nicht verfügbar oder beschädigt → Fallback auf JSON
   }
   // Typkonvertierung: JSON hat lyrics: null, was unser Typ erlaubt
-  return (globalHitsRaw.songs as unknown as AdminSong[]) || [];
+  return (ALL_SONGS as unknown as AdminSong[]) || [];
 }
 
 /** Speichert Songs in localStorage */
@@ -164,7 +164,7 @@ function SongRow({
         {song.artist}
       </td>
       <td className="px-3 py-2 text-sm text-gray-500">{song.year}</td>
-      <td className="px-3 py-2 text-sm text-gray-500">{song.pack}</td>
+      <td className="px-3 py-2 text-sm text-gray-500">{song.packs[0] || 'Unassigned'}</td>
       <td className="px-3 py-2">
         <CompletenessBadge complete={complete} />
       </td>
@@ -192,11 +192,11 @@ export default function AdminSongsPage() {
 
 
   // Alle verfügbaren Packs aus den Songs ermitteln
-  const availablePacks = Array.from(new Set(songs.map((s) => s.pack)));
+  const availablePacks = Array.from(new Set(songs.flatMap((s) => s.packs)));
 
   // Gefilterte Song-Liste
   const filteredSongs = songs.filter((song) => {
-    if (filterPack !== 'all' && song.pack !== filterPack) return false;
+    if (filterPack !== 'all' && !song.packs.includes(filterPack)) return false;
     if (filterCompleteness === 'complete' && !isSongComplete(song)) return false;
     if (filterCompleteness === 'incomplete' && isSongComplete(song)) return false;
     if (searchQuery) {
@@ -270,7 +270,7 @@ export default function AdminSongsPage() {
   function handleReset() {
     if (!confirm('Alle lokalen Änderungen verwerfen und vom Original-JSON laden?')) return;
     localStorage.removeItem(STORAGE_KEY);
-    setSongs(globalHitsRaw.songs as unknown as AdminSong[]);
+    setSongs(ALL_SONGS as unknown as AdminSong[]);
     setSelectedId(null);
   }
 

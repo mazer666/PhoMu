@@ -394,7 +394,7 @@ function printValidationResult(result: PackValidationResult): void {
   const DIM = '\x1b[2m';
 
   console.log(`\n${BOLD}🎵 Phomu Song-Validierung${RESET}`);
-  console.log(`${DIM}Pack: ${result.pack}${RESET}`);
+  console.log(`${DIM}File: ${result.pack}${RESET}`);
   console.log('─'.repeat(60));
 
   // Zusammenfassung
@@ -451,7 +451,7 @@ async function main() {
   const path = await import('path');
 
   // Standard-Pack-Datei oder per Argument angeben
-  const targetFile = process.argv[2] ?? 'src/data/packs/global-hits.json';
+  const targetFile = process.argv[2] ?? 'src/data/songs/A1.json';
   const absolutePath = path.resolve(process.cwd(), targetFile);
 
   console.log(`Lese Datei: ${absolutePath}`);

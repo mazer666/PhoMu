@@ -109,7 +109,7 @@ export function HintMasterMode({ song, onAnswer }: HintMasterModeProps) {
                 songId={song.id}
                 songTitle={song.title}
                 songArtist={song.artist}
-                songPack={song.pack}
+                songPack={song.packs[0]}
                 youtubeLink={song.links.youtube}
                 youtubeAlternatives={song.links.youtubeAlternatives ?? (song.links.fallbackYoutubeId ? [song.links.fallbackYoutubeId] : undefined)}
                 spotifyLink={song.links.spotify}
