@@ -1877,7 +1877,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=F3EE_ENosLI"
+        "youtube": "https://www.youtube.com/watch?v=F3EE_ENosLI",
+        "spotify": "3QqONU0GW4byIClquChyf0",
+        "amazonMusic": "B00DLRY0OG"
       },
       "supportedModes": [
         "timeline"
@@ -1920,7 +1922,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=s_VPmgxBMQI"
+        "youtube": "https://www.youtube.com/watch?v=s_VPmgxBMQI",
+        "spotify": "2wUlYDGGXlSvm2NkGj0Qio",
+        "amazonMusic": "B01N3LMT2B"
       },
       "coverUrl": "/covers/synth-depeche-jesus.jpg",
       "supportedModes": [
@@ -1958,7 +1962,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=qwagjFlvv_s"
+        "youtube": "https://www.youtube.com/watch?v=qwagjFlvv_s",
+        "spotify": "2xOa2qPj8kDnlj8Nr1D07s",
+        "amazonMusic": "B01GWC0K7Y"
       },
       "supportedModes": [
         "timeline"
@@ -1990,7 +1996,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=NiZErygnITo"
+        "youtube": "https://www.youtube.com/watch?v=NiZErygnITo",
+        "spotify": "0QrUw86ZKRgNGGgrvC5yC5",
+        "amazonMusic": "B07Z8L3J8S"
       },
       "supportedModes": [
         "timeline"
@@ -2083,7 +2091,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "Yr8xDSPjII8"
+        "youtube": "Yr8xDSPjII8",
+        "spotify": "3CDHydgW0ssTh59f0jy1y3",
+        "amazonMusic": "B00005NDFE"
       },
       "supportedModes": [
         "timeline",
@@ -2129,7 +2139,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "6CHdKORwPEQ"
+        "youtube": "6CHdKORwPEQ",
+        "spotify": "3SnGymj6ijE2iuUfWxLo1q",
+        "amazonMusic": "B000026G9U"
       },
       "supportedModes": [
         "timeline",
@@ -2173,7 +2185,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "ZIU0RMV_II8"
+        "youtube": "ZIU0RMV_II8",
+        "spotify": "6S79K4aOf8A9eonS3mXGv9",
+        "amazonMusic": "B077SXDXBL"
       },
       "supportedModes": [
         "timeline",
@@ -2218,7 +2232,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "Mp4UPCs_jsA"
+        "youtube": "Mp4UPCs_jsA",
+        "spotify": "6S9S7fX4F6kU5m0j6zG2mW",
+        "amazonMusic": "B001T9O66E"
       },
       "supportedModes": [
         "timeline",
@@ -2264,7 +2280,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "h6W0BDdMG8I"
+        "youtube": "h6W0BDdMG8I",
+        "spotify": "3tZIs4EaG46mO0NLoNf90N",
+        "amazonMusic": "B001SLY0S6"
       },
       "coverUrl": "/covers/german-fanta4-die-da.jpg",
       "supportedModes": [
@@ -2310,7 +2328,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "6z8o7qAIlIU"
+        "youtube": "6z8o7qAIlIU",
+        "spotify": "1zs0BxFFLfbJQTSo84rkhy",
+        "amazonMusic": "B001T9O27G"
       },
       "coverUrl": "/covers/german-hosen-hier-kommt-alex.jpg",
       "supportedModes": [
