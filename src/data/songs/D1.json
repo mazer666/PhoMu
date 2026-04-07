@@ -1282,7 +1282,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=uXCtOk5dedI"
+        "youtube": "https://www.youtube.com/watch?v=uXCtOk5dedI",
+        "spotify": "0LQsM0KYkSyCdN6TCo63vp",
+        "amazonMusic": "B07259VH6F"
       },
       "supportedModes": [
         "timeline"
@@ -1323,7 +1325,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "2UjOQ0w_4CU"
+        "youtube": "2UjOQ0w_4CU",
+        "spotify": "2OidS9m9pS09UunXo8pS88",
+        "amazonMusic": "B001SEE1WU"
       },
       "supportedModes": [
         "timeline",
@@ -1424,7 +1428,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "tKi9Z-f6qX4"
+        "youtube": "tKi9Z-f6qX4",
+        "spotify": "4kJWtxDDNb9oAk3h7sX3N4",
+        "amazonMusic": "B00379MTZK"
       },
       "coverUrl": "/covers/electro-deadmau5-strobe.jpg",
       "supportedModes": [
@@ -1470,7 +1476,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "I0czvJ_jikg"
+        "youtube": "I0czvJ_jikg",
+        "spotify": "3EPXxR3ImUwfayaurPi3cm",
+        "amazonMusic": "B07DXLV538"
       },
       "supportedModes": [
         "timeline",
@@ -1507,7 +1515,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=RUz1pZ_LujU"
+        "youtube": "https://www.youtube.com/watch?v=RUz1pZ_LujU",
+        "spotify": "3ChSPlVjL8D4685kLntN77",
+        "amazonMusic": "B001RSAY3G"
       },
       "supportedModes": [
         "timeline"
@@ -1548,7 +1558,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "8F4tT_JNl40"
+        "youtube": "8F4tT_JNl40",
+        "spotify": "1fTxsj3O5AizB0f0rN9YNu",
+        "amazonMusic": "B00G04COTO"
       },
       "supportedModes": [
         "timeline",
@@ -1593,7 +1605,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "AqEW53Ui2no"
+        "youtube": "AqEW53Ui2no",
+        "spotify": "3uMmllZo1AfoEnVT4ENCD3",
+        "amazonMusic": "B001RS7U5Y"
       },
       "supportedModes": [
         "timeline",
@@ -1639,7 +1653,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "Q2FzZSBD5LE"
+        "youtube": "Q2FzZSBD5LE",
+        "spotify": "5MMnwYs0hIxkENRsbkWJ2G",
+        "amazonMusic": "B001RS8EYI"
       },
       "supportedModes": [
         "timeline",
@@ -1728,7 +1744,9 @@
       "lyrics": null,
       "isOneHitWonder": false,
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=hBYP9f1LAHY"
+        "youtube": "https://www.youtube.com/watch?v=hBYP9f1LAHY",
+        "spotify": "6YwLgicpvVuMt1eE2OldwQ",
+        "amazonMusic": "B00U3Q0LNC"
       },
       "supportedModes": [
         "timeline"
@@ -1769,7 +1787,9 @@
       },
       "isOneHitWonder": false,
       "links": {
-        "youtube": "aGSKrC7dGcY"
+        "youtube": "aGSKrC7dGcY",
+        "spotify": "6WK9dVrRABMkUXFLNlgWFh",
+        "amazonMusic": "B00B99B78I"
       },
       "coverUrl": "/covers/synth-depeche-silence.jpg",
       "supportedModes": [
