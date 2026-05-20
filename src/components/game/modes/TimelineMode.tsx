@@ -200,7 +200,10 @@ export function TimelineMode({ song, onAnswer, onReveal }: TimelineModeProps) {
     song.year, 
     timelineYears, 
     addTimelineYear, 
-    removeTimelineYear
+    removeTimelineYear,
+    onAnswer,
+    points,
+    validSlotSet
   ]);
 
   function handleRemoveYear(year: number) {

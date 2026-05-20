@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           <section className="space-y-3">
             <h2 className="text-xl font-black uppercase tracking-wider text-[var(--color-accent)]">1. Data Storage & Localization</h2>
             <p className="text-sm leading-relaxed opacity-90">
-              Phomu prioritizes data minimization. Most application data, such as game progress, scores, and preferences, is stored **locally on your device** via the browser's <code>localStorage</code>. 
+              Phomu prioritizes data minimization. Most application data, such as game progress, scores, and preferences, is stored **locally on your device** via the browser&apos;s <code>localStorage</code>. 
               No user accounts are required, and no persistent personal profiles are created on our servers.
             </p>
           </section>
@@ -45,14 +45,14 @@ export default function PrivacyPage() {
           <section className="space-y-3">
             <h2 className="text-xl font-black uppercase tracking-wider text-[var(--color-accent)]">2. Technical Metadata</h2>
             <p className="text-sm leading-relaxed opacity-90">
-              When using features like "Report Missing Link", technical metadata (such as provider name, locale, and song ID) may be transmitted to improve the service. 
+              When using features like &quot;Report Missing Link&quot;, technical metadata (such as provider name, locale, and song ID) may be transmitted to improve the service. 
               We explicitly **avoid free-text fields** in these flows to prevent accidental transmission of Personally Identifiable Information (PII).
             </p>
           </section>
           <section className="space-y-3 border-l-0 md:border-l border-[var(--color-border)] md:pl-8">
             <h2 className="text-xl font-black uppercase tracking-wider opacity-60">2. Technische Metadaten</h2>
             <p className="text-sm leading-relaxed opacity-70 italic">
-              Bei der Nutzung von Funktionen wie "Fehlenden Link melden" können technische Metadaten (wie Providername, Gebietsschema und Song-ID) übertragen werden, um den Dienst zu verbessern. 
+              Bei der Nutzung von Funktionen wie &quot;Fehlenden Link melden&quot; können technische Metadaten (wie Providername, Gebietsschema und Song-ID) übertragen werden, um den Dienst zu verbessern. 
               Wir **vermeiden ausdrücklich Freitextfelder** in diesen Abläufen, um die versehentliche Übertragung von personenbezogenen Daten (PII) zu verhindern.
             </p>
           </section>
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-black uppercase tracking-wider text-[var(--color-accent)]">4. Your Rights & Control</h2>
             <p className="text-sm leading-relaxed opacity-90">
               Under GDPR (Art. 15-21) and CCPA, you have the right to access, rectify, or delete your data. 
-              Since Phomu stores data locally, you can exercise these rights at any time by **clearing your browser's site data/cache**. 
+              Since Phomu stores data locally, you can exercise these rights at any time by **clearing your browser&apos;s site data/cache**. 
               This will permanently remove all game-related information from your device.
             </p>
           </section>

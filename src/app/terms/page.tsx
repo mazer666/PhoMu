@@ -83,7 +83,7 @@ export default function TermsPage() {
           <section className="space-y-3">
             <h2 className="text-xl font-black uppercase tracking-wider text-[var(--color-accent)]">4. Liability Disclaimer</h2>
             <p className="text-sm leading-relaxed opacity-90">
-              The software is provided "as is", without warranty of any kind. 
+              The software is provided &quot;as is&quot;, without warranty of any kind. 
               In no event shall the authors or copyright holders be liable for any claim, damages, or other liability arising from the use of the platform. 
               Users are responsible for their own interaction with third-party APIs.
             </p>
@@ -91,7 +91,7 @@ export default function TermsPage() {
           <section className="space-y-3 border-l-0 md:border-l border-[var(--color-border)] md:pl-8">
             <h2 className="text-xl font-black uppercase tracking-wider opacity-60">4. Haftungsausschluss</h2>
             <p className="text-sm leading-relaxed opacity-70 italic">
-              Die Software wird "wie besehen" zur Verfügung gestellt, ohne jegliche Gewährleistung. 
+              Die Software wird &quot;wie besehen&quot; zur Verfügung gestellt, ohne jegliche Gewährleistung. 
               In keinem Fall sind die Autoren oder Urheberrechtsinhaber für Ansprüche, Schäden oder sonstige Haftung haftbar, die sich aus der Nutzung der Plattform ergeben. 
               Nutzer sind für ihre eigene Interaktion mit Drittanbieter-APIs verantwortlich.
             </p>

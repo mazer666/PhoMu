@@ -24,7 +24,6 @@
         "real": [
           "Can I kick it? (Yes you can!)",
           "Can I kick it? (Yes you can!)",
-          "Can I kick it? (Yes you can!)",
           "Well, then I'm gone!"
         ],
         "fake": "Dancing in the light, feeling so right, all through the night"
@@ -141,12 +140,7 @@
           "See that girl, watch that scene, digging the dancing queen",
           "Friday night and the lights are low, looking out for a place to go"
         ],
-        "fake": [
-          "Saturday lights and you are bright and flow, fading on a stair to show",
-          "Kiss the girl, stare into the lights, glowing, becoming the dancing queen",
-          "Loving you, missing you, driving fully insane",
-          "Like the wind, as you are, a shooting star"
-        ]
+        "fake": "Saturday lights and you are bright and flow, fading on a stair to show"
       },
       "isOneHitWonder": false,
       "links": {
@@ -376,7 +370,7 @@
       "title": "We Don't Talk About Bruno",
       "artist": "Adassa, Stephanie Beatriz, Mauro Castillo, Rhenzy Feliz, Carolina Gaitán, Diane Guerrero",
       "year": 2021,
-      "country": "US/CO",
+      "country": "US",
       "genre": "Soundtrack / Salsa / Pop",
       "difficulty": "hard",
       "mood": [
